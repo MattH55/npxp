@@ -18,5 +18,10 @@
     "label": "Tier 3 \u2014 Mechanism-only",
     "short_label": "T3",
     "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+  },
+  "tier_4_heuristic_target_match": {
+    "label": "Tier 4 \u2014 Heuristic (unverified target match)",
+    "short_label": "T4",
+    "definition": "The lowest-confidence tier in this database. A mechanical keyword match between a compound's own DepMap-supplied target/mechanism-of-action text and a modifier's induced-signature panel category -- not a cited, per-drug resistance-mechanism claim (see Tier 3), not reviewed by a curator, and not a prediction of direction (interaction_type is always 'unknown' here). Treat as 'worth someone checking,' not evidence."
   }
 }

@@ -18,7 +18,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "24a438be-294e-49a9-92c5-5fc63eb15611",
+      "id": "553a9318-0a60-44c8-87d9-c80a38507863",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "cyclophosphamide",
       "cell_line_id": "4T1_BREAST",
@@ -49,10 +49,10 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": true,
-      "priority_score": 0.225,
+      "priority_score": 0.375,
       "priority_components": {
         "convergent_evidence": 0.0,
-        "coverage_gap": 0.0,
+        "coverage_gap": 0.5,
         "trial_saturation_inverse": 0.5,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 1.0,
@@ -63,5 +63,14 @@
   "cell_lines": [
     "4T1"
   ],
-  "resistance_mechanisms": []
+  "resistance_mechanisms": [
+    {
+      "id": "47e08d2c-18fd-4491-b8ea-23334f4542c4",
+      "drug_id": "cyclophosphamide",
+      "pathway_or_gene": "ALDH1A1 (aldehyde dehydrogenase 1A1) detoxification",
+      "mechanism_description": "Cytosolic ALDH1A1 oxidizes the active cyclophosphamide metabolite (aldophosphamide) to the inactive carboxyphosphamide; ALDH1A1 overexpression (originally shown via retroviral gene transfer into hematopoietic cell lines) confers cyclophosphamide resistance (Magni et al. 1996).",
+      "source": "pmid:8562935",
+      "signature_panel": null
+    }
+  ]
 }

@@ -18,7 +18,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "3c9778a6-4dc6-43c2-b810-057b886b599d",
+      "id": "a74bbcd6-3b24-45a4-ae5f-74081fc3c7f0",
       "modifier_id": "MOD-GLUCOSE-LOW-DU145",
       "drug_id": "metformin",
       "cell_line_id": "DU145_PROSTATE",
@@ -60,14 +60,14 @@
       }
     },
     {
-      "id": "dafc2229-ce0b-43b6-9ca4-6505cc1ae0ee",
+      "id": "b76e3f37-ee68-4b04-a10f-27f026156c56",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "T47D_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "8a3fd772-3117-42be-94a9-393ef035a48e",
+      "mechanism_link": "5fd63d25-217e-4d1d-8368-33e2bba9c449",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:33281976",
@@ -102,14 +102,14 @@
       }
     },
     {
-      "id": "d230fda9-d266-4214-b9fa-5dffbc1477c1",
+      "id": "9fa211f9-f391-45ba-8e7a-3893128807cb",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "8ec398ed-81af-4024-9010-c89a619ad750",
+      "mechanism_link": "c4f87a03-ef85-4890-990b-a16f505592c2",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:33281976",
@@ -144,15 +144,15 @@
       }
     },
     {
-      "id": "c0f21b3f-7fed-4069-879e-88186f10fa43",
+      "id": "e96ccac0-31fa-47ec-a6e9-0702a2819f8e",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "metformin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "47b44fe8-c526-4693-9511-3eb90d1dee43",
-      "resistance_mechanism_link": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+      "mechanism_link": "a52dfaf3-ed5e-42ec-97a4-e90e22f25245",
+      "resistance_mechanism_link": "5a254880-f175-4608-b285-0ffe8d34535d",
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
         "pmid:34162423"
@@ -173,7 +173,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+        "id": "5a254880-f175-4608-b285-0ffe8d34535d",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -193,15 +193,15 @@
       }
     },
     {
-      "id": "e0e28f4d-95a9-48c1-9f94-c3f28a9f85d2",
+      "id": "ecb1ab91-82db-4ab4-8a4b-5e759ebdefd9",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "metformin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "fec2303b-8e4a-41a0-8612-d45cfe0ad1ad",
-      "resistance_mechanism_link": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+      "mechanism_link": "da0a85f5-ffd6-430c-b2a8-ce27de9e1ac5",
+      "resistance_mechanism_link": "5a254880-f175-4608-b285-0ffe8d34535d",
       "source_study": [
         "pmid:23242140",
         "pmid:34162423"
@@ -222,7 +222,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+        "id": "5a254880-f175-4608-b285-0ffe8d34535d",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -242,15 +242,15 @@
       }
     },
     {
-      "id": "3eda7cfd-f6e3-4a7f-b9d0-9037b475e5fd",
+      "id": "fbd2ff51-2299-4f07-b4f4-366dfd0949d6",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "metformin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "13326494-14b5-4ee1-91b4-e845962129f1",
-      "resistance_mechanism_link": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+      "mechanism_link": "c948e272-5b9c-4397-acaf-42087145f8f7",
+      "resistance_mechanism_link": "5a254880-f175-4608-b285-0ffe8d34535d",
       "source_study": [
         "pmid:23242140",
         "pmid:34162423"
@@ -271,7 +271,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+        "id": "5a254880-f175-4608-b285-0ffe8d34535d",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -291,15 +291,15 @@
       }
     },
     {
-      "id": "cf0f4889-3a86-4d55-9fe1-3eff57697ab3",
+      "id": "eb25df7b-a70a-4479-9acf-0bc5ea86c100",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "metformin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "8fe2e1c1-c1cd-46c0-bd02-b9b5cd05a692",
-      "resistance_mechanism_link": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+      "mechanism_link": "769a7fa6-be1d-44fa-86e6-59432c15cfc2",
+      "resistance_mechanism_link": "5a254880-f175-4608-b285-0ffe8d34535d",
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
         "pmid:34162423"
@@ -320,7 +320,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+        "id": "5a254880-f175-4608-b285-0ffe8d34535d",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -350,7 +350,7 @@
   ],
   "resistance_mechanisms": [
     {
-      "id": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
+      "id": "5a254880-f175-4608-b285-0ffe8d34535d",
       "drug_id": "metformin",
       "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
       "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",

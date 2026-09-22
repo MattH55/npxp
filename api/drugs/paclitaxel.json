@@ -17,7 +17,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "bb49afec-bd82-4297-9e8f-1d55a3569a96",
+      "id": "612043fd-5986-4fb4-938b-f4869da41a70",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MDAMB231_BREAST",
@@ -48,10 +48,10 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.2,
+      "priority_score": 0.3,
       "priority_components": {
         "convergent_evidence": 0.0,
-        "coverage_gap": 0.0,
+        "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
@@ -59,7 +59,7 @@
       }
     },
     {
-      "id": "25ef590a-7407-4ea2-8729-8cc2f1c50a48",
+      "id": "255ae4c6-7973-42ce-a0e3-ebc4a89258d0",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MCF7_BREAST",
@@ -90,10 +90,10 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.2,
+      "priority_score": 0.3,
       "priority_components": {
         "convergent_evidence": 0.0,
-        "coverage_gap": 0.0,
+        "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
@@ -105,5 +105,14 @@
     "MCF-7",
     "MDA-MB-231"
   ],
-  "resistance_mechanisms": []
+  "resistance_mechanisms": [
+    {
+      "id": "f5c7f908-98ba-4878-b221-787e48d94d8f",
+      "drug_id": "paclitaxel",
+      "pathway_or_gene": "ABCB1/P-glycoprotein efflux; TUBB3 (class III beta-tubulin) alteration",
+      "mechanism_description": "ABCB1/P-gp-mediated efflux reduces intracellular paclitaxel accumulation; TUBB3 overexpression alters microtubule dynamics away from paclitaxel's stabilizing mechanism. FOXO3a-mediated feedback links the two: TUBB3 upregulation drives ABCB1 expression, compounding resistance (Aldonza et al. 2016).",
+      "source": "pmid:27284014",
+      "signature_panel": null
+    }
+  ]
 }

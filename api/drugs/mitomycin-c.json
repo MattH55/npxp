@@ -18,7 +18,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "914f50df-9556-4c44-b393-abab224c8429",
+      "id": "69c4f936-9fee-4822-9c05-9ea7d6b75fc3",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -49,10 +49,10 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.2,
+      "priority_score": 0.35,
       "priority_components": {
         "convergent_evidence": 0.0,
-        "coverage_gap": 0.0,
+        "coverage_gap": 0.5,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
@@ -63,5 +63,14 @@
   "cell_lines": [
     "RKO"
   ],
-  "resistance_mechanisms": []
+  "resistance_mechanisms": [
+    {
+      "id": "bd6e3fe8-66cb-4466-8b95-91372129b5ba",
+      "drug_id": "mitomycin-c",
+      "pathway_or_gene": "NQO1 (NAD(P)H:quinone oxidoreductase 1) bioreductive activation",
+      "mechanism_description": "Mitomycin C requires bioreductive activation (quinone to hydroquinone/semiquinone) to form the DNA-crosslinking species; NQO1 is a major activating enzyme in vivo (Gustafson et al. 2003), so its loss/inhibition reduces effective drug activation -- the reverse of the more commonly cited overexpression-confers-resistance pattern seen for detox/efflux mechanisms elsewhere in this table.",
+      "source": "pmid:12649308",
+      "signature_panel": null
+    }
+  ]
 }

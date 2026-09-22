@@ -15,14 +15,14 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "0c75f562-4da5-4982-ad6b-91b3e8a23284",
+      "id": "249380cb-ab76-40d5-8b82-49a6eb4bd83b",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "erastin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "47b44fe8-c526-4693-9511-3eb90d1dee43",
+      "mechanism_link": "a52dfaf3-ed5e-42ec-97a4-e90e22f25245",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -57,15 +57,15 @@
       }
     },
     {
-      "id": "56d268c6-9989-41b9-bb10-32f83910bb1c",
+      "id": "3f9fa369-e198-4769-b4d0-823b93e3ec57",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "erastin",
       "cell_line_id": "T47D_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "8a3fd772-3117-42be-94a9-393ef035a48e",
-      "resistance_mechanism_link": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+      "mechanism_link": "5fd63d25-217e-4d1d-8368-33e2bba9c449",
+      "resistance_mechanism_link": "759b63d3-7e30-4c49-b76c-e8151f62230d",
       "source_study": [
         "doi:10.3892/ol.2020.12326",
         "pmid:24439385"
@@ -86,7 +86,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+        "id": "759b63d3-7e30-4c49-b76c-e8151f62230d",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -106,15 +106,15 @@
       }
     },
     {
-      "id": "81332a9c-1425-4788-a72a-8afcab88fc9a",
+      "id": "af032cd2-2ae5-4da7-aafa-aa2bd439839a",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "erastin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "fec2303b-8e4a-41a0-8612-d45cfe0ad1ad",
-      "resistance_mechanism_link": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+      "mechanism_link": "da0a85f5-ffd6-430c-b2a8-ce27de9e1ac5",
+      "resistance_mechanism_link": "759b63d3-7e30-4c49-b76c-e8151f62230d",
       "source_study": [
         "pmid:23242140",
         "pmid:24439385"
@@ -135,7 +135,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+        "id": "759b63d3-7e30-4c49-b76c-e8151f62230d",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -155,15 +155,15 @@
       }
     },
     {
-      "id": "b36fa5f2-8a91-4dc8-bbb0-153053f5c16c",
+      "id": "a3d2e00e-b690-445a-96be-7c7a05386968",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "erastin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "13326494-14b5-4ee1-91b4-e845962129f1",
-      "resistance_mechanism_link": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+      "mechanism_link": "c948e272-5b9c-4397-acaf-42087145f8f7",
+      "resistance_mechanism_link": "759b63d3-7e30-4c49-b76c-e8151f62230d",
       "source_study": [
         "pmid:23242140",
         "pmid:24439385"
@@ -184,7 +184,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+        "id": "759b63d3-7e30-4c49-b76c-e8151f62230d",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -204,15 +204,15 @@
       }
     },
     {
-      "id": "914dd189-abc1-4f39-a6bc-1547d15cbe47",
+      "id": "a41cbbac-b04b-4269-8cba-eeb34d064cba",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "erastin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "8fe2e1c1-c1cd-46c0-bd02-b9b5cd05a692",
-      "resistance_mechanism_link": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+      "mechanism_link": "769a7fa6-be1d-44fa-86e6-59432c15cfc2",
+      "resistance_mechanism_link": "759b63d3-7e30-4c49-b76c-e8151f62230d",
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
         "pmid:24439385"
@@ -233,7 +233,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+        "id": "759b63d3-7e30-4c49-b76c-e8151f62230d",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -261,7 +261,7 @@
   ],
   "resistance_mechanisms": [
     {
-      "id": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
+      "id": "759b63d3-7e30-4c49-b76c-e8151f62230d",
       "drug_id": "erastin",
       "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
       "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",

@@ -164,12 +164,14 @@ const TIER_SHORT = {
     tier_2_inferred: "T2",
     tier_2b_model_predicted: "T2b",
     tier_3_mechanism_only: "T3",
+    tier_4_heuristic_target_match: "T4",
 };
 const TIER_STYLES = {
     tier_1_direct: "bg-emerald-600",
     tier_2_inferred: "bg-yellow-600",
     tier_2b_model_predicted: "bg-violet-600",
     tier_3_mechanism_only: "bg-orange-700",
+    tier_4_heuristic_target_match: "bg-red-800",
 };
 
 function typeBadge(t) {

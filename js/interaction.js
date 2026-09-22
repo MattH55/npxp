@@ -39,7 +39,7 @@ function clinicalEvidenceBlock(rows) {
       </div>`).join("");
 }
 
-function relatedBlock(related) {
+function relatedBlock(related, truncated, cellLineId) {
     if (!related.length) return "";
     return `<h3 class="text-white font-semibold mt-8 mb-2">
         <i class="fa-solid fa-circle-nodes mr-2 text-emerald-400"></i>Other interactions in this cell line</h3>
@@ -55,7 +55,8 @@ function relatedBlock(related) {
             <td class="py-2 pr-3">${typeBadge(r.interaction_type)}</td>
             <td class="py-2 pr-3">${tierBadge(r.evidence_tier)}</td>
           </tr>`).join("")}
-        </tbody></table>`;
+        </tbody></table>
+        ${truncated ? `<div class="text-slate-500 text-xs mt-2">Showing the first ${related.length} (Tier 1-3 only) — this cell line has more. See <a class="underline text-emerald-400" href="cell-lines.html#${encodeURIComponent(cellLineId)}">the cell line page</a> or filter <code>/api/interactions?cell_line_id=${encodeURIComponent(cellLineId)}</code> for the rest, including Tier 4.</div>` : ""}`;
 }
 
 async function load() {
@@ -113,6 +114,9 @@ async function load() {
               ${it.is_bridging_candidate
                 ? `<div class="mt-3 border border-violet-500/50 bg-violet-500/10 rounded-lg p-3 text-sm text-violet-200"><i class="fa-solid fa-flask-vial mr-1"></i>Mechanistic Bridging output — a <b>model-generated hypothesis</b> from matching this modifier's induced signature against ${escapeHtml(it.drug_name)}'s known resistance mechanism, not a tested result. See <a class="underline" href="candidates.html">Candidates</a> for the full list.</div>`
                 : ""}
+              ${it.evidence_tier === "tier_4_heuristic_target_match"
+                ? `<div class="mt-3 border border-red-500/50 bg-red-500/10 rounded-lg p-3 text-sm text-red-200"><i class="fa-solid fa-triangle-exclamation mr-1"></i><b>Tier 4 — mechanical keyword match, not a verified claim.</b> ${escapeHtml(it.drug_name)}'s own DepMap-supplied target/mechanism text happens to share a keyword with this modifier's induced signature category. This is a purely textual co-occurrence, not a cited resistance mechanism (compare Tier 3), has not been reviewed by a curator, and predicts no direction. Treat as a keyword-matched lead worth checking, nothing more.</div>`
+                : ""}
             </div>
 
             <h3 class="text-white font-semibold mt-6"><i class="fa-solid fa-user-pen mr-2 text-emerald-400"></i>Curator notes</h3>
@@ -135,7 +139,7 @@ async function load() {
             ${it.modifier?.protocol_parameters ? `
               <h3 class="text-white font-semibold mt-6"><i class="fa-solid fa-sliders mr-2 text-emerald-400"></i>Modifier protocol</h3>
               <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mt-2">${protocolKv(it.modifier.protocol_parameters)}</div>` : ""}
-            ${relatedBlock(it.related || [])}
+            ${relatedBlock(it.related || [], it.related_truncated, it.cell_line_id)}
           </div>`;
     } catch (e) {
         box.innerHTML = `<div class="text-rose-400 text-sm">${escapeHtml(e.message)}</div>`;
