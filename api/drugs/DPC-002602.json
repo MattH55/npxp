@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002602",
+  "name": "ESZOPICLONE",
+  "drug_class": "BENZODIAZEPINE RECEPTOR AGONIST",
+  "target": "GABRA1;GABRA2;GABRA3;GABRA4;GABRA5;GABRA6;GABRB1;GABRB2;GABRB3;GABRD;GABRE;GABRG1;GABRG2;GABRG3;GABRP;GABRQ;TSPO",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "cdfe5708-3b9b-45d4-a1a2-03c33c1dd43d",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.08543872761,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f1bca5e7-1311-4bfa-98a8-a26e51224a4b",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.10961403302,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c25b8c7a-0672-40e1-9f55-454488e0da3a",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.30003272299,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ffab44dc-4ad7-424d-85f4-685ef8763228",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.081009089339,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e0336fe7-aa80-41a7-bc78-e7cb3653b08d",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.0255119422297,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5ba15a24-d5d0-4827-bf88-58ac240c9197",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.00598775555651,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ca14d336-564c-4eef-890c-a525a265eb54",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.119159471367,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e32aca0a-63d7-4e99-9aa8-6e5ce5f89614",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.537603307875,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a96650d8-bac5-4e4b-8d1c-5e565dcfeca6",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.40899457543,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "694843d0-c9b8-4d32-b77d-10b1bd76b00f",
+      "drug_id": "DPC-002602",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.37831574639,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

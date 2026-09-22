@@ -1,0 +1,123 @@
+{
+  "drug_id": "DPC-002977",
+  "name": "GEMCITABINE",
+  "drug_class": "inhibitor of DNA replication",
+  "target": "",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "GEMZAR",
+    "LY-188011"
+  ],
+  "pubchem_cid": "60750",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "21f76e3f-bb12-4222-ab88-9f7ac1b8db96",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -2.81099224605,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5788b1d1-f200-4958-b58f-e3cbf34d3099",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -2.2732463655,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b6026753-7768-4cf6-b1d8-7a2c444cc25c",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -1.20140063189,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "15211f83-686a-4fb5-aa17-86a4c7d80a03",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -1.64865858148,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3fdce622-46da-40f3-b130-4e90ba640bf3",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -1.24994710037,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dbbe39dd-dc97-43bf-8ac7-ca04e9e77c2c",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -1.60864352399,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "27fe1dd9-4abd-4be5-a1b6-8e18039c8d8e",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -1.28862792105,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9152002e-5974-4514-a126-8681e92e11f1",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -2.91426405994,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ba095650-416b-4bde-9dc7-902cd20dfa02",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -2.60031325263,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e2274a21-8256-4fc7-88d2-cf20f3400648",
+      "drug_id": "DPC-002977",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -1.5090779065,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": [
+    {
+      "id": "1e13cb36-a71f-49b4-ae02-e659ebb13e20",
+      "drug_id": "DPC-002977",
+      "pathway_or_gene": "hENT1 (SLC29A1) transporter loss / cytidine deaminase (CDA) overexpression",
+      "mechanism_description": "Gemcitabine uptake depends on the hENT1 nucleoside transporter; hENT1 loss reduces intracellular drug accumulation, and CDA overexpression inactivates the drug directly (Koltai et al. 2022 review).",
+      "source": "pmid:35626089",
+      "signature_panel": null
+    }
+  ]
+}

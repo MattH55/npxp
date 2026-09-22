@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-004904",
+  "name": "PANCURONIUM",
+  "drug_class": "ACETYLCHOLINE RECEPTOR ANTAGONIST",
+  "target": "CHRM2;CHRM3;CHRNA1;CHRNA2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "2c36dc7e-dfd5-4578-8aed-57dbbfc11023",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.798327324671,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "034b52ee-ee36-4d0d-a15c-bf86abd0fd89",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.192681349013,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "29fc2683-ede1-4b48-b232-51121985dede",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.143712680001,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a4f29878-0e72-4608-baef-c39ebb4499f5",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.380332679062,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4f7f93a8-86e1-4b7b-a7de-58062435ff34",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.381056976119,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fcb0ea24-d04a-49b6-85c0-f749ff7b9fe0",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.41026028451,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7ce03267-dd44-495e-bed1-6c035a6f6dde",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.263404119282,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f723e901-3fc7-48c2-8654-82ab57941578",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.773189868716,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5df428d0-b63d-4fe3-81df-2c043bd15b79",
+      "drug_id": "DPC-004904",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.150566759625,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-000546",
+  "name": "AMITRIPTYLINE",
+  "drug_class": "NOREPINEPHRINE INHIBITOR, NOREPINEPHRINE REUPTAKE INHIBITOR, SEROTONIN RECEPTOR ANTAGONIST, SEROTONIN-NOREPINEPHRINE REUPTAKE INHIBITOR (SNRI), SEROTONIN\u00c2\u0080\u0093NOREPINEPHRINE REUPTAKE INHIBITOR (SNRI)",
+  "target": "ADRA1A;ADRA1B;ADRA1D;ADRA2A;ADRB1;ADRB2;ADRB3;CHRM1;CHRM2;CHRM3;CHRM4;CHRM5;HRH1;HRH2;HRH4;HTR1A;HTR1B;HTR1D;HTR2A;HTR2C;HTR6;HTR7;KCNA1;KCND2;KCND3;KCNQ2;KCNQ3;NTRK1;NTRK2;OPRD1;OPRK1;OPRM1;SIGMAR1;SLC6A2;SLC6A4",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "7d54c8b5-39b4-46c6-a045-1ea86606be2c",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.150341379022,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "faecf0f4-50e4-47e3-a3c6-3194b2fc1692",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.584576652234,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e4ce6cbd-61f0-472b-81bb-af683a68908c",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.152922789369,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "23f457f4-87da-4406-bb4d-c0d09c51b023",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.142415379263,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "51dbc466-9b4a-49d3-b87e-2c1b5e244bc4",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.293496668897,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "978dccac-6758-4e4d-b110-168509956474",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.657880617217,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "46cdadc1-6ac1-45c3-a317-31594e2214c9",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.496032541716,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2a82e8d0-8bdc-4354-9498-6894327b6e23",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.17571933149,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "63f001c8-6263-49b9-84a5-dade0e97c1b8",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.46104878971,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d6046ec1-aec1-42ef-8ada-a929e01728c0",
+      "drug_id": "DPC-000546",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.576483504759,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

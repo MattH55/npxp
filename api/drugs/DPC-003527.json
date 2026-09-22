@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-003527",
+  "name": "IU1",
+  "drug_class": "UBIQUITIN C-TERMINAL HYDROLASE INHIBITOR",
+  "target": "USP14",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "00f0968d-a927-43a9-bec1-e4caa645eefd",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.0481513675807,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "aaf90f1e-7bf8-430b-b0e1-713396ed40ac",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.226095954055,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ddb1883a-974b-4e23-b62d-1e1c7196559f",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.162491809492,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c6e6bc6f-b192-447f-b40d-93e0b8602dfe",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.571782457102,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "747c8b30-5a51-4c48-b728-d8b08c372290",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.42820794576,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1a15cc58-e231-456b-ae5e-2fac34f5b298",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.279262100914,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e62e52e4-0b86-4099-88c8-be3fbda4ce8a",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.115425680317,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "52180ef8-42b1-45bc-a256-badb5c99522b",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.508278849271,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "83208b5d-675a-40c2-817a-ffd600659cbb",
+      "drug_id": "DPC-003527",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.294187824475,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

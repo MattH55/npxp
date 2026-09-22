@@ -14,17 +14,98 @@
   "clinical_status": "approved",
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": "essential_generic",
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "b52975ee-837f-4089-b88e-25e4bd867cc2",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -4.47203472621,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7e736d8f-ed9a-4b2f-8719-4e83ef43cb47",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -2.21294834334,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "916d4741-5072-494a-b724-c2d995fe6cd4",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -5.23373111961,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fd59f72d-63c6-4062-8873-b7ed7222aa1d",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -4.26563850386,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "27f57ba2-d118-49b0-8507-9ac00e89e624",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -5.63296575204,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0f45e415-8536-4d45-9e3a-0ba24d5e3f19",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -1.50164568029,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "217b620d-a9fd-4340-8a62-506e2dce6f69",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -6.32356339815,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b60a9a45-53f4-43cd-b0e3-31a3279efa56",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -2.75234125199,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "91ca8b91-6f9e-4038-9a97-59195a3c5e2d",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -4.10726576788,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "09048b42-1836-447a-ab25-8a453e2f12ea",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -6.40669483828,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "02af1ff5-e5a6-49f1-87cd-bdbfbe66517b",
+      "id": "309ac5c8-a169-4984-bb3d-58b729f8f570",
       "modifier_id": "MOD-HT-41C-30M",
       "drug_id": "doxorubicin",
       "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "ff78fa12-967b-400e-8b22-8e055c0bc53b",
+      "mechanism_link": "061ae0e6-6835-4a26-8fe1-0aaf1d2a5e3a",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1080/02656730802140777",
@@ -59,14 +140,14 @@
       }
     },
     {
-      "id": "69b00f77-f784-4b2a-8a0e-296ad51b408a",
+      "id": "231c9e0b-c354-4eb9-9f2d-0dd29b215e73",
       "modifier_id": "MOD-HYP-1O2-24H",
       "drug_id": "doxorubicin",
       "cell_line_id": "DU145_PROSTATE",
       "combined_effect_metric": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "ddb9142c-ea83-4465-97aa-6c5a0bd81938",
+      "mechanism_link": "02ebe9fa-c2d7-4329-852f-cb9a710a4381",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.drup.2011.03.001",
@@ -101,7 +182,7 @@
       }
     },
     {
-      "id": "89135bdd-4c03-4fc5-8dd3-e6ab4a877827",
+      "id": "902416e1-7a26-4e21-ab78-f125bbfd1f86",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB231_BREAST",
@@ -143,7 +224,7 @@
       }
     },
     {
-      "id": "fbd2acb4-f599-407a-b6e2-648f55da8f55",
+      "id": "e511de04-bb54-4851-b3e1-f80cdf779e5e",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF7_BREAST",
@@ -185,14 +266,14 @@
       }
     },
     {
-      "id": "2ac71830-df21-425a-b802-07c5ba46b673",
+      "id": "6e30a2aa-f817-494d-962f-3176a014a1e9",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "doxorubicin",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "027b22ec-6959-406c-8f4d-b23c57f037b4",
+      "mechanism_link": "712fa707-9648-448b-9706-bf7de2fe9e7d",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1126/scitranslmed.3003293",
@@ -227,14 +308,14 @@
       }
     },
     {
-      "id": "385fae12-d7e5-4fc0-a02e-1d1a340cc99d",
+      "id": "24e21131-29c3-407b-8388-1e04b4c418ab",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "9344f5e5-2815-4df5-968b-da0d5129a803",
+      "mechanism_link": "c93afbf1-1d6a-484d-89fc-17fd54879616",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1093/jn/nxy224",
@@ -269,14 +350,14 @@
       }
     },
     {
-      "id": "6b37e636-7c08-4d1e-aafc-7dd232cf196c",
+      "id": "baa1060d-cd68-44bc-9db7-3d45af42fc7a",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "doxorubicin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "c948e272-5b9c-4397-acaf-42087145f8f7",
+      "mechanism_link": "4b0142b7-bee5-4e82-a785-13e5ced45472",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1038/nature11743",
@@ -313,15 +394,22 @@
   ],
   "cell_lines": [
     "4T1",
+    "A549",
     "DU-145",
+    "HCT116",
     "HCT116 p53-/-",
     "MCF-7",
     "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG",
     "U-937"
   ],
   "resistance_mechanisms": [
     {
-      "id": "ae0caecb-15c3-41e8-9daf-36fdcace6391",
+      "id": "b189ebc6-bd9a-4515-a485-986dfe9bffd6",
       "drug_id": "doxorubicin",
       "pathway_or_gene": "ABCB1/P-glycoprotein drug efflux",
       "mechanism_description": "ABCB1 (P-gp) actively effluxes doxorubicin, one of the best-characterized multidrug-resistance mechanisms in oncology (Gottesman 2002).",

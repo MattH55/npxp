@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-000413",
+  "name": "ALCURONIUM",
+  "drug_class": "MUSCLE RELAXANT",
+  "target": "CHRM1;CHRM2;CHRM3;CHRM4;CHRNA7",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "98fa5121-7ff5-4aa2-967f-8d2775cb5183",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.228840325072,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a886913c-24bd-4017-96a3-3e286131d480",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.245949942271,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "91f9b662-3bc8-41ef-9169-2fe297d3b8bf",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.599865042713,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1fe96b6e-96be-4b7e-bcdd-a27be03b3b85",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.0418167931884,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "81ff33d7-07f0-41a5-91ff-41e739315e86",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.550096282711,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e9278373-6c96-4c18-ac9a-81883f45c354",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.248483156773,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "aa3b1e35-b8a9-443f-a7d8-ce2b357de0fc",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.25121949566,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5fa34ebd-e518-4c66-96d6-5bb929efcf80",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.126185676679,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e34d0629-7d4b-4890-a110-0d58fbe930e7",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.751829110867,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f4ea4f64-1ad7-4fd8-9e95-8f83390a73c1",
+      "drug_id": "DPC-000413",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.095897745698,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

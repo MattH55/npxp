@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003617",
+  "name": "KETANSERIN",
+  "drug_class": "SEROTONIN RECEPTOR ANTAGONIST",
+  "target": "ADRA1A;ADRA1B;ADRA1D;DRD1;DRD5;HTR1A;HTR1B;HTR1D;HTR2A;HTR2B;HTR2C;HTR5A;HTR7;SLC18A1;SLC18A2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "7aaf17db-0608-4ed0-aa35-9ffd27825bee",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.324905031463,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "11c008d5-5eb3-4f8b-bc3d-b41b2c60c42d",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.383645331077,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f89f44e2-634f-4e29-a98d-32a7381857bd",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.217957176429,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5996dfed-e66c-444a-ac2f-3e4655c4cbd3",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.0813891640898,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d2101f2d-490a-47fc-ac24-60e59ea264ce",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.373407581944,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8b170278-81e3-4524-b00c-093485c452d5",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.276965981954,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cceffe87-203f-480f-9f6f-88cbaea3780f",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.310798431599,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7642c874-40ab-44fd-822a-a696400eed90",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.0451177865614,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dae65260-b21e-4f0a-bc02-56bdc5ffe9c5",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.370479508512,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "032be55e-1506-42b9-a2e5-f1fc15852c2e",
+      "drug_id": "DPC-003617",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.395595717913,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

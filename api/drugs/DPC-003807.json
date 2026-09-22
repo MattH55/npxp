@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003807",
+  "name": "LEVOSIMENDAN",
+  "drug_class": "CALCIUM SENSITIZER",
+  "target": "KCNJ11;KCNJ8;PDE3A;TNNC1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "2ad928a9-517e-4470-a8c0-aca31a5d80c6",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.291172033606,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e5827782-5202-41ba-b267-75904bed5229",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.707581044559,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8de6192c-17e0-4621-8aca-735d3efe3cf9",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0822512292384,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2f1e4890-317d-4ee7-bcde-e0704324d1db",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.360608424882,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7e6278fc-201f-4a4a-8ffb-c8e40021a4ed",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.288527887364,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ddc9ca4c-89aa-4d44-b6fd-1147c24ea8a5",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.168442793388,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "42cb3e12-64a7-4bcc-bc8c-142bc7343b1f",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.274217260553,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "72b45701-1d3a-4ade-98d0-aed3d21d3e03",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.329038436626,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b3ea6dca-b0e2-4397-aa7c-044e573982d3",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.123564121159,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b84d6191-3576-494c-a9bc-7ca1b8dc6e01",
+      "drug_id": "DPC-003807",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.595581610429,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006343",
+  "name": "TECALCET",
+  "drug_class": "CALCIUM-SENSING RECEPTOR AGONIST",
+  "target": "CASR",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "66f67dcc-f232-4109-8b8a-a50cb4468198",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.0547807539251,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "69258d60-2dbd-4a12-905f-f4f6a326672e",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.272802661399,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "25148a5d-dcb0-41e9-adf0-d63e9b6fa7ac",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0063096785435,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d23ba9b7-ea61-452b-a704-7ca921f17340",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.406800260295,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a3a3f208-f38f-4d26-97b9-0a56f041f3bb",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.177218247274,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d8548365-ffc8-43f3-b931-881809565e28",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.229260263133,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e9588ba1-4c16-48ed-8625-f62f225cc1c0",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.266335644659,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0092a5c5-357a-4577-823d-7e1595dd63e0",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.283035827009,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "08921309-31b4-4427-bd36-3f54762ae4b0",
+      "drug_id": "DPC-006343",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.177917538627,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

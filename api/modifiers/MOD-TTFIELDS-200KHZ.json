@@ -16,7 +16,7 @@
   "estimated_relative_cost_note": "FDA-approved Optune device: portable field generator plus adhesive transducer arrays replaced every few days -- high recurring cost, though it is a wearable/outpatient device rather than an inpatient procedure.",
   "signature_scores": [
     {
-      "id": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "id": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "signature_panel": "dna_damage",
@@ -29,14 +29,14 @@
   ],
   "interactions": [
     {
-      "id": "7c0cd730-d823-482d-a329-155e0356670b",
+      "id": "e207ab03-5b38-4849-bc0e-c401b7e75c35",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "temozolomide",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -71,14 +71,14 @@
       }
     },
     {
-      "id": "b5ed2260-51f4-405d-9cfd-de308976a9ea",
+      "id": "a4e86161-8165-4dc5-b4bb-5531a78d736e",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "lomustine",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -113,15 +113,15 @@
       }
     },
     {
-      "id": "0de4cc5e-da93-42d4-abe8-9daf65ddbb88",
+      "id": "5d44d764-a09f-485b-93cb-068308bc29f1",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "cisplatin",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": "120732f6-2d78-4bce-baf8-3c31a0eabadf",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
+      "resistance_mechanism_link": "6f63a9c7-45cb-48c1-a7f3-ed95fbe2e6a8",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:9861196"
@@ -142,7 +142,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "120732f6-2d78-4bce-baf8-3c31a0eabadf",
+        "id": "6f63a9c7-45cb-48c1-a7f3-ed95fbe2e6a8",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -162,15 +162,15 @@
       }
     },
     {
-      "id": "5fecae7b-faae-49a0-bdf6-e8caca68a51c",
+      "id": "40340eb4-3bfa-4e52-bdb1-a44ed64faba5",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "oxaliplatin",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": "92de0d78-7d6b-4485-b5b8-7cbcd619840f",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
+      "resistance_mechanism_link": "c81b36f4-a9ca-40fd-a907-72088f8f555c",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:9861196"
@@ -191,7 +191,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "92de0d78-7d6b-4485-b5b8-7cbcd619840f",
+        "id": "c81b36f4-a9ca-40fd-a907-72088f8f555c",
         "drug_id": "oxaliplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -211,15 +211,15 @@
       }
     },
     {
-      "id": "a672e6ea-de07-4ca8-9634-886e05a17bb0",
+      "id": "ea785674-d7b7-43c3-9aaa-b0c7039952cb",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "carboplatin",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": "e57e1d8f-df4d-4981-a1ca-24705af8f8af",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
+      "resistance_mechanism_link": "10aff369-43e0-48dc-bd14-a570e21ccbdf",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:9861196"
@@ -240,7 +240,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "e57e1d8f-df4d-4981-a1ca-24705af8f8af",
+        "id": "10aff369-43e0-48dc-bd14-a570e21ccbdf",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -260,15 +260,15 @@
       }
     },
     {
-      "id": "ec589df3-8cb0-40e5-b633-4a1f6908a6ac",
+      "id": "2827d60a-28a4-4ae0-84da-d2c447aa7ed8",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "triapine",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": "e1f88ae6-ec76-45be-acc8-e657822f7de5",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
+      "resistance_mechanism_link": "3e574eeb-f1da-45d0-9e02-f55f2535b40f",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:37588202"
@@ -289,7 +289,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "e1f88ae6-ec76-45be-acc8-e657822f7de5",
+        "id": "3e574eeb-f1da-45d0-9e02-f55f2535b40f",
         "drug_id": "triapine",
         "pathway_or_gene": "RRM2 (ribonucleotide reductase M2 subunit) overexpression",
         "mechanism_description": "Triapine directly inhibits RRM2 (iron chelation of the tyrosyl radical); RRM2 overexpression -- the same target the drug itself acts on -- is a documented general resistance mechanism across multiple RNR-dependent chemotherapies (Zuo et al. 2024 review), consistent with a titration-out-the-inhibitor pattern.",
@@ -309,15 +309,15 @@
       }
     },
     {
-      "id": "4d7fecfe-6982-4992-9d64-a525c709e563",
+      "id": "97971d31-81b3-4cc9-9687-3635abea0f19",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002651",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
+      "resistance_mechanism_link": "2ea62c49-ce47-414a-a7a4-37601c13463d",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:22285073"
@@ -338,7 +338,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+        "id": "2ea62c49-ce47-414a-a7a4-37601c13463d",
         "drug_id": "DPC-002651",
         "pathway_or_gene": "TOP2A (topoisomerase II alpha) downregulation",
         "mechanism_description": "Reduced TOP2A expression lowers the number of etoposide-DNA-topoisomerase cleavable complexes that can form, one of several mechanisms identified in etoposide-resistant MCF-7 cells (Kaplan & Gunduz 2012).",
@@ -358,14 +358,14 @@
       }
     },
     {
-      "id": "17be9666-3284-4426-b54d-22cada94c504",
+      "id": "230b85df-0ab4-4974-8645-ae82ca19e546",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000001",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -400,14 +400,14 @@
       }
     },
     {
-      "id": "d098716e-3db4-414a-b4c0-9bb889e4d988",
+      "id": "36215d23-23b0-4e31-8796-85c85e193e03",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000025",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -442,14 +442,14 @@
       }
     },
     {
-      "id": "ea936cf3-45d7-4769-8e20-9560f14dc564",
+      "id": "dc3517dd-2d72-4838-9e0c-fbe4fb709202",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000092",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -484,14 +484,14 @@
       }
     },
     {
-      "id": "e7d4c353-45e3-41d7-ae13-c05aa81ecd09",
+      "id": "9b2b1446-5c23-4b1f-a80a-2098e9769afc",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000121",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -526,14 +526,14 @@
       }
     },
     {
-      "id": "6ccd6ac4-0007-456b-af68-8e32627fb7fc",
+      "id": "81a01f0e-0880-45c6-bff8-c3e28dd16d15",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000179",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -568,14 +568,14 @@
       }
     },
     {
-      "id": "df9fcce1-57cb-4d86-aec0-d7810cd3a6a5",
+      "id": "74f38b72-622f-45e6-a2b9-f994b9da782c",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000236",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -610,14 +610,14 @@
       }
     },
     {
-      "id": "3ddf5ce7-5d95-4185-b2c3-33c4145ef13e",
+      "id": "051907d7-b06f-45ff-aea8-b71084f466db",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000254",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -652,14 +652,14 @@
       }
     },
     {
-      "id": "84033c4d-a93e-4e2a-9841-fc39880f07cc",
+      "id": "801b8883-81dc-41ab-bd5e-acfc4e600f95",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000323",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -694,14 +694,14 @@
       }
     },
     {
-      "id": "388d8641-7b64-4ea7-af35-5a463544137e",
+      "id": "42325754-0627-4859-962c-ddb6d54f17dd",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000334",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -736,14 +736,14 @@
       }
     },
     {
-      "id": "9cfc8960-88ef-4832-bf52-d697def95322",
+      "id": "3da873bc-f305-4601-bf34-17a9386e0d2c",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000335",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -778,14 +778,14 @@
       }
     },
     {
-      "id": "5a67e853-e54e-4b33-b330-3b2bc701d027",
+      "id": "20135d90-b4d3-47f2-a0d6-1ec837c5b65f",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000364",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -820,14 +820,14 @@
       }
     },
     {
-      "id": "cbe33676-b3a1-4761-aa57-18c4ccc317e8",
+      "id": "ad2c33be-675d-4578-b965-d6616e5d51dd",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000367",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -862,14 +862,14 @@
       }
     },
     {
-      "id": "ec6eeb23-e551-4268-881c-14cd9459cd27",
+      "id": "ef8ef283-5c65-4547-a92f-1a1f60519716",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000554",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -904,14 +904,14 @@
       }
     },
     {
-      "id": "9f56a035-30fd-4ae6-8448-26f18e754666",
+      "id": "206e3502-61b4-49eb-adb4-f90be8568539",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000568",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -946,14 +946,14 @@
       }
     },
     {
-      "id": "45186f10-9de8-4046-9b59-1f7a7c18835b",
+      "id": "bad1887c-b9df-433c-9052-a9c1567de019",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000569",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -988,14 +988,14 @@
       }
     },
     {
-      "id": "4d768a3d-453e-4c04-be15-6897381c81c6",
+      "id": "31536408-4b91-4359-8051-194f93c88788",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000740",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1030,14 +1030,14 @@
       }
     },
     {
-      "id": "999ff6e0-2984-4f54-b3fc-496ad427ac2c",
+      "id": "9986ee51-f745-45a6-9b24-95c643825963",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000802",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1072,14 +1072,14 @@
       }
     },
     {
-      "id": "81de3c1e-3a11-4854-8ff8-49ea26f35f11",
+      "id": "040148de-682b-4fd0-8189-9566fbf5683a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000821",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1114,14 +1114,14 @@
       }
     },
     {
-      "id": "85c1fb9c-6709-4ff8-a108-f96a3d71d597",
+      "id": "5aa1cac6-1e5f-4342-a4ec-20fc3422a5a8",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000823",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1156,14 +1156,14 @@
       }
     },
     {
-      "id": "addb6212-6c8e-43cb-b6fa-0eb4fdf3c6c6",
+      "id": "41daa853-7c18-46aa-814b-d6be4688ace9",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000827",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1198,14 +1198,14 @@
       }
     },
     {
-      "id": "af05b8e6-c806-49d5-bce4-77f42457c9b6",
+      "id": "c77d197e-526c-4577-a256-a38e87b47c7c",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000833",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1240,14 +1240,14 @@
       }
     },
     {
-      "id": "edb1a339-8fca-4ce8-bc06-3db97f428ab6",
+      "id": "56732baa-5423-4d68-8715-08628f587af9",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000889",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1282,14 +1282,14 @@
       }
     },
     {
-      "id": "429f804d-3ea4-470d-b19e-510e55426ca2",
+      "id": "620d2063-c817-484c-a0a2-6f2ed2ff1330",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000902",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1324,14 +1324,14 @@
       }
     },
     {
-      "id": "047894dc-72f5-488d-8357-019d981ad6d7",
+      "id": "1583041e-1ab2-474d-aebf-e7b052a731f3",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-000967",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1366,14 +1366,14 @@
       }
     },
     {
-      "id": "62b9e360-e77c-4ccc-99b9-ceb94d1f6513",
+      "id": "434f9171-a2de-42e6-b460-93aabb7d677b",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001018",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1408,14 +1408,14 @@
       }
     },
     {
-      "id": "54b30588-893d-439b-8767-482275c3277a",
+      "id": "a9fce7d5-979a-4f0c-ada9-911a8d7a0caf",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001027",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1450,14 +1450,14 @@
       }
     },
     {
-      "id": "811dee82-cf8b-4c78-b1e7-b872b847cd48",
+      "id": "46c42c36-8ba0-4f8b-a331-bfe0c70736c0",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001054",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1492,14 +1492,14 @@
       }
     },
     {
-      "id": "596c761e-e91c-4002-aa9e-abbf17e12dbf",
+      "id": "7ad50683-253e-42ef-b1f6-1a7a7e5dd82b",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001111",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1534,14 +1534,14 @@
       }
     },
     {
-      "id": "5af6e739-8722-4261-b9b7-15e635ce9627",
+      "id": "4bcc3a21-fb1a-4229-a77d-76f864dbd983",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001314",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1576,14 +1576,14 @@
       }
     },
     {
-      "id": "54eb2960-f2c4-4ed6-9876-2733c601ce88",
+      "id": "18b10954-902a-4f53-9e71-69cf6e2c2018",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001411",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1618,56 +1618,14 @@
       }
     },
     {
-      "id": "b668231c-70e3-42b9-afe8-f4fa80601470",
-      "modifier_id": "MOD-TTFIELDS-200KHZ",
-      "drug_id": "DPC-001479",
-      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
-      "combined_effect_metric": null,
-      "interaction_type": "unknown",
-      "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": null,
-      "source_study": [
-        "doi:10.1007/s11060-023-04308-4",
-        "doi:10.25452/figshare.plus.27993248.v1"
-      ],
-      "curator_notes": "[Tier 4 -- mechanical heuristic, NOT a verified resistance-mechanism claim] CARBOPLATIN's DepMap-supplied target/mechanism annotation ('DNA ALKYLATING AGENT, DNA INHIBITOR') contains the keyword 'ALKYLAT', which this build's keyword list maps to the dna_damage signature panel. Tumor Treating Fields (TTFields, 200 kHz) induces a dna_damage signature (death_promoting) in U87MG_CENTRAL_NERVOUS_SYSTEM. This is a purely textual co-occurrence between the drug's own mechanism of action and the modifier's induced pathway category -- it is NOT a claim that either affects the other's resistance, has not been reviewed by a curator, and predicts no direction (recorded as interaction_type = unknown). Treat as a keyword-matched lead for someone to investigate, not as evidence.",
-      "model_run_id": null,
-      "trial_builder_ref": null,
-      "modifier_agent": "Tumor Treating Fields (TTFields, 200 kHz)",
-      "modifier_type": "mechanical_radiative",
-      "modifier_infrastructure_requirement": "high",
-      "cell_line_name": "U-87 MG",
-      "tissue_origin": "Central nervous system",
-      "drug_name": "CARBOPLATIN",
-      "drug_class": "DNA ALKYLATING AGENT, DNA INHIBITOR",
-      "drug_cost_accessibility_tier": null,
-      "drug_pubchem_cid": null,
-      "drug_clinical_status": null,
-      "drug_lincs_signature_ref": null,
-      "evidence_tier_label": "Tier 4 \u2014 Heuristic (unverified target match)",
-      "resistance_mechanism": null,
-      "is_bridging_candidate": false,
-      "low_resource_relevance": false,
-      "priority_score": 0.3167,
-      "priority_components": {
-        "convergent_evidence": 0.3333,
-        "coverage_gap": 0.0,
-        "trial_saturation_inverse": 1.0,
-        "tumor_representativeness": 0.5,
-        "low_resource_boost": 0.0,
-        "disease_burden": null
-      }
-    },
-    {
-      "id": "50ad80f3-872b-4a6e-be1a-4736e4c3e0c0",
+      "id": "68c183ab-8d43-4246-ad9f-0235163b1676",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001496",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1702,14 +1660,14 @@
       }
     },
     {
-      "id": "dd242e0c-e2bc-4326-a999-1d62408f2c17",
+      "id": "45f1ee06-feba-4218-b0e3-cd3bccdf9e8c",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001610",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1744,14 +1702,14 @@
       }
     },
     {
-      "id": "5bc458f9-3fe9-4789-9c50-caeb4636e630",
+      "id": "36eeb0a3-2c8f-429a-895a-8069ebcc185d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001615",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1786,14 +1744,14 @@
       }
     },
     {
-      "id": "3d470584-9996-48cc-98b1-5e5788ff8a4d",
+      "id": "cf900ea8-fe61-4ae4-974a-8607f34bd808",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001636",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1828,14 +1786,14 @@
       }
     },
     {
-      "id": "ea252a59-9211-4410-8acb-767cabc88a32",
+      "id": "73ba0924-74e2-4a45-b31a-8fa28d3c0b3a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001743",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1870,14 +1828,14 @@
       }
     },
     {
-      "id": "bdd50a3a-1d40-41f5-8938-98e24d346ab0",
+      "id": "5eba53d1-408c-4a5f-8b1c-871e4c7bb46e",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001776",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1912,14 +1870,14 @@
       }
     },
     {
-      "id": "d3cfecc8-0c05-4eb4-ac53-ba501021737f",
+      "id": "e3f0ad8f-7da7-4c57-9844-3bda76fabd3f",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001786",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -1954,56 +1912,14 @@
       }
     },
     {
-      "id": "e49233ea-71c5-49b1-97ca-8b61b74692d0",
-      "modifier_id": "MOD-TTFIELDS-200KHZ",
-      "drug_id": "DPC-001793",
-      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
-      "combined_effect_metric": null,
-      "interaction_type": "unknown",
-      "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": null,
-      "source_study": [
-        "doi:10.1007/s11060-023-04308-4",
-        "doi:10.25452/figshare.plus.27993248.v1"
-      ],
-      "curator_notes": "[Tier 4 -- mechanical heuristic, NOT a verified resistance-mechanism claim] CIS-DDP's DepMap-supplied target/mechanism annotation ('XIAP DNA ALKYLATING AGENT, DNA SYNTHESIS INHIBITOR') contains the keyword 'ALKYLAT', which this build's keyword list maps to the dna_damage signature panel. Tumor Treating Fields (TTFields, 200 kHz) induces a dna_damage signature (death_promoting) in U87MG_CENTRAL_NERVOUS_SYSTEM. This is a purely textual co-occurrence between the drug's own mechanism of action and the modifier's induced pathway category -- it is NOT a claim that either affects the other's resistance, has not been reviewed by a curator, and predicts no direction (recorded as interaction_type = unknown). Treat as a keyword-matched lead for someone to investigate, not as evidence.",
-      "model_run_id": null,
-      "trial_builder_ref": null,
-      "modifier_agent": "Tumor Treating Fields (TTFields, 200 kHz)",
-      "modifier_type": "mechanical_radiative",
-      "modifier_infrastructure_requirement": "high",
-      "cell_line_name": "U-87 MG",
-      "tissue_origin": "Central nervous system",
-      "drug_name": "CIS-DDP",
-      "drug_class": "DNA ALKYLATING AGENT, DNA SYNTHESIS INHIBITOR",
-      "drug_cost_accessibility_tier": null,
-      "drug_pubchem_cid": null,
-      "drug_clinical_status": null,
-      "drug_lincs_signature_ref": null,
-      "evidence_tier_label": "Tier 4 \u2014 Heuristic (unverified target match)",
-      "resistance_mechanism": null,
-      "is_bridging_candidate": false,
-      "low_resource_relevance": false,
-      "priority_score": 0.3167,
-      "priority_components": {
-        "convergent_evidence": 0.3333,
-        "coverage_gap": 0.0,
-        "trial_saturation_inverse": 1.0,
-        "tumor_representativeness": 0.5,
-        "low_resource_boost": 0.0,
-        "disease_burden": null
-      }
-    },
-    {
-      "id": "147a81b0-35b2-4191-9a6d-ecc4749a6484",
+      "id": "5ad8c768-327b-4a82-a74c-b77b57d14695",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001819",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2038,56 +1954,14 @@
       }
     },
     {
-      "id": "80c5c38a-ac4f-47f7-be35-0410b094177d",
-      "modifier_id": "MOD-TTFIELDS-200KHZ",
-      "drug_id": "DPC-002004",
-      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
-      "combined_effect_metric": null,
-      "interaction_type": "unknown",
-      "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": null,
-      "source_study": [
-        "doi:10.1007/s11060-023-04308-4",
-        "doi:10.25452/figshare.plus.27993248.v1"
-      ],
-      "curator_notes": "[Tier 4 -- mechanical heuristic, NOT a verified resistance-mechanism claim] CYCLOPHOSPHAMIDE's DepMap-supplied target/mechanism annotation ('DNA alkylating agent') contains the keyword 'ALKYLAT', which this build's keyword list maps to the dna_damage signature panel. Tumor Treating Fields (TTFields, 200 kHz) induces a dna_damage signature (death_promoting) in U87MG_CENTRAL_NERVOUS_SYSTEM. This is a purely textual co-occurrence between the drug's own mechanism of action and the modifier's induced pathway category -- it is NOT a claim that either affects the other's resistance, has not been reviewed by a curator, and predicts no direction (recorded as interaction_type = unknown). Treat as a keyword-matched lead for someone to investigate, not as evidence.",
-      "model_run_id": null,
-      "trial_builder_ref": null,
-      "modifier_agent": "Tumor Treating Fields (TTFields, 200 kHz)",
-      "modifier_type": "mechanical_radiative",
-      "modifier_infrastructure_requirement": "high",
-      "cell_line_name": "U-87 MG",
-      "tissue_origin": "Central nervous system",
-      "drug_name": "CYCLOPHOSPHAMIDE",
-      "drug_class": "DNA alkylating agent",
-      "drug_cost_accessibility_tier": null,
-      "drug_pubchem_cid": "2907",
-      "drug_clinical_status": null,
-      "drug_lincs_signature_ref": null,
-      "evidence_tier_label": "Tier 4 \u2014 Heuristic (unverified target match)",
-      "resistance_mechanism": null,
-      "is_bridging_candidate": false,
-      "low_resource_relevance": false,
-      "priority_score": 0.3167,
-      "priority_components": {
-        "convergent_evidence": 0.3333,
-        "coverage_gap": 0.0,
-        "trial_saturation_inverse": 1.0,
-        "tumor_representativeness": 0.5,
-        "low_resource_boost": 0.0,
-        "disease_burden": null
-      }
-    },
-    {
-      "id": "b7c951ac-0ee6-4982-958d-26190ccfbb0b",
+      "id": "1d4207b9-f959-42c2-8da7-a43534748931",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002046",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2122,14 +1996,14 @@
       }
     },
     {
-      "id": "5edfbff5-c952-4332-9050-0a07c8050cc7",
+      "id": "ac237d9a-348d-4216-895f-aa123e2a8e6d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002089",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2164,14 +2038,14 @@
       }
     },
     {
-      "id": "15a26cf8-bdda-4a75-b3a9-3e6676233978",
+      "id": "44dcd3d1-9150-40cd-be29-9a72418848e6",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002182",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2206,14 +2080,14 @@
       }
     },
     {
-      "id": "700f119e-a333-487a-91df-1e60d094d353",
+      "id": "608d0374-5c29-40ff-9367-74814212c25d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002196",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2248,56 +2122,14 @@
       }
     },
     {
-      "id": "15bfa894-7f52-4ff1-acb1-5cf06c82f203",
-      "modifier_id": "MOD-TTFIELDS-200KHZ",
-      "drug_id": "DPC-002342",
-      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
-      "combined_effect_metric": null,
-      "interaction_type": "unknown",
-      "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": null,
-      "source_study": [
-        "doi:10.1007/s11060-023-04308-4",
-        "doi:10.25452/figshare.plus.27993248.v1"
-      ],
-      "curator_notes": "[Tier 4 -- mechanical heuristic, NOT a verified resistance-mechanism claim] DOXORUBICIN's DepMap-supplied target/mechanism annotation ('TOP2A;TOP2B inhibitor of TOP2A and TOP2B; DNA intercalator') contains the keyword 'TOP2', which this build's keyword list maps to the dna_damage signature panel. Tumor Treating Fields (TTFields, 200 kHz) induces a dna_damage signature (death_promoting) in U87MG_CENTRAL_NERVOUS_SYSTEM. This is a purely textual co-occurrence between the drug's own mechanism of action and the modifier's induced pathway category -- it is NOT a claim that either affects the other's resistance, has not been reviewed by a curator, and predicts no direction (recorded as interaction_type = unknown). Treat as a keyword-matched lead for someone to investigate, not as evidence.",
-      "model_run_id": null,
-      "trial_builder_ref": null,
-      "modifier_agent": "Tumor Treating Fields (TTFields, 200 kHz)",
-      "modifier_type": "mechanical_radiative",
-      "modifier_infrastructure_requirement": "high",
-      "cell_line_name": "U-87 MG",
-      "tissue_origin": "Central nervous system",
-      "drug_name": "DOXORUBICIN",
-      "drug_class": "inhibitor of TOP2A and TOP2B; DNA intercalator",
-      "drug_cost_accessibility_tier": null,
-      "drug_pubchem_cid": "31703",
-      "drug_clinical_status": null,
-      "drug_lincs_signature_ref": null,
-      "evidence_tier_label": "Tier 4 \u2014 Heuristic (unverified target match)",
-      "resistance_mechanism": null,
-      "is_bridging_candidate": false,
-      "low_resource_relevance": false,
-      "priority_score": 0.3167,
-      "priority_components": {
-        "convergent_evidence": 0.3333,
-        "coverage_gap": 0.0,
-        "trial_saturation_inverse": 1.0,
-        "tumor_representativeness": 0.5,
-        "low_resource_boost": 0.0,
-        "disease_burden": null
-      }
-    },
-    {
-      "id": "ffa4c0c5-4b69-4514-b7be-83e0b407467d",
+      "id": "d1cc5b42-9754-469f-89a4-f17f84c1ccec",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002353",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2332,14 +2164,14 @@
       }
     },
     {
-      "id": "747b8efa-474f-4f8f-8940-72ac68e28e1a",
+      "id": "09ed3ec5-ebf0-4bb5-912c-5a669e5ee491",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002393",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2374,14 +2206,14 @@
       }
     },
     {
-      "id": "35b07742-8a20-4346-b38a-5445d7a16723",
+      "id": "31bb3f35-1c5a-48f1-9961-ec9ee929bb1f",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002396",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2416,14 +2248,14 @@
       }
     },
     {
-      "id": "616a52fc-8524-4cc8-952f-7eeb511b602a",
+      "id": "9625a1d5-0fa6-42e5-b6ad-bbd16ccc4e1d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002419",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2458,14 +2290,14 @@
       }
     },
     {
-      "id": "3c0c39ca-036d-4a3d-bf9a-f80a884c1173",
+      "id": "6c437933-f3c3-4b9a-b92d-e7b4a9a65af6",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002460",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2500,14 +2332,14 @@
       }
     },
     {
-      "id": "6e03327e-c585-491d-a7ea-af1b11044641",
+      "id": "c0daf6dd-f96c-4ea6-945b-fb62c93c1ca0",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002463",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2542,14 +2374,14 @@
       }
     },
     {
-      "id": "29238f4e-6de4-465c-9342-561b54f27a5a",
+      "id": "8c2adbc4-e008-45d3-9846-dce0627fae8c",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002498",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2584,14 +2416,14 @@
       }
     },
     {
-      "id": "e1e7dbf7-d3bc-4a5d-b87b-fd8fc0a8390f",
+      "id": "ffc66c35-4781-40fc-a7ef-1ba81d827d93",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002505",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2626,14 +2458,14 @@
       }
     },
     {
-      "id": "05b46e25-5716-4696-951b-f18a79bc8cd3",
+      "id": "263aad8c-a471-462d-819f-a9c8b494bc7a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002597",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2668,14 +2500,14 @@
       }
     },
     {
-      "id": "577aec4a-2dda-4ca2-a581-87e6f69f6fc0",
+      "id": "4283cde7-6f5e-4f50-9223-0d3354863824",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002652",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2710,14 +2542,14 @@
       }
     },
     {
-      "id": "e422fe79-b792-4ab2-8b47-6e7f0cb860f4",
+      "id": "ce8fcd65-3886-44c3-a499-a85362bcc867",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002657",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2752,14 +2584,14 @@
       }
     },
     {
-      "id": "693dc1ce-bcf0-466a-89be-656e0cc07937",
+      "id": "3e00a0ea-8504-4526-b4c8-4b3f953c06bb",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002682",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2794,14 +2626,14 @@
       }
     },
     {
-      "id": "e55350b1-6e7e-44e4-b975-8fb04f43ddc8",
+      "id": "fb88b98f-775a-46c6-88e0-3cbf70e5029a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002700",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2836,14 +2668,14 @@
       }
     },
     {
-      "id": "f61a0867-bf65-4e65-b310-1b7544b4dab4",
+      "id": "c240edd0-8e75-480e-953d-18adc96025a8",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002791",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2878,14 +2710,14 @@
       }
     },
     {
-      "id": "43fc3a35-549b-40ed-9f42-7e675ba8148b",
+      "id": "6d176eab-ca14-4f94-b2f4-85f6fe04a0f8",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002816",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2920,14 +2752,14 @@
       }
     },
     {
-      "id": "7e12b940-07b3-4d85-bf6d-5cb3b690aff3",
+      "id": "62850389-f6e9-40b5-ae1a-5282500604f7",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002866",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -2962,14 +2794,14 @@
       }
     },
     {
-      "id": "fb1e071d-846f-4af1-87ba-3096bd5a9dc2",
+      "id": "12c9c062-720f-4b4b-a408-de2b71830b0d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002944",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3004,14 +2836,14 @@
       }
     },
     {
-      "id": "553ffc5d-85a3-42d4-a0d6-f84120951a43",
+      "id": "62ed08bb-80e3-4454-8154-dfe18fcffb0a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002950",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3046,14 +2878,14 @@
       }
     },
     {
-      "id": "5d6a2125-a7b4-4d84-8467-e3cb4ae9fb47",
+      "id": "ddd9837e-fcda-42da-8417-0bec3e065c49",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002987",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3088,14 +2920,14 @@
       }
     },
     {
-      "id": "413a9e20-37f4-42d6-99c6-8373fa71cea4",
+      "id": "bd695e94-8c4a-4a83-a7e8-f4db091a0246",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002990",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3130,14 +2962,14 @@
       }
     },
     {
-      "id": "a91de9c1-bebc-495a-9809-f65e51522370",
+      "id": "21a5a3b8-7042-4efc-b044-855dea54a72a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002993",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3172,14 +3004,14 @@
       }
     },
     {
-      "id": "8da8df04-b1b1-4b3f-a460-fecd7f9e8af1",
+      "id": "bcbf22fa-18ec-4119-b911-118158714b3e",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003298",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3214,14 +3046,14 @@
       }
     },
     {
-      "id": "9bd96bd6-d315-4929-b6b2-0f7b42d84827",
+      "id": "14348408-ef4e-4f51-b774-ec845093bf69",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003346",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3256,14 +3088,14 @@
       }
     },
     {
-      "id": "6cb2d6b2-b68b-4770-844a-4a55eafce3fb",
+      "id": "1442c7b0-3b64-4e36-bc7a-cc0123cda41b",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003355",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3298,14 +3130,14 @@
       }
     },
     {
-      "id": "26d5b7bc-af69-4a3b-b436-75ca3c32895d",
+      "id": "c7a7a19e-cee5-4707-8ec5-98615cab4603",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003361",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3340,14 +3172,14 @@
       }
     },
     {
-      "id": "2900438a-0bcc-4fef-841d-1e3ac3f11d90",
+      "id": "c3562c10-e5f1-4038-8cd0-88ffeaaf4b3c",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003428",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3382,14 +3214,14 @@
       }
     },
     {
-      "id": "85ac3ea7-eba6-4410-83e3-0e01c870e93e",
+      "id": "faf648a8-3945-4c22-a7c4-555365a8311c",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003430",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3424,14 +3256,14 @@
       }
     },
     {
-      "id": "bf5f9d48-8bcd-408d-ba89-a31487c391b9",
+      "id": "8aa140cf-032a-4cf7-821b-9b14af0c5b61",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003469",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3466,14 +3298,14 @@
       }
     },
     {
-      "id": "a8f340e8-bd92-4414-a36d-95b5487b9888",
+      "id": "8b043b9d-66e9-4baa-91c8-d48607e92354",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003606",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3508,14 +3340,14 @@
       }
     },
     {
-      "id": "f7992137-8bb9-49ce-aaca-f2375e3cddd7",
+      "id": "67bad1f1-1ebc-43a3-8b97-9dc924ad13a9",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003668",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3550,14 +3382,14 @@
       }
     },
     {
-      "id": "d449607a-1391-4cb1-9863-bfcb3a5c6b7a",
+      "id": "d3b7651a-9a27-4ded-bc06-4809c1eee0fa",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003670",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3592,14 +3424,14 @@
       }
     },
     {
-      "id": "15faf0a3-8974-4e76-a570-f0b13f70e567",
+      "id": "fb9ed141-5832-41db-bc03-b7bee61cd70a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003803",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3634,14 +3466,14 @@
       }
     },
     {
-      "id": "3b63783f-4f20-499c-bbad-4672ea1ded57",
+      "id": "e751af01-3a0e-4d0e-9be4-24999b02c4da",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003816",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3676,14 +3508,14 @@
       }
     },
     {
-      "id": "e4506709-67f2-4de3-8d25-e13ed4137e91",
+      "id": "1c69f76b-5297-4ffb-8259-a9b87de3bf50",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003866",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3718,14 +3550,14 @@
       }
     },
     {
-      "id": "cd030220-e768-413f-8162-b3b04ce56747",
+      "id": "f6ab9dc1-cebe-43d9-8326-660b0188fa15",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-003904",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3760,56 +3592,14 @@
       }
     },
     {
-      "id": "2bee5cef-1520-44d6-81ce-1074f168a771",
-      "modifier_id": "MOD-TTFIELDS-200KHZ",
-      "drug_id": "DPC-003981",
-      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
-      "combined_effect_metric": null,
-      "interaction_type": "unknown",
-      "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": null,
-      "source_study": [
-        "doi:10.1007/s11060-023-04308-4",
-        "doi:10.25452/figshare.plus.27993248.v1"
-      ],
-      "curator_notes": "[Tier 4 -- mechanical heuristic, NOT a verified resistance-mechanism claim] M-39831's DepMap-supplied target/mechanism annotation ('MGMT DNA ALKYLATING AGENT') contains the keyword 'ALKYLAT', which this build's keyword list maps to the dna_damage signature panel. Tumor Treating Fields (TTFields, 200 kHz) induces a dna_damage signature (death_promoting) in U87MG_CENTRAL_NERVOUS_SYSTEM. This is a purely textual co-occurrence between the drug's own mechanism of action and the modifier's induced pathway category -- it is NOT a claim that either affects the other's resistance, has not been reviewed by a curator, and predicts no direction (recorded as interaction_type = unknown). Treat as a keyword-matched lead for someone to investigate, not as evidence.",
-      "model_run_id": null,
-      "trial_builder_ref": null,
-      "modifier_agent": "Tumor Treating Fields (TTFields, 200 kHz)",
-      "modifier_type": "mechanical_radiative",
-      "modifier_infrastructure_requirement": "high",
-      "cell_line_name": "U-87 MG",
-      "tissue_origin": "Central nervous system",
-      "drug_name": "M-39831",
-      "drug_class": "DNA ALKYLATING AGENT",
-      "drug_cost_accessibility_tier": null,
-      "drug_pubchem_cid": null,
-      "drug_clinical_status": null,
-      "drug_lincs_signature_ref": null,
-      "evidence_tier_label": "Tier 4 \u2014 Heuristic (unverified target match)",
-      "resistance_mechanism": null,
-      "is_bridging_candidate": false,
-      "low_resource_relevance": false,
-      "priority_score": 0.3167,
-      "priority_components": {
-        "convergent_evidence": 0.3333,
-        "coverage_gap": 0.0,
-        "trial_saturation_inverse": 1.0,
-        "tumor_representativeness": 0.5,
-        "low_resource_boost": 0.0,
-        "disease_burden": null
-      }
-    },
-    {
-      "id": "e3a1cf3c-f3d2-4f6a-9161-8461c2e917af",
+      "id": "00086469-0d7b-4680-a0a9-f10bb53c5be6",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004035",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3844,14 +3634,14 @@
       }
     },
     {
-      "id": "91a4bba2-3012-4294-ba9f-a563f633d15a",
+      "id": "e2de79ee-f841-45cd-be45-3d88b1e55e74",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004075",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3886,14 +3676,14 @@
       }
     },
     {
-      "id": "29554fae-748c-42e0-81a8-3dc3357643d1",
+      "id": "282922cb-28a1-4643-9e8e-91c05c8578f4",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004078",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3928,14 +3718,14 @@
       }
     },
     {
-      "id": "dfbce997-e1a3-4144-a507-ffba4137b862",
+      "id": "89d5d279-5096-4cbd-acab-b62adcd737a0",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004095",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -3970,56 +3760,14 @@
       }
     },
     {
-      "id": "9950d9d9-1bc0-4c8f-98d7-27e6af79df9e",
-      "modifier_id": "MOD-TTFIELDS-200KHZ",
-      "drug_id": "DPC-004225",
-      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
-      "combined_effect_metric": null,
-      "interaction_type": "unknown",
-      "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": null,
-      "source_study": [
-        "doi:10.1007/s11060-023-04308-4",
-        "doi:10.25452/figshare.plus.27993248.v1"
-      ],
-      "curator_notes": "[Tier 4 -- mechanical heuristic, NOT a verified resistance-mechanism claim] MITOMYCIN's DepMap-supplied target/mechanism annotation ('natural product and DNA crosslinking agent') contains the keyword 'CROSSLINK', which this build's keyword list maps to the dna_damage signature panel. Tumor Treating Fields (TTFields, 200 kHz) induces a dna_damage signature (death_promoting) in U87MG_CENTRAL_NERVOUS_SYSTEM. This is a purely textual co-occurrence between the drug's own mechanism of action and the modifier's induced pathway category -- it is NOT a claim that either affects the other's resistance, has not been reviewed by a curator, and predicts no direction (recorded as interaction_type = unknown). Treat as a keyword-matched lead for someone to investigate, not as evidence.",
-      "model_run_id": null,
-      "trial_builder_ref": null,
-      "modifier_agent": "Tumor Treating Fields (TTFields, 200 kHz)",
-      "modifier_type": "mechanical_radiative",
-      "modifier_infrastructure_requirement": "high",
-      "cell_line_name": "U-87 MG",
-      "tissue_origin": "Central nervous system",
-      "drug_name": "MITOMYCIN",
-      "drug_class": "natural product and DNA crosslinking agent",
-      "drug_cost_accessibility_tier": null,
-      "drug_pubchem_cid": "5746",
-      "drug_clinical_status": null,
-      "drug_lincs_signature_ref": null,
-      "evidence_tier_label": "Tier 4 \u2014 Heuristic (unverified target match)",
-      "resistance_mechanism": null,
-      "is_bridging_candidate": false,
-      "low_resource_relevance": false,
-      "priority_score": 0.3167,
-      "priority_components": {
-        "convergent_evidence": 0.3333,
-        "coverage_gap": 0.0,
-        "trial_saturation_inverse": 1.0,
-        "tumor_representativeness": 0.5,
-        "low_resource_boost": 0.0,
-        "disease_burden": null
-      }
-    },
-    {
-      "id": "49a3d3be-42e4-498a-b746-01b29670a3ef",
+      "id": "b3510570-839b-4b66-bb18-392d8a938f0b",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004226",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4054,14 +3802,14 @@
       }
     },
     {
-      "id": "c3d62058-e45e-4e27-be9e-a389adb66655",
+      "id": "7c422e9e-f971-4fcf-8732-a607669aec97",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004229",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4096,14 +3844,14 @@
       }
     },
     {
-      "id": "0449a663-e4e8-4db1-9e20-6dc86c9c117b",
+      "id": "d22695ca-76a5-4ffb-9dc7-982d1dcad959",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004359",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4138,14 +3886,14 @@
       }
     },
     {
-      "id": "64e170f2-388a-4666-a18a-e5a046bf2fce",
+      "id": "97ebe314-17d0-4a43-a1f4-ad28286353d8",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004517",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4180,14 +3928,14 @@
       }
     },
     {
-      "id": "a4cb5063-0053-4c52-8ae5-2af8ca12cb08",
+      "id": "a2a08079-f747-4722-8c35-36f8a73db7e2",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004562",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4222,14 +3970,14 @@
       }
     },
     {
-      "id": "052b3569-7061-4ca1-84c6-eaeb4a96b79f",
+      "id": "bdbbfabf-b2a9-4d15-bdd5-8a1975c6ef5d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004586",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4264,14 +4012,14 @@
       }
     },
     {
-      "id": "92f83cee-0477-4bc5-95e2-1272d3de00eb",
+      "id": "8b8adffe-af48-4c7f-92b5-ac1c787cfe48",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004634",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4306,14 +4054,14 @@
       }
     },
     {
-      "id": "c60b8a7b-18c4-4638-9cd4-8428a161332d",
+      "id": "7476f6ab-7a99-4669-b36f-cdbd2c4a5a39",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004688",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4348,14 +4096,14 @@
       }
     },
     {
-      "id": "37b33ea1-fb5e-4b7d-96ae-11a8e4a0e49d",
+      "id": "5bffbb6f-bdfe-4e19-84d3-4d035e42281a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004736",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4390,14 +4138,14 @@
       }
     },
     {
-      "id": "4eb8dacc-518f-47ac-8bfc-71d306d3e42d",
+      "id": "22515d00-7b8a-40bc-9276-2a5814035332",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004744",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4432,14 +4180,14 @@
       }
     },
     {
-      "id": "e6981b72-b834-4db3-b094-c8caf2feeaad",
+      "id": "aeda8f8a-5015-4f7e-bdb3-f24a085ac0c5",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004889",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4474,14 +4222,14 @@
       }
     },
     {
-      "id": "0f85c59b-a1bc-4941-8824-1bcd76053803",
+      "id": "33349517-c38c-4713-a758-a5388402a605",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004903",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4516,14 +4264,14 @@
       }
     },
     {
-      "id": "f3b7c1c7-88a2-477f-9747-91e8bc9d8636",
+      "id": "7bff00dd-3509-457e-a35d-526074e17075",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004937",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4558,14 +4306,14 @@
       }
     },
     {
-      "id": "9d6d785b-092c-4922-a501-22bcde132987",
+      "id": "9ede33b8-334e-4be7-b151-fbb7df054478",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004973",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4600,14 +4348,14 @@
       }
     },
     {
-      "id": "5a91d5be-54e5-47f2-8d23-5b32fc7e1749",
+      "id": "a699448a-ddd0-4fad-9bf5-7d171716bbf4",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004982",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4642,14 +4390,14 @@
       }
     },
     {
-      "id": "14172562-2e91-476e-af80-1613ad911248",
+      "id": "e09ce37e-7c34-4be4-a2cd-d0b6bd15cba2",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-004995",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4684,14 +4432,14 @@
       }
     },
     {
-      "id": "ea1a3244-875b-4fb7-bc54-50ea6393053c",
+      "id": "1472c4eb-6678-46b8-b041-9eca8e82d150",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005195",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4726,14 +4474,14 @@
       }
     },
     {
-      "id": "d3f06adf-ab72-42e3-9d2d-8f946dda27d8",
+      "id": "98d2349f-d991-45ca-b03f-8f32d108fc2d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005207",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4768,14 +4516,14 @@
       }
     },
     {
-      "id": "601a7fc4-aefb-450a-ada5-5784e9cd84aa",
+      "id": "5c13b281-7319-444e-bbba-7e2639f5943d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005232",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4810,14 +4558,14 @@
       }
     },
     {
-      "id": "a9918326-e87e-4af4-b480-39700df4b457",
+      "id": "db5bddb6-9fb7-4956-8226-e45b51855caf",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005261",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4852,14 +4600,14 @@
       }
     },
     {
-      "id": "ad5cc015-4ed5-4064-a33c-a66ecb49f41a",
+      "id": "0ee3df63-aff2-48ea-9385-f0197f9b35fc",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005596",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4894,14 +4642,14 @@
       }
     },
     {
-      "id": "24b624e5-dd21-4676-933b-1baa3dfbe781",
+      "id": "148729eb-2b70-43aa-b377-93b8ab124399",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005656",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4936,14 +4684,14 @@
       }
     },
     {
-      "id": "701b6a6d-8d98-4d68-9904-8a73d901b67b",
+      "id": "8ec42941-c4e6-4cd4-9ae4-b576f0f577b5",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005691",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -4978,14 +4726,14 @@
       }
     },
     {
-      "id": "6c8a390d-8d8c-4cd2-95cb-b33725af804e",
+      "id": "9bb81bf0-ff7f-437f-bdbe-10617234de3b",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005710",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5020,14 +4768,14 @@
       }
     },
     {
-      "id": "bbf8f07b-ec80-41e2-90d0-22a311ef03c3",
+      "id": "c0a65524-ed5a-4d15-9fcd-18d27607bda6",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005728",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5062,14 +4810,14 @@
       }
     },
     {
-      "id": "c734211d-d69f-404b-9c71-465c68409740",
+      "id": "2e63b645-1a89-4ebd-97df-570cf61e0eaa",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005780",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5104,14 +4852,14 @@
       }
     },
     {
-      "id": "3c427248-e48a-4d30-b505-9dae9eae0808",
+      "id": "998ff2d9-0d2a-4d37-99a8-3d07971ab685",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-005853",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5146,14 +4894,14 @@
       }
     },
     {
-      "id": "835f54f0-52b4-4744-824a-8164efb92259",
+      "id": "eb6b7ed5-3ed0-4f13-8cb9-c95d98327683",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006002",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5188,14 +4936,14 @@
       }
     },
     {
-      "id": "29f11d91-5aae-4c6f-9b28-5873b53929b8",
+      "id": "c40cc0b5-5e8c-4ba3-8e2b-bfc8632a087d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006015",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5230,14 +4978,14 @@
       }
     },
     {
-      "id": "dc5b2ac9-3102-4d54-af69-94085fd6733c",
+      "id": "bbdcf6c7-b628-4549-b683-4787e95fa8cf",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006030",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5272,14 +5020,14 @@
       }
     },
     {
-      "id": "466d5681-9b76-4346-8bf9-7914d2fbcd36",
+      "id": "ff25dbf1-da09-402d-882d-158bf24326b9",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006058",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5314,14 +5062,14 @@
       }
     },
     {
-      "id": "5046de24-d0cc-43dc-a144-4b61811a4d17",
+      "id": "e9445d31-ebdf-4037-b7e4-548b80a1a8f6",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006118",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5356,14 +5104,14 @@
       }
     },
     {
-      "id": "734df922-d648-47bf-9da2-1aeb35669802",
+      "id": "e9608e7d-9c3c-4325-8901-5e0b6b0820d9",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006127",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5398,14 +5146,14 @@
       }
     },
     {
-      "id": "c8976ef4-cdcd-4dcf-930c-d625a1558199",
+      "id": "e9d4d323-732c-46b5-8a44-5665145d9691",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006246",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5440,14 +5188,14 @@
       }
     },
     {
-      "id": "094b8dc5-3ada-4351-ba93-436772a558be",
+      "id": "10a981f6-e7ea-4c04-8cfb-c30a76d10803",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006279",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5482,14 +5230,14 @@
       }
     },
     {
-      "id": "e091f161-52f9-462d-963f-01ce4f8c73e9",
+      "id": "67a6a7ce-9b43-4505-8328-834a70dc9a9a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006357",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5524,14 +5272,14 @@
       }
     },
     {
-      "id": "5863ff25-4dc7-4843-8587-a9b7260aa449",
+      "id": "d1ded436-ab92-4af8-8f93-cc8f1a070dac",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006378",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5566,14 +5314,14 @@
       }
     },
     {
-      "id": "a8e108ec-6342-4844-b38d-7a061d795d56",
+      "id": "cf01d7b6-70d5-4193-a851-8b1ccaf4c528",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006435",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5608,14 +5356,14 @@
       }
     },
     {
-      "id": "2914bd22-fe7e-447a-a00d-c800130de061",
+      "id": "3ceb29ea-6280-4d6c-86af-b0d5f8cf2339",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006564",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5650,14 +5398,14 @@
       }
     },
     {
-      "id": "5f0842fa-b5aa-42b9-9306-d0254950421e",
+      "id": "04493020-8558-46b7-8f5e-2d51d97464d9",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006567",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5692,14 +5440,14 @@
       }
     },
     {
-      "id": "bc6869d7-616f-4872-b92a-02618f6c7e1e",
+      "id": "7f842dc7-3f43-4315-9716-183c552762c8",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006641",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5734,14 +5482,14 @@
       }
     },
     {
-      "id": "da10429e-1efd-4d6f-86b2-a4b547c43953",
+      "id": "83a25607-5b35-44b8-9eed-faab9404f495",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006661",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5776,14 +5524,14 @@
       }
     },
     {
-      "id": "0df5bb22-2bd2-4cc8-8911-882a4672c5d3",
+      "id": "158b40de-a762-402e-96a5-04ae2994929f",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006673",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5818,14 +5566,14 @@
       }
     },
     {
-      "id": "8247c2ac-3e5a-4179-860d-28229df721ec",
+      "id": "73afb855-d18c-49c3-8843-47981251e414",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006764",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5860,14 +5608,14 @@
       }
     },
     {
-      "id": "3c4c6f68-1677-435c-9823-022bdfa972f0",
+      "id": "d5c8b105-3be8-434f-857f-45bdb017f0ed",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006787",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5902,14 +5650,14 @@
       }
     },
     {
-      "id": "86912b6e-9373-406a-b66f-b25fb8a0194f",
+      "id": "856c7a60-90b0-4065-9c21-4bd9162ba645",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006796",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5944,14 +5692,14 @@
       }
     },
     {
-      "id": "bc8f6e88-b9a6-4862-91f9-b6df6527211a",
+      "id": "b4900bc6-3231-48d5-b87f-1ea2e088371f",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006814",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -5986,14 +5734,14 @@
       }
     },
     {
-      "id": "fc95ee53-76ed-4c2d-93aa-12a5ff01f90a",
+      "id": "b21f753c-8ed2-4157-8ed3-1423779eeed2",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-006873",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -6062,7 +5810,6 @@
     "DPC-001111",
     "DPC-001314",
     "DPC-001411",
-    "DPC-001479",
     "DPC-001496",
     "DPC-001610",
     "DPC-001615",
@@ -6070,14 +5817,11 @@
     "DPC-001743",
     "DPC-001776",
     "DPC-001786",
-    "DPC-001793",
     "DPC-001819",
-    "DPC-002004",
     "DPC-002046",
     "DPC-002089",
     "DPC-002182",
     "DPC-002196",
-    "DPC-002342",
     "DPC-002353",
     "DPC-002393",
     "DPC-002396",
@@ -6114,12 +5858,10 @@
     "DPC-003816",
     "DPC-003866",
     "DPC-003904",
-    "DPC-003981",
     "DPC-004035",
     "DPC-004075",
     "DPC-004078",
     "DPC-004095",
-    "DPC-004225",
     "DPC-004226",
     "DPC-004229",
     "DPC-004359",

@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-002339",
+  "name": "DOXERCALCIFEROL",
+  "drug_class": "VITAMIN D RECEPTOR AGONIST",
+  "target": "VDR",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "ca8d4b26-c6b4-423f-a36b-651dd4b51492",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.99147354935,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "190a502b-07c8-456b-875a-bfd1dbb4af63",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.850004996683,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cb83e711-83aa-4384-8ca9-704ccdaa1e04",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.562756324384,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "af7293ce-4d7f-430e-b0f0-28ac3c6c9503",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -1.0836332937,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "087e6620-de2c-4de0-8a00-4480d6983eb8",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.213453971009,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7a4dbe01-5903-486b-b256-4b9b5982d8e6",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.65687786201,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f4bfaa55-8294-4ec7-ad80-72c1b5fb880e",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.128623768237,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d4ec9c1a-72a9-4b8c-8ebd-815cb2a41713",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.523383946315,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c6aa4c9f-127d-4fb0-8422-39ecc728ea91",
+      "drug_id": "DPC-002339",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.247473488623,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

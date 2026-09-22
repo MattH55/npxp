@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003955",
+  "name": "LY294002",
+  "drug_class": "MTOR INHIBITOR, PI3K INHIBITOR, DNA DEPENDENT PROTEIN KINASE INHIBITOR, PHOSPHODIESTERASE INHIBITOR, PLK INHIBITOR",
+  "target": "AKT1;CHEK1;GSK3B;LCK;MAPK1;MAPK11;MAPK12;MAPK14;MAPK8;MTOR;PIK3CA;PIK3CB;PIK3CD;PIK3CG;PIM1;PLK1;PRKCA;PRKDC;ROCK1;RPS6KB1;SGK1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "a57eab18-dc93-460e-8bb5-f87d797fa8b5",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.347932983303,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8353fd5c-20a2-43e0-8c61-b610fde5fce9",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.185059055171,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b6fc9b52-bc38-4ceb-82cd-db7d0d1762a2",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.101796370641,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "756387b1-0aa1-4722-ad31-341e30fd873b",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.583471042846,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d8472d64-6551-4cdb-ae7c-ebef0a9dca25",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.0574293230769,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "87def160-132f-4793-8c5f-dff99aec69fe",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.150075710661,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "21acb9b7-a89f-4576-994b-209a68269212",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.607073656307,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4c6fd767-8a2b-48a2-aece-de855fbf6e64",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.13850814308,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "00c15d8c-9250-4ffc-98e6-ffea403803cd",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.402977307156,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5ae6ee3d-9284-4acb-96ae-7292c9dfcb12",
+      "drug_id": "DPC-003955",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0156534031154,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

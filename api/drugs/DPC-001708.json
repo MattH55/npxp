@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-001708",
+  "name": "CHLORPYRIFOS",
+  "drug_class": "ACETYLCHOLINESTERASE INHIBITOR",
+  "target": "ACHE",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "eb922511-b4a9-4312-afee-118a2d10fbde",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.997301706284,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ff628ff4-6577-41fe-a845-77a4057ade0b",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.583829648993,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "59625e15-c293-43d1-96f6-04c1738cbeb4",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0605124654414,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fc332622-169e-42e5-be85-3d8005b1e423",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.131088468723,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ac3ce26a-4e73-4edf-9fca-2759eeefcabb",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.350823201067,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2dd3f7f5-2dc3-4885-a036-0c47d7e0c955",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.179844579393,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d0705855-bff9-474b-984d-f5893d3757c7",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.01230355823,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dd7f663f-fe31-4ba0-9a29-263c4c4d311a",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.88960569937,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "95fc0216-fd37-41d7-a60b-fd1e3e5f25a9",
+      "drug_id": "DPC-001708",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.174309664247,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

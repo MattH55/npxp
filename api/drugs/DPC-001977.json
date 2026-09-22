@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-001977",
+  "name": "CURCUMIN",
+  "drug_class": "CYCLOOXYGENASE INHIBITOR, HISTONE ACETYLTRANSFERASE INHIBITOR, LIPOXYGENASE INHIBITOR, NFKB PATHWAY INHIBITOR",
+  "target": "APP;CA1;CA12;CA14;CA2;CA4;CA6;CA9;CHRM3;CYP3A4;DNMT3B;EP300;MMP13;MMP9;NOS2;PTGS1;PTGS2;XDH",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "0b8c2da8-dcbc-423b-a023-928caad3485c",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0518419531434,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "717a28d2-5e2b-46a6-8da6-f305837034e0",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.464358681674,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ce25bdab-f67b-4a29-a94f-1531a25598a4",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.946690183401,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7097c4f4-7af6-435f-9226-90c75a373363",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -3.06734136527,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "305ea475-049e-4a91-a2d8-0fdbc2ff2c7b",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.00476044442074,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f90c3935-2f5c-4556-aeed-3e161da732ff",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.918006271031,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "af5ed1ce-a3d1-4dfa-b31a-b03f4b256e23",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.493686520468,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "575870c3-a6b2-4606-8f4a-738aa1b68eac",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.432858744463,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b5fe6413-6d48-429c-96dc-84fccafbd21b",
+      "drug_id": "DPC-001977",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0864732909973,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-004007",
+  "name": "MAPROTILINE",
+  "drug_class": "NOREPINEPHRINE REPUTAKE INHIBITOR, TRICYCLIC ANTIDEPRESSANT",
+  "target": "ADRA1A;ADRA1B;ADRA1D;ADRA2A;ADRA2B;ADRA2C;CHRM1;CHRM2;CHRM3;CHRM4;CHRM5;DRD2;HRH1;HTR2A;HTR2C;HTR7;SLC6A2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "0fdbe782-0ce1-4299-942d-7faa74c8dbbf",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.27087381715,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "19ad7626-c643-4a76-b600-63f603327441",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.796276922274,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "80a7f593-f608-4bc1-9e3a-26457c3dbefd",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.240168801693,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f7abe3dc-e05f-41bb-a6e4-b6479c7d7008",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.0567090168968,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b865b130-98df-4d74-b09b-f65350035f9e",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.0859749710525,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "aa5a4efe-5614-4d4a-aa22-7bae4aced187",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.139332319758,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "786eadf7-74e6-41ca-bb53-6c141368e528",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.37325752978,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a6c6f927-f3ff-46ff-926f-9d6e4486db58",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.733385409162,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fbd541df-f0bd-42ec-9696-b1bd69b00f88",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.432094601883,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "083e3870-8098-453c-b01e-0ef7995088f8",
+      "drug_id": "DPC-004007",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.464794565273,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

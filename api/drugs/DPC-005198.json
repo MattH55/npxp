@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-005198",
+  "name": "PIPERACILLIN",
+  "drug_class": "BACTERIAL CELL WALL SYNTHESIS INHIBITOR",
+  "target": "",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "3fcc8830-6387-4fc1-a183-f61ca55f80b4",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.242967734509,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e027423e-3109-4543-a349-710310956846",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.392483916792,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2bab202f-5c7a-4fe0-b02e-cf04f47b19d7",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.111645881963,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a54d56f2-d8fb-45fa-8500-2f4d522fd240",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.131416016883,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bb98877f-2ce2-40f3-8c07-d23c761bb65c",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.0633815231721,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fe254dc5-1f57-41ae-bc4c-b95ab37853b6",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.113254010314,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "488f2dd4-b81c-4d37-bf78-ca1f8ac06b91",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.314274172897,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "21d0d344-0b67-418e-8a11-ff21b7a308c1",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0864989421157,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4c24dc20-dd95-40fa-a21a-50696894049b",
+      "drug_id": "DPC-005198",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.279628981461,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

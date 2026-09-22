@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002503",
+  "name": "ENMD-2076",
+  "drug_class": "AURORA KINASE INHIBITOR, FLT3 INHIBITOR, VEGFR INHIBITOR",
+  "target": "AURKA;FLT3;KDR;PDGFRA;PTK2;SRC",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "8131e82c-7b69-4366-aad8-76f7ba5903b3",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.321233581433,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "52101aa3-61f1-4091-816c-1a1b0add4caf",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.427422252335,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "73213fa5-bdda-4967-a1fe-1048e39f09b1",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.163945852989,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4bdfc965-4c2f-4de6-8e14-776d10d48b26",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.639299843261,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "31455221-05ce-4bef-99ab-b79002d7e132",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.157666055855,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dd2fbd2f-d02f-4dad-8b49-5dc39b37b6ac",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.00692548758292,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0b4a6915-3dd6-40d3-9878-68c7fe89d219",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -1.14126532717,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4c28ca2d-cbed-4167-9bc3-3ce5e7e7fa02",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -1.00705574888,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5a7324dc-dfb6-484b-9931-fa080354ccd9",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.787145801379,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "03a8ef71-1e88-4e3d-a724-80d42718dfe2",
+      "drug_id": "DPC-002503",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -1.51181856981,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

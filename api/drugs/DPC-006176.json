@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-006176",
+  "name": "SULFINPYRAZONE",
+  "drug_class": "URICOSURIC BLOCKER",
+  "target": "ABCC1;ABCC2;FPR1;SLC22A12",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "45f77800-93a5-4a07-8920-3a61850e9512",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.206809141782,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c8965f75-be7c-4952-9ce2-374b4b3d7792",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.418914770638,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9db2a5d5-1bd1-49a4-a097-f29a1e80469c",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.116564030627,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fda84faf-a88a-45d3-8114-a70f5f335fbc",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.489233468661,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "80975ac1-446c-4aad-92ab-df306c87db0b",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.325123535009,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dd0448a7-8129-4646-9698-3fdc9be1ff45",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.120586492416,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6d423282-856b-4793-9844-dabc9e71b518",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.159526685882,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "843c6865-7983-4fe4-a07a-1d96cff0cb2c",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.0997632619575,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9294cf39-a7ba-401e-9bd5-8431b69146ca",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.441879276208,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f11b6aa8-be4b-4709-99b8-791577e28b97",
+      "drug_id": "DPC-006176",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.242386221263,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

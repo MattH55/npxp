@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003706",
+  "name": "L-ASPARTIC-ACID",
+  "drug_class": "METALLIC RADICAL FORMATION STIMULANT",
+  "target": "ACY1;ACY3;ADSS;ADSSL1;ASNS;ASPA;ASPH;ASRGL1;ASS1;CAD;DARS;DARS2;GOT1;GOT2;GRIN1;GRIN2A;GRIN2B;GRIN2C;GRIN2D;LYZ;PAICS;RNASE1;SLC1A1;SLC25A12;SLC25A13",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "4e56ddc1-3474-4188-96d5-524f5ff4a72b",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.407393474684,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7e6b17fd-7587-444c-a7cf-cb22c7c42370",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.0282320792017,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1eb1fc97-e3bf-479a-871b-28fecfbf6ce8",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.252328741725,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7ab480e6-fdcc-468e-91fb-019e5a230bf3",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.402491694339,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9626577d-658d-4326-9a89-5b6c69b41a20",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.0205984184612,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "12bdb451-6b33-40f7-839f-c3c818e209a4",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.366796579691,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9edddb69-64cb-4503-93ea-58eb2932d282",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.354197378346,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "701789f1-a467-468f-9a52-c2de1af3cf51",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.290694531523,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "21370f59-14aa-4793-b365-0a02dc76622f",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0640921084221,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2439bb49-d34e-4e7f-877c-26bdbd55c128",
+      "drug_id": "DPC-003706",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0626980205697,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

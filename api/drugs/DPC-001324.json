@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-001324",
+  "name": "BROMANTAN",
+  "drug_class": "DOPAMINE REUPTAKE INHIBITOR, SEROTONIN REUPTAKE INHIBITOR",
+  "target": "",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "80f2680f-735c-4ca4-852d-b5a693fc89fa",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.166764212332,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2f6fa70f-f5b7-4080-a6ad-145dbef3cf7d",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.122592303871,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "da840bf7-576c-4c2e-abc2-ee5c61924ebb",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.014134911934,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b1f45b52-6f04-4299-aa70-3cfddf9b3bf3",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.412715590426,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "64515eb5-4f44-4634-b496-e1956debb992",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0435623057074,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "095a6697-318a-438f-b20f-663ac3e6893f",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.169009406935,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "14b68f33-01e2-477c-8e60-45d48ba0e8c1",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.0387595922096,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "debf6320-2663-4e4e-8437-129584ffa9b1",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.445033670565,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "054fa8ca-cf91-4d41-974d-1c9fd8662420",
+      "drug_id": "DPC-001324",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.110213065971,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

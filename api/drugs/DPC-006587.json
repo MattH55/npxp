@@ -1,0 +1,114 @@
+{
+  "drug_id": "DPC-006587",
+  "name": "TRAMETINIB",
+  "drug_class": "inhibitor of MEK1 (MAP2K1) and MEK2 (MAP2K2)",
+  "target": "MAP2K1;MAP2K2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "GSK1120212",
+    "MEKINIST"
+  ],
+  "pubchem_cid": "11707110",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "60774328-045e-463a-8d74-4df385642d3b",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 1.07186214766,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d4846b98-1375-435c-a4f1-f6378b10b5d8",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.964208041376,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d740ab02-fd6a-4fd9-80b5-7c19125be8b6",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -1.0686960225,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "60a770b9-96a5-41ca-92e6-c56ccb5a8e3d",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.484418193608,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c1dc85fc-fbb6-4137-9289-01f4bd4fd9ff",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.401900072139,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7cc74f70-727a-4be8-ab95-53931baac04e",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.665773896847,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "29f5551f-c088-4473-a766-69606b597eef",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -2.49696883375,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8080284f-bcc6-4db1-badd-1d4ca96bd2a6",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -2.11357060814,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c3614724-ecd5-4d6b-818e-1bba94847888",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -1.51023746005,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8c2c9ee6-d0f3-41dc-9329-b25d7d4dbd6f",
+      "drug_id": "DPC-006587",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0316706163899,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

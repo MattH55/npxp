@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006396",
+  "name": "TERGURIDE",
+  "drug_class": "DOPAMINE RECEPTOR AGONIST, SEROTONIN RECEPTOR ANTAGONIST",
+  "target": "ADRA1A;ADRA2A;ADRA2B;ADRA2C;DRD2;DRD3;DRD4;HTR1A;HTR1B;HTR1D;HTR2A;HTR2B;HTR2C",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "db1dc524-cd5a-4ed4-8531-02af3d06f488",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.162243778862,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fb10e1da-715a-4eb6-8113-b65de3c27e7f",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.436552118372,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "134594df-8ff1-4985-9a60-0233db9283e3",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.227172449517,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b1e5da7f-b3b9-418a-8acb-861724084c8a",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.102644853833,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0b09e057-4a32-4b7e-aebf-d8c007ee4db1",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.254043202979,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "efc45625-533b-47dc-8f8b-b17b90ca96a7",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.226880540769,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "da5cb10f-7f58-4a1c-a47c-d8edafc0451a",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.214306931603,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d2e2d60f-ab72-4622-b59f-18e38fa42d17",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0816365579079,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ac5b634a-87e1-4a15-9fc2-5cf85c0d22ba",
+      "drug_id": "DPC-006396",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0782135756533,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

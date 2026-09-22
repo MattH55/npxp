@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006810",
+  "name": "VATALANIB",
+  "drug_class": "KIT INHIBITOR, PDGFR TYROSINE KINASE RECEPTOR INHIBITOR, VEGFR INHIBITOR",
+  "target": "EGFR;FLT1;FLT4;KDR;PDGFRB",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "9cf3af16-7242-47c9-9409-040b4a0c2223",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -1.03024357953,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9ac034cf-5c06-44f6-8d79-92899c678df9",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.15643591319,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "09d0af8a-ac24-42c9-9545-5d4bbbc2b9a7",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.660325540151,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1c8f25ed-bb2a-47e6-8251-824eda56aacd",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -1.16032855797,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dc6bc124-d031-4480-bae1-bda60ba3b69c",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.41493494582,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3c208691-c618-4fcc-a480-11dfa5e5b799",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.0676438873735,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7e81880d-6ada-4fae-86e6-aabc1a24f27c",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.846842123112,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2e536ee4-f4ad-4ef9-8773-f217e55e5c69",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -1.65008159946,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "93a54811-e05a-4b48-ae2a-88839d536638",
+      "drug_id": "DPC-006810",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.738317321416,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

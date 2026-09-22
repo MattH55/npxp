@@ -1,0 +1,115 @@
+{
+  "drug_id": "DPC-003512",
+  "name": "ISPINESIB",
+  "drug_class": "inhibitor of KIF11",
+  "target": "KIF11",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "CK0238273",
+    "ISPINESIB MESYLATE",
+    "SB-715992"
+  ],
+  "pubchem_cid": "6851740",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "cc0d82a7-e92e-4172-8fc1-2f2e045723ec",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.437449115792,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "12d18c7e-07d3-450a-a8fe-b22211560610",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -2.35269141185,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "67b3d4f6-b62a-4b9e-84fe-10fb654e3219",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.809895773176,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a5223213-dc4c-4d0f-9fac-dd3f2906489f",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -2.43397864996,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a40aa37d-8e91-4827-bbab-ff43d5a2d6c2",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -1.55444858482,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dadb0f69-382e-4aae-b867-4bd9053daa99",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -3.23839841491,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "42a50930-74ad-4e38-b301-006efc85b484",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.964089774598,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "410a7374-245a-4107-b23b-3b1cbabf5e57",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -3.48833163039,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "90dc1b10-f1e5-4286-b1b0-cbe2355dcebd",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -2.73002896471,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "310597a9-c964-48aa-8696-67fe8afb8633",
+      "drug_id": "DPC-003512",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -3.29628823831,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-006493",
+  "name": "TIMOFIBRATE",
+  "drug_class": "CHOLESTEROL INHIBITOR, LIPASE CLEARING FACTOR INHIBITOR",
+  "target": "LPL",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "2cc93359-c47f-433c-a11c-20fd7abb98da",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.468164348294,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "de81a46a-8bc5-4651-9a7c-2bad2f9b9898",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.0779049825541,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b386d8ac-0000-4bc7-8b54-332c9e2c8f51",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.582789942282,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7c137f4f-1a5b-460b-9efa-6ed81d47e2cb",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.241890927496,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "63563b16-fb12-487a-9a9e-63195b8d1e27",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.517087958831,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e00465be-878f-4a56-9cb6-6fd0dab4e363",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0509754964428,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5e7b4649-f178-475e-9c3e-49035764adff",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.076272303154,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "76f9f4d4-03e4-4248-a04a-698c1a92d40c",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.352166681729,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "44ca2b08-87ab-482b-a345-8e1e0aba8cf4",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0994346493287,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d6e4619d-f1f2-4c33-b97e-7c1e1b79257b",
+      "drug_id": "DPC-006493",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.111560575114,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

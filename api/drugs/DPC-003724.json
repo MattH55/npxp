@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003724",
+  "name": "LACOSAMIDE",
+  "drug_class": "COLLAPSIN RESPONSE MEDIATOR PROTEIN INHIBITOR, COLLAPSIN RESPONSE MEDIATOR PROTEIN STIMULANT, SODIUM CHANNEL BLOCKER",
+  "target": "SCN10A;SCN11A;SCN1A;SCN2A;SCN3A;SCN4A;SCN5A;SCN7A;SCN8A;SCN9A",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "cf4704c7-e07a-448d-be87-4ab8dbe8028d",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.263432063116,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8fbd9875-565b-409d-a97d-a3546e0126d4",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.251274637657,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e3160867-fe18-4a99-b421-989ed2c81f6c",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.537125391436,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f119bd8f-3e10-49ec-be02-8f1f247179da",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.365644709681,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "70483553-cea9-478c-9b95-69e91a780622",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.09016812513,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3fa0af4a-3456-4e55-a4fd-b5e2160db914",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.144499831979,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "269c9629-f2a9-499f-9a66-d5da7f1ca87d",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.250203302817,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f23422bc-4787-4bcf-a68a-28a6548a2066",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.237466566839,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f6e23c64-1669-460b-acff-47e0715bbcaf",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.257220407639,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fa264958-b78a-45d6-8b3f-eb1d631fc2a0",
+      "drug_id": "DPC-003724",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.347924931354,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

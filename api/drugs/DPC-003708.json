@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-003708",
+  "name": "L-CYSTEINESULFINIC-ACID",
+  "drug_class": "GLUTAMATE RECEPTOR AGONIST",
+  "target": "GRM1;GRM5;GSR;HMGCS2;PAPOLA;PRDX2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "f4e757c1-1fdb-49b9-81d2-2d6bf03d2be7",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0219753535427,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f5e43f3f-54c1-4d4a-b129-f62d89c6660d",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.220212033052,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7d3dfb82-71bc-4911-942d-19bd3116b051",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.220368663705,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cd1076c9-d0a7-4ce1-be59-5fa84a3b5707",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.339395717455,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "22a9285f-4560-47b3-beb5-3da72ba0fe31",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.0237765475908,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ca5eb078-ce52-4f73-b65f-752820f54b09",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.701385298136,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ad37b567-30d7-42bd-a415-e27e6cc3031d",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.0854695500999,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b36a8ae4-43db-440f-9938-8085bd78e249",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.15656049566,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5e57e650-8c42-47e6-9c3e-a18a46353c5a",
+      "drug_id": "DPC-003708",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.190993911296,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

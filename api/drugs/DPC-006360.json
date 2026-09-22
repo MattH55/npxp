@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-006360",
+  "name": "TELITHROMYCIN",
+  "drug_class": "BACTERIAL 30S RIBOSOMAL SUBUNIT INHIBITOR, BACTERIAL 50S RIBOSOMAL SUBUNIT INHIBITOR",
+  "target": "CYP1A2;CYP2D6;CYP3A4;CYP3A5;CYP3A7",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "ae113be9-4bc2-4bc9-aa5b-1fdb72481604",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.004646127426,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "da7ba72d-d21c-4b70-908b-3c1d9925709b",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.0526398442009,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3e478094-ae20-46dd-9358-f692eec0f09a",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.257607240768,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "313efe93-6406-4586-9c4c-f915d60a1310",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.216585869859,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d3cd6afd-1f7c-4116-ae58-66f326715f7c",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.365803743648,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6a648497-ce33-409d-9795-1da44e0fa8ac",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.160813111707,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2519923d-c117-4601-bc8c-ddca77847f58",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.0127890177303,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f16bf6b0-6811-478d-abb5-f0f797730446",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.151656656996,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7ce3566a-4a3f-4e40-a81d-f230a62b595e",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.395252137691,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "467ebf46-2bc5-47e0-ba9b-10e5e977ce46",
+      "drug_id": "DPC-006360",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0198332532019,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

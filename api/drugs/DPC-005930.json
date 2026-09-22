@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-005930",
+  "name": "SEVOFLURANE",
+  "drug_class": "MEMBRANE INTEGRITY INHIBITOR",
+  "target": "ATP2C1;ATP5D;GABRA1;GABRA2;GABRA3;GABRA4;GABRA5;GABRA6;GABRB1;GABRB2;GABRB3;GABRD;GABRE;GABRG1;GABRG2;GABRG3;GABRP;GABRQ;GLRA1;GLRB;GRIA1;KCNA1;KCNK10;KCNK18;KCNK2;KCNK3;KCNK9;MT-ND1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "4d1f559d-e0ed-4a2c-954c-af79b41fad4e",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.389732586041,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c711111c-90c3-4006-8643-d79d310663c3",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.736829934859,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "80de1e07-f8f2-42ed-aaf1-10e155fec75d",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0324840830989,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "951235e2-e682-40c9-bf46-f16a1854bca7",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.609934802342,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "140943fd-8438-4e94-afff-c54f0bd92f25",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.225575949353,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "043a04cc-beff-4009-b6c5-d56d97d9f8a9",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.140953869621,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8621f1ca-a0d0-4c1c-8912-2df12c38a5c8",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.36657502317,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "969409e5-683c-4eed-9741-e599e9b9e8ff",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.188886325483,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5f76a46c-347a-4677-ae58-fbe0189b2022",
+      "drug_id": "DPC-005930",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.603405290519,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

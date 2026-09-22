@@ -1,0 +1,113 @@
+{
+  "drug_id": "DPC-002238",
+  "name": "DIGOXIN",
+  "drug_class": "inhibitor of the sodium-potassium ATPase (ATP1A1/ATP1B1, ATP1A2/ATP1B1, ATP1A2/ATP1B3)",
+  "target": "ATP1A1;ATP1B1;ATP1A2;ATP1B3",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "NSC 95100"
+  ],
+  "pubchem_cid": "2724385",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "a2d89196-91b3-4a5d-9b1f-e443f61b30af",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -2.19056366866,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e1249941-2fcc-43e5-bf47-1342e5b65f2a",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -2.32007069519,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d684a0b8-0f62-4777-a592-c891009afcac",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -4.97092640456,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "57bad8fc-562f-4440-b35d-daadc40055a6",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -3.2554999257,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c13f95cc-4a9c-41bc-81d8-136a5c0217d8",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -4.73647651389,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7ed643d0-767b-46f0-a271-a310d61f12c4",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -4.82960372552,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "99e5011d-77bd-4384-8b32-5ccfa02ffebf",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -5.29832994787,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7a0dbeec-68ab-4e8b-a3c9-325d533907d2",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -4.40028338864,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f7231a24-9067-4fa9-b090-14b236e067af",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -1.85731649314,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "447d7a38-f585-4728-a123-ab7d3795ec5e",
+      "drug_id": "DPC-002238",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -5.37009858339,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

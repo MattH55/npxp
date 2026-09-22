@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-001861",
+  "name": "CLOTRIMAZOLE",
+  "drug_class": "CYTOCHROME P450 INHIBITOR, IMIDAZOLINE RECEPTOR LIGAND",
+  "target": "CYP3A4;KCNN4;NR1I2;NR1I3;TRPM2;TRPM4;TRPM8",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "14d1597b-9f33-4b6e-a52a-c4ae352d48ed",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0190222884187,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f6597fd8-dee7-415d-9661-b483e1ecf9c1",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.52318316234,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b1422de5-99a1-4651-a4d3-86b80d0c02d1",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.160076604298,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e00c530c-2868-4a17-ac00-32472ae3c8d6",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.124971489341,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "403dfb56-fb7a-4eb3-8113-b2e5aaa0566c",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.100086343524,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c13cf158-4e79-4d6c-926a-2a8d8c6b2216",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.179809786521,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "71eebbab-165f-41a9-b8a6-dce674c26aea",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.122064764538,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cc882fa5-59f5-4023-b4bc-6714b2a9f32d",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.270452470769,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d6caebec-55ed-42f2-81df-f3c4246ad69a",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.348170279249,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ff1e32ea-c723-4511-aca4-d59489e6c3df",
+      "drug_id": "DPC-001861",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0275187346347,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

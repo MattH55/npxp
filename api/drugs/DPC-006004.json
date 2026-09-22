@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006004",
+  "name": "SNAP",
+  "drug_class": "NITRIC OXIDE DONOR",
+  "target": "PTPN1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "d0c26f6f-880a-4f9d-833c-e7e2fe98254a",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.364554282507,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2c38c7d1-8c8e-44d5-aca3-1ddd514af01b",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.19660669038,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "626b8313-f8b5-47a4-a385-672fd59cf725",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.00371196559334,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fe373502-69c8-4169-a03e-887d4fdac7b8",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.0690573979864,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "750f9795-01d7-49fb-9eb3-5471525ae3ad",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.426234112228,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "eed82089-1ea2-4b7e-8ddd-8462b906108a",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.252442737075,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dd3bef5c-a459-4360-9440-81a043af8718",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.134362312623,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e03e71fd-1d9a-4002-9480-bde8ccd7c641",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.227439829827,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4c55b5bc-8262-4dde-9c05-ca7476c36593",
+      "drug_id": "DPC-006004",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.288296970128,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -18,18 +18,99 @@
   "clinical_status": null,
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": null,
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "3b3457f3-0382-4fd2-b0f0-e754ec21881f",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.86987089261,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "68859881-59bc-4c59-8927-388ba93f0b9f",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.71289404287,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7650d33e-64a2-4870-8e6f-32cd37da4a51",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.0639587128017,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cb5a459a-e09c-4ff8-a2bf-46d0255d44e9",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -1.76947492039,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "07ca2b04-64de-47af-9d7d-04393cc18ddc",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.0803078058588,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "83a01ca0-3fe6-4bec-b825-01d2341e738d",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -2.01039908778,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1d0c713a-bbad-4dd9-841c-6242125d96aa",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -1.01133400811,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9619b9c1-6b54-409b-84e5-0c3c72bada56",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.857004274014,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0a103c33-f8f9-47ab-ac40-358e43c9f0db",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -1.24275552963,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d772db12-9a7c-4ccd-b174-cbdd88c1147f",
+      "drug_id": "DPC-002651",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.304002669255,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "dbf1d100-2c90-494d-ad7c-0eb075b9f8e6",
+      "id": "e5ce3e66-d432-46fd-8229-518d16e77e02",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002651",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "027b22ec-6959-406c-8f4d-b23c57f037b4",
-      "resistance_mechanism_link": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+      "mechanism_link": "712fa707-9648-448b-9706-bf7de2fe9e7d",
+      "resistance_mechanism_link": "2ea62c49-ce47-414a-a7a4-37601c13463d",
       "source_study": [
         "pmid:22323820",
         "pmid:22285073"
@@ -50,7 +131,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+        "id": "2ea62c49-ce47-414a-a7a4-37601c13463d",
         "drug_id": "DPC-002651",
         "pathway_or_gene": "TOP2A (topoisomerase II alpha) downregulation",
         "mechanism_description": "Reduced TOP2A expression lowers the number of etoposide-DNA-topoisomerase cleavable complexes that can form, one of several mechanisms identified in etoposide-resistant MCF-7 cells (Kaplan & Gunduz 2012).",
@@ -70,15 +151,15 @@
       }
     },
     {
-      "id": "81a4c54b-4f0e-45c5-a733-9e4ecc33cab0",
+      "id": "8fb62911-609a-48c1-81c6-f24683fb33cc",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002651",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "138fd9b9-8c0f-4513-87fe-0e1bfde58402",
-      "resistance_mechanism_link": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "resistance_mechanism_link": "2ea62c49-ce47-414a-a7a4-37601c13463d",
       "source_study": [
         "pmid:19929413",
         "pmid:22285073"
@@ -99,7 +180,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+        "id": "2ea62c49-ce47-414a-a7a4-37601c13463d",
         "drug_id": "DPC-002651",
         "pathway_or_gene": "TOP2A (topoisomerase II alpha) downregulation",
         "mechanism_description": "Reduced TOP2A expression lowers the number of etoposide-DNA-topoisomerase cleavable complexes that can form, one of several mechanisms identified in etoposide-resistant MCF-7 cells (Kaplan & Gunduz 2012).",
@@ -119,15 +200,15 @@
       }
     },
     {
-      "id": "4d7fecfe-6982-4992-9d64-a525c709e563",
+      "id": "97971d31-81b3-4cc9-9687-3635abea0f19",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-002651",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
+      "resistance_mechanism_link": "2ea62c49-ce47-414a-a7a4-37601c13463d",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:22285073"
@@ -148,7 +229,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+        "id": "2ea62c49-ce47-414a-a7a4-37601c13463d",
         "drug_id": "DPC-002651",
         "pathway_or_gene": "TOP2A (topoisomerase II alpha) downregulation",
         "mechanism_description": "Reduced TOP2A expression lowers the number of etoposide-DNA-topoisomerase cleavable complexes that can form, one of several mechanisms identified in etoposide-resistant MCF-7 cells (Kaplan & Gunduz 2012).",
@@ -170,12 +251,20 @@
   ],
   "cell_lines": [
     "4T1",
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
     "RKO",
+    "T47D",
+    "T98G",
     "U-87 MG"
   ],
   "resistance_mechanisms": [
     {
-      "id": "76eba80c-5636-4eac-8c0e-8edc4069c93f",
+      "id": "2ea62c49-ce47-414a-a7a4-37601c13463d",
       "drug_id": "DPC-002651",
       "pathway_or_gene": "TOP2A (topoisomerase II alpha) downregulation",
       "mechanism_description": "Reduced TOP2A expression lowers the number of etoposide-DNA-topoisomerase cleavable complexes that can form, one of several mechanisms identified in etoposide-resistant MCF-7 cells (Kaplan & Gunduz 2012).",

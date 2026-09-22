@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-000632",
+  "name": "APIGENIN",
+  "drug_class": "CASEIN KINASE INHIBITOR, CELL PROLIFERATION INHIBITOR",
+  "target": "AKR1B1;AR;CDK6;CFTR;CYP19A1;CYP1B1;HSD17B1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "72fd203a-ad23-409c-bc04-dd2812bf45dc",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.202134719521,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1183ed9d-cc89-4178-8a76-2753834a5276",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.297427106258,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4b6ae0b8-ac2a-4400-94cf-997d9a228203",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.130722644299,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1e711a15-1952-41e9-b25e-97c533cb2032",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.425255339699,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f846b87b-c566-4630-b57a-e3ed43608a96",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.195075088432,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cbd039c3-d4c2-401e-8c8f-0f214a6088f1",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.155395874764,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "db261fba-d4da-40d3-8a72-52dbcb8d4907",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.067003891771,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "56eab91a-0124-48c0-afc9-26fbfcdb084a",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.114138904649,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c0a7eabc-98ad-4d9b-a38c-06511e54975c",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.577483789663,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "52f7ffd6-bc37-4819-a56a-0c3f07bce272",
+      "drug_id": "DPC-000632",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0609950275795,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

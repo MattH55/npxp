@@ -1,0 +1,114 @@
+{
+  "drug_id": "DPC-002294",
+  "name": "DISULFIRAM",
+  "drug_class": "copper ionophore; inhibitor of ALDH1A1",
+  "target": "ALDH1A1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "NSC 190940",
+    "TETRAETHYLDISULFANEDICARBOTHIOAMIDE"
+  ],
+  "pubchem_cid": "3117",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "3a5e9f44-fa9a-4503-8998-36e4e66794c2",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.212510968823,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "67622d0a-64bd-4a0f-bc2a-1d753bfec772",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.940341543951,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b35c54d0-81e2-4a05-a94c-8e63c7621a6c",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.435463637335,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6dd7fa02-54cb-400d-b691-adb5583f703c",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -1.04109246,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c834435d-0d8b-4c68-9297-6b889ab93852",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.598777075408,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cf53d0a3-9fef-4a3b-8dd8-2e57e81c32eb",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.43718016922,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5b440c40-f929-4e8e-864c-3de980e72c5f",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.340737257094,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "655b1399-dc56-4955-bd0b-f502815dbd03",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.436606678644,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "06c8fba2-a683-4704-80b1-06fc6b11329c",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.132495684488,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dc6bedac-8051-4b1a-ab9e-c3a951cbac58",
+      "drug_id": "DPC-002294",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.351665111113,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

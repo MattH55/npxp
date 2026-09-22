@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002427",
+  "name": "EFAVIRENZ",
+  "drug_class": "HIV PROTEASE INHIBITOR",
+  "target": "CYP1A2;CYP2B6;CYP2C19;CYP2C9;CYP2D6;CYP3A4",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "a5a2412a-e5ef-4c23-9864-3db51019ba0e",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.0390466871062,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e19cca12-e224-4fbf-81d8-2858c341a36e",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.278121741364,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2c4e2886-44dc-44d4-9165-18258b605d10",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.096322781626,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dc2e8ebf-5c5a-49ff-954f-4759ec20d3aa",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.54536693944,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a36061e6-ec6b-45d6-86cc-3b35e08dc185",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.508528862272,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3bbb58a5-a994-49d9-a7ef-b8e6d7e6f423",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.0524487640682,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "619cc8c3-33e2-4b23-8581-3e0260c72080",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.740986228875,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b61b91a6-2f4b-4a43-96c9-a0fbba7df040",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.214064727289,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a8007422-7f9a-4e7a-8b9c-75e74527c2aa",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0887864885432,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "744d1ccb-e092-415e-bbd9-50bdb06b71c2",
+      "drug_id": "DPC-002427",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.393631823803,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

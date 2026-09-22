@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003497",
+  "name": "ISOPRENALINE",
+  "drug_class": "ADRENERGIC RECEPTOR AGONIST",
+  "target": "ADRB1;ADRB2;ADRB3;MAPK1;PIK3R1;PIK3R2;PIK3R3",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "2f5cce8a-f416-4f19-96c8-dceafb92e0e6",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0353627487673,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0ca3d038-b1b5-4536-b846-e1b5ba74991e",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.594281144523,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ca3f1055-e9fe-46b0-ad25-00370f6ebc49",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.515272098425,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "068ca691-78b8-4b31-abef-9043af03d545",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.274032667236,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "15224c10-ed20-4ac7-96bb-fba37ed8f565",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.283373404178,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0382e90e-be00-4dae-8f3a-27af0f965bf6",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.0843873912987,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "48d1456d-9b70-41a8-92cf-7874bc3c78fb",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.251397997306,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f369dae8-a858-4c69-a56b-c71e2e99a70b",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.063742488483,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "23b7eebd-99b9-4c1c-8653-96c93a7f3d61",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0299142255024,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bf22a561-1e5f-4595-b290-40069c011a2a",
+      "drug_id": "DPC-003497",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.196271126263,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

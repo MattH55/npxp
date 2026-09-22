@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003534",
+  "name": "IXABEPILONE",
+  "drug_class": "MICROTUBULE STABILIZING AGENT",
+  "target": "TUBA1A;TUBA1B;TUBA1C;TUBA3C;TUBA3D;TUBA3E;TUBA4A;TUBB;TUBB1;TUBB2A;TUBB2B;TUBB3;TUBB4A;TUBB4B;TUBB6;TUBB8",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "6aff67f7-642f-48af-bd01-31230638bb02",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -5.04960026802,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4d6684a2-6937-45d5-8a1e-f5909241ac10",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.41579041121,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f6a8bc2c-9486-4dd2-a6f1-9ca930998dbc",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -1.65351341049,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8b0eb2ff-6382-43fa-a503-00e735587177",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -3.64289688096,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b3fac786-8c6d-4ace-8926-7d9115ac412d",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -4.66515013269,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0d6cf0df-bc1f-43e7-b78b-697f82c253b0",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -3.98926408791,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e4bac828-bff6-4a19-9c4c-ffcb57ecbf30",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -3.56540001881,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "21bc5970-7301-4386-9790-0b44b089503b",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -3.0810617069,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "78281fe4-b31a-484f-aed8-a47afc548e3c",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -3.82670830451,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5f6c057c-b6a6-4e9f-9527-623815f2a066",
+      "drug_id": "DPC-003534",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -2.79544534284,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

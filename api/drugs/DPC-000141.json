@@ -1,0 +1,114 @@
+{
+  "drug_id": "DPC-000141",
+  "name": "AZACITIDINE",
+  "drug_class": "covalent inhibitor of DNMT1; hypomethylating agent with DNA/RNA incorporation",
+  "target": "DNMT1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "5-AZACYTIDINE",
+    "AZACYTIDINE"
+  ],
+  "pubchem_cid": "9444",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "4aa5aaae-e986-47e7-92e8-84dcb63a8cc5",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.823558931325,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b775355e-88a1-4a12-9f42-29e0937caa97",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.251584331898,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e38d32a9-4bc2-4b74-be00-e44de5366905",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.180718207318,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5f9a2a4b-574d-4ef8-9e6d-817ba4764ea8",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -3.38971710601,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3792c494-ac14-4e5c-a0c9-4f92ecaf649c",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.299708703544,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0b69a070-b3d2-4a30-a393-cf4c64eb0754",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.663876845307,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ae3a9f91-fdd3-43af-ac4c-7e35270bb227",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.105014306815,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "aad8a49c-3c26-4148-a37b-ac8747340f65",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -1.91254271312,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2129381b-d213-4452-ac62-97a597f5fe8b",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.385659731956,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9567f0e1-c663-4374-a4ad-2e6889a3f856",
+      "drug_id": "DPC-000141",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.249084580566,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

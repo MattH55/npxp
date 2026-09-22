@@ -15,10 +15,91 @@
   "clinical_status": "approved",
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": "essential_generic",
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "5b33b428-6705-4749-8e7d-be143d1c9419",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.469704768811,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a6315588-1742-47ba-8b5d-f4f7ebdf9f25",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.571352818273,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7b1d5649-9581-47cf-a229-710bc2164b60",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.779242075185,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2b8f4d0e-a1b1-4291-a207-4efe5fb376b0",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -1.03530386113,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "468b52df-ca40-4204-9dca-015308364555",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.304770562085,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "638a4b3f-d75d-4bb8-829b-2f10c57fd7a2",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.325582267636,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0771f3a9-18e2-445b-b546-291adb24ed41",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -1.90692682205,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a1c515df-f980-4e25-a15e-a6d1aaead093",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -1.1812620964,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cc6bd735-3f57-4f56-85b4-dbe059e896ba",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.321123989634,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e9da8442-56ea-449f-badd-6dcfb16c8c3a",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -2.10635824561,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "18e74ce3-380a-4a01-9e64-f964e46dff49",
+      "id": "4b8ca784-863b-42e1-84c2-a9b14f504c9f",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -60,14 +141,14 @@
       }
     },
     {
-      "id": "0786928a-2e47-411f-a077-174f31ce7ef0",
+      "id": "9286691b-9ebc-4e3b-8526-781335ca705d",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "e66dedc8-90df-4835-9bb3-f4e8c37702e7",
+      "mechanism_link": "ab003a16-2848-4bee-b5ca-a537a2d38a3e",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:26411344",
@@ -103,12 +184,20 @@
     }
   ],
   "cell_lines": [
+    "A549",
+    "DU-145",
     "HCT116",
-    "RKO"
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
   ],
   "resistance_mechanisms": [
     {
-      "id": "b8ee69bc-383f-4181-8822-37a82398daf8",
+      "id": "cfb7737f-6980-4a6f-baa1-19d67ab6ecf8",
       "drug_id": "5-fluorouracil",
       "pathway_or_gene": "TYMS (thymidylate synthase) overexpression",
       "mechanism_description": "Elevated thymidylate synthase overcomes 5-FU's TYMS-inhibitory mechanism, restoring dTMP synthesis (Longley et al. 2003).",

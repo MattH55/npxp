@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-002428",
+  "name": "EFINACONAZOLE",
+  "drug_class": "LANOSTEROL DEMETHYLASE INHIBITOR",
+  "target": "CYP51A1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "e17d2039-28a6-4ee6-95db-03bb5f3733a9",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.125188918932,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "52869103-eb54-45a3-acab-9c55b4337a4e",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.253205503738,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "70991cb9-51bd-45b8-bc5a-37fe62fc9c3e",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.198422943677,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "515504fc-3e47-486c-a764-dcb4dc19b5fe",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.398868222349,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "31e7b6db-71db-4b06-b26c-0dececcb88f7",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0409022425861,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bf221f96-09e7-4262-8218-5bc54b7505de",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.0760432208553,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bdafa0cd-a365-4aed-83cb-834ed4ec9e41",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.0631910099729,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3a86f393-aa6c-4e20-9e2e-70444f5e37ba",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.379028160113,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "003c3966-d1c7-4e79-bffe-b06952912055",
+      "drug_id": "DPC-002428",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.392444643285,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

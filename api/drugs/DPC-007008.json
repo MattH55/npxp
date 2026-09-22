@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-007008",
+  "name": "YOHIMBINE",
+  "drug_class": "ADRENERGIC RECEPTOR ANTAGONIST",
+  "target": "ADRA2A;ADRA2B;ADRA2C;DRD2;DRD3;HTR1A;HTR1B;HTR1D;HTR1E;HTR1F;HTR2A;HTR2B;HTR2C;HTR5A;HTR7;KCNJ1;KCNJ10;KCNJ11;KCNJ12;KCNJ14;KCNJ15;KCNJ8",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "3b6cf6da-8f79-481c-8dac-26c931cc64f5",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0750891947507,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5819ff04-6fe5-4bc0-988e-dab0ceea7a7a",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.209895120526,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1e3fc7d4-721e-4f63-9d51-4d608127d34f",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0850500931321,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e10f83c5-a723-4c67-9a1d-a604f69a83ba",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.273244437804,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "453cabc1-4693-425b-963c-415ba3f5596d",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.238751649738,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2f59e25e-b145-4e69-bd92-537045de4566",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.0764237266503,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f35f5d97-45b1-4a50-86a5-a0cc9256a400",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.0853846725788,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "41fc7dd4-f63f-4c39-a4fa-2413a1a35291",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.00992851077052,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fdec2e5b-e709-4145-acde-b49fafc5738e",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0799920476106,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "af95b293-db27-432e-9df3-16d56bb73871",
+      "drug_id": "DPC-007008",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.231973740105,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

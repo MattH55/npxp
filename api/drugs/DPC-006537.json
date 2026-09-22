@@ -1,0 +1,114 @@
+{
+  "drug_id": "DPC-006537",
+  "name": "TOFACITINIB",
+  "drug_class": "inhibitor of JAK1, JAK2, and JAK3",
+  "target": "JAK1;JAK2;JAK3",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "CP-690550",
+    "TASOCITINIB"
+  ],
+  "pubchem_cid": "9926791",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "0f3625b8-7bc0-4435-8c4d-6dfdeafa21dd",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.575463605035,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5d24e2ab-30a1-44b0-9304-0e68471cc495",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.178896936069,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3dd0c5a3-d198-48df-a392-cb0eefc424aa",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.187742998373,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "05e98259-1ea6-4855-849d-37de5d5214f1",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.0963476505121,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e9076a3a-cfb5-42c0-9a66-b604f8acd8ae",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.0505626649005,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f632677a-7042-49a8-a9ed-2495112d9467",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.0974094400402,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cadf91c1-7c66-4876-ae82-b2269e0c2f31",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.125787296863,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2ed94a20-4b7a-4172-b14c-bce67e5af202",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.100479639509,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c6768d36-6630-494d-bff0-5100bf67fefe",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.246783578573,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e9b864ba-7144-4eb0-9196-77a30c7fa205",
+      "drug_id": "DPC-006537",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.112265682125,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

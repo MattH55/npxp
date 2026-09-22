@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-000149",
+  "name": "5-HYDROXYTRYPTOPHAN",
+  "drug_class": "NEUROTRANSMITTER",
+  "target": "SLC36A1;SLC36A2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "2e02e222-d002-4144-9a98-82fed38aa0da",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.124348535875,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "21da1d52-589e-4e36-a06d-f180a83afa65",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.437372352226,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "aad05d69-4cea-463c-b7a7-8824cf3e9d99",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.312623498016,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fd9fbed2-afc9-40e3-bcf4-4de2544fe9ae",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.0571330401386,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "97f5560d-d2af-4f3b-9988-db57634afe19",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.178602180179,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2e83c263-e17e-41b2-9c0b-30fa0562a89a",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.192443316195,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cdeb56f1-57c9-4a1d-9384-4a1a2688d02a",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.122363978249,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "eeca3d94-a36f-4a12-a099-8e4001144d5c",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.59847856637,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1c31b949-5cf8-4643-960b-e9bc74a070e2",
+      "drug_id": "DPC-000149",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0178376035985,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

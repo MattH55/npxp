@@ -1,0 +1,115 @@
+{
+  "drug_id": "DPC-004509",
+  "name": "NELARABINE",
+  "drug_class": "purine nucleoside analog; inhibitor of DNA synthesis",
+  "target": "",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "506U78",
+    "ARRANON",
+    "ATRIANCE"
+  ],
+  "pubchem_cid": "3011155",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "b964d0d0-ceb2-4ab9-abe5-6aaf28bf3aef",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.560942429931,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dfb01603-1133-421d-956d-e3a8f3e3481b",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.552141332243,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "63f6c638-6dc2-4aeb-a7e9-bcb7683a394a",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.531583514811,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "99f4c7f2-f276-42ef-82aa-4c0bdc6d5d7e",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.153904079192,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9ebb6844-3777-4017-bc8b-6c5e055d6b6f",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.442958051956,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4c719cc0-eed5-4c2f-8859-223ab7e2401b",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.287657870619,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "57028e3c-1d8a-48a4-bf3f-ae23b0896434",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.138404738093,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9d3cf45c-c720-4dfc-8e51-9a376663170c",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.25616948462,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "163fa9fd-9c31-442e-adf4-7c42b5c545eb",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 1.07869167925,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a6b5ca7d-f9ff-4de7-8dd5-ab7aca81ac3a",
+      "drug_id": "DPC-004509",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.127328171424,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

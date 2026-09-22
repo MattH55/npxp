@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002625",
+  "name": "ETHOSUXIMIDE",
+  "drug_class": "SUCCINIMIDE ANTIEPILEPTIC",
+  "target": "CACNA1G;CACNA1H;CACNA1I",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "c879a8ed-ca1c-48d1-9f2d-f15e0326c64d",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.104885485321,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8ad2fc5b-f280-4b54-891e-84369223a6a4",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.29807407203,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d5096204-cc3c-4abf-8a52-887da2756218",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.223025706791,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2293d51c-66bb-4cc4-9f99-af35ca3cba2b",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.51247240455,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e864f11e-bdba-4341-8ab7-4b2d417d07e8",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.246684040829,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3394b9cf-43b8-4121-83a8-16ff196c22c1",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.0406741809746,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5552058b-6a9b-4889-b9fe-91801a17c83c",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.157231627888,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "155bedfa-abb8-413e-99c4-b9a56082a4eb",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.226173117548,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fc8edc68-b80a-4e39-b191-a04f93757a93",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.202773215375,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e51393f7-74de-43fc-ac94-02e38e48d5a8",
+      "drug_id": "DPC-002625",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0312138214817,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-000836",
+  "name": "AZD3463",
+  "drug_class": "ALK TYROSINE KINASE RECEPTOR INHIBITOR, INSULIN GROWTH FACTOR RECEPTOR INHIBITOR",
+  "target": "ALK;IGF1R",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "776d96e4-0336-44f7-aa87-b784949fafc9",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -3.88172462186,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d04223a9-0ab8-4a41-a18b-e95592b49568",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.0431804074469,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2de497cc-f9e8-4032-a7b5-5f5ea1c72c86",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -1.73242813936,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fc4910ad-5aaf-4883-99a7-59aae582f775",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -2.94078027471,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0c356b0d-d667-44e8-aa9a-a6f0f296de1a",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -1.04521873535,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e115a08a-e043-457c-bf0a-cb6efdb2de98",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -2.49351255366,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8661b260-a5e4-435f-b452-85931fa27188",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -1.85054944044,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1993458f-dbac-4e0b-8973-bf561af79e20",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -3.062348661,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a651be55-68d8-4233-b78c-66e61d08733e",
+      "drug_id": "DPC-000836",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -3.65287193835,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

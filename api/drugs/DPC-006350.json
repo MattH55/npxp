@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006350",
+  "name": "TEGASEROD",
+  "drug_class": "SEROTONIN RECEPTOR PARTIAL AGONIST",
+  "target": "HTR2A;HTR2B;HTR2C;HTR4",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "bfb2e472-e5f1-464d-bc1f-68c3fb7b3885",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.151414772614544,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b67b3d0a-c10a-4531-9229-6248f487c4b9",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.554595401974643,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0e296e7a-bf89-46c5-a37e-7023b2ba9e6f",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.0163089259755859,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "386a823a-52c2-4eb6-ac63-2ed3c3736123",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.84294100770569,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f02e008f-68df-447d-80c8-bfe23ff86440",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.18831412629838,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9f963e7c-6c27-4f00-b118-6ad15e10f5c0",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.038861738237856,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "665638d2-c025-492a-82d8-c7f34925f933",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.0863714343218133,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5e8dce49-3622-4342-818e-34d78720b4c0",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.00625969100579414,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e4462a50-9ea9-492a-83e6-d8e34481ce61",
+      "drug_id": "DPC-006350",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.231767211794364,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G"
+  ],
+  "resistance_mechanisms": []
+}

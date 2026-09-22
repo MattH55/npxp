@@ -1,0 +1,118 @@
+{
+  "drug_id": "DPC-001049",
+  "name": "BEXAROTENE",
+  "drug_class": "RETINOID RECEPTOR AGONIST",
+  "target": "RXRA;RXRB;RXRG",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "BEXAROTENUM",
+    "LG-100069",
+    "TARGRET",
+    "TARGRETIN",
+    "TARGRETYN",
+    "TARGREXIN"
+  ],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "f36e681e-6994-4ac5-b392-2d67d97274a2",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.558737824904,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6854c7a5-d1b7-4f48-9f49-7184c240e9ab",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.14933773371,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6ab4a28d-dd34-437c-8ab5-109d0c0c000c",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.152261964231,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "62bb2409-5444-4869-bb03-b2f45f5daabe",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.701961255,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "640037c1-382e-4529-841c-a70eae0d9091",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.0528989424356,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "37a58949-042d-4493-ab9c-a4365bb5f0c6",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0852268708575,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d2f86214-0b66-42bb-bf9f-a57256a9c003",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.215064286276,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dbd836f9-75c7-4de1-9a46-764396758abd",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.0683825247772,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8dfacbf5-f2ee-436d-84ee-f6790993760e",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.379669419427,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "497fc885-39db-4cf8-8b48-52600bd46508",
+      "drug_id": "DPC-001049",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.153680175041,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

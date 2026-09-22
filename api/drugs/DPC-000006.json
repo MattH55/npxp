@@ -1,0 +1,104 @@
+{
+  "drug_id": "DPC-000006",
+  "name": "(R)-BACLOFEN",
+  "drug_class": "BENZODIAZEPINE RECEPTOR AGONIST",
+  "target": "GABBR1;GABBR2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "BACLOFEN-(R)"
+  ],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "7a1d6bb7-08fb-4aeb-8b44-8f4f272f1f9c",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.345347488618,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2fe4c8f3-17f1-466a-baeb-ab44187e5e08",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.36496131259,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3695de37-0322-45b8-a1df-a05508592eff",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.167533958036,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9cf5611d-f355-43db-a550-f3d6800fae68",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.136642843532,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d2809360-6f1a-451f-a4c6-6ef858244333",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.363144637522,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "89bf9639-4aed-4ee7-b97e-9a7a2262defd",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.681178225074,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "05be6c38-8908-427c-b406-caba8aa58e0e",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.741725025729,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fb53e859-57e6-4a56-9341-317a86d7ae18",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0458647597443,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c9d3e7c3-5a18-4cba-8ec4-5cd08d5c7852",
+      "drug_id": "DPC-000006",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.337822767563,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

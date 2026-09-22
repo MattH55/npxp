@@ -15,17 +15,90 @@
   "clinical_status": "investigational",
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": "unknown",
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "c39a35d1-da6c-4a4a-af72-2ee4c94566d5",
+      "drug_id": "triapine",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.835437022326,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8634ba61-c398-48d6-a3cc-5149d31820df",
+      "drug_id": "triapine",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.36061645651,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c15c37c1-fffe-4442-9849-f295afa4b3b8",
+      "drug_id": "triapine",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.00632684880854,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "12923aab-ce66-498c-94d6-1d5bcdfbbcfc",
+      "drug_id": "triapine",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -2.73722855504,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9a3158f2-a30c-4f67-bc37-a087934c4117",
+      "drug_id": "triapine",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -1.72102628301,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5f660764-2e0f-4681-9183-cdc16908dd18",
+      "drug_id": "triapine",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -1.16519844167,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "439d1897-efd9-4316-bf40-8d36e9694dea",
+      "drug_id": "triapine",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -3.03368087233,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5bcb5da4-b006-4ba5-9b77-b79e27ebc2e4",
+      "drug_id": "triapine",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -2.35760722325,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fe1bb876-bb4b-448b-9d1d-69c5575d0fb4",
+      "drug_id": "triapine",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -2.46948461666,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "50222a4c-66a1-41c6-bba3-09ec7fdb4a98",
+      "id": "82575ee8-7a89-40a9-bbc0-86b8ac8565b9",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "138fd9b9-8c0f-4513-87fe-0e1bfde58402",
+      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1667/RR1858.1",
@@ -60,7 +133,7 @@
       }
     },
     {
-      "id": "847d4bea-c4d9-4c8f-8436-ee28ae8cfee3",
+      "id": "437e4a56-b9a1-4a64-8970-8397e97db088",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "HELA_CERVIX",
@@ -102,7 +175,7 @@
       }
     },
     {
-      "id": "edb8e9dd-1351-4683-922f-340575667957",
+      "id": "016dcccf-ba0f-4c34-bb6b-a393a187f514",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "CASKI_CERVIX",
@@ -144,15 +217,15 @@
       }
     },
     {
-      "id": "775a5519-bef6-44ba-9c57-d1a09cd9b883",
+      "id": "f172c13f-a54d-4277-9f38-fa22b84a47ec",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "triapine",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "027b22ec-6959-406c-8f4d-b23c57f037b4",
-      "resistance_mechanism_link": "e1f88ae6-ec76-45be-acc8-e657822f7de5",
+      "mechanism_link": "712fa707-9648-448b-9706-bf7de2fe9e7d",
+      "resistance_mechanism_link": "3e574eeb-f1da-45d0-9e02-f55f2535b40f",
       "source_study": [
         "pmid:22323820",
         "pmid:37588202"
@@ -173,7 +246,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "e1f88ae6-ec76-45be-acc8-e657822f7de5",
+        "id": "3e574eeb-f1da-45d0-9e02-f55f2535b40f",
         "drug_id": "triapine",
         "pathway_or_gene": "RRM2 (ribonucleotide reductase M2 subunit) overexpression",
         "mechanism_description": "Triapine directly inhibits RRM2 (iron chelation of the tyrosyl radical); RRM2 overexpression -- the same target the drug itself acts on -- is a documented general resistance mechanism across multiple RNR-dependent chemotherapies (Zuo et al. 2024 review), consistent with a titration-out-the-inhibitor pattern.",
@@ -193,15 +266,15 @@
       }
     },
     {
-      "id": "ec589df3-8cb0-40e5-b633-4a1f6908a6ac",
+      "id": "2827d60a-28a4-4ae0-84da-d2c447aa7ed8",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "triapine",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
-      "resistance_mechanism_link": "e1f88ae6-ec76-45be-acc8-e657822f7de5",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
+      "resistance_mechanism_link": "3e574eeb-f1da-45d0-9e02-f55f2535b40f",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:37588202"
@@ -222,7 +295,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "e1f88ae6-ec76-45be-acc8-e657822f7de5",
+        "id": "3e574eeb-f1da-45d0-9e02-f55f2535b40f",
         "drug_id": "triapine",
         "pathway_or_gene": "RRM2 (ribonucleotide reductase M2 subunit) overexpression",
         "mechanism_description": "Triapine directly inhibits RRM2 (iron chelation of the tyrosyl radical); RRM2 overexpression -- the same target the drug itself acts on -- is a documented general resistance mechanism across multiple RNR-dependent chemotherapies (Zuo et al. 2024 review), consistent with a titration-out-the-inhibitor pattern.",
@@ -244,14 +317,21 @@
   ],
   "cell_lines": [
     "4T1",
+    "A549",
     "Ca Ski",
+    "HCT116",
     "HeLa",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
     "RKO",
+    "T47D",
+    "T98G",
     "U-87 MG"
   ],
   "resistance_mechanisms": [
     {
-      "id": "e1f88ae6-ec76-45be-acc8-e657822f7de5",
+      "id": "3e574eeb-f1da-45d0-9e02-f55f2535b40f",
       "drug_id": "triapine",
       "pathway_or_gene": "RRM2 (ribonucleotide reductase M2 subunit) overexpression",
       "mechanism_description": "Triapine directly inhibits RRM2 (iron chelation of the tyrosyl radical); RRM2 overexpression -- the same target the drug itself acts on -- is a documented general resistance mechanism across multiple RNR-dependent chemotherapies (Zuo et al. 2024 review), consistent with a titration-out-the-inhibitor pattern.",

@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002333",
+  "name": "DOSULEPIN",
+  "drug_class": "NOREPINEPHRINE REUPTAKE INHIBITOR, SEROTONIN-NOREPINEPHRINE REUPTAKE INHIBITOR (SNRI), SEROTONIN\u00c2\u0080\u0093NOREPINEPHRINE REUPTAKE INHIBITOR (SNRI), TRICYCLIC ANTIDEPRESSANT",
+  "target": "CHRM1;CHRM2;CHRM3;CHRM4;CHRM5;HRH1;SLC6A2;SLC6A4",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "970cafed-d9ff-4b99-b96c-411d6c2d0956",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0458060976791,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b7007349-d113-4a68-ab1d-5f57362047aa",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.0566159809465,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "292caa35-a577-4cca-9be7-15382bff3d1a",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.576258720613,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "afaf3180-900f-47e2-8534-c7dc472e00a7",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.34376701845,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ca6312a0-8218-42a9-b7fd-927051e6bde4",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.582699155052,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e044929d-4ce7-42e3-98a9-b5f062be969b",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.183163611626,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ab7280be-fae6-4c9b-b271-637d0b417914",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.259405037138,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "79802809-1eb1-4cfc-9819-49b0316364f8",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.374663923224,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e6bacba6-26f8-4703-a985-a412bfe01d9b",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0111789838362,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ae560a32-7b26-4950-9a0c-a55ca6f407d2",
+      "drug_id": "DPC-002333",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.241058965156,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

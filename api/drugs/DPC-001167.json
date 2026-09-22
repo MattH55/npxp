@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-001167",
+  "name": "BMS-777607",
+  "drug_class": "AXL KINASE INHIBITOR, C-MET INHIBITOR, FLT3 INHIBITOR, HEPATOCYTE GROWTH FACTOR RECEPTOR INHIBITOR, MACROPHAGE MIGRATION INHIBITING FACTOR INHIBITOR, TYROSINE KINASE INHIBITOR",
+  "target": "AXL;MERTK;MET;MST1R;TYRO3",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "326506d1-3adc-447a-9a28-7785db74b367",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0482976438011,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "888ded12-d6c2-4c36-a6f9-94f807a7f9d1",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.183153373311,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5a907655-260f-49f7-9f1c-949de9c9bcc5",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.282684031465,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e5bfa5b0-679f-4c86-af23-7625474cd3c5",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.0773150980611,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6f9dbdad-c7bb-4bdb-96df-f0d0544d33af",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.278110664133,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c03629f1-f2f1-43da-9f3a-816574a4791d",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.356861033273,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d3a60d7f-ff3c-460f-b24b-a0d9e81e7c44",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.119928504462,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "09ab65c8-323a-4c33-9382-0aee9e7e0e8a",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.852264749055,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fb5c3856-6f04-4450-9190-55980cad6100",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.558868816855,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5b184c1a-583c-4c9c-aeac-02ad7552feed",
+      "drug_id": "DPC-001167",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.390060590171,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

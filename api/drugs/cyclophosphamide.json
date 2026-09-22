@@ -15,10 +15,91 @@
   "clinical_status": "approved",
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": "essential_generic",
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "1558e3c9-6fcf-4596-a107-d6954c972c19",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.372378515296,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a226515d-1f3d-4aec-8b84-b00a29d6bf79",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.000226743561753,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "36ba1546-20b3-4a29-9904-f48ea8e6f4a4",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.124743759293,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "60db43b5-7486-46f0-8f5d-5b7e1ba0a3b3",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.273161205631,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a272c156-be72-4866-8450-684f6860fd71",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.181961062167,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3b7f25f4-7b18-4ebd-90b2-98bdbdc69f9a",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.620419242739,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ae4b89ec-e779-4796-823b-4970e006185a",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.666302006596,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "75830473-b45b-47d3-9fd8-2677059d0b3a",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.189689639884,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "582a0cf1-d913-46a5-9388-95f31ae2dadd",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.17940503899,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b186f400-7495-42c2-8127-c03bf70107a7",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.349718399757,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "553a9318-0a60-44c8-87d9-c80a38507863",
+      "id": "300ec33d-83aa-4237-907e-aad9fe6af948",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "cyclophosphamide",
       "cell_line_id": "4T1_BREAST",
@@ -61,11 +142,21 @@
     }
   ],
   "cell_lines": [
-    "4T1"
+    "4T1",
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
   ],
   "resistance_mechanisms": [
     {
-      "id": "47e08d2c-18fd-4491-b8ea-23334f4542c4",
+      "id": "0b092654-d286-4583-a603-43e0cb52c969",
       "drug_id": "cyclophosphamide",
       "pathway_or_gene": "ALDH1A1 (aldehyde dehydrogenase 1A1) detoxification",
       "mechanism_description": "Cytosolic ALDH1A1 oxidizes the active cyclophosphamide metabolite (aldophosphamide) to the inactive carboxyphosphamide; ALDH1A1 overexpression (originally shown via retroviral gene transfer into hematopoietic cell lines) confers cyclophosphamide resistance (Magni et al. 1996).",

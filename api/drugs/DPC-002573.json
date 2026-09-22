@@ -1,0 +1,119 @@
+{
+  "drug_id": "DPC-002573",
+  "name": "ERLOTINIB",
+  "drug_class": "inhibitor of EGFR and ERBB2",
+  "target": "EGFR;ERBB2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "CP-358774",
+    "CP358774",
+    "OSI-774",
+    "R-1415",
+    "RG-1415",
+    "RO-508231",
+    "TARCEVA"
+  ],
+  "pubchem_cid": "176870",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "a109a313-9bb7-4f1c-a998-22d3acb0d49e",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.478782775768,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "95ff9b6a-79d3-482c-88ac-ef45aac5e751",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.45412610894,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "166b785e-e8d4-4a8f-941a-b5f3a54c020a",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 1.25095518818,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "250371e7-1759-434a-8bc2-45f4e923ee9b",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.649100267407,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e7e90d0e-5ad4-46c9-aa5b-c3289ba6cfe8",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.345221397535,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bd3901b5-7065-4405-a2e7-42a3acfc7d11",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -1.05562822315,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "64ccb1c6-c10e-4835-9dcf-6b127b106651",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.277633588625,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "73274e68-b00b-4f4b-b7df-0db5a8ee6483",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.425614642525,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4de950f6-33c3-467b-a6ee-c265a218e7e7",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.182542727294,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "76febaf2-774b-47c8-ae0e-086932215c26",
+      "drug_id": "DPC-002573",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.442177317967,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,115 @@
+{
+  "drug_id": "DPC-001983",
+  "name": "PIDNARULEX",
+  "drug_class": "inhibitor of RNA polymerase I and II (POLR1A and POLR2A)",
+  "target": "POLR1A;POLR2A",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "CX 5461",
+    "CX-5461",
+    "CX5461"
+  ],
+  "pubchem_cid": "25257557",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "9eb10d16-680d-4f4a-83e8-12c2c96d03cc",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.071994033656,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f1b44134-05a5-4340-9a5e-41c37e24ad78",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.315311051513,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d60922bf-3170-4a42-9492-e4015f8c59d8",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.505809814693,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c83f1f66-215c-47f3-9ac6-657fe7616d1d",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.995182262278,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "420e1c3b-a336-43ba-aeb0-2387d2a027dd",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.564556126754,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d8a22377-a651-45ac-908d-01c17a72bbde",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.622598784711,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "432a8cc3-ea91-46aa-8994-377df2c7f09e",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.814828788327,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8c2132d9-467b-4137-a7e6-62ef5426e8e4",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -1.09959280969,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "da63fd3b-8fd9-4b76-8793-cdf3ef9bcee5",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.428515748271,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c18e9e9a-a40a-46d6-8c27-327101b972c1",
+      "drug_id": "DPC-001983",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.847715798214,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

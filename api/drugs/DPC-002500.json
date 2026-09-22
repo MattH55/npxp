@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002500",
+  "name": "ENILCONAZOLE",
+  "drug_class": "STEROL DEMETHYLASE INHIBITOR",
+  "target": "CYP19A1;CYP1A2;CYP2B6;CYP2C9;CYP2J2;CYP3A4;CYP3A5;NR1I2;PPARA;PTGER2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "7af34c19-aae1-4a51-81b0-c3ba0d0df3ed",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -1.00007701166,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "48945b62-4d7e-402b-bbed-865ca2ae88a2",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.067066433742,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2e8a818e-ae86-4c12-ac28-371508bc097b",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.204043207425,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "66d9440b-fea4-411d-9352-e79b4e984334",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.117452401509,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f271f75f-7582-454c-b768-7a7f86739a80",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.0568150942321,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "480c38cf-a06a-41b1-9650-8a7bbfa323ed",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.160994716385,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3fc66219-48ad-42ea-a2c4-61bd1891dbe3",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.423705348911,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e6464ee0-ba63-4adc-bb7e-f6f2ac1a9cdd",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.273573384811,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6a6d14b1-f845-4e79-9369-e5f7c4db5928",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.628147654556,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a58fd89d-be91-41ea-863d-89099436a75a",
+      "drug_id": "DPC-002500",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.162846374527,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

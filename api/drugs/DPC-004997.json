@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-004997",
+  "name": "PERAMIVIR",
+  "drug_class": "NEURAMINIDASE INHIBITOR",
+  "target": "",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "59981c30-5481-4e5d-82f7-0cb23e6ba564",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.598434481131,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4f7829d2-261b-4f65-b209-a2c90210b707",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.595001648934,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6432419c-531a-497d-b3b1-2da19580ff7c",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.164852631863,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "330dcf78-608a-4bb3-b494-29ac1f492700",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.215060201242,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c1bdc107-41de-4fc6-aa88-88fdfdae467e",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.216364407622,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "007bac42-9b7e-4184-b6f3-ae8d4237c160",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.232180513937,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2f4deef0-2145-4695-a48c-c1afb555efa6",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.0272070463668,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cc4f848b-5942-4c5a-9741-a3cf7333249e",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.225554456672,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f04897a9-d7d9-4306-872a-8367ef5c1980",
+      "drug_id": "DPC-004997",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.147997075322,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

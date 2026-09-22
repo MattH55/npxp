@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-000979",
+  "name": "BENDROFLUMETHIAZIDE",
+  "drug_class": "SODIUM/POTASSIUM/CHLORIDE TRANSPORTER INHIBITOR",
+  "target": "CA1;CA2;CA4;KCNMA1;SLC12A1;SLC12A3",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "c9d788c4-8fe6-4cf8-baba-c109f0ad104f",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.261751431029,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "791d51b3-0d65-4783-9453-5e537f183fa9",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.359959498574,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ff8d46be-0486-45b7-b85e-7c391f24bcfd",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.402275537425,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f69cb5db-084c-4fa4-a1a7-b7cb6acb996b",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.300486248109,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "52ad4739-8013-4c46-8d61-1d97eb82b2bd",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.302349805963,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0a84347a-1205-4e8f-944f-f145361fb290",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.642094966004,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9b75c881-f99f-47ed-84d4-a1dc6c612781",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.0516322164612,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4226fd5c-d488-410c-ba9d-10a35ce2b415",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.172509288887,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ad2e05d4-ae4c-46a1-b8f4-12f1795ca69b",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.678570595038,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "38489711-d0e9-4023-879b-dc3744825c37",
+      "drug_id": "DPC-000979",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.153948434051,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

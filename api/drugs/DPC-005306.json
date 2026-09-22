@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-005306",
+  "name": "PREDNISOLONE",
+  "drug_class": "agonist of GR (NR3C1); corticosteroid",
+  "target": "NR3C1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": "5755",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "38329f81-f835-451a-b88c-67fed1e0e1d2",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.861418532692,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "58777a2c-d923-40b6-a292-e01e4016e8de",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.665915974406,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "34b3f5cd-da5a-437f-b504-e1519fc9bc8e",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.593549661554,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e8c0bec0-d72a-485a-97e3-7ae7cfc05207",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.242358719531,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ace93db6-dbad-42a8-8504-8c1f7e78fc53",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.108233888295,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "14e63f34-7ae2-487c-8a3a-df5002081018",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.865918388258,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "648bf8b2-377c-460f-9eef-773e41c4aad0",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.0346864444147,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "864a4914-9219-4ba9-bd72-300ac4d4d1a8",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.193483082108,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f7ed7f9f-fd42-471b-9650-72a41138c122",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.3164587818,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "575ce903-c2b3-4c5f-9f75-444f045dc010",
+      "drug_id": "DPC-005306",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.219438879808,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

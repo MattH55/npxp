@@ -12,17 +12,98 @@
   "clinical_status": null,
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": null,
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "745d7964-c3a5-444d-ad66-9077e94b873d",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.67659246008,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "292a12dd-016a-4db0-bb71-f3a6a350c730",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.169652971159,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3756dea6-5491-4fc1-98c2-cc665bcf7020",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0622983517745,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9ab47440-57e4-4d86-b7f2-bdf07e4e2357",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.338093247681,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e65bc8ed-96fc-4f3a-8335-ecd47e860861",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.523181434434,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c46523bc-460d-4d25-8e36-9b92a1debda2",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.172936417523,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "effc27ad-56f4-4dfe-8fe6-3ff143fefb94",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.245142306865,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "19576608-4835-41b9-abea-cad3c7044b62",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.543772819597,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0c6cf13e-03a6-4542-8c15-7e4dd5246d46",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 1.22522333361,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d7ec6c85-216f-4780-9cb8-12b4d12f9ee8",
+      "drug_id": "DPC-004499",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.347826186412,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "2c8ab7a7-0a67-4603-9282-97c2451a298a",
+      "id": "b2195c3f-9c0e-4fe7-bb6b-ed23be78e2be",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "drug_id": "DPC-004499",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "56028e73-566a-4b2d-ab72-7a409f5ec65f",
+      "mechanism_link": "63e75c69-46b8-49ca-9a11-a0e969098fb8",
       "resistance_mechanism_link": null,
       "source_study": [
         "geo:GSE48398",
@@ -57,14 +138,14 @@
       }
     },
     {
-      "id": "fbf5af1e-b5df-492c-bfce-19d8df95707e",
+      "id": "d0ec2b60-9053-4550-82e4-8088c031fe01",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "drug_id": "DPC-004499",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2338da5d-e792-4f7f-9bf3-fd86f101c67b",
+      "mechanism_link": "492d655e-8cfb-42a2-97a9-4f1211c1f187",
       "resistance_mechanism_link": null,
       "source_study": [
         "geo:GSE48398",
@@ -99,14 +180,14 @@
       }
     },
     {
-      "id": "513f21e9-1590-45bb-9770-0860842b824c",
+      "id": "b7903c2a-2f4c-4aa4-bbd7-16e16e41e4df",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "drug_id": "DPC-004499",
       "cell_line_id": "MDAMB468_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "eb45e4f4-87e6-4404-ab5b-bab9c9b3ef91",
+      "mechanism_link": "ef6ff045-ea07-44dc-9eba-3ec9159162c0",
       "resistance_mechanism_link": null,
       "source_study": [
         "geo:GSE48398",
@@ -141,14 +222,14 @@
       }
     },
     {
-      "id": "bf6f7ba7-f2bd-4c33-811a-2b471138e63c",
+      "id": "7480b851-3187-4bd6-8859-5ad3acc6fe92",
       "modifier_id": "MOD-HT-41C-30M",
       "drug_id": "DPC-004499",
       "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "ff78fa12-967b-400e-8b22-8e055c0bc53b",
+      "mechanism_link": "061ae0e6-6835-4a26-8fe1-0aaf1d2a5e3a",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1080/02656730802140777",
@@ -184,9 +265,16 @@
     }
   ],
   "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
     "MCF-7",
     "MDA-MB-231",
     "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG",
     "U-937"
   ],
   "resistance_mechanisms": []

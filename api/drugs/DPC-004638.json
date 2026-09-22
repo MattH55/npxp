@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-004638",
+  "name": "NORTRIPTYLINE",
+  "drug_class": "TRICYCLIC ANTIDEPRESSANT",
+  "target": "ADRA1A;ADRA1B;ADRA1D;ADRA2A;ADRA2B;ADRA2C;ADRB1;ADRB2;ADRB3;CHRM1;CHRM2;CHRM3;CHRM4;CHRM5;DRD2;HRH1;HTR1A;HTR2A;HTR2C;HTR6;KCNJ10;PGRMC1;SIGMAR1;SLC6A2;SLC6A4",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "3ee03d39-661b-402b-b857-5b89b04d49bd",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.352867317258,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "54af8384-1a94-411c-a775-25bc2b66ffc9",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.118996481376,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "376ec85f-6595-4ffa-a021-320a4b76d0eb",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.112330089019,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c90ac24c-6bc0-4b5d-9922-07da4f6ba0df",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.539364039766,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "10cd581b-170e-4230-9ec3-9b07fc30f723",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.0924449117576,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d74c92e7-f447-4828-9398-6452c086189a",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0294834923014,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "959db545-5cdc-40f0-8087-cc238b439f38",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.0534458542724,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9c6677cb-1371-4d7e-bc27-96116847b746",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.12101871031,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b184ad86-d6b6-447b-b535-cd25cad953db",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.144666753713,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8b4f43ed-880a-4976-a704-127bf197ec86",
+      "drug_id": "DPC-004638",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0934611286105,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

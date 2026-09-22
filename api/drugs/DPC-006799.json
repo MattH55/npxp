@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-006799",
+  "name": "VANDETANIB",
+  "drug_class": "EGFR INHIBITOR, RET TYROSINE KINASE INHIBITOR, VEGFR INHIBITOR",
+  "target": "EGFR;EPHA1;EPHA10;EPHA2;EPHA3;EPHA4;EPHA5;EPHA6;EPHA7;EPHA8;EPHB1;EPHB2;EPHB3;EPHB4;EPHB6;ERBB2;ERBB3;ERBB4;FLT1;FLT4;KDR;PTK6;RET;SRC;TEK;VEGFA",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "11e11e76-3855-41ef-bca3-29cfbcd59dc8",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.212589351565,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "718a4fd6-0e36-4dac-bc10-92364b65cdc2",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.189926171834,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f89590b6-c697-45bd-ad53-486d85ac3a38",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.532929566432,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0238cc16-2f46-4aa6-be83-22693787ea9b",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.452571999188,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6c588da4-4588-4c46-bf0a-3b625d094076",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.240557619204,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ff7689a4-f071-47c9-b91c-4e85e4e8e1f7",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -1.049499232,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fe939af7-f409-451e-be45-841fa145db55",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.376210063524,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a75fc6d5-e695-4063-9faf-c5feb7566b82",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.0842680732557,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "81c883ee-bf2b-41c6-8404-f4394c8b457c",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.574469677918,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b4a8e6f9-f7c7-4bba-be09-6a5f1b0d3f5d",
+      "drug_id": "DPC-006799",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.402680145937,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

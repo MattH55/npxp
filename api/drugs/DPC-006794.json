@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-006794",
+  "name": "VALPROIC-ACID",
+  "drug_class": "BENZODIAZEPINE RECEPTOR AGONIST, HDAC INHIBITOR",
+  "target": "ABAT;ACADSB;ALDH5A1;HDAC1;HDAC2;HDAC9;OGDH;SCN10A;SCN11A;SCN1A;SCN1B;SCN2A;SCN2B;SCN3A;SCN3B;SCN4A;SCN4B;SCN5A;SCN7A;SCN8A;SCN9A",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "b2ff49ac-1061-44bb-9a77-129bd2f28897",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0692150506042,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1faddec3-b006-458a-b2fa-8813a24de614",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.0352543655079,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a9bb74f5-f8f5-4452-be74-1a15e59c8674",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.321007021786,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "279b1308-2318-4df9-9ff5-c5d8b069986d",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.361182136974,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "69164869-bd3f-4a33-b365-45add734c265",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.108829908488,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c82dd3b1-1d38-4d42-b842-33fac1b43a8e",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.148804869137,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a52f0e57-f0e8-44c1-9e49-07bd59e47803",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.369395514909,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2f051bfa-1749-4b77-a674-74052a7dbeb3",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.200144676624,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "04c40ff3-5f0e-442b-b17d-0a56c0df479f",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.634708780929,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6494ef55-d9ac-4534-87da-c3522fd6aa2e",
+      "drug_id": "DPC-006794",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0962107237061,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

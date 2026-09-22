@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002372",
+  "name": "DULOXETINE",
+  "drug_class": "NOREPINEPHRINE REUPTAKE INHIBITOR, SEROTONIN-NOREPINEPHRINE REUPTAKE INHIBITOR (SNRI), SEROTONIN\u00c2\u0080\u0093NOREPINEPHRINE REUPTAKE INHIBITOR (SNRI)",
+  "target": "HTR2A;HTR2C;HTR6;SLC6A2;SLC6A3;SLC6A4",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "d2d25b05-6cc6-41d1-b0c1-83ae286a6849",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.404655830553,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9ad9aa96-2d81-49d2-b7d1-c28b37ace4ce",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.189906804101,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8acb6aa4-87aa-40c2-9c46-6869dc092c87",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.308281426468,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7241e259-93ee-4c93-a7f6-adecd7c9182d",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.463519903931,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f0a531cb-1455-4ae4-9bea-03fa996ec407",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.340208507191,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5552d509-6790-43b5-8b59-58a69218e93c",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.463503289008,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ec6aa04c-81a2-4242-a0ae-ceaa4bbdceb7",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.471436095746,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "03acb6bd-1081-44a2-83d0-dcbbecb32890",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.61367230742,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8f0fa80f-597e-40ff-9b10-0ee0db07cced",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.272815276444,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6576841e-22d7-4dca-8614-0a7e2afc22e5",
+      "drug_id": "DPC-002372",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.546030248802,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -12,17 +12,98 @@
   "clinical_status": null,
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": null,
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "e581e7b3-656c-4afd-a2f1-da8b06ef5559",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.0315937408476,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1d3b0746-10a8-4cf1-a6d6-c405b427a203",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.207891791457,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e8797770-6eac-4eca-8f8c-358f4d655f5f",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.259321414127,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "69d764c9-8660-415a-a646-e799b712891e",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.0570736441024,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9b1c6a9e-a114-4049-9714-e92efaba99c5",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.136348061189,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f967790a-ff46-45ac-a104-056678ca977f",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.512267630529,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c233490d-05c6-44e5-926b-e8905937bc10",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.290288244724,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1f17d619-6913-40ac-a69e-988154a336e8",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.391613927243,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "75e45f6b-0570-46fb-a833-c28462fd6bfd",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.614229089469,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1cecfbe0-073e-444d-9e16-6643604ea251",
+      "drug_id": "DPC-000594",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0428047322632,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "ecb78dc8-5912-44e9-94f4-aa88396984c9",
+      "id": "e2e2d295-056c-48e9-b8f4-caf4fe806eac",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-000594",
       "cell_line_id": "T47D_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "5fd63d25-217e-4d1d-8368-33e2bba9c449",
+      "mechanism_link": "d01483d7-2bec-443f-959f-1c7ab4254e6d",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -57,14 +138,14 @@
       }
     },
     {
-      "id": "c7715f1b-e29a-4d74-b267-8f8c228b42df",
+      "id": "45f1e771-e751-4fb6-984b-f94882ea79f5",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-000594",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "a52dfaf3-ed5e-42ec-97a4-e90e22f25245",
+      "mechanism_link": "255deac7-1a71-4ee9-a09f-f7307cea243d",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -99,14 +180,14 @@
       }
     },
     {
-      "id": "af223ca2-6f6a-47ca-a853-fff60780d7ef",
+      "id": "98c41656-497e-4fa2-8d53-730653c6071b",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000594",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "da0a85f5-ffd6-430c-b2a8-ce27de9e1ac5",
+      "mechanism_link": "fca33fdb-7a43-4578-a013-0e1ec7c78e70",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -141,14 +222,14 @@
       }
     },
     {
-      "id": "50cd3edb-408f-40bc-9e50-849a5c9ee787",
+      "id": "b35a764b-6ce7-4c0f-aa04-dd752f1de501",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000594",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c948e272-5b9c-4397-acaf-42087145f8f7",
+      "mechanism_link": "4b0142b7-bee5-4e82-a785-13e5ced45472",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -183,14 +264,14 @@
       }
     },
     {
-      "id": "0980aa5f-bede-47a3-a692-9f7cfe301305",
+      "id": "8cc23e6d-d4ee-4f8b-81fd-c3cdf5e12210",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-000594",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "769a7fa6-be1d-44fa-86e6-59432c15cfc2",
+      "mechanism_link": "b25e2543-75f4-456e-8f04-56b57f8ec2b2",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -226,10 +307,17 @@
     }
   ],
   "cell_lines": [
+    "A549",
+    "DU-145",
     "HCT116",
     "HCT116 p53-/-",
+    "MCF-7",
     "MDA-MB-231",
-    "T47D"
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
   ],
   "resistance_mechanisms": []
 }

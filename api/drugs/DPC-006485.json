@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006485",
+  "name": "TIENILIC-ACID",
+  "drug_class": "CYTOCHROME P450 INHIBITOR, SODIUM/POTASSIUM/CHLORIDE TRANSPORTER INHIBITOR",
+  "target": "CYP2C9;SLC12A1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "fc6084c6-c26b-4948-96a2-d8a73e8054fc",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.462738264222849,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9cadfcfc-5d83-4306-89d3-37fb222daafc",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.0500414219736082,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3ad6f5c8-9a66-466d-825d-33e353ce11ba",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.383597219255068,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4ccfed53-1b97-4191-b2eb-77853eb36408",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.714091655634229,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e713084a-1acc-4f26-8c37-7d320121bddc",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.660732554830354,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9c3b6f50-1045-40b9-95a2-c941a85f67a3",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.342480823022925,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "17a6d9ef-0f6b-45ad-99bf-71fc6c77c20d",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.297751927349594,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8de77e36-0a9e-4afa-90eb-7c63fce72594",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.294806911716208,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3ffe2f97-657f-4565-a7ef-6cf0b7d6cb72",
+      "drug_id": "DPC-006485",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.268703390380457,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G"
+  ],
+  "resistance_mechanisms": []
+}

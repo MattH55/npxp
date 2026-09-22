@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006847",
+  "name": "VIGABATRIN",
+  "drug_class": "GABA AMINOTRANSFERASE INHIBITOR",
+  "target": "ABAT;GABBR1;SLC32A1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "1420d7ea-5949-48fc-ac86-d3d69a9e2dd7",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0892030065869,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fbe292a1-5e66-420b-9c53-4cdb6cfd8817",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.722688594857,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c32a59a3-7cf8-4d0f-9ab5-f90f2e7c6844",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0805706126827,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5b9d43ef-0e83-4ada-bd44-5efbd5777a18",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.19448190642,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "26f9369a-6ef3-4226-adb6-73cad429ecc8",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.216462544354,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "524b7e03-fcf4-488c-b7bf-591777694a9c",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.0861483703656,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5c554069-90b6-4ffa-9a34-3b1a5ce9b5ad",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.325507061401,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "57a4e554-11dd-4479-b431-d31d36fd0425",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.116212986988,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1d47052a-4dd0-41f5-b7a3-e5b2819e371f",
+      "drug_id": "DPC-006847",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0263948480821,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

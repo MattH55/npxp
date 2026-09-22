@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-000991",
+  "name": "BENZAMIL",
+  "drug_class": "SODIUM CHANNEL BLOCKER",
+  "target": "ASIC1;PKD2L1;SCNN1A;SCNN1B;SCNN1D;SCNN1G;SLC8A1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "76817c85-6e08-4ea4-bf5d-692061474f54",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.7621715302,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fe162cfb-f111-4c14-a1e3-dffd6e2c1b6f",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.52464748827,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "96f29f9c-08b4-442f-9216-a491309eebf3",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0811066455647,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b5933dd7-4b37-4755-9a67-b4c076afa62b",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.135700608418,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a81816fa-aa90-47f7-b288-29c3503d2d8a",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.399642318924,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9accad81-9add-44be-a6a5-13b757a341be",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.162483549938,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ce4547b7-5b2d-47c5-904b-a10bbec66a4c",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.267763164166,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cef3adb7-93b8-4c0c-953b-e4aff9c77edd",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.0193248884095,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cddde331-1939-4ec3-969c-354e23899aa7",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.686493116288,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e9833e2b-fb82-465b-b6de-b6b01d707352",
+      "drug_id": "DPC-000991",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0294560305082,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

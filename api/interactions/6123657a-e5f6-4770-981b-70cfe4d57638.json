@@ -1,0 +1,158 @@
+{
+  "id": "6123657a-e5f6-4770-981b-70cfe4d57638",
+  "modifier_id": "MOD-ALICIN-NSCLC",
+  "drug_id": "cisplatin",
+  "cell_line_id": "A549_LUNG",
+  "combined_effect_metric": null,
+  "interaction_type": "synergistic",
+  "evidence_tier": "tier_1_direct",
+  "mechanism_link": "07217f0f-ceee-4439-9847-8bbe29fb75cc",
+  "resistance_mechanism_link": null,
+  "source_study": [
+    "doi:10.33594/000000253",
+    "pmid:32809300"
+  ],
+  "curator_notes": "Allicin synergistically enhanced the growth-inhibitory activity of low-dose cisplatin in A549 cells under hypoxia, overcoming hypoxia-induced cisplatin resistance via ROS accumulation, HIF-1alpha/HIF-2alpha suppression and ROS/JNK-MAPK signalling (Pandey et al. 2020); allicin alone was also efficacious in normoxia. Quantitative IC50/CI values pending curation from source figures.",
+  "model_run_id": null,
+  "trial_builder_ref": null,
+  "modifier_agent": "Allicin (garlic organosulfur thiosulfinate)",
+  "modifier_type": "dietary_metabolic",
+  "modifier_infrastructure_requirement": "minimal",
+  "cell_line_name": "A549",
+  "tissue_origin": "Lung",
+  "drug_name": "Cisplatin",
+  "drug_class": "Platinum agent",
+  "drug_cost_accessibility_tier": "essential_generic",
+  "drug_pubchem_cid": "5702198",
+  "drug_clinical_status": "approved",
+  "drug_lincs_signature_ref": null,
+  "evidence_tier_label": "Tier 1 \u2014 Direct",
+  "resistance_mechanism": null,
+  "is_bridging_candidate": false,
+  "low_resource_relevance": true,
+  "priority_score": 0.5167,
+  "priority_components": {
+    "convergent_evidence": 0.3333,
+    "coverage_gap": 0.3333,
+    "trial_saturation_inverse": 1.0,
+    "tumor_representativeness": 0.5,
+    "low_resource_boost": 1.0,
+    "disease_burden": null
+  },
+  "modifier": {
+    "modifier_id": "MOD-ALICIN-NSCLC",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Allicin (garlic organosulfur thiosulfinate)",
+    "protocol_parameters": {
+      "oxygenation": "parallel normoxic and hypoxic arms (hypoxia confers cisplatin resistance in A549; exact O2% per source Methods pending curation)",
+      "dose": "per Pandey et al. Methods (dose/timepoints pending curation from source tables; not stated in abstract)",
+      "readout": "MTT viability; flow cytometry (cell cycle, apoptosis, ROS); scratch and transwell migration; genome-wide methylation dot blot; HIF-1alpha/HIF-2alpha immunoblot"
+    },
+    "source_study": "pmid:32809300",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Garlic-derived compound / dietary organosulfur; low-cost, widely available."
+  },
+  "cell_line": {
+    "cell_line_id": "A549_LUNG",
+    "name": "A549",
+    "tissue_origin": "Lung",
+    "cancer_subtype": "Lung adenocarcinoma (NSCLC)",
+    "key_mutations": [
+      {
+        "gene": "KRAS",
+        "variant": "G12S"
+      },
+      {
+        "gene": "STK11",
+        "variant": "loss-of-function"
+      }
+    ],
+    "source": "CCLE/DepMap",
+    "oncotree_code": "LUAD",
+    "oncotree_primary_disease": "Non-Small Cell Lung Cancer",
+    "oncotree_subtype": "Lung Adenocarcinoma",
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed"
+  },
+  "drug": {
+    "drug_id": "cisplatin",
+    "name": "Cisplatin",
+    "drug_class": "Platinum agent",
+    "target": "DNA crosslinking (intrastrand adducts)",
+    "source": "curated seed",
+    "synonyms": [
+      "cis-Diamminedichloroplatinum(II)",
+      "CDDP"
+    ],
+    "pubchem_cid": "5702198",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Platinum-DNA intrastrand crosslinks trigger DNA-damage response and apoptosis",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic"
+  },
+  "mechanism": {
+    "id": "07217f0f-ceee-4439-9847-8bbe29fb75cc",
+    "modifier_id": "MOD-ALICIN-NSCLC",
+    "cell_line_id": "A549_LUNG",
+    "signature_panel": "other",
+    "score": null,
+    "raw_deg_evidence_ref": "Pandey N et al. 2020 (PMID 32809300), Cell Physiol Biochem 54(4):748-766 (published figures; no transcriptomic accession)",
+    "directionality": "death_promoting",
+    "notes": "Allicin decreases A549 viability/proliferation/migration in normoxia and hypoxia via ROS accumulation (ROS/MAPK and ROS/JNK), elicits apoptosis + autophagy with S/G2-M arrest, and suppresses HIF-1alpha/HIF-2alpha expression in hypoxic cells - overcoming hypoxia-mediated resistance. Panel=other (no HIF panel in spec)."
+  },
+  "evidence_tier_definition": {
+    "label": "Tier 1 \u2014 Direct",
+    "short_label": "T1",
+    "definition": "The combination was tested empirically in the same study: drug and modifier were applied together and death/viability was measured."
+  },
+  "clinical_evidence": [],
+  "related": [
+    {
+      "id": "4785851f-3b75-44ba-91fc-09de31884b49",
+      "modifier_id": "MOD-HBOT",
+      "drug_id": "cisplatin",
+      "cell_line_id": "A549_LUNG",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_3_mechanism_only",
+      "mechanism_link": "55ca792e-0c7d-4c8d-8619-7862f59fc607",
+      "resistance_mechanism_link": null,
+      "source_study": [
+        "doi:10.3389/fonc.2021.691762",
+        "pmid:34367973"
+      ],
+      "curator_notes": "Mechanism-only entry, paralleling the curated allicin x cisplatin (hypoxic A549) entry above: HBO suppresses the HIF-1alpha/PFKP axis that otherwise drives hypoxia-mediated chemoresistance (Zhang et al. 2021), but no HBO x cisplatin combination was tested in the source study. Awaiting a combination viability readout.",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Hyperbaric oxygen therapy (HBOT)",
+      "modifier_type": "hypoxic",
+      "modifier_infrastructure_requirement": "high",
+      "cell_line_name": "A549",
+      "tissue_origin": "Lung",
+      "drug_name": "Cisplatin",
+      "drug_class": "Platinum agent",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "5702198",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": false,
+      "priority_score": 0.4667,
+      "priority_components": {
+        "convergent_evidence": 0.3333,
+        "coverage_gap": 0.5,
+        "trial_saturation_inverse": 1.0,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 0.0,
+        "disease_burden": null
+      }
+    }
+  ],
+  "related_truncated": false
+}

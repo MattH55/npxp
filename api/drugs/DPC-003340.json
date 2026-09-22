@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003340",
+  "name": "ICOSAPENT",
+  "drug_class": "PLATELET AGGREGATION INHIBITOR",
+  "target": "ACSL3;ACSL4;FADS1;FFAR1;PPARD;PPARG;PTGS1;PTGS2;SLC8A1;TRPV1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "281cec6d-149d-4d7d-b2c1-4275e52a24f2",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.160166827663,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6a4db277-c666-4905-816e-da7f3b52f83e",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.181888891482,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "98a34360-b84e-400f-b418-d1527f32a766",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.377339610751,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "280c4f4e-8936-4bc7-9b5b-09a14fba037b",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.15360835248,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cb077538-00de-4661-a55e-d6dd9c76ac2a",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.0693281337102,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1099c776-112a-4757-a6bb-bf12edbbeab7",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0408875269762,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9bc93a94-632f-4509-a631-cd1ea8c576ee",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.0544523082146,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "609dee44-7c1a-412a-b27b-d521b4458292",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.117319404515,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ebaf7765-0934-4045-a245-187597232864",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.537017472633,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b71a9e79-161a-45ec-b818-e4d996d5543b",
+      "drug_id": "DPC-003340",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.117383937829,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

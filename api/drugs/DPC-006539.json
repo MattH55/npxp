@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006539",
+  "name": "TOFOGLIFLOZIN",
+  "drug_class": "SODIUM/GLUCOSE COTRANSPORTER INHIBITOR",
+  "target": "GCK",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "21f32393-7bca-4e4d-8643-ae3434da2673",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.236720033788,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a10f3b84-d8ef-4416-9096-1176cf4bce9c",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.100991621175,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c6a87928-6840-403b-8ca5-e95cad0fe27f",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.679041740814,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cb30b3f8-088e-4c7e-9c7d-b9bc13567ae3",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.216417879256,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b3982202-6914-4c50-8e14-391a24eddb4c",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.1984314164,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7dd58978-358a-45df-82fa-8142450a2c45",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.31995431463,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "820cee3a-9d85-4ea0-b08f-a677f1936f8f",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.0968088077565,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8d4db868-02bc-4405-8ea6-08f7ee9059fc",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.333244155558,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0d76b381-bbb3-41a7-ac81-fbc71d342649",
+      "drug_id": "DPC-006539",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.161292157512,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

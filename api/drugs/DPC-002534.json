@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002534",
+  "name": "EPINEPHRINE",
+  "drug_class": "ADRENERGIC RECEPTOR AGONIST, CARBONIC ANHYDRASE ACTIVATOR, NEUROTRANSMITTER",
+  "target": "ADRA1A;ADRA1B;ADRA1D;ADRA2A;ADRA2B;ADRA2C;ADRB1;ADRB2;ADRB3;PAH;TNF",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "7c7b366d-9e8a-446c-9e24-3bb9c7e5f6a2",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.459528545276,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0bf37986-9cf2-4888-bc8b-948cc64d3588",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.103298900101,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b888be3e-7a15-4b16-893d-ca9477dd183e",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.907859897441,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1d0a6642-6601-4681-992c-c5f7e83889c6",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.0840349999933,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "038f61df-6f76-4257-8da6-44dc0ec6cb4a",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.380781110862,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0466d6ff-29dd-4649-85a9-999a4cea8b56",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.25475449962,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "528b03e1-df41-4c31-a5b7-d8dc42897380",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.825982903962,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a36842d6-939e-4218-857c-43ef2e55d1d0",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.176469678804,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3fa7bca7-0172-4716-99df-c9086187ca97",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.630263301573,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0b1f4b3e-316c-4f4c-9b55-396695bbefb5",
+      "drug_id": "DPC-002534",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.0873553141011,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

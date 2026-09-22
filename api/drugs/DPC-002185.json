@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-002185",
+  "name": "DEXTROMETHORPHAN",
+  "drug_class": "GLUTAMATE RECEPTOR ANTAGONIST, SIGMA RECEPTOR AGONIST",
+  "target": "CHRNA2;CHRNA3;CHRNA4;CHRNA7;CHRNB2;CHRNB4;CYBA;CYBB;GRIN3A;NCF1;NCF2;NCF4;OPRD1;OPRK1;OPRM1;PGRMC1;RAC1;RAC2;SIGMAR1;SLC6A2;SLC6A4",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "e5f78cff-9557-46fe-a867-1a0b1ecf477d",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.20074888952,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "523e2b93-11a2-4d60-b55c-b1cfb826fd76",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.126273579486,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ac3c4597-4972-4b6e-be62-d71fdae3c20a",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.772702583176,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "77637a08-6a54-445a-a48e-20beee917b0c",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.192002334649,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "73f8cdd3-d9f4-4301-b482-fd083e6b51c2",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.393872277609,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "46059bc7-a186-444e-80ac-7d2762aff582",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0169743189574,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "901c5536-77cf-44e6-9b25-9889b2ec2782",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.229721108998,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c47193a0-ee2e-4b62-b2dc-9cc28b4ed655",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.747188762653,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7475fdaa-2c19-4b9f-af95-29d6121b0408",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.32157976874,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "43fd1c0f-6304-491f-b266-1f912ab0f524",
+      "drug_id": "DPC-002185",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.51322765108,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

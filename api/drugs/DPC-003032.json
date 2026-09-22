@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-003032",
+  "name": "GLYCEROL-MONOLAURATE",
+  "drug_class": "BETA LACTAMASE INHIBITOR",
+  "target": "",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "0a2ae907-0961-41e3-86bd-c97f57a54ee4",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.130813565276,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "aea6bedb-2137-47f3-aa66-3e160adc3f37",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.42768592825,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "be46ffb7-1ed1-4f45-9a20-7ebc2ee44a20",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.310077435018,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d6620a92-8873-48e4-991c-1912e380cb91",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.0666130747494,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9bd53de1-b3bd-4256-96d7-edbfc1c0f5bf",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.100986493148,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "87ffbfd8-bae0-4190-81c6-720b4cf9a264",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.133209684832,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3e122fff-3b27-4239-8440-fbdb898c90b2",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.0578011455601,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "84be9f5e-8c05-4274-a259-c76e5664ccc4",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.163525118656,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "398086f0-c6cd-4be6-962d-432419e0d370",
+      "drug_id": "DPC-003032",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.516575831725,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

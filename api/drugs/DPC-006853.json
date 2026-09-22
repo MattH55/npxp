@@ -1,0 +1,123 @@
+{
+  "drug_id": "DPC-006853",
+  "name": "VINCRISTINE",
+  "drug_class": "inhibitor of tubulin polymerization",
+  "target": "TUBB;TUBB1;TUBB2A;TUBB2B;TUBB3;TUBB4A;TUBB4B;TUBB6;TUBB8",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "LEUROCRISTINE",
+    "NSC-67574"
+  ],
+  "pubchem_cid": "5978",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "157ad5ef-5bd2-48a4-a831-8350df622482",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -2.94676253204,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "71e59daf-12bd-4463-89cd-30e58645380c",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -1.01376344682,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "775d9a92-319a-465e-804c-cb54c420c2a1",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -2.63450178449,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c131cdd7-66ea-4df9-abf9-c400b66a9e3d",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.0580791029821,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9c15eaf8-9b38-458d-b27c-2abf3725d4ec",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -3.44463136874,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "13621885-d126-46b9-ae13-8aa405f3911b",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -2.48656394434,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "404b7c63-422a-42e0-96a6-7f24b9d7593c",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -1.44322043504,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4f47adc3-4b33-4ca5-b4c5-e94d4424f722",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -2.07751314666,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "959b14e5-4c0b-49d7-b307-bd5dd2e8c29f",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -2.0634122762,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c4545825-c01e-4ee6-8bcf-1a1202b2b121",
+      "drug_id": "DPC-006853",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -3.37840077726,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": [
+    {
+      "id": "392f4bd6-4558-40ca-87ba-5dc0f3fd7f63",
+      "drug_id": "DPC-006853",
+      "pathway_or_gene": "ABCB1/P-glycoprotein drug efflux",
+      "mechanism_description": "Vinca alkaloids are classic ABCB1/P-gp substrates; P-gp overexpression is one of the best-characterized multidrug-resistance mechanisms in oncology (Gottesman 2002) -- the same review already cited for doxorubicin's ABCB1 mechanism.",
+      "source": "pmid:11818492",
+      "signature_panel": null
+    }
+  ]
+}

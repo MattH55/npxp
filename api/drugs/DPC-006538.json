@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006538",
+  "name": "TOFISOPAM",
+  "drug_class": "PHOSPHODIESTERASE INHIBITOR, CYTOCHROME P450 INHIBITOR",
+  "target": "CYP3A4;PDE10A;PDE2A;PDE3A;PDE4A",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "c8b45160-d898-4919-91d7-f87e6871ed25",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.113068890691,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f53617a2-e050-4725-9e3c-2dcda2fe10c0",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.295341127077,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bd4379e6-ac97-406c-83e3-a7c9f63d7adf",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.268971832433,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3fedad7d-9a93-4ce0-8705-04a7c2e54f03",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.0421687404096,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2200168d-9b4f-4776-88bc-eb86cb869b3d",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.136286105578,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "76304c8e-03eb-48f8-9dbf-4033daf0337e",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -2.92485930566e-05,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "40715085-df6d-45d8-9ca5-3f4741488f7a",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.263640335741,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f114b7c9-a98e-41b2-afb3-788dccd72f43",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.464818484939,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8efe2356-a9bd-4157-8a03-6316e7f4b925",
+      "drug_id": "DPC-006538",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.312987515136,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

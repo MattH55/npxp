@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-004191",
+  "name": "MIBEFRADIL",
+  "drug_class": "T-TYPE CALCIUM CHANNEL BLOCKER",
+  "target": "ANO1;CACNA1C;CACNA1D;CACNA1F;CACNA1G;CACNA1H;CACNA1I;CACNA1S;CACNB1;CACNB2;CACNB3;CACNB4;CATSPER1;CATSPER2;CATSPER3;CATSPER4",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "f2f33d60-baee-4ff7-9760-fcc7c41d014b",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.374802396609,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e0d9e4fe-f6e9-404f-b04a-75f143de7e97",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.242243807086,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "80bfa0f1-760f-485c-8895-128f540ba99a",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.840495673369,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0e9aa601-be27-4ac3-8cc2-028fea921d3c",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.00642342867319,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e91f5f3f-ad89-4409-befc-d95a8074ad41",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.146025397061,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0d947f48-831a-4a33-afd9-43a1302daa96",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.907031866479,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3bb6a2b1-e669-4620-8bf3-20af80792d77",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.0904455041597,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "60429fb4-ae94-4625-aee1-da0ef55aa6ea",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.626950713944,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "28ffc1e1-9e92-432d-bd36-9ce0e9884655",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.412629104967,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7a98495f-e4f0-4125-a198-27525704e271",
+      "drug_id": "DPC-004191",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.56274520488,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

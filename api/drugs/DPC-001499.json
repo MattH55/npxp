@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-001499",
+  "name": "CAROVERINE",
+  "drug_class": "CALCIUM CHANNEL BLOCKER, GLUTAMATE RECEPTOR ANTAGONIST",
+  "target": "",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "39479a89-706e-4a09-80d3-f20ad942e61d",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0782032169477,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "00708513-e4c6-420e-a5f5-7baa68ad98de",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.0438421144151,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2f4a59c2-80f6-46b7-b339-7cbd7fe0274a",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.139530188895,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f35517fe-c7da-448d-9999-acb124aacc5d",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.234432648302,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4ecfecd4-03b8-45fb-b876-6965a301faea",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0446698526012,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "231c5dd9-b57d-4fab-b7d2-564b6c396ca9",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.399679251584,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "24f1440e-0eba-42e0-bbb0-3266542d8769",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.0163259971834,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b9377328-aad0-41cf-82d3-74175ded2e47",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.346318326358,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "628f3114-bb83-428b-b791-03773e8fd41d",
+      "drug_id": "DPC-001499",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.252811206011,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

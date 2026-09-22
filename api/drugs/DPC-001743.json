@@ -12,17 +12,90 @@
   "clinical_status": null,
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": null,
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "8c249e03-5722-4d55-af1c-ae2a544569d2",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.611476668091,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "254650f7-92c8-4b8a-812b-2a35bb1f3207",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.0222697316619,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "263a4750-1baa-40d5-84d5-25487adf613f",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0856030162601,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f26fd55d-2fc4-4eb7-905f-9e9ecfd05787",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.873963822444,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "893e0976-5f68-4e06-b38e-10e60f071d11",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.214204725048,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bedab416-0df6-4ae0-bec1-c4d8b5ec1344",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.206494052667,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6869b7a5-6109-4453-8f53-ad413a4591ee",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.515122287856,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "78597bc8-96c7-4719-9852-f9ed1d071c40",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0443489422112,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "563cc3fd-0ce2-46da-8bc1-699c0f07f274",
+      "drug_id": "DPC-001743",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0358703663974,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "8d36dc5e-81ec-4990-be09-79d749113b5c",
+      "id": "df4e7330-70e5-4fc5-8b2a-fe5ca470e7bc",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001743",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "027b22ec-6959-406c-8f4d-b23c57f037b4",
+      "mechanism_link": "712fa707-9648-448b-9706-bf7de2fe9e7d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -57,14 +130,14 @@
       }
     },
     {
-      "id": "32814563-ab5e-44b5-b9aa-2372b81960c5",
+      "id": "b83792d7-64d8-4acc-b153-7b80b6a3c91b",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001743",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "138fd9b9-8c0f-4513-87fe-0e1bfde58402",
+      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -99,14 +172,14 @@
       }
     },
     {
-      "id": "ea252a59-9211-4410-8acb-767cabc88a32",
+      "id": "73ba0924-74e2-4a45-b31a-8fa28d3c0b3a",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "DPC-001743",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -143,7 +216,14 @@
   ],
   "cell_lines": [
     "4T1",
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
     "RKO",
+    "T47D",
+    "T98G",
     "U-87 MG"
   ],
   "resistance_mechanisms": []

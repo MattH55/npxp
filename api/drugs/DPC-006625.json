@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-006625",
+  "name": "TRICHLORMETHIAZIDE",
+  "drug_class": "CHLORIDE CHANNEL BLOCKER",
+  "target": "ATP1A1;CA1;CA2;CA4;PTGS1;PTGS2;SLC12A1;SLC12A3",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "0b479610-90e7-493a-ab89-36b1e0955a7e",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.395115252929,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "85c7ecf5-ffc5-4ed0-b238-9022f444d949",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.438786769422,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "71f5e51e-8994-4879-bd22-16a9bf79f4b3",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.00169863411189,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f3d97ea8-6b13-4267-a259-2548d06c6c20",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.26049924786,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f98adc03-5747-426f-a04c-7c953c815637",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.500578832607,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7a2640c5-837e-4ee8-8402-8456e8134b54",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.223885075992,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a25c02c0-0d2a-4cf0-bc88-a28831a212d1",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.00767251721046,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0a30c2c5-7ab6-4d6d-ba3a-205cc8898348",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.0748588332622,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "20ea0dad-2ab2-487d-bdf4-dcbdd8ea0b63",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.325522098928,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6160892b-99e1-4152-b7e9-8da604b7f21d",
+      "drug_id": "DPC-006625",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.264974826925,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

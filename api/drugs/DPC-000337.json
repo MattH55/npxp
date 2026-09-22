@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-000337",
+  "name": "ADENINE",
+  "drug_class": "PROTEIN SYNTHESIS STIMULANT",
+  "target": "ACACB;ACP1;APRT;MTAP;PECR;SRPK2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "75fe76fa-a1d4-4085-8704-17c54fc4baf4",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.0295073963798,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "55dcb19c-3d92-4d9b-ad20-aeadbd6ebf00",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.101346294953,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e065a793-2ee5-47cf-abf0-a3403f7e4009",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.160455274996,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b6a56b43-2a2c-4215-8b87-daf8a5e1eb87",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.618340937724,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a0f751e0-d5b6-4772-98d6-b3c43afaa7b7",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.31529577284,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f374bf4a-e9cc-48e3-b8a5-ec0652c3f039",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.245412964731,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "5b260149-6849-48bc-85ba-476d021dcf3a",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.576273217763,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "94545399-401b-4a2b-bf0e-6a26eda5f831",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.0392276269889,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "22fdcc2c-cc32-4293-bddb-cf4350ccfa8b",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.083081360614,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "86e196eb-8541-4854-b638-9a6b0c784550",
+      "drug_id": "DPC-000337",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.307258511547,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

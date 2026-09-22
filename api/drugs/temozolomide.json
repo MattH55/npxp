@@ -15,17 +15,98 @@
   "clinical_status": "approved",
   "induced_expression_signature_ref": null,
   "cost_accessibility_tier": "generic_available",
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "2737ab99-b306-4fe8-8eb9-a0c1e878b70e",
+      "drug_id": "temozolomide",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.553374667823,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "496198f0-4a0c-4bca-a164-646e5264abeb",
+      "drug_id": "temozolomide",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.328701973658,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "304e7496-9ef2-4613-ad6e-ade0a200c3bf",
+      "drug_id": "temozolomide",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0971175997933,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "957c2151-97dd-4dca-b40e-5afaad2b002a",
+      "drug_id": "temozolomide",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.687944287408,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c923604c-dba5-47ad-b481-df05a60c1947",
+      "drug_id": "temozolomide",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.192508492462,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1dbce470-215e-44f9-ae9e-9cc2aa473e69",
+      "drug_id": "temozolomide",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.202727626321,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e7debf8e-65de-45af-82b9-f8fb44583ad7",
+      "drug_id": "temozolomide",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.361983894836,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "83d15944-8de0-4789-875b-9923a744aa95",
+      "drug_id": "temozolomide",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.20602501375,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3b7a219f-c5b4-451b-abfa-0dcfeddd8627",
+      "drug_id": "temozolomide",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.111176163566,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0f4c4386-2e75-4c58-82c3-280c1bddd85c",
+      "drug_id": "temozolomide",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0549041042404,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
   "interactions": [
     {
-      "id": "7c0cd730-d823-482d-a329-155e0356670b",
+      "id": "e207ab03-5b38-4849-bc0e-c401b7e75c35",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "temozolomide",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "c816ec3a-9149-4ae2-9b02-79a22fad0e51",
+      "mechanism_link": "4a96e271-d519-4f43-b2c1-f183eedc693c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -60,14 +141,14 @@
       }
     },
     {
-      "id": "46d074d7-d122-4780-bcfa-82b469517ac0",
+      "id": "9ba1aeaa-6981-4a43-9774-8a39bcc4f532",
       "modifier_id": "MOD-PEMF-XRBK11",
       "drug_id": "temozolomide",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "b2c6af71-baba-4c74-9ab9-1c020563901e",
+      "mechanism_link": "7a485c47-6608-45e8-8b32-51dd5c817feb",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1038/s41598-026-47481-y",
@@ -103,11 +184,20 @@
     }
   ],
   "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
     "U-87 MG"
   ],
   "resistance_mechanisms": [
     {
-      "id": "4938ded4-112a-4ef3-99fe-66a4a5c676d2",
+      "id": "e017cab4-c931-4aee-a7d6-8ad4dd51d020",
       "drug_id": "temozolomide",
       "pathway_or_gene": "MGMT (O6-methylguanine-DNA methyltransferase)",
       "mechanism_description": "MGMT directly repairs the O6-methylguanine lesion TMZ induces, irreversibly inactivating the drug's cytotoxic mechanism; MGMT promoter methylation (low MGMT expression) predicts TMZ benefit, the landmark clinical correlation in glioblastoma (Hegi et al. 2005).",

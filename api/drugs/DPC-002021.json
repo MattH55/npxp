@@ -1,0 +1,116 @@
+{
+  "drug_id": "DPC-002021",
+  "name": "CYTARABINE",
+  "drug_class": "pyrimidine nucleoside analog; inducer of DNA damage",
+  "target": "",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "ARA-C",
+    "ARA-CYTIDINE",
+    "ARABINOSYL CYTOSINE",
+    "U-19920"
+  ],
+  "pubchem_cid": "6253",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "ed882eb0-c8bb-45ff-b42f-1c4a048d80ae",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.490198782049,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "41138ae6-e51d-4aa6-9944-a488b01854ac",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.00630933867872,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bf9ad3f1-1be3-4269-9e30-c74a7b391662",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.436777920111,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "20544d39-29a0-4133-a6e6-f408b0d72800",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.322117047495,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8f024bbc-f007-4f89-ba71-f2b499e6d68b",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.44343039456,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "19798bc5-e23a-4d4b-894d-6f41c0d03b7d",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0787786936616,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "01d8c4c4-8ce9-4d2a-9185-4c7399fa18f4",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.0803014712881,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "33aa457f-c054-4ffb-9a21-ea9831aeee63",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.295720465221,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a45bcd0e-d7c6-4c74-bcea-264560ee9abd",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.384586577156,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "42b5838a-1b10-4182-9e25-4546ccb5065b",
+      "drug_id": "DPC-002021",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.34904400196,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

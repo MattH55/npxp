@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-006535",
+  "name": "TOCERANIB",
+  "drug_class": "PROTEIN TYROSINE KINASE INHIBITOR",
+  "target": "FLT1;FLT3;KDR;PDGFRA;PDGFRB",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "2586c5fa-87ed-410c-b2f4-0960299868db",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.00875741345351,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "103ec39e-71df-44a2-a10b-90dedd6fb10f",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.219464313906,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dea15a90-9335-4942-b710-cf1f0cec7810",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.106046601612,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "676d4230-071b-4f47-a497-817a8311ffd1",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.536885076033,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "eab822b2-8044-4718-bdcb-2b3b1a247f38",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0411445127663,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8af46074-cb49-4f3c-8c77-08089344404b",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.433230659722,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "38b2c2a8-b798-48df-b05b-6c99172afb0c",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.227224722464,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4edb6622-f198-4aa0-9ef0-99504eb69bc4",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0889952999995,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2a239a48-b7b2-4972-864b-721ab47a6d2b",
+      "drug_id": "DPC-006535",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.154743261712,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

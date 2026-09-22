@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-005130",
+  "name": "PHENYTOIN",
+  "drug_class": "HYDANTOIN ANTIEPILEPTIC",
+  "target": "SCN10A;SCN11A;SCN1A;SCN2A;SCN3A;SCN4A;SCN5A;SCN7A;SCN8A;SCN9A",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "a1c75cfc-8d3f-45f2-b30d-fbe5cb9527c8",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.114377301879,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6ed5a224-bd66-4eae-baf9-524ed0cb87d4",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.275378355776,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "1246bbaf-66e8-40c9-9495-8804e5f2905a",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.306648279196,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "726d968f-e4cc-401b-96d6-dd84b20ebdb0",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.415743357952,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b4f0fe10-c11a-40bf-a1a5-3c9e77d78f82",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.619182211205,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b840235d-4020-4a7f-afcd-84ff74a31d7f",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.00408779301673,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "da1fb914-7aa7-4c6e-bd8a-5585427b7fce",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.00247451289157,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "93a1fe58-c9fb-4cc6-a782-9786e7a66191",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.346813546003,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2e2a4b36-609a-4638-8aa4-71e6ed369cd7",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.472503754868,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a47f3071-0892-49ff-9b92-0b01136bb6a2",
+      "drug_id": "DPC-005130",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.107775212548,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-002364",
+  "name": "DROXIDOPA",
+  "drug_class": "NOREPINEPHRINE PRECURSOR",
+  "target": "ADRA1A;ADRA1B;ADRA1D;ADRA2A;ADRA2B;ADRA2C;ADRB1;ADRB2;ADRB3;PAH",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "fcd7a9dc-43a8-4548-865c-525661e9385d",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.222087888522,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "43e836ca-ef00-4ea0-a7c8-e97674c69e3e",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.252253271304,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e48ae4f8-c4d6-4e26-a354-f9d7483729b5",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.238964941207,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "485610ba-0edb-4607-84b0-bd58a6cfd249",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.444976856271,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3197b306-7619-4925-97f6-def19e0c0da8",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.258664513816,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "0c62995d-43ba-4c97-a861-f5399bb54252",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.330500023469,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fedd4a85-ccd1-4db2-9c55-5dc97b9f745e",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.3753931474,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3fc46f9f-1047-4692-940b-3bd56800d2ba",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0402153219415,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "13f33948-8a68-48f6-9da6-110dbfd1a3fb",
+      "drug_id": "DPC-002364",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.260444859614,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

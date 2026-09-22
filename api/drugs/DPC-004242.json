@@ -1,0 +1,108 @@
+{
+  "drug_id": "DPC-004242",
+  "name": "MK-0683",
+  "drug_class": "HDAC INHIBITOR",
+  "target": "HDAC1;HDAC10;HDAC11;HDAC2;HDAC3;HDAC5;HDAC6;HDAC8;HDAC9",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "SAHA",
+    "SUBERANILOHYDROXAMIC ACID",
+    "SUBEROYLANILIDE HYDROXAMIC ACID",
+    "VORINOSTAT",
+    "ZOLINZA"
+  ],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "affe1336-1bd2-4dbd-b853-c25d37520f81",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -2.83976876521,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9cf62f4f-e51c-421e-b45e-c08e5dd90eaf",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -2.04242123741,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "114b0bae-14ca-41cf-a100-783e2afbeeae",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -3.42351974951,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "506d60df-1bdc-45e5-ac65-eb54f7ea9136",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -2.13789000691,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2025e92c-c216-4998-9f00-c5ca6581bd03",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.528498558774,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cef01213-0a41-437d-a9e9-0b6c4a95ec64",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -1.57629939898,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d667554c-423e-4c04-b545-c8928db710c4",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -4.22505881874,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3387fa7c-7e77-47a1-805f-7a146a202fc4",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.338892818005,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "99c725f5-f852-4d74-8875-148864670c47",
+      "drug_id": "DPC-004242",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.857596205739,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

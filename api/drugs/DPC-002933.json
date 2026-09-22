@@ -1,0 +1,102 @@
+{
+  "drug_id": "DPC-002933",
+  "name": "GALLAMINE-TRIETHIODIDE",
+  "drug_class": "ACETYLCHOLINE RECEPTOR ANTAGONIST",
+  "target": "ACHE;CHRM2;CHRNA1;CHRNA2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "46e1cb54-5b20-4aad-b432-8ea14c941227",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.183774730482,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b03374cf-4539-4982-b0c6-9269be34c012",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.533730623569,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d12f2ec6-d4ec-49cf-a9e5-6f4f9d96bffa",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.106389003136,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a7545702-3ea4-4109-a319-698c9a18bca7",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.241534352863,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a74d5946-b8d4-4113-825e-766fbb3a7d34",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.0817637460076,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "abfd317f-c428-40f3-9d0b-94fc6c23939b",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.159220545829,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2d3128fe-58a3-4239-af94-85fa87f1d5dc",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.2572410632,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c6b5ddd8-2727-4313-8323-1e768e5c7a96",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.540625393346,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d1c5cca7-4f6d-4741-85fb-e820245cc243",
+      "drug_id": "DPC-002933",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.397571474834,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

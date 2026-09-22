@@ -1,0 +1,113 @@
+{
+  "drug_id": "DPC-004833",
+  "name": "OUABAIN",
+  "drug_class": "inhibitor of the sodium-potassium ATPase (ATP1A1/ATP1B1, ATP1A2/ATP1B1, ATP1A2/ATP1B3)",
+  "target": "ATP1A1;ATP1B1;ATP1A2;ATP1B3",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "G-STROPHANTHIN"
+  ],
+  "pubchem_cid": "439501",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "3138251c-a1f0-40da-a9ff-95e971957ed0",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -2.35167452909,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "13bf4050-66f9-486d-b3d1-888d4ffcaca4",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.873228705381,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "6751872f-1359-4de5-8da1-5af5a1a9439c",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -2.60758290798,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4d79265b-c337-4207-a62a-b9e02a378614",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -3.12410973997,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e6666252-fced-4406-b4b0-74596f478355",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -1.21282417056,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "bbf2a80f-0b8e-48de-8830-3d01bcecb545",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -5.39490470133,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d06765fc-e378-4ef2-b99d-549d8cf3e980",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -5.09085191078,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "3c225a24-1305-443d-845f-ef6e6d291e45",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -4.1133219083,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "2c6abd3c-5bbf-4ca7-b170-0b7d54221831",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -3.87894480104,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "26bca55d-ff8d-4a71-b86b-4ec6d89c42a7",
+      "drug_id": "DPC-004833",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -2.16208320653,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

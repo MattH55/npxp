@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003031",
+  "name": "GLYBURIDE",
+  "drug_class": "ATP CHANNEL BLOCKER, INSULIN SECRETAGOGUE, SULFONYLUREA",
+  "target": "ABCA1;ABCB11;ABCC8;ABCC9;CFTR;CPT1A;KCNJ1;KCNJ11;KCNJ5;KCNJ8;SLCO2B1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "2f776f5a-12a5-42dc-be2f-6b6a731f2897",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.441695485204,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "10923ec9-01e5-4019-ad59-118af4268377",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.518510713924,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b5e670a4-e8b7-4517-823c-0eab1467743a",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.199448702926,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9664e369-9d8c-4840-9c76-1c82fafccb18",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.457610197233,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cd572b7f-5323-49ce-9fa5-e29a4ebc5429",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.414247271079,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ab1f1c22-7c67-4031-8f52-72fcb16b1ef6",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.337570752686,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ce01f7d0-d863-4a4b-8bc0-63d0a5e784dc",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.328475395995,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9d2d7a61-c9bd-4c6e-b425-b911728851fd",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.227330293254,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "18333636-8abb-4be5-9160-060eb3315595",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.00211273646933,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "c88fb2ea-7226-45d3-85f5-c56793bdec37",
+      "drug_id": "DPC-003031",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.172952202911,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

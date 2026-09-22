@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-000174",
+  "name": "8-HYDROXY-DPAT",
+  "drug_class": "SEROTONIN RECEPTOR AGONIST",
+  "target": "CDK1;CHEK1;CHEK2;GSK3B;HTR5A;HTR7;LCK;MAPK14;MARK1;PDPK1;PRKCA;PRKCB;PRKCD;PRKCE;PRKCG",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "e1f05ba9-5744-4d04-a1c4-d4c31712588f",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.00994215263921,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e8319a43-3c4d-46be-8cc9-a3b66cb50782",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.087153780411,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7620fd4c-2fe6-4b15-ab5f-619992873bc8",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.421322303087,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "17bc285f-4d97-4d96-a162-4e8b93307b3c",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.618245918761,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f7102c81-e70c-434a-afd2-a80297167bd3",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.270427486306,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a40e8fff-f708-4828-916c-c4668ba594f5",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.239344394785,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e8be39a3-7494-4f8d-bf24-2143811b10e9",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": -0.459865502636,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "27c13f13-517b-4edc-8106-b175b0d2ad5d",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.555230251676,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f602e9dd-c2b5-4759-b91d-7f648ef01a29",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.00711406089332,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "60feee8c-d1a7-449c-9f94-9abed2148889",
+      "drug_id": "DPC-000174",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.499604668479,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,111 @@
+{
+  "drug_id": "DPC-003808",
+  "name": "LEVOSULPIRIDE",
+  "drug_class": "DOPAMINE RECEPTOR ANTAGONIST",
+  "target": "CA1;CA12;CA7;DRD2;DRD3",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [],
+  "pubchem_cid": null,
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "a83292a7-f7d5-420f-9392-5eb48876f344",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.313351730235,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e973e965-5db2-419b-a77b-42a3a54e2a99",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": -0.0108232755617,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "30e52bf2-59ac-4256-b695-45a6c3325a18",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": -0.328606585627,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "623a306b-ba20-4b5d-a42c-ac263c5871ea",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.691955483898,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7494e20c-a7da-4ccc-81e5-53b759e14996",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.151271011796,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cc94b7a5-16bd-4bc6-ac57-c925694bef25",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.0733622527802,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "8752f464-f64a-4a72-a2c9-0671620be77c",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.0785517360284,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "fe2576f4-d514-4753-b448-0639ebb51b29",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.255652956999,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "782e8017-ceba-4377-bde8-499768c775bc",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.452813037971,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "ebb0f9f0-5e84-48aa-b13b-647d99a3914c",
+      "drug_id": "DPC-003808",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.253805865248,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

@@ -1,0 +1,114 @@
+{
+  "drug_id": "DPC-003185",
+  "name": "OLVEREMBATINIB",
+  "drug_class": "inhibitor of BCR-ABL1, including common ABL1-mutant kinases",
+  "target": "ABL1",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "GZD824",
+    "HQP1351"
+  ],
+  "pubchem_cid": "51038269",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "e2336ec3-c7b3-4d1b-9d80-edd403e9fe49",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.995589126015,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "703aabe9-5125-46f8-a499-5f0947a16fe6",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 1.11212971762,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4f299eb3-f8da-4639-8bbb-004ac85da668",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.122614952386,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b496f3e2-98c9-4a41-b14d-93776347021d",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": -0.902425093964,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "cddcb4bc-792d-486c-8dae-30a2fbabc14f",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.944384911691,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "e3e6b63a-8e5f-4c51-b8ec-c2345dd56675",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -1.08576832636,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "4cf1390f-43e1-4736-9e9a-b0db2f08d057",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.573963896569,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "9309a735-c859-4ec6-8045-548f9525c08d",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": -0.828281804937,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "70a6839b-d65c-41ee-8149-37380bda9be8",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.127671947392,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "38e391e0-4934-46ec-80c9-89a3d1996a56",
+      "drug_id": "DPC-003185",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": -0.687892272932,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}

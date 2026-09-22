@@ -1,0 +1,106 @@
+{
+  "drug_id": "DPC-006689",
+  "name": "TUCATINIB",
+  "drug_class": "inhibitor of ERBB2",
+  "target": "ERBB2",
+  "source": "DepMap 24Q4 PortalCompounds.csv",
+  "synonyms": [
+    "ARRY-380",
+    "IRBINITINIB",
+    "ONT-380"
+  ],
+  "pubchem_cid": "51039094",
+  "chembl_id": "CHEMBL14253",
+  "drugbank_id": null,
+  "mechanism_of_action": null,
+  "clinical_status": null,
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": null,
+  "drug_responses": [
+    {
+      "id": "84e4ad18-4002-469d-ae0b-e16d012d245d",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": -0.811961309266,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "7be3bcb2-84d5-407e-85c2-3a517bc1cb51",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.171357788977,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "f12206d1-4a9a-4e7c-8d40-5d6ec3c43bb4",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.0234975587255,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "79fc6fc7-eaa7-4785-bac8-5e82bf713416",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": -0.723289764923,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "dfddf720-6f70-4411-b0b4-d0d05d6019d2",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": -0.00979234368113,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "d96523d7-4676-42e3-97c8-28cd50cbeb6c",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "A549_LUNG",
+      "viability_metric": 0.256573165874,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "b58ff0af-bf0f-49da-b5d5-089df67c3e0f",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.02846291239,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "84de44b9-0696-4e1b-9128-ec6ffdccde35",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.118741718242,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    },
+    {
+      "id": "a6552745-5170-4525-9750-dc31af4fcef4",
+      "drug_id": "DPC-006689",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.0552851410214,
+      "metric_type": "lfc_2_5um_5d",
+      "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [
+    "A549",
+    "DU-145",
+    "HCT116",
+    "MCF-7",
+    "MDA-MB-231",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
+  ],
+  "resistance_mechanisms": []
+}
