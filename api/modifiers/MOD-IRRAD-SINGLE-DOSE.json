@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device.",
   "signature_scores": [
     {
-      "id": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "id": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "signature_panel": "dna_damage",
@@ -26,14 +26,14 @@
   ],
   "interactions": [
     {
-      "id": "82575ee8-7a89-40a9-bbc0-86b8ac8565b9",
+      "id": "28731f64-2ce4-4024-9c71-c4eb61247810",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1667/RR1858.1",
@@ -68,7 +68,7 @@
       }
     },
     {
-      "id": "437e4a56-b9a1-4a64-8970-8397e97db088",
+      "id": "6aaa5774-f41f-45b6-992b-a3ff1078e138",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "HELA_CERVIX",
@@ -110,7 +110,7 @@
       }
     },
     {
-      "id": "016dcccf-ba0f-4c34-bb6b-a393a187f514",
+      "id": "de2d7a83-33d4-4b27-a2f1-b2184d5c921d",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "CASKI_CERVIX",
@@ -152,15 +152,15 @@
       }
     },
     {
-      "id": "b57aa0d1-89c9-4eb8-b4d5-fddd75bfb987",
+      "id": "068a7586-50f3-47da-8f39-1f8cc8db1fb2",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
-      "resistance_mechanism_link": "6f63a9c7-45cb-48c1-a7f3-ed95fbe2e6a8",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
+      "resistance_mechanism_link": "a4477e7c-7c02-4753-a352-ba1332763a43",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -181,7 +181,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "6f63a9c7-45cb-48c1-a7f3-ed95fbe2e6a8",
+        "id": "a4477e7c-7c02-4753-a352-ba1332763a43",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -201,15 +201,15 @@
       }
     },
     {
-      "id": "f07eb8b7-ea59-43ec-8ef5-36ce2e3fce07",
+      "id": "8b893a0f-390c-4cae-b6e0-e99eff5f6fbb",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "oxaliplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
-      "resistance_mechanism_link": "c81b36f4-a9ca-40fd-a907-72088f8f555c",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
+      "resistance_mechanism_link": "52727651-837d-44a7-bd7d-53316e4b54ca",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -230,7 +230,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "c81b36f4-a9ca-40fd-a907-72088f8f555c",
+        "id": "52727651-837d-44a7-bd7d-53316e4b54ca",
         "drug_id": "oxaliplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -250,15 +250,15 @@
       }
     },
     {
-      "id": "43c49a85-a77e-4dfe-b233-8721dbb6f901",
+      "id": "f4eaa193-e23a-4d77-a80e-149215d262ae",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
-      "resistance_mechanism_link": "10aff369-43e0-48dc-bd14-a570e21ccbdf",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
+      "resistance_mechanism_link": "f4e3a6c1-71b7-4f75-b7a3-86b8570c4182",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -279,7 +279,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "10aff369-43e0-48dc-bd14-a570e21ccbdf",
+        "id": "f4e3a6c1-71b7-4f75-b7a3-86b8570c4182",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -299,15 +299,15 @@
       }
     },
     {
-      "id": "8fb62911-609a-48c1-81c6-f24683fb33cc",
+      "id": "b25cf33e-13e6-4b23-bd25-1460be3185ae",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002651",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
-      "resistance_mechanism_link": "2ea62c49-ce47-414a-a7a4-37601c13463d",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
+      "resistance_mechanism_link": "971d299b-164c-4729-bfae-8fdd1a22a2ed",
       "source_study": [
         "pmid:19929413",
         "pmid:22285073"
@@ -328,7 +328,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "2ea62c49-ce47-414a-a7a4-37601c13463d",
+        "id": "971d299b-164c-4729-bfae-8fdd1a22a2ed",
         "drug_id": "DPC-002651",
         "pathway_or_gene": "TOP2A (topoisomerase II alpha) downregulation",
         "mechanism_description": "Reduced TOP2A expression lowers the number of etoposide-DNA-topoisomerase cleavable complexes that can form, one of several mechanisms identified in etoposide-resistant MCF-7 cells (Kaplan & Gunduz 2012).",
@@ -348,14 +348,14 @@
       }
     },
     {
-      "id": "4809c47e-03ca-40d2-828a-6420abf16bf4",
+      "id": "a783300c-7c06-430e-a698-98a83b5d8543",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000001",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -390,14 +390,14 @@
       }
     },
     {
-      "id": "be7942b0-5836-4a68-8004-618f1ef3a9d1",
+      "id": "0b186528-5126-4e78-abd5-561499cfc49e",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000025",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -432,14 +432,14 @@
       }
     },
     {
-      "id": "eb63c684-5511-4625-9886-d37b8295b972",
+      "id": "6dd16c55-fc61-4e86-ad6e-3868d319510f",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000092",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -474,14 +474,14 @@
       }
     },
     {
-      "id": "16775390-2d43-4cd7-9180-0363148dbb16",
+      "id": "ec6b2e5d-4515-4f89-a14e-3e0ed51eea65",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000121",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -516,14 +516,14 @@
       }
     },
     {
-      "id": "ece04dbe-be74-48c9-bcac-57af15bfeab1",
+      "id": "74d7323a-b00a-4ff5-a351-6a578692d699",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000179",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -558,14 +558,14 @@
       }
     },
     {
-      "id": "426c7eee-49c2-41df-80ed-15cc1eebdb9a",
+      "id": "f556665c-5ec1-4387-b994-fd14f275b23e",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000236",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -600,14 +600,14 @@
       }
     },
     {
-      "id": "a5047cb1-b352-4e8b-b127-b9db14348eeb",
+      "id": "5ca9d0dc-3c9e-4888-a38f-49aad9620e67",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000254",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -642,14 +642,14 @@
       }
     },
     {
-      "id": "69c85083-522f-497e-b99f-dc929f9c7f16",
+      "id": "7b4b644d-b20f-4b4b-9408-b22488fc4b96",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000323",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -684,14 +684,14 @@
       }
     },
     {
-      "id": "fc7e9ee0-cbeb-4113-9a2c-0e65bee589ab",
+      "id": "518d2a25-8014-4751-9b49-240c9301919e",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000334",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -726,14 +726,14 @@
       }
     },
     {
-      "id": "37595626-346b-45a0-a4f5-b2b2734a8938",
+      "id": "f2bfb294-3daf-4a33-9d47-d8bdc8e1c3d1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000335",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -768,14 +768,14 @@
       }
     },
     {
-      "id": "8439c486-15b4-4bd4-8309-3daf5acfde11",
+      "id": "0c8545a4-79d0-4767-9c25-807b216e0d46",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000364",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -810,14 +810,14 @@
       }
     },
     {
-      "id": "44ab24bc-9d02-41ea-871c-acb89bf7da45",
+      "id": "02e34bf8-aaaa-4999-880f-0a34db3b2ae2",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000367",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -852,14 +852,14 @@
       }
     },
     {
-      "id": "bd9458bb-58a5-4e6b-b3ce-9318d07f44a7",
+      "id": "48e3fde1-1952-4823-84a3-2d080b8331f2",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000554",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -894,14 +894,14 @@
       }
     },
     {
-      "id": "2be165eb-6757-4824-ba72-cb927b08ffc7",
+      "id": "398717b8-2236-4739-8173-b00728c184bb",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000568",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -936,14 +936,14 @@
       }
     },
     {
-      "id": "74eee689-e4ab-458d-80f8-95e0ef7e7cfc",
+      "id": "15b3b7b2-683f-4a54-bab6-d27d437052e3",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000569",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -978,14 +978,14 @@
       }
     },
     {
-      "id": "234540e8-f5f2-4053-bbb7-af71e6acd5ba",
+      "id": "3d4a5f6e-951a-4cd8-bb27-7d8dcd1b1c10",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000740",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1020,14 +1020,14 @@
       }
     },
     {
-      "id": "63f6f466-b8a5-4014-81e1-c65402d7b5b4",
+      "id": "c6df2325-dbe6-44d7-92d5-9ca57f840610",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000802",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1062,14 +1062,14 @@
       }
     },
     {
-      "id": "ef70f754-ff34-4dec-a7df-bf5ff99cd95b",
+      "id": "e4115b74-3103-4964-b26c-9ebb017cf3dd",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000821",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1104,14 +1104,14 @@
       }
     },
     {
-      "id": "848e4125-7a7e-434e-aa45-eab04db5d048",
+      "id": "e0cedc7b-24be-436d-88ab-1698f64e4fc5",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000823",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1146,14 +1146,14 @@
       }
     },
     {
-      "id": "45ba92fc-efcf-4249-aca7-1d7db2cf6792",
+      "id": "8ae1512c-0987-4dd4-9afe-e9fd541ccaff",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000827",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1188,14 +1188,14 @@
       }
     },
     {
-      "id": "06b56e99-fa35-40cc-a8cf-6eb66b8cb6ca",
+      "id": "7f210992-80dc-4c94-a4e4-19d4c12709cc",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000833",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1230,14 +1230,14 @@
       }
     },
     {
-      "id": "664a1320-a9fe-42e7-8004-62f248b470eb",
+      "id": "7346ea09-4cd0-41a4-a4fd-7b84e77b2ae9",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000889",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1272,14 +1272,14 @@
       }
     },
     {
-      "id": "757bcffa-f4a1-4d51-b1ef-09e2774f2d85",
+      "id": "2283d5dc-c456-4e72-861c-5a3b613165a1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000902",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1314,14 +1314,14 @@
       }
     },
     {
-      "id": "dadb36eb-1a06-4b2e-878a-d987fed45745",
+      "id": "f703f3ec-1735-4310-bf5e-71a6592ffc20",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-000967",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1356,14 +1356,14 @@
       }
     },
     {
-      "id": "fb80b381-eb98-44c7-a6cd-244b4626fb7f",
+      "id": "0550e610-b882-423c-b73e-5f750310cf74",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001018",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1398,14 +1398,14 @@
       }
     },
     {
-      "id": "8e55fe5a-6b35-43b9-90a6-d23170dcea6f",
+      "id": "ec882a90-aea6-427c-8cf9-c9b34a19c72c",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001027",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1440,14 +1440,14 @@
       }
     },
     {
-      "id": "95e0f3e3-7405-417c-bb5c-74485f510cdb",
+      "id": "cf022734-3c01-4096-9e96-3b22285f3a03",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001054",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1482,14 +1482,14 @@
       }
     },
     {
-      "id": "608afd2f-12fc-4e43-a787-0c82637acb94",
+      "id": "e2522ba3-1ee4-43f3-a04a-fee550081675",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001111",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1524,14 +1524,14 @@
       }
     },
     {
-      "id": "aad2ac6d-623a-4a08-9886-960e443852b2",
+      "id": "8579fc26-cc96-4b58-8328-1138b0f483d6",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001314",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1566,14 +1566,14 @@
       }
     },
     {
-      "id": "ee35b0ea-1c21-41c3-a05a-0d62469220dc",
+      "id": "0159850f-760e-4d51-b590-1bc21aa94a96",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001411",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1608,14 +1608,14 @@
       }
     },
     {
-      "id": "a3d9a8b0-3c7d-46fa-ab88-9378f3288224",
+      "id": "9c6eef34-2d04-417d-9890-cc73872fb7d4",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001496",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1650,14 +1650,14 @@
       }
     },
     {
-      "id": "cb37b3fc-2eac-440c-a107-e84361972669",
+      "id": "64e3c199-4c7e-4ada-9f8c-fb6057d4fb7e",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001610",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1692,14 +1692,14 @@
       }
     },
     {
-      "id": "5799defd-403c-4f6d-9ca8-b0a0c5f131c6",
+      "id": "648b3e12-60a1-4794-9d02-7a405d619dca",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001615",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1734,14 +1734,14 @@
       }
     },
     {
-      "id": "e745ca45-5f16-49fd-b846-ff30ddb0890e",
+      "id": "136e7431-4f5f-4538-b55f-f0a6d596bed1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001636",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1776,14 +1776,14 @@
       }
     },
     {
-      "id": "b83792d7-64d8-4acc-b153-7b80b6a3c91b",
+      "id": "4504e537-421d-490b-a071-6d7b559791a1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001743",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1818,14 +1818,14 @@
       }
     },
     {
-      "id": "d064ebf2-f07b-475c-a920-2c8e935e960c",
+      "id": "9e2a14da-95e2-4b6d-b2f3-7bf2982901fd",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001776",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1860,14 +1860,14 @@
       }
     },
     {
-      "id": "7ace5ac1-04ef-4e1c-9af1-c9cde40c4c90",
+      "id": "207ec8bb-44d9-46d6-a8bf-6fe42562d833",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001786",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1902,14 +1902,14 @@
       }
     },
     {
-      "id": "8df04396-d793-4cfe-8ccf-1cb47931968c",
+      "id": "384e8344-8190-476f-a92f-b9ca1eadca95",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-001819",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1944,14 +1944,14 @@
       }
     },
     {
-      "id": "a8802662-8f4a-409d-87fb-14eb65f057a2",
+      "id": "3a05b52d-0d48-448b-a668-40bb62d0febb",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002046",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -1986,14 +1986,14 @@
       }
     },
     {
-      "id": "90b4b29a-b742-4d8b-b393-0285503b906f",
+      "id": "fb9fb61f-55d5-4f49-b938-da1c0ac777f4",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002089",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2028,14 +2028,14 @@
       }
     },
     {
-      "id": "c20172a7-08e2-4306-aca0-13cf74b470f8",
+      "id": "1cffc7ef-b9f2-4e63-bba2-77480faeda7b",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002182",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2070,14 +2070,14 @@
       }
     },
     {
-      "id": "4d26a17b-25e9-4114-b099-7a27ac7b2a50",
+      "id": "7ef451d3-dbc6-49d4-9acd-5d4b74ee4d57",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002196",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2112,14 +2112,14 @@
       }
     },
     {
-      "id": "65645efe-6e7e-426f-be3e-98a78b14fbe2",
+      "id": "447d114f-9619-44a6-a296-ab82c29fb295",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002353",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2154,14 +2154,14 @@
       }
     },
     {
-      "id": "812fd933-81c3-45fb-b7dd-a5b68e34e0e9",
+      "id": "31cebc38-45e8-4a25-b4d1-f1ff21b23722",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002393",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2196,14 +2196,14 @@
       }
     },
     {
-      "id": "0397715d-78c1-4c8d-b829-e6d0a2d747b0",
+      "id": "e98de6d6-edee-4f63-a7e8-efd67b4a84d4",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002396",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2238,14 +2238,14 @@
       }
     },
     {
-      "id": "6fdcbfd8-de45-4948-96d2-12960fd6a568",
+      "id": "beb3c048-490c-402d-ab35-a7f8f95533c4",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002419",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2280,14 +2280,14 @@
       }
     },
     {
-      "id": "2ca3dcbc-cbef-489c-b3ef-0bbb70804c33",
+      "id": "3c491a36-63be-452d-8ecc-ffc9cdd0844a",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002460",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2322,14 +2322,14 @@
       }
     },
     {
-      "id": "444778d3-0f13-45f8-9cc3-953e05e62236",
+      "id": "3e77f903-d21e-4428-9240-932985e67f40",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002463",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2364,14 +2364,14 @@
       }
     },
     {
-      "id": "ab7d95ab-7c85-4f7b-94b2-8ca8f38cd368",
+      "id": "37046c9c-9302-48d4-acad-9a126e7dadad",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002498",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2406,14 +2406,14 @@
       }
     },
     {
-      "id": "fcf76c2d-9445-43f0-adc8-3e08d510bd3d",
+      "id": "b4c9d6fc-1e3b-4d9e-9a6e-711403629363",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002505",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2448,14 +2448,14 @@
       }
     },
     {
-      "id": "57e5b25f-ad64-4bb3-adc4-fd726db4aeac",
+      "id": "3ac9f8b8-b209-447e-af01-41aa008657d2",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002597",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2490,14 +2490,14 @@
       }
     },
     {
-      "id": "1d6482bd-ae34-47c7-9922-ad238b85448f",
+      "id": "aa3d61d6-e6e2-4c40-953b-6448928e9e7c",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002652",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2532,14 +2532,14 @@
       }
     },
     {
-      "id": "0bed65c9-a9e1-4331-93ba-1e8b8136e50e",
+      "id": "6986461f-2b19-49d1-a6cb-da74a5425c2f",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002657",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2574,14 +2574,14 @@
       }
     },
     {
-      "id": "290df9e8-e55f-4d3a-be97-4c618a6a9ccc",
+      "id": "56c5454d-83fa-4a66-8927-8d1a4926de49",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002682",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2616,14 +2616,14 @@
       }
     },
     {
-      "id": "56b7a88b-23c3-40c9-94b1-42cc52dae850",
+      "id": "0962ddbe-2c41-4018-bb39-73a9e7413247",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002700",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2658,14 +2658,14 @@
       }
     },
     {
-      "id": "afb1b59b-4ab3-40b7-b3a0-32b7a625a2bb",
+      "id": "658fb608-d283-47ee-96da-ba3b59a7da68",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002791",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2700,14 +2700,14 @@
       }
     },
     {
-      "id": "a6e61647-c1c0-4140-a5a9-5a1869efac1b",
+      "id": "785fee1d-b14e-4a7e-93a9-43816c9794ce",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002816",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2742,14 +2742,14 @@
       }
     },
     {
-      "id": "a5c47148-b778-4143-9b03-598a499d9f55",
+      "id": "93d31edd-400a-41f8-98b9-b079a7e6a3c1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002866",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2784,14 +2784,14 @@
       }
     },
     {
-      "id": "5c6b307d-e99f-4444-ad8a-f8aa708888e6",
+      "id": "0c39a8db-b9a1-4936-a824-c1b2926400ab",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002944",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2826,14 +2826,14 @@
       }
     },
     {
-      "id": "4bdc882f-4fd5-4ca7-aeb0-3fe5bffacca8",
+      "id": "f6a6b291-2989-48bf-b1a6-f7c81db5f5e7",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002950",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2868,14 +2868,14 @@
       }
     },
     {
-      "id": "d92fd924-2e43-4f16-9277-13cdfecfe580",
+      "id": "d7f7c995-1c08-479f-9172-3cc8a4843f38",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002987",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2910,14 +2910,14 @@
       }
     },
     {
-      "id": "7d7a0fec-ce8d-4160-af84-7961f0c5fdbc",
+      "id": "22bd0edd-0a56-432c-be67-acf2f51b698e",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002990",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2952,14 +2952,14 @@
       }
     },
     {
-      "id": "71c1d9e4-8d1b-4ee8-ade7-9a38ac7a2eaa",
+      "id": "68050ab4-950a-499e-b62e-ce9f1f077693",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-002993",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -2994,14 +2994,14 @@
       }
     },
     {
-      "id": "a3aada6d-0913-484a-8b7d-174ee6334daf",
+      "id": "25e4a59a-2f74-488f-9fae-e227202b2c37",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003298",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3036,14 +3036,14 @@
       }
     },
     {
-      "id": "b6fed1e1-90bd-4afb-9c59-e87454892b22",
+      "id": "feb6fd3a-e7ea-4ef0-9083-d9c5a65a819c",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003346",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3078,14 +3078,14 @@
       }
     },
     {
-      "id": "ca22f92c-68c9-43b7-9791-ecd226b08929",
+      "id": "f6f2d957-8e17-4063-a457-aaccfa63ae38",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003355",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3120,14 +3120,14 @@
       }
     },
     {
-      "id": "08af9bd8-843f-4457-bb75-828fd5cb33f4",
+      "id": "30fe57e8-3518-4151-bebb-0dc3aef32e4a",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003361",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3162,14 +3162,14 @@
       }
     },
     {
-      "id": "998d1540-b27b-4c18-9755-994fae622fe0",
+      "id": "28d7cd03-c959-4474-baaa-7d5a6806ac21",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003428",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3204,14 +3204,14 @@
       }
     },
     {
-      "id": "1592cf8e-5d5b-47de-97ea-377db3f335f6",
+      "id": "e055479f-db4b-4240-a57f-401cfcb5000d",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003430",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3246,14 +3246,14 @@
       }
     },
     {
-      "id": "38ce8f61-f215-4426-b2c3-61f7b85667ef",
+      "id": "7d56c157-e1a9-4ac2-bda1-bde3094b2ec4",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003469",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3288,14 +3288,14 @@
       }
     },
     {
-      "id": "31f25c25-9da4-4ffa-b281-e517a7782ae0",
+      "id": "70549ab1-ddcd-443f-b749-cef44044215e",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003606",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3330,14 +3330,14 @@
       }
     },
     {
-      "id": "e113e663-c357-4059-8eaa-c163a79ebd9a",
+      "id": "f56215e2-c61b-44d5-b157-7e6de311ddbe",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003668",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3372,14 +3372,14 @@
       }
     },
     {
-      "id": "78d53dba-10f6-42a7-8edf-ca8b13c0b1d2",
+      "id": "8c562917-b2f3-47bd-9309-5858047bded7",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003670",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3414,14 +3414,14 @@
       }
     },
     {
-      "id": "be523224-cd75-4de3-9afe-99470a8dfc77",
+      "id": "91e19fa6-6f3e-4468-b964-841d24affe10",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003803",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3456,14 +3456,14 @@
       }
     },
     {
-      "id": "7e1ccd56-de24-401d-8513-4919a9487430",
+      "id": "181f138c-ce3a-4637-b844-99530e25fd23",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003816",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3498,14 +3498,14 @@
       }
     },
     {
-      "id": "36f5d01a-fb9f-4401-a173-88358c1ac065",
+      "id": "123007ae-b466-40b1-907b-b5614f4ab573",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003866",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3540,14 +3540,14 @@
       }
     },
     {
-      "id": "fed72741-f281-41f9-aee2-dc4dd427eb29",
+      "id": "b624efe0-7476-43c8-8924-9ad91ffac5c1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-003904",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3582,14 +3582,14 @@
       }
     },
     {
-      "id": "6f3766e2-db63-411e-8afe-5ed498a5975c",
+      "id": "a6854479-73e9-4397-b530-3ed7f565804f",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004035",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3624,14 +3624,14 @@
       }
     },
     {
-      "id": "600e88c6-b91f-4f05-b848-c39b08a6e88d",
+      "id": "bddd9b0f-fcae-4d43-b255-b728ac2813c3",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004075",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3666,14 +3666,14 @@
       }
     },
     {
-      "id": "e5b82d10-eee3-48af-9d63-7366c640ce5c",
+      "id": "fad1ade4-220d-405e-ae87-2ca5d04388e2",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004078",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3708,14 +3708,14 @@
       }
     },
     {
-      "id": "dea5c538-cb35-472d-88ce-748d90f23f7a",
+      "id": "1bc2e8be-a9b5-42f7-a93d-b0710a4717d4",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004095",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3750,14 +3750,14 @@
       }
     },
     {
-      "id": "e3ba49e4-6a91-4c5f-8753-713661c2a388",
+      "id": "5cf607d5-1454-4fea-aa15-0c2ebc917499",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004226",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3792,14 +3792,14 @@
       }
     },
     {
-      "id": "5513ad4e-6936-485e-8cfd-efa15724b802",
+      "id": "abbc75a4-3bc2-4b32-9ca8-9ad481db62de",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004229",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3834,14 +3834,14 @@
       }
     },
     {
-      "id": "26300d34-62ff-46ac-b24e-ed9e24206e27",
+      "id": "e9b60c30-3ecc-4ce8-b933-da1d735a2634",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004359",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3876,14 +3876,14 @@
       }
     },
     {
-      "id": "793025d2-f2aa-4bde-808a-e08358796c62",
+      "id": "ff869ee5-f0e7-4723-9c86-ef0fcfcad867",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004517",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3918,14 +3918,14 @@
       }
     },
     {
-      "id": "f4852852-ec30-4797-8dff-b58c64bd47fa",
+      "id": "597941a1-9166-45a6-b5c3-59e35627ba05",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004562",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -3960,14 +3960,14 @@
       }
     },
     {
-      "id": "51094e4c-6dc8-4bb6-b0e7-fbd7c5ec84f6",
+      "id": "3d7b9a79-ea48-4077-9940-bcd91443ec7f",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004586",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4002,14 +4002,14 @@
       }
     },
     {
-      "id": "48fdf581-a282-4454-b96f-e982490315c4",
+      "id": "ff8d7103-3503-4e4d-af90-826221f17130",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004634",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4044,14 +4044,14 @@
       }
     },
     {
-      "id": "264eab28-28bb-4c56-8623-ed3089a26029",
+      "id": "8c19e27b-2ac1-411b-a3b8-4c21ea19c545",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004688",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4086,14 +4086,14 @@
       }
     },
     {
-      "id": "a04ec6a6-b882-40c8-b8e9-56ceca522638",
+      "id": "de0bb516-e467-48c8-b7a7-4db2b0173fd2",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004736",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4128,14 +4128,14 @@
       }
     },
     {
-      "id": "fbc21f5b-5d61-4791-8248-32c96daa794a",
+      "id": "128a38b4-1326-4ecb-af97-b2870afedec4",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004744",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4170,14 +4170,14 @@
       }
     },
     {
-      "id": "cec5c06c-b769-4d96-8f46-27d7d85cd756",
+      "id": "dba3c885-d954-4981-a29f-0a484bb7f9d2",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004889",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4212,14 +4212,14 @@
       }
     },
     {
-      "id": "0de84db6-4c82-45b6-8e1c-b122696a0fec",
+      "id": "570b4849-a121-4c1a-8647-3d7e63ba9dd9",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004903",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4254,14 +4254,14 @@
       }
     },
     {
-      "id": "f0832970-76a5-4c3b-a10e-b6d7a3aa3cb8",
+      "id": "9625b3e6-3fb2-4fe9-b19f-8d10a5bba14a",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004937",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4296,14 +4296,14 @@
       }
     },
     {
-      "id": "898ce5d2-0335-409b-8066-cba3f366ed2a",
+      "id": "e369b2d5-c4b8-4e60-a813-ba269b15cf9d",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004973",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4338,14 +4338,14 @@
       }
     },
     {
-      "id": "55f2c574-3be9-44ea-8c1d-4c7e0559a90b",
+      "id": "c62df373-6316-4a95-bd9b-7714c41267ab",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004982",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4380,14 +4380,14 @@
       }
     },
     {
-      "id": "433f71c3-92c5-4005-ae27-a1a122268480",
+      "id": "a47c37ff-ae15-4c81-a489-f930eb2eda94",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-004995",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4422,14 +4422,14 @@
       }
     },
     {
-      "id": "443fca69-4171-4b62-a5e0-5ac1b4cd6ca5",
+      "id": "491b0380-97ae-4914-8f2a-5447a9d6ab4f",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005195",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4464,14 +4464,14 @@
       }
     },
     {
-      "id": "3b9e7dfc-fecb-4c9c-aefd-f2f5d4b8844c",
+      "id": "f2c3fabc-5810-4aec-bd05-84e26adfdfaf",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005207",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4506,14 +4506,14 @@
       }
     },
     {
-      "id": "a24d4f5a-d2a3-40f4-92ce-64ec73a3425b",
+      "id": "088ae918-da51-4d97-bf04-af10c60da090",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005232",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4548,14 +4548,14 @@
       }
     },
     {
-      "id": "67a1ce6a-5ffb-416a-927f-ed67e43ae029",
+      "id": "09d2509e-c316-4531-af11-4cd838ddaaf2",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005261",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4590,14 +4590,14 @@
       }
     },
     {
-      "id": "b9b3dd4d-90f6-4708-95b1-15781f89bff4",
+      "id": "dca4e0ab-dee2-4d77-a19a-e1ca3daefa1e",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005596",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4632,14 +4632,14 @@
       }
     },
     {
-      "id": "39467ba0-cbc9-4d86-ac7e-1fbff65d5a58",
+      "id": "a334f660-4335-4e15-b090-9bff0872b541",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005656",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4674,14 +4674,14 @@
       }
     },
     {
-      "id": "2e6942b0-f8e2-4ac3-9ac8-f58e247d609a",
+      "id": "476ebb75-6578-4dbc-81e2-215e6897fa44",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005691",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4716,14 +4716,14 @@
       }
     },
     {
-      "id": "ff0ecc8b-10d5-41e0-88b2-a3f9b2d8cf7d",
+      "id": "3793e681-bb1e-4102-a241-5ef37a6d4d3b",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005710",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4758,14 +4758,14 @@
       }
     },
     {
-      "id": "ebfa5740-2ddf-4676-8d56-d7e47e61d8d5",
+      "id": "1ed7f609-28df-4023-ab26-9643861df122",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005728",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4800,14 +4800,14 @@
       }
     },
     {
-      "id": "faa1f7e3-0ef3-4f85-8d1e-1e44cc455011",
+      "id": "85465d62-477a-47a7-bbce-837387c61992",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005780",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4842,14 +4842,14 @@
       }
     },
     {
-      "id": "e147ca80-c07a-4aa3-8a77-927dc43d3b15",
+      "id": "b1304c04-f0c8-4056-be6d-d2c312bbe723",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-005853",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4884,14 +4884,14 @@
       }
     },
     {
-      "id": "ce8b62a2-132e-4db3-9b85-e79395309ef4",
+      "id": "adaa8ccc-f03c-4eba-a7c6-6dc7c7b44742",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006002",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4926,14 +4926,14 @@
       }
     },
     {
-      "id": "eb783ffb-6cca-47c7-8c95-6f8f036147bc",
+      "id": "5f0769ba-4410-4365-a52d-bd7a150434c3",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006015",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -4968,14 +4968,14 @@
       }
     },
     {
-      "id": "7117fa18-f54a-4da1-91e3-03fe7c74c5fd",
+      "id": "f0109443-8d87-42dc-ad98-12ad37eae25a",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006030",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5010,14 +5010,14 @@
       }
     },
     {
-      "id": "0f76deac-ee39-4b0a-af42-b8753f404b71",
+      "id": "de8ea771-af6e-4ebd-b91c-268739a007a0",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006058",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5052,14 +5052,14 @@
       }
     },
     {
-      "id": "3316f141-2392-46fd-b0da-95db8545fc44",
+      "id": "90a6f9f0-ba2e-4b19-8390-4cb92d44f30e",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006118",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5094,14 +5094,14 @@
       }
     },
     {
-      "id": "9eec04bd-bc85-412e-b1b8-6c4fc8f328db",
+      "id": "36ec79f9-d7d3-4c84-add0-4d7225968671",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006127",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5136,14 +5136,14 @@
       }
     },
     {
-      "id": "7073817f-1c96-438a-8712-2b6a756d6ed0",
+      "id": "98fbadb0-2572-4dab-8215-736c1bd65560",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006246",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5178,14 +5178,14 @@
       }
     },
     {
-      "id": "928eba7f-91e6-410a-b2d0-d2533b297c4a",
+      "id": "11a94278-b20b-48b8-ab0d-4265726bb650",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006279",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5220,14 +5220,14 @@
       }
     },
     {
-      "id": "06bbc521-f6c4-4a53-8065-78c0e579ede4",
+      "id": "8aca268e-f0d1-4280-a136-c8304213148d",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006357",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5262,14 +5262,14 @@
       }
     },
     {
-      "id": "252c0cb7-efa6-4f02-bebd-f9a0192ccb1c",
+      "id": "14c1c593-a868-4194-b873-e6a1a9cb5346",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006378",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5304,14 +5304,14 @@
       }
     },
     {
-      "id": "b0f497d7-5291-40f0-84b5-fdbd9ac784e0",
+      "id": "05dd8587-ef19-4c85-a7f1-8b4658c388f1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006435",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5346,14 +5346,14 @@
       }
     },
     {
-      "id": "ce545536-4f8d-43c3-809c-b9ed352d1534",
+      "id": "0375476e-a732-42ba-bef6-60662cafd9e8",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006564",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5388,14 +5388,14 @@
       }
     },
     {
-      "id": "37e4adb7-bc94-4103-8542-d4e124f31f57",
+      "id": "ca862e56-99a6-47f8-ac7c-492f6634428c",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006567",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5430,14 +5430,14 @@
       }
     },
     {
-      "id": "0dc48975-74bd-4c4f-80e1-347b21ece834",
+      "id": "817c0745-2fd4-47d9-a863-0aac5e91fe35",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006641",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5472,14 +5472,14 @@
       }
     },
     {
-      "id": "3db94f8d-2d2c-4f2f-b216-4256e45119d6",
+      "id": "e71bd730-54bc-47fe-9603-a1ede9ea782c",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006661",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5514,14 +5514,14 @@
       }
     },
     {
-      "id": "276f623e-b58b-4dd1-97f4-19ad6f9d77d8",
+      "id": "e0f2dbe4-98d7-4df7-9b44-7614fa406271",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006673",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5556,14 +5556,14 @@
       }
     },
     {
-      "id": "2655cba9-0e59-46fc-bff5-d72cd0985f6c",
+      "id": "4e82c8f7-5d88-4004-9ac0-88c3396632d0",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006764",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5598,14 +5598,14 @@
       }
     },
     {
-      "id": "c392a00a-112a-46ed-a489-02fc0db36863",
+      "id": "ed846c2f-2ff8-48eb-a7e0-a1b0ab747a42",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006787",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5640,14 +5640,14 @@
       }
     },
     {
-      "id": "009098a2-10ee-48cd-8a29-0754f1dea46a",
+      "id": "6f7cee86-81dd-41e4-9b4f-c97f908a2c69",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006796",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5682,14 +5682,14 @@
       }
     },
     {
-      "id": "efc7df3a-efe7-4a71-a7ca-d3d37da27ce3",
+      "id": "66a7f3b4-f629-46c7-96ff-56781665ddbf",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006814",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",
@@ -5724,14 +5724,14 @@
       }
     },
     {
-      "id": "ae03aaa2-6e0f-4d11-bcf1-8af75108089b",
+      "id": "bfdaa4e4-32a6-4850-82cc-767abca0a3ea",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "DPC-006873",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "2f07038e-3ed6-4608-894d-94f50a18b3f3",
+      "mechanism_link": "57c50a00-72e0-48f1-9a81-c0844466f63d",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:19929413",

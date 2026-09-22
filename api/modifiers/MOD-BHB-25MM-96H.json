@@ -13,14 +13,14 @@
   "estimated_relative_cost_note": "Oral ketone-body supplement (BHB salts); low unit cost.",
   "signature_scores": [
     {
-      "id": "e761473f-af42-446a-a29f-3fed50ea34bf",
+      "id": "7dd69fee-78ba-49e6-9300-8dfac9b6de79",
       "modifier_id": "MOD-BHB-25MM-96H",
       "cell_line_id": "T47D_BREAST",
       "signature_panel": "other",
-      "score": null,
-      "raw_deg_evidence_ref": "GSE153830; Zhang et al. 2021 (PMID 33281976)",
+      "score": -4.824420803830654,
+      "raw_deg_evidence_ref": "geo:GSE153830 FPKM matrix (Zhang et al. 2021, pmid:33281976); log2FC computed here",
       "directionality": "ambiguous",
-      "notes": "No significant pathway enrichment detected for 25 mM BHB in T47D (series summary: limited transcriptional impact).",
+      "notes": "No significant pathway enrichment detected for 25 mM BHB in T47D (series summary: limited transcriptional impact). [Real DEG backfill 2026-09-22: ssGSEA-style z-score -4.824 for gene set 'HALLMARK_REACTIVE_OXYGEN_SPECIES_PATHWAY' (49 genes measured), computed from 2 treatment vs 2 control real GSE153830 samples. This is a simple, uncorrected standardized-mean-difference statistic, not the paper's own (likely multiple-testing-corrected) pathway enrichment test -- a large |z| here does not necessarily mean the paper would call it significant, and vice versa. Treat as a real, reproducible number, not a replication of the paper's own significance call. See synlethality/signature_correlation.py for the method and its documented deviation from ssGSEA/GSVA proper.]",
       "cell_line_name": "T47D"
     }
   ],
