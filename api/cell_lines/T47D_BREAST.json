@@ -14,15 +14,15 @@
     }
   ],
   "source": "CCLE/DepMap",
-  "oncotree_code": null,
-  "oncotree_primary_disease": null,
-  "oncotree_subtype": null,
+  "oncotree_code": "IDC",
+  "oncotree_primary_disease": "Invasive Breast Carcinoma",
+  "oncotree_subtype": "Breast Invasive Ductal Carcinoma",
   "ncit_code": null,
   "tumor_concordance_score": null,
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "78d373fa-bca9-4c9f-bdeb-a39e65ead7da",
+      "id": "8a3fd772-3117-42be-94a9-393ef035a48e",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "cell_line_id": "T47D_BREAST",
       "signature_panel": "nrf2_ferroptosis",
@@ -34,7 +34,7 @@
       "modifier_type": "dietary_metabolic"
     },
     {
-      "id": "c7b92da7-c84c-4d55-bf48-14fb1b2ea8ad",
+      "id": "0947da49-8d77-4ad3-84af-c0b83aa0b877",
       "modifier_id": "MOD-BHB-25MM-96H",
       "cell_line_id": "T47D_BREAST",
       "signature_panel": "other",
@@ -49,14 +49,14 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "2a5b54d9-a1f3-43a5-b751-83fc2730951c",
+      "id": "dafc2229-ce0b-43b6-9ca4-6505cc1ae0ee",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "T47D_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "78d373fa-bca9-4c9f-bdeb-a39e65ead7da",
+      "mechanism_link": "8a3fd772-3117-42be-94a9-393ef035a48e",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:33281976",
@@ -80,10 +80,10 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": true,
-      "priority_score": 0.4595,
+      "priority_score": 0.4542,
       "priority_components": {
         "convergent_evidence": 0.3333,
-        "coverage_gap": 0.1429,
+        "coverage_gap": 0.125,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 1.0,
@@ -91,15 +91,15 @@
       }
     },
     {
-      "id": "7cfb0913-3977-461d-b5e5-09db5859bdb6",
+      "id": "56d268c6-9989-41b9-bb10-32f83910bb1c",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "erastin",
       "cell_line_id": "T47D_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "78d373fa-bca9-4c9f-bdeb-a39e65ead7da",
-      "resistance_mechanism_link": "82dc7cd6-872f-421e-9946-08ac16b567eb",
+      "mechanism_link": "8a3fd772-3117-42be-94a9-393ef035a48e",
+      "resistance_mechanism_link": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
       "source_study": [
         "doi:10.3892/ol.2020.12326",
         "pmid:24439385"
@@ -120,7 +120,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "82dc7cd6-872f-421e-9946-08ac16b567eb",
+        "id": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -129,10 +129,10 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.4933,
+      "priority_score": 0.4833,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.2,
+        "coverage_gap": 0.1667,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,

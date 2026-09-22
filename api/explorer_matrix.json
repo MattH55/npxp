@@ -22,6 +22,29 @@
       "drug_class": null,
       "cell_lines": [
         {
+          "cell_line_id": "HCT116_LARGE_INTESTINE",
+          "name": "HCT116",
+          "tissue_origin": "Large intestine",
+          "cancer_subtype": "Colorectal adenocarcinoma (KRAS-mutant; mismatch-repair deficient)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "TP53",
+              "variant": "wild-type (parental line; p53+/+)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "name": "RKO",
           "tissue_origin": "Large intestine",
@@ -37,15 +60,30 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
+        {
+          "modifier_id": "MOD-METHIONINE-RESTRICT",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
+          "protocol_parameters": {
+            "medium": "methionine-restricted vs standard",
+            "line_context": "HCT116 (GSE72131); human cancer cell lines + mouse liver (GSE103602)",
+            "readout": "H3K4me3 ChIP-seq + RNA-seq (one-carbon-metabolism/SAM sensing)",
+            "clinical_precedent": "Phase I/II feasibility: dietary methionine restriction + FOLFOX (5-FU + oxaliplatin) in metastatic colorectal cancer (Durando et al. 2010, PMID 20424491) -- see [C3]"
+          },
+          "source_study": "pmid:26411344",
+          "source_dataset_accession": "GSE72131",
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Specialized low-methionine diet; no equipment, though the Durando et al. feasibility trial noted poor long-term palatability as a real adherence barrier."
+        },
         {
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "modifier_type": "thermal",
@@ -63,12 +101,21 @@
       ],
       "cells": [
         {
-          "interaction_id": "679e123c-a9c0-4a43-90be-1a7272dafd34",
+          "interaction_id": "ec471293-5daa-42aa-98a5-d06f35874d54",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "5-fluorouracil",
           "interaction_type": "additive",
           "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "5f18dde7-1113-4edf-b884-a11e57e2a0ef",
+          "cell_line_id": "HCT116_LARGE_INTESTINE",
+          "modifier_id": "MOD-METHIONINE-RESTRICT",
+          "drug_id": "5-fluorouracil",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_2_inferred",
           "combined_effect_metric": null
         }
       ],
@@ -154,9 +201,32 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "name": "U-87 MG",
+          "tissue_origin": "Central nervous system",
+          "cancer_subtype": "Glioblastoma multiforme",
+          "key_mutations": [
+            {
+              "gene": "PTEN",
+              "variant": "homozygous deletion"
+            },
+            {
+              "gene": "CDKN2A",
+              "variant": "homozygous deletion"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": "GB",
+          "oncotree_primary_disease": "Diffuse Glioma",
+          "oncotree_subtype": "Glioblastoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -194,6 +264,23 @@
           "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device."
         },
         {
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Tumor Treating Fields (TTFields, 200 kHz)",
+          "protocol_parameters": {
+            "frequency_kHz": 200,
+            "field_strength_V_cm": 0.83,
+            "duration_hr": 72,
+            "device": "inovitro (research); clinical delivery via Optune transducer arrays",
+            "line_context": "U-87 MG, LN-229, U-118 MG, LN-18 glioblastoma (+ TMZ-resistant U-87 MG/U-118 MG derivatives)",
+            "readout": "viability, apoptosis, clonogenic assay"
+          },
+          "source_study": "doi:10.1007/s11060-023-04308-4",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "FDA-approved Optune device: portable field generator plus adhesive transducer arrays replaced every few days -- high recurring cost, though it is a wearable/outpatient device rather than an inpatient procedure."
+        },
+        {
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "modifier_type": "thermal",
           "agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -210,7 +297,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "564e8e33-8240-45f4-ba39-cda55827b28b",
+          "interaction_id": "a65fb81d-bad0-4172-93f4-8813201191b1",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "carboplatin",
@@ -219,7 +306,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "d76abe80-52b2-4273-bdd3-847a84135e1b",
+          "interaction_id": "4f0b4415-c167-4156-afe1-7f13c63013ad",
           "cell_line_id": "4T1_BREAST",
           "modifier_id": "MOD-FAST-CYCLES-48-60H",
           "drug_id": "carboplatin",
@@ -228,9 +315,18 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "51e18e94-b46d-4394-a53b-c91af31ff7a7",
+          "interaction_id": "437e9eaa-df52-4076-be44-cc1e74822a8d",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "carboplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "d8821620-80a8-4efa-afe3-8fd31d9b5702",
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
           "drug_id": "carboplatin",
           "interaction_type": "synergistic",
           "evidence_tier": "tier_3_mechanism_only",
@@ -320,9 +416,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "LUAD",
+          "oncotree_primary_disease": "Non-Small Cell Lung Cancer",
+          "oncotree_subtype": "Lung Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -343,9 +439,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "BRCA",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Invasive Breast Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -366,9 +462,32 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "name": "U-87 MG",
+          "tissue_origin": "Central nervous system",
+          "cancer_subtype": "Glioblastoma multiforme",
+          "key_mutations": [
+            {
+              "gene": "PTEN",
+              "variant": "homozygous deletion"
+            },
+            {
+              "gene": "CDKN2A",
+              "variant": "homozygous deletion"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": "GB",
+          "oncotree_primary_disease": "Diffuse Glioma",
+          "oncotree_subtype": "Glioblastoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -406,6 +525,20 @@
           "estimated_relative_cost_note": "Fasting protocol; food withdrawal only, no equipment."
         },
         {
+          "modifier_id": "MOD-HBOT",
+          "modifier_type": "hypoxic",
+          "agent": "Hyperbaric oxygen therapy (HBOT)",
+          "protocol_parameters": {
+            "line_context": "A549, H1299 NSCLC (hypoxic culture reversed by HBO)",
+            "note": "Exact pressure (ATA)/exposure duration per Zhang et al. 2021 Methods, pending curation from source tables; acts via HIF-1alpha/PFKP axis suppression of the Warburg effect and EMT",
+            "readout": "Warburg-effect/EMT markers; in vivo Lewis lung carcinoma growth (Pfkp-dependent)"
+          },
+          "source_study": "doi:10.3389/fonc.2021.691762",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "Requires a dedicated hyperbaric chamber facility and clinical staff -- dedicated clinical infrastructure, not a bedside or outpatient intervention."
+        },
+        {
           "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
           "modifier_type": "mechanical_radiative",
           "agent": "Ionizing radiation (single-dose radiosensitization context)",
@@ -418,6 +551,23 @@
           "source_dataset_accession": null,
           "infrastructure_requirement": "high",
           "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device."
+        },
+        {
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Tumor Treating Fields (TTFields, 200 kHz)",
+          "protocol_parameters": {
+            "frequency_kHz": 200,
+            "field_strength_V_cm": 0.83,
+            "duration_hr": 72,
+            "device": "inovitro (research); clinical delivery via Optune transducer arrays",
+            "line_context": "U-87 MG, LN-229, U-118 MG, LN-18 glioblastoma (+ TMZ-resistant U-87 MG/U-118 MG derivatives)",
+            "readout": "viability, apoptosis, clonogenic assay"
+          },
+          "source_study": "doi:10.1007/s11060-023-04308-4",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "FDA-approved Optune device: portable field generator plus adhesive transducer arrays replaced every few days -- high recurring cost, though it is a wearable/outpatient device rather than an inpatient procedure."
         },
         {
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
@@ -449,7 +599,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "27ce9c01-6828-4ccf-9fb8-c278f82fb5e7",
+          "interaction_id": "9f96f2c2-44ca-4376-9bdc-227b2bca2c8c",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "cisplatin",
@@ -458,7 +608,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "9ae628e2-a7e9-480c-82f3-d2b364a2160b",
+          "interaction_id": "e101955e-93e1-438e-8cac-9da66660dd8c",
           "cell_line_id": "MCF7_BREAST",
           "modifier_id": "MOD-HT-45C-GSE48398",
           "drug_id": "cisplatin",
@@ -467,7 +617,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "b4bcf8ba-aafc-42b0-ba1c-79038235cdac",
+          "interaction_id": "ceaf605a-f3fd-46e6-a840-6366d591fef6",
           "cell_line_id": "A549_LUNG",
           "modifier_id": "MOD-ALICIN-NSCLC",
           "drug_id": "cisplatin",
@@ -476,7 +626,16 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "c34afd9a-df0a-4294-8b15-63fff23cb129",
+          "interaction_id": "438e2a62-8c8c-4f81-bb5b-bab7d6343306",
+          "cell_line_id": "A549_LUNG",
+          "modifier_id": "MOD-HBOT",
+          "drug_id": "cisplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "07b42c44-96cf-4109-9054-55be5ac1e5ff",
           "cell_line_id": "4T1_BREAST",
           "modifier_id": "MOD-FAST-CYCLES-48-60H",
           "drug_id": "cisplatin",
@@ -485,9 +644,18 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "266cabaa-880e-45f0-9d6e-f0086991b829",
+          "interaction_id": "f701c866-ce6b-42a6-ada3-0dc47910f9a1",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "cisplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "5feb09d8-2e5d-41b3-9884-82adcca04553",
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
           "drug_id": "cisplatin",
           "interaction_type": "synergistic",
           "evidence_tier": "tier_3_mechanism_only",
@@ -582,7 +750,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "a8255afd-9162-4dd3-a6ee-3196de608a38",
+          "interaction_id": "24a438be-294e-49a9-92c5-5fc63eb15611",
           "cell_line_id": "4T1_BREAST",
           "modifier_id": "MOD-FAST-CYCLES-48-60H",
           "drug_id": "cyclophosphamide",
@@ -673,9 +841,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "PRAD",
+          "oncotree_primary_disease": "Prostate Adenocarcinoma",
+          "oncotree_subtype": "Prostate Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -719,9 +887,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "BRCA",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Invasive Breast Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -746,9 +914,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "BRCA",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Invasive Breast Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -765,9 +933,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "AML",
+          "oncotree_primary_disease": "Acute Myeloid Leukemia",
+          "oncotree_subtype": "Acute Myeloid Leukemia",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -779,8 +947,8 @@
           "modifier_type": "dietary_metabolic",
           "agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
           "protocol_parameters": {
-            "in_vitro": "DHA 60 uM on a control fatty-acid background (OALA: 40 uM linoleic + 40 uM oleic) vs OALA alone",
-            "in_vivo": "nutritionally complete diet with 2.8 g/100 g DHA (P:S ratio 0.5) vs matched control diet in nu/nu mice bearing MDA-MB-231 xenografts",
+            "in_vitro_leg": "DHA 60 uM on a control fatty-acid background (OALA: 40 uM linoleic + 40 uM oleic) vs OALA alone",
+            "in_vivo_leg": "nutritionally complete diet with 2.8 g/100 g DHA (P:S ratio 0.5) vs matched control diet in nu/nu mice bearing MDA-MB-231 xenografts",
             "drug_leg": "doxorubicin 0.41 uM (in vitro); 5 mg/kg DOX 2x/week for 4 weeks (in vivo)",
             "readout": "viability; microarray/protein apoptosis and cell-cycle markers; tumour volume"
           },
@@ -870,7 +1038,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "e4586280-f142-4631-af88-5ca9700655ea",
+          "interaction_id": "c736a63a-6b7c-48a7-8d16-526315539b79",
           "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
           "modifier_id": "MOD-HT-41C-30M",
           "drug_id": "doxorubicin",
@@ -879,7 +1047,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "139b420c-b145-45a8-b58c-7b846b985485",
+          "interaction_id": "8c9d292a-62ec-4211-b468-f00fe49ca1d1",
           "cell_line_id": "DU145_PROSTATE",
           "modifier_id": "MOD-HYP-1O2-24H",
           "drug_id": "doxorubicin",
@@ -888,7 +1056,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "4167d635-0906-447e-8f7d-07cd750b559f",
+          "interaction_id": "1f75f5d6-ae93-4f35-bd88-ca3a01a82f71",
           "cell_line_id": "MDAMB231_BREAST",
           "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
           "drug_id": "doxorubicin",
@@ -897,7 +1065,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "eb251a1e-23b8-4dbd-8aca-5c791d34cdac",
+          "interaction_id": "4ccf8d3d-7eec-422e-8983-323110e88b9d",
           "cell_line_id": "MCF7_BREAST",
           "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
           "drug_id": "doxorubicin",
@@ -906,7 +1074,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "2b00f42f-b6c1-4872-951d-df7f2daa2feb",
+          "interaction_id": "aa60a496-5082-4a5d-9f3b-cca236dd4748",
           "cell_line_id": "4T1_BREAST",
           "modifier_id": "MOD-FAST-CYCLES-48-60H",
           "drug_id": "doxorubicin",
@@ -915,7 +1083,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "2d89cadb-31e9-451f-9117-3f34631cb543",
+          "interaction_id": "1de938ea-87f4-4a9d-b06b-724e41c5a2ef",
           "cell_line_id": "MDAMB231_BREAST",
           "modifier_id": "MOD-DHA-60UM",
           "drug_id": "doxorubicin",
@@ -924,7 +1092,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "3af24b10-df5b-4541-9436-13983320f528",
+          "interaction_id": "b572fdbd-0f3e-45eb-b542-3c1ef0bf5a2f",
           "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
           "modifier_id": "MOD-SERINE-GLYCINE-FREE",
           "drug_id": "doxorubicin",
@@ -990,9 +1158,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1040,9 +1208,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "BRCA",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Invasive Breast Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1063,9 +1231,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "IDC",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Breast Invasive Ductal Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1101,6 +1269,20 @@
           "estimated_relative_cost_note": "Dietary/fasting-style protocol; no equipment."
         },
         {
+          "modifier_id": "MOD-GLUTAMINE-RESTRICT",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Glutamine restriction (glutamine-free/deprived medium)",
+          "protocol_parameters": {
+            "glutamine_concentration": "0 (deprivation)",
+            "line_context": "MDA-MB-231 (basal/TNBC) glutamine-dependent; MCF-7 (luminal) glutamine-independent via glutamine synthetase expression (Kung et al. 2011)",
+            "readout": "viability/proliferation; RNA-seq (GSE26370)"
+          },
+          "source_study": "doi:10.1371/journal.pgen.1002229",
+          "source_dataset_accession": "GSE26370",
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol; no equipment."
+        },
+        {
           "modifier_id": "MOD-SERINE-GLYCINE-FREE",
           "modifier_type": "dietary_metabolic",
           "agent": "Serine/glycine starvation (-SG medium; dietary serine/glycine depletion in vivo)",
@@ -1118,7 +1300,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "f6057eaf-6dd5-43d0-a7a2-f7977af8105f",
+          "interaction_id": "0c75f562-4da5-4982-ad6b-91b3e8a23284",
           "cell_line_id": "MDAMB231_BREAST",
           "modifier_id": "MOD-CYS-WITHDRAWAL",
           "drug_id": "erastin",
@@ -1127,7 +1309,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "7cfb0913-3977-461d-b5e5-09db5859bdb6",
+          "interaction_id": "56d268c6-9989-41b9-bb10-32f83910bb1c",
           "cell_line_id": "T47D_BREAST",
           "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
           "drug_id": "erastin",
@@ -1136,7 +1318,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "380f5681-5b6a-490a-b6fd-cd6626d1a570",
+          "interaction_id": "81332a9c-1425-4788-a72a-8afcab88fc9a",
           "cell_line_id": "HCT116_LARGE_INTESTINE",
           "modifier_id": "MOD-SERINE-GLYCINE-FREE",
           "drug_id": "erastin",
@@ -1145,12 +1327,119 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "69ab4543-31cb-41cf-b929-94bf65a4463d",
+          "interaction_id": "b36fa5f2-8a91-4dc8-bbb0-153053f5c16c",
           "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
           "modifier_id": "MOD-SERINE-GLYCINE-FREE",
           "drug_id": "erastin",
           "interaction_type": "synergistic",
           "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "914dd189-abc1-4f39-a6bc-1547d15cbe47",
+          "cell_line_id": "MDAMB231_BREAST",
+          "modifier_id": "MOD-GLUTAMINE-RESTRICT",
+          "drug_id": "erastin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        }
+      ],
+      "evidence_tier_definitions": {
+        "tier_1_direct": {
+          "label": "Tier 1 \u2014 Direct",
+          "short_label": "T1",
+          "definition": "The combination was tested empirically in the same study: drug and modifier were applied together and death/viability was measured."
+        },
+        "tier_2_inferred": {
+          "label": "Tier 2 \u2014 Inferred",
+          "short_label": "T2",
+          "definition": "Drug response and modifier response were measured separately, then joined via a shared cell line and a biologically plausible shared mechanism. No combined-treatment readout exists."
+        },
+        "tier_2b_model_predicted": {
+          "label": "Tier 2b \u2014 Model-predicted",
+          "short_label": "T2b",
+          "definition": "Generated by the learned prediction layer (Step 2) for an untested drug x modifier x cell-line combination \u2014 distinct from Tier 2, which is a manual join of separate single-factor studies. Every Tier 2b row stores the model version / training-run ID it came from so predictions can be invalidated and regenerated as data and models improve. Experimental: low-confidence until validated against a critical mass of Tier 1 labels."
+        },
+        "tier_3_mechanism_only": {
+          "label": "Tier 3 \u2014 Mechanism-only",
+          "short_label": "T3",
+          "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+        }
+      }
+    },
+    "lomustine": {
+      "drug": {
+        "drug_id": "lomustine",
+        "name": "Lomustine (CCNU)",
+        "drug_class": "Nitrosourea alkylating agent",
+        "target": "DNA/RNA alkylation and interstrand crosslinking; lysine carbamoylation",
+        "source": "curated seed",
+        "synonyms": [
+          "CCNU",
+          "CeeNU"
+        ],
+        "pubchem_cid": "3950",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Lipophilic nitrosourea crosses the blood-brain barrier and alkylates DNA, forming interstrand crosslinks",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "generic_available"
+      },
+      "drug_class": null,
+      "cell_lines": [
+        {
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "name": "U-87 MG",
+          "tissue_origin": "Central nervous system",
+          "cancer_subtype": "Glioblastoma multiforme",
+          "key_mutations": [
+            {
+              "gene": "PTEN",
+              "variant": "homozygous deletion"
+            },
+            {
+              "gene": "CDKN2A",
+              "variant": "homozygous deletion"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": "GB",
+          "oncotree_primary_disease": "Diffuse Glioma",
+          "oncotree_subtype": "Glioblastoma",
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        }
+      ],
+      "modifiers": [
+        {
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Tumor Treating Fields (TTFields, 200 kHz)",
+          "protocol_parameters": {
+            "frequency_kHz": 200,
+            "field_strength_V_cm": 0.83,
+            "duration_hr": 72,
+            "device": "inovitro (research); clinical delivery via Optune transducer arrays",
+            "line_context": "U-87 MG, LN-229, U-118 MG, LN-18 glioblastoma (+ TMZ-resistant U-87 MG/U-118 MG derivatives)",
+            "readout": "viability, apoptosis, clonogenic assay"
+          },
+          "source_study": "doi:10.1007/s11060-023-04308-4",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "FDA-approved Optune device: portable field generator plus adhesive transducer arrays replaced every few days -- high recurring cost, though it is a wearable/outpatient device rather than an inpatient procedure."
+        }
+      ],
+      "cells": [
+        {
+          "interaction_id": "8358b449-c217-4e04-b53e-c690e7e66d89",
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
+          "drug_id": "lomustine",
+          "interaction_type": "additive",
+          "evidence_tier": "tier_1_direct",
           "combined_effect_metric": null
         }
       ],
@@ -1214,9 +1503,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "PRAD",
+          "oncotree_primary_disease": "Prostate Adenocarcinoma",
+          "oncotree_subtype": "Prostate Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1237,9 +1526,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1283,9 +1572,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "BRCA",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Invasive Breast Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1310,9 +1599,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "BRCA",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Invasive Breast Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1333,9 +1622,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "IDC",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Breast Invasive Ductal Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1371,6 +1660,20 @@
           "estimated_relative_cost_note": "Dietary/fasting-style protocol; no equipment."
         },
         {
+          "modifier_id": "MOD-GLUTAMINE-RESTRICT",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Glutamine restriction (glutamine-free/deprived medium)",
+          "protocol_parameters": {
+            "glutamine_concentration": "0 (deprivation)",
+            "line_context": "MDA-MB-231 (basal/TNBC) glutamine-dependent; MCF-7 (luminal) glutamine-independent via glutamine synthetase expression (Kung et al. 2011)",
+            "readout": "viability/proliferation; RNA-seq (GSE26370)"
+          },
+          "source_study": "doi:10.1371/journal.pgen.1002229",
+          "source_dataset_accession": "GSE26370",
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol; no equipment."
+        },
+        {
           "modifier_id": "MOD-GLUCOSE-LOW-DU145",
           "modifier_type": "dietary_metabolic",
           "agent": "Low-glucose medium (metformin co-treatment context)",
@@ -1400,7 +1703,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "d24759c7-abf4-40fa-8547-893989b9971f",
+          "interaction_id": "3c9778a6-4dc6-43c2-b810-057b886b599d",
           "cell_line_id": "DU145_PROSTATE",
           "modifier_id": "MOD-GLUCOSE-LOW-DU145",
           "drug_id": "metformin",
@@ -1409,7 +1712,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "2a5b54d9-a1f3-43a5-b751-83fc2730951c",
+          "interaction_id": "dafc2229-ce0b-43b6-9ca4-6505cc1ae0ee",
           "cell_line_id": "T47D_BREAST",
           "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
           "drug_id": "metformin",
@@ -1418,7 +1721,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "926d01c8-78d3-49f7-8197-0accff307c0b",
+          "interaction_id": "d230fda9-d266-4214-b9fa-5dffbc1477c1",
           "cell_line_id": "MCF7_BREAST",
           "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
           "drug_id": "metformin",
@@ -1427,7 +1730,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "96d1789a-a69f-472a-87a8-984341396e5d",
+          "interaction_id": "c0f21b3f-7fed-4069-879e-88186f10fa43",
           "cell_line_id": "MDAMB231_BREAST",
           "modifier_id": "MOD-CYS-WITHDRAWAL",
           "drug_id": "metformin",
@@ -1436,7 +1739,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "114f8a72-3229-4ff0-b51c-3e295ff467d0",
+          "interaction_id": "e0e28f4d-95a9-48c1-9f94-c3f28a9f85d2",
           "cell_line_id": "HCT116_LARGE_INTESTINE",
           "modifier_id": "MOD-SERINE-GLYCINE-FREE",
           "drug_id": "metformin",
@@ -1445,9 +1748,18 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "462cc94c-4a13-4174-acfb-3dcf272aa511",
+          "interaction_id": "3eda7cfd-f6e3-4a7f-b9d0-9037b475e5fd",
           "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
           "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "drug_id": "metformin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "cf0f4889-3a86-4d55-9fe1-3eff57697ab3",
+          "cell_line_id": "MDAMB231_BREAST",
+          "modifier_id": "MOD-GLUTAMINE-RESTRICT",
           "drug_id": "metformin",
           "interaction_type": "synergistic",
           "evidence_tier": "tier_3_mechanism_only",
@@ -1514,9 +1826,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1540,7 +1852,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "2355caee-28cb-42b7-90e5-b46973f5fc6b",
+          "interaction_id": "914f50df-9556-4c44-b393-abab224c8429",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "mitomycin-c",
@@ -1616,6 +1928,29 @@
           "tumor_concordance_flag": "unassessed"
         },
         {
+          "cell_line_id": "HCT116_LARGE_INTESTINE",
+          "name": "HCT116",
+          "tissue_origin": "Large intestine",
+          "cancer_subtype": "Colorectal adenocarcinoma (KRAS-mutant; mismatch-repair deficient)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "TP53",
+              "variant": "wild-type (parental line; p53+/+)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "name": "RKO",
           "tissue_origin": "Large intestine",
@@ -1631,15 +1966,53 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "name": "U-87 MG",
+          "tissue_origin": "Central nervous system",
+          "cancer_subtype": "Glioblastoma multiforme",
+          "key_mutations": [
+            {
+              "gene": "PTEN",
+              "variant": "homozygous deletion"
+            },
+            {
+              "gene": "CDKN2A",
+              "variant": "homozygous deletion"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": "GB",
+          "oncotree_primary_disease": "Diffuse Glioma",
+          "oncotree_subtype": "Glioblastoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
+        {
+          "modifier_id": "MOD-METHIONINE-RESTRICT",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
+          "protocol_parameters": {
+            "medium": "methionine-restricted vs standard",
+            "line_context": "HCT116 (GSE72131); human cancer cell lines + mouse liver (GSE103602)",
+            "readout": "H3K4me3 ChIP-seq + RNA-seq (one-carbon-metabolism/SAM sensing)",
+            "clinical_precedent": "Phase I/II feasibility: dietary methionine restriction + FOLFOX (5-FU + oxaliplatin) in metastatic colorectal cancer (Durando et al. 2010, PMID 20424491) -- see [C3]"
+          },
+          "source_study": "pmid:26411344",
+          "source_dataset_accession": "GSE72131",
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Specialized low-methionine diet; no equipment, though the Durando et al. feasibility trial noted poor long-term palatability as a real adherence barrier."
+        },
         {
           "modifier_id": "MOD-FAST-CYCLES-48-60H",
           "modifier_type": "dietary_metabolic",
@@ -1671,6 +2044,23 @@
           "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device."
         },
         {
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Tumor Treating Fields (TTFields, 200 kHz)",
+          "protocol_parameters": {
+            "frequency_kHz": 200,
+            "field_strength_V_cm": 0.83,
+            "duration_hr": 72,
+            "device": "inovitro (research); clinical delivery via Optune transducer arrays",
+            "line_context": "U-87 MG, LN-229, U-118 MG, LN-18 glioblastoma (+ TMZ-resistant U-87 MG/U-118 MG derivatives)",
+            "readout": "viability, apoptosis, clonogenic assay"
+          },
+          "source_study": "doi:10.1007/s11060-023-04308-4",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "FDA-approved Optune device: portable field generator plus adhesive transducer arrays replaced every few days -- high recurring cost, though it is a wearable/outpatient device rather than an inpatient procedure."
+        },
+        {
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "modifier_type": "thermal",
           "agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -1687,7 +2077,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "26961df0-73bd-450d-88a9-44859359dccf",
+          "interaction_id": "97f5545f-d72a-4d52-bae8-640e64d79f7b",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "oxaliplatin",
@@ -1696,7 +2086,16 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "f670dfee-98b9-45f1-ae3d-c3342e103095",
+          "interaction_id": "11cc4dd1-210d-49ac-a29e-9d3c24d79e93",
+          "cell_line_id": "HCT116_LARGE_INTESTINE",
+          "modifier_id": "MOD-METHIONINE-RESTRICT",
+          "drug_id": "oxaliplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_2_inferred",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "e1d54332-b3c4-4547-aa0e-490174fb482a",
           "cell_line_id": "4T1_BREAST",
           "modifier_id": "MOD-FAST-CYCLES-48-60H",
           "drug_id": "oxaliplatin",
@@ -1705,9 +2104,18 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "2fc0aaaf-4fc8-436b-826c-274b2d814eec",
+          "interaction_id": "214ed824-6420-4212-9068-725ef764993b",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "oxaliplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "a5aa2e2f-5c53-4921-9f14-b615eb2cd04d",
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
           "drug_id": "oxaliplatin",
           "interaction_type": "synergistic",
           "evidence_tier": "tier_3_mechanism_only",
@@ -1773,9 +2181,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "BRCA",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Invasive Breast Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1800,9 +2208,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "BRCA",
+          "oncotree_primary_disease": "Invasive Breast Carcinoma",
+          "oncotree_subtype": "Invasive Breast Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1831,7 +2239,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "433dc48d-1e9c-4729-8274-86739144e870",
+          "interaction_id": "bb49afec-bd82-4297-9e8f-1d55a3569a96",
           "cell_line_id": "MDAMB231_BREAST",
           "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
           "drug_id": "paclitaxel",
@@ -1840,11 +2248,135 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "389e1a10-78c7-4757-adc8-2c8fafb27a46",
+          "interaction_id": "25ef590a-7407-4ea2-8729-8cc2f1c50a48",
           "cell_line_id": "MCF7_BREAST",
           "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
           "drug_id": "paclitaxel",
           "interaction_type": "antagonistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        }
+      ],
+      "evidence_tier_definitions": {
+        "tier_1_direct": {
+          "label": "Tier 1 \u2014 Direct",
+          "short_label": "T1",
+          "definition": "The combination was tested empirically in the same study: drug and modifier were applied together and death/viability was measured."
+        },
+        "tier_2_inferred": {
+          "label": "Tier 2 \u2014 Inferred",
+          "short_label": "T2",
+          "definition": "Drug response and modifier response were measured separately, then joined via a shared cell line and a biologically plausible shared mechanism. No combined-treatment readout exists."
+        },
+        "tier_2b_model_predicted": {
+          "label": "Tier 2b \u2014 Model-predicted",
+          "short_label": "T2b",
+          "definition": "Generated by the learned prediction layer (Step 2) for an untested drug x modifier x cell-line combination \u2014 distinct from Tier 2, which is a manual join of separate single-factor studies. Every Tier 2b row stores the model version / training-run ID it came from so predictions can be invalidated and regenerated as data and models improve. Experimental: low-confidence until validated against a critical mass of Tier 1 labels."
+        },
+        "tier_3_mechanism_only": {
+          "label": "Tier 3 \u2014 Mechanism-only",
+          "short_label": "T3",
+          "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+        }
+      }
+    },
+    "temozolomide": {
+      "drug": {
+        "drug_id": "temozolomide",
+        "name": "Temozolomide",
+        "drug_class": "Alkylating agent (imidazotetrazine prodrug)",
+        "target": "DNA O6-guanine methylation; MGMT-repairable lesion",
+        "source": "curated seed",
+        "synonyms": [
+          "Temodar",
+          "TMZ"
+        ],
+        "pubchem_cid": "5394",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Spontaneous hydrolysis to MTIC methylates DNA at O6-guanine, triggering mismatch-repair-mediated cytotoxicity unless reversed by MGMT",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "generic_available"
+      },
+      "drug_class": null,
+      "cell_lines": [
+        {
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "name": "U-87 MG",
+          "tissue_origin": "Central nervous system",
+          "cancer_subtype": "Glioblastoma multiforme",
+          "key_mutations": [
+            {
+              "gene": "PTEN",
+              "variant": "homozygous deletion"
+            },
+            {
+              "gene": "CDKN2A",
+              "variant": "homozygous deletion"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": "GB",
+          "oncotree_primary_disease": "Diffuse Glioma",
+          "oncotree_subtype": "Glioblastoma",
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        }
+      ],
+      "modifiers": [
+        {
+          "modifier_id": "MOD-PEMF-XRBK11",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Pulsed electromagnetic field (PEMF), XR-BK11 sequence",
+          "protocol_parameters": {
+            "sequence": "XR-BK11: 11 base frequencies (40, 150, 230, 490, 720, 780, 1830, 5100, 7500, 8000, 10000 Hz), 5 min each",
+            "duration_min": 55,
+            "days": 4,
+            "magnetic_flux_uT_range": "10-400",
+            "line_context": "U-87 MG, T98 glioblastoma",
+            "readout": "viability, apoptosis (caspase-3), stemness markers (OCT4/NANOG); see also Sandberg et al. 2025 (PMID 40278322) genomic-profiling in bladder cancer HT-1197 (monotherapy, no drug combination tested)"
+          },
+          "source_study": "doi:10.1038/s41598-026-47481-y",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "moderate",
+          "estimated_relative_cost_note": "Portable PEMF device; moderate cost range relative to dietary/fasting protocols, well below TTFields/HBOT."
+        },
+        {
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Tumor Treating Fields (TTFields, 200 kHz)",
+          "protocol_parameters": {
+            "frequency_kHz": 200,
+            "field_strength_V_cm": 0.83,
+            "duration_hr": 72,
+            "device": "inovitro (research); clinical delivery via Optune transducer arrays",
+            "line_context": "U-87 MG, LN-229, U-118 MG, LN-18 glioblastoma (+ TMZ-resistant U-87 MG/U-118 MG derivatives)",
+            "readout": "viability, apoptosis, clonogenic assay"
+          },
+          "source_study": "doi:10.1007/s11060-023-04308-4",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "FDA-approved Optune device: portable field generator plus adhesive transducer arrays replaced every few days -- high recurring cost, though it is a wearable/outpatient device rather than an inpatient procedure."
+        }
+      ],
+      "cells": [
+        {
+          "interaction_id": "d18af3c5-1fda-4bc1-9e27-b14486f96881",
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "modifier_id": "MOD-TTFIELDS-200KHZ",
+          "drug_id": "temozolomide",
+          "interaction_type": "additive",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "1f337dc0-c9ed-4d9e-adcd-4ae135f4088e",
+          "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+          "modifier_id": "MOD-PEMF-XRBK11",
+          "drug_id": "temozolomide",
+          "interaction_type": "synergistic",
           "evidence_tier": "tier_1_direct",
           "combined_effect_metric": null
         }
@@ -1905,9 +2437,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "CESC",
+          "oncotree_primary_disease": "Cervical Squamous Cell Carcinoma",
+          "oncotree_subtype": "Cervical Squamous Cell Carcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1924,9 +2456,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "ECAD",
+          "oncotree_primary_disease": "Cervical Adenocarcinoma",
+          "oncotree_subtype": "Endocervical Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1947,9 +2479,9 @@
             }
           ],
           "source": "CCLE/DepMap",
-          "oncotree_code": null,
-          "oncotree_primary_disease": null,
-          "oncotree_subtype": null,
+          "oncotree_code": "COAD",
+          "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+          "oncotree_subtype": "Colon Adenocarcinoma",
           "ncit_code": null,
           "tumor_concordance_score": null,
           "tumor_concordance_flag": "unassessed"
@@ -1973,7 +2505,7 @@
       ],
       "cells": [
         {
-          "interaction_id": "07bc4531-82c2-458c-a766-fc5d8ad603d4",
+          "interaction_id": "8e59231f-da27-4ae4-9b5d-6f117d3bd644",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
           "drug_id": "triapine",
@@ -1982,7 +2514,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "654c7b76-779c-44b1-ae36-4e370e193d88",
+          "interaction_id": "d152a96b-3477-42f7-89ba-48748a23e604",
           "cell_line_id": "HELA_CERVIX",
           "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
           "drug_id": "triapine",
@@ -1991,7 +2523,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "249fb01e-a260-4277-8244-3e53c7cbd822",
+          "interaction_id": "179c459c-2998-421b-bbbd-5541f8a35d9a",
           "cell_line_id": "CASKI_CERVIX",
           "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
           "drug_id": "triapine",

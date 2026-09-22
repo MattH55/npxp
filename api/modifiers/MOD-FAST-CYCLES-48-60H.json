@@ -15,7 +15,7 @@
   "estimated_relative_cost_note": "Fasting protocol; food withdrawal only, no equipment.",
   "signature_scores": [
     {
-      "id": "9002e002-43c3-4cfa-8a91-3db42ab9278d",
+      "id": "ecc5dac7-c400-44c6-b8a1-08be0d61aaff",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "cell_line_id": "4T1_BREAST",
       "signature_panel": "dna_damage",
@@ -28,14 +28,14 @@
   ],
   "interactions": [
     {
-      "id": "2b00f42f-b6c1-4872-951d-df7f2daa2feb",
+      "id": "aa60a496-5082-4a5d-9f3b-cca236dd4748",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "doxorubicin",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "9002e002-43c3-4cfa-8a91-3db42ab9278d",
+      "mechanism_link": "ecc5dac7-c400-44c6-b8a1-08be0d61aaff",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1126/scitranslmed.3003293",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "a8255afd-9162-4dd3-a6ee-3196de608a38",
+      "id": "24a438be-294e-49a9-92c5-5fc63eb15611",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "cyclophosphamide",
       "cell_line_id": "4T1_BREAST",
@@ -112,15 +112,15 @@
       }
     },
     {
-      "id": "c34afd9a-df0a-4294-8b15-63fff23cb129",
+      "id": "07b42c44-96cf-4109-9054-55be5ac1e5ff",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "cisplatin",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "9002e002-43c3-4cfa-8a91-3db42ab9278d",
-      "resistance_mechanism_link": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+      "mechanism_link": "ecc5dac7-c400-44c6-b8a1-08be0d61aaff",
+      "resistance_mechanism_link": "b0b73514-2c55-4867-bd59-8154f69be1e3",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -141,7 +141,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+        "id": "b0b73514-2c55-4867-bd59-8154f69be1e3",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -161,15 +161,15 @@
       }
     },
     {
-      "id": "f670dfee-98b9-45f1-ae3d-c3342e103095",
+      "id": "e1d54332-b3c4-4547-aa0e-490174fb482a",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "oxaliplatin",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "9002e002-43c3-4cfa-8a91-3db42ab9278d",
-      "resistance_mechanism_link": "904cb200-3c0d-4063-a37e-9e23bfa38acd",
+      "mechanism_link": "ecc5dac7-c400-44c6-b8a1-08be0d61aaff",
+      "resistance_mechanism_link": "2fe5772d-dbb0-4ab8-be50-a1e788e527c5",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -190,7 +190,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "904cb200-3c0d-4063-a37e-9e23bfa38acd",
+        "id": "2fe5772d-dbb0-4ab8-be50-a1e788e527c5",
         "drug_id": "oxaliplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -199,26 +199,26 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": true,
-      "priority_score": 0.6083,
+      "priority_score": 0.5333,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.5,
-        "trial_saturation_inverse": 0.5,
+        "coverage_gap": 0.3333,
+        "trial_saturation_inverse": 0.3333,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 1.0,
         "disease_burden": null
       }
     },
     {
-      "id": "d76abe80-52b2-4273-bdd3-847a84135e1b",
+      "id": "4f0b4415-c167-4156-afe1-7f13c63013ad",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "carboplatin",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "9002e002-43c3-4cfa-8a91-3db42ab9278d",
-      "resistance_mechanism_link": "5e7f1b66-0c96-4b78-afd0-4bc1e0d46527",
+      "mechanism_link": "ecc5dac7-c400-44c6-b8a1-08be0d61aaff",
+      "resistance_mechanism_link": "9db4f74d-e37b-4782-9f2f-e0bb9cb40bdf",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -239,7 +239,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "5e7f1b66-0c96-4b78-afd0-4bc1e0d46527",
+        "id": "9db4f74d-e37b-4782-9f2f-e0bb9cb40bdf",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",

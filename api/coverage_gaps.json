@@ -2,14 +2,6 @@
   {
     "drug_id": "5-fluorouracil",
     "drug_name": "5-Fluorouracil",
-    "modifier_type": "dietary_metabolic",
-    "mechanism_count": 1,
-    "interaction_count": 0,
-    "gap_score": 1.0
-  },
-  {
-    "drug_id": "5-fluorouracil",
-    "drug_name": "5-Fluorouracil",
     "modifier_type": "hypoxic",
     "mechanism_count": 1,
     "interaction_count": 0,
@@ -43,14 +35,6 @@
     "drug_id": "carboplatin",
     "drug_name": "Carboplatin",
     "modifier_type": "other",
-    "mechanism_count": 1,
-    "interaction_count": 0,
-    "gap_score": 1.0
-  },
-  {
-    "drug_id": "cisplatin",
-    "drug_name": "Cisplatin",
-    "modifier_type": "hypoxic",
     "mechanism_count": 1,
     "interaction_count": 0,
     "gap_score": 1.0
@@ -104,6 +88,38 @@
     "gap_score": 1.0
   },
   {
+    "drug_id": "lomustine",
+    "drug_name": "Lomustine (CCNU)",
+    "modifier_type": "dietary_metabolic",
+    "mechanism_count": 1,
+    "interaction_count": 0,
+    "gap_score": 1.0
+  },
+  {
+    "drug_id": "lomustine",
+    "drug_name": "Lomustine (CCNU)",
+    "modifier_type": "thermal",
+    "mechanism_count": 1,
+    "interaction_count": 0,
+    "gap_score": 1.0
+  },
+  {
+    "drug_id": "lomustine",
+    "drug_name": "Lomustine (CCNU)",
+    "modifier_type": "hypoxic",
+    "mechanism_count": 1,
+    "interaction_count": 0,
+    "gap_score": 1.0
+  },
+  {
+    "drug_id": "lomustine",
+    "drug_name": "Lomustine (CCNU)",
+    "modifier_type": "other",
+    "mechanism_count": 1,
+    "interaction_count": 0,
+    "gap_score": 1.0
+  },
+  {
     "drug_id": "metformin",
     "drug_name": "Metformin",
     "modifier_type": "thermal",
@@ -150,6 +166,46 @@
     "mechanism_count": 1,
     "interaction_count": 0,
     "gap_score": 1.0
+  },
+  {
+    "drug_id": "temozolomide",
+    "drug_name": "Temozolomide",
+    "modifier_type": "dietary_metabolic",
+    "mechanism_count": 1,
+    "interaction_count": 0,
+    "gap_score": 1.0
+  },
+  {
+    "drug_id": "temozolomide",
+    "drug_name": "Temozolomide",
+    "modifier_type": "thermal",
+    "mechanism_count": 1,
+    "interaction_count": 0,
+    "gap_score": 1.0
+  },
+  {
+    "drug_id": "temozolomide",
+    "drug_name": "Temozolomide",
+    "modifier_type": "hypoxic",
+    "mechanism_count": 1,
+    "interaction_count": 0,
+    "gap_score": 1.0
+  },
+  {
+    "drug_id": "temozolomide",
+    "drug_name": "Temozolomide",
+    "modifier_type": "other",
+    "mechanism_count": 1,
+    "interaction_count": 0,
+    "gap_score": 1.0
+  },
+  {
+    "drug_id": "5-fluorouracil",
+    "drug_name": "5-Fluorouracil",
+    "modifier_type": "dietary_metabolic",
+    "mechanism_count": 1,
+    "interaction_count": 1,
+    "gap_score": 0.5
   },
   {
     "drug_id": "5-fluorouracil",
@@ -176,17 +232,9 @@
     "gap_score": 0.5
   },
   {
-    "drug_id": "carboplatin",
-    "drug_name": "Carboplatin",
-    "modifier_type": "mechanical_radiative",
-    "mechanism_count": 1,
-    "interaction_count": 1,
-    "gap_score": 0.5
-  },
-  {
     "drug_id": "cisplatin",
     "drug_name": "Cisplatin",
-    "modifier_type": "mechanical_radiative",
+    "modifier_type": "hypoxic",
     "mechanism_count": 1,
     "interaction_count": 1,
     "gap_score": 0.5
@@ -208,9 +256,9 @@
     "gap_score": 0.5
   },
   {
-    "drug_id": "oxaliplatin",
-    "drug_name": "Oxaliplatin",
-    "modifier_type": "dietary_metabolic",
+    "drug_id": "lomustine",
+    "drug_name": "Lomustine (CCNU)",
+    "modifier_type": "mechanical_radiative",
     "mechanism_count": 1,
     "interaction_count": 1,
     "gap_score": 0.5
@@ -224,12 +272,12 @@
     "gap_score": 0.5
   },
   {
-    "drug_id": "oxaliplatin",
-    "drug_name": "Oxaliplatin",
+    "drug_id": "carboplatin",
+    "drug_name": "Carboplatin",
     "modifier_type": "mechanical_radiative",
     "mechanism_count": 1,
-    "interaction_count": 1,
-    "gap_score": 0.5
+    "interaction_count": 2,
+    "gap_score": 0.3333
   },
   {
     "drug_id": "cisplatin",
@@ -248,8 +296,40 @@
     "gap_score": 0.3333
   },
   {
+    "drug_id": "cisplatin",
+    "drug_name": "Cisplatin",
+    "modifier_type": "mechanical_radiative",
+    "mechanism_count": 1,
+    "interaction_count": 2,
+    "gap_score": 0.3333
+  },
+  {
     "drug_id": "doxorubicin",
     "drug_name": "Doxorubicin",
+    "modifier_type": "mechanical_radiative",
+    "mechanism_count": 1,
+    "interaction_count": 2,
+    "gap_score": 0.3333
+  },
+  {
+    "drug_id": "oxaliplatin",
+    "drug_name": "Oxaliplatin",
+    "modifier_type": "dietary_metabolic",
+    "mechanism_count": 1,
+    "interaction_count": 2,
+    "gap_score": 0.3333
+  },
+  {
+    "drug_id": "oxaliplatin",
+    "drug_name": "Oxaliplatin",
+    "modifier_type": "mechanical_radiative",
+    "mechanism_count": 1,
+    "interaction_count": 2,
+    "gap_score": 0.3333
+  },
+  {
+    "drug_id": "temozolomide",
+    "drug_name": "Temozolomide",
     "modifier_type": "mechanical_radiative",
     "mechanism_count": 1,
     "interaction_count": 2,
@@ -268,15 +348,15 @@
     "drug_name": "Erastin",
     "modifier_type": "dietary_metabolic",
     "mechanism_count": 1,
-    "interaction_count": 4,
-    "gap_score": 0.2
+    "interaction_count": 5,
+    "gap_score": 0.1667
   },
   {
     "drug_id": "metformin",
     "drug_name": "Metformin",
     "modifier_type": "dietary_metabolic",
     "mechanism_count": 1,
-    "interaction_count": 6,
-    "gap_score": 0.1429
+    "interaction_count": 7,
+    "gap_score": 0.125
   }
 ]

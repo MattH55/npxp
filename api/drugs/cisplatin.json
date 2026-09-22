@@ -18,7 +18,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "27ce9c01-6828-4ccf-9fb8-c278f82fb5e7",
+      "id": "9f96f2c2-44ca-4376-9bdc-227b2bca2c8c",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -60,14 +60,14 @@
       }
     },
     {
-      "id": "9ae628e2-a7e9-480c-82f3-d2b364a2160b",
+      "id": "e101955e-93e1-438e-8cac-9da66660dd8c",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "drug_id": "cisplatin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "304f28a0-d5fa-4c92-8239-546f667bc6d2",
+      "mechanism_link": "07b1d56e-dfb1-4a21-810d-6d78f713ccb9",
       "resistance_mechanism_link": null,
       "source_study": [
         "geo:GSE48398",
@@ -102,14 +102,14 @@
       }
     },
     {
-      "id": "b4bcf8ba-aafc-42b0-ba1c-79038235cdac",
+      "id": "ceaf605a-f3fd-46e6-a840-6366d591fef6",
       "modifier_id": "MOD-ALICIN-NSCLC",
       "drug_id": "cisplatin",
       "cell_line_id": "A549_LUNG",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "b0d71c4b-e60b-484e-8a92-65227d12695b",
+      "mechanism_link": "8d3b4484-75d7-42ac-a524-8b3e5a205b65",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.33594/000000253",
@@ -144,15 +144,57 @@
       }
     },
     {
-      "id": "c34afd9a-df0a-4294-8b15-63fff23cb129",
+      "id": "438e2a62-8c8c-4f81-bb5b-bab7d6343306",
+      "modifier_id": "MOD-HBOT",
+      "drug_id": "cisplatin",
+      "cell_line_id": "A549_LUNG",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_3_mechanism_only",
+      "mechanism_link": "c7a95240-7c6d-4317-bf09-403881eab619",
+      "resistance_mechanism_link": null,
+      "source_study": [
+        "doi:10.3389/fonc.2021.691762",
+        "pmid:34367973"
+      ],
+      "curator_notes": "Mechanism-only entry, paralleling the curated allicin x cisplatin (hypoxic A549) entry above: HBO suppresses the HIF-1alpha/PFKP axis that otherwise drives hypoxia-mediated chemoresistance (Zhang et al. 2021), but no HBO x cisplatin combination was tested in the source study. Awaiting a combination viability readout.",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Hyperbaric oxygen therapy (HBOT)",
+      "modifier_type": "hypoxic",
+      "modifier_infrastructure_requirement": "high",
+      "cell_line_name": "A549",
+      "tissue_origin": "Lung",
+      "drug_name": "Cisplatin",
+      "drug_class": "Platinum agent",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "5702198",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": false,
+      "priority_score": 0.4667,
+      "priority_components": {
+        "convergent_evidence": 0.3333,
+        "coverage_gap": 0.5,
+        "trial_saturation_inverse": 1.0,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 0.0,
+        "disease_burden": null
+      }
+    },
+    {
+      "id": "07b42c44-96cf-4109-9054-55be5ac1e5ff",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "cisplatin",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "9002e002-43c3-4cfa-8a91-3db42ab9278d",
-      "resistance_mechanism_link": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+      "mechanism_link": "ecc5dac7-c400-44c6-b8a1-08be0d61aaff",
+      "resistance_mechanism_link": "b0b73514-2c55-4867-bd59-8154f69be1e3",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -173,7 +215,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+        "id": "b0b73514-2c55-4867-bd59-8154f69be1e3",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -193,15 +235,15 @@
       }
     },
     {
-      "id": "266cabaa-880e-45f0-9d6e-f0086991b829",
+      "id": "f701c866-ce6b-42a6-ada3-0dc47910f9a1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
-      "resistance_mechanism_link": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
+      "resistance_mechanism_link": "b0b73514-2c55-4867-bd59-8154f69be1e3",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -222,7 +264,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+        "id": "b0b73514-2c55-4867-bd59-8154f69be1e3",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -231,10 +273,59 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.5833,
+      "priority_score": 0.5333,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.5,
+        "coverage_gap": 0.3333,
+        "trial_saturation_inverse": 1.0,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 0.0,
+        "disease_burden": null
+      }
+    },
+    {
+      "id": "5feb09d8-2e5d-41b3-9884-82adcca04553",
+      "modifier_id": "MOD-TTFIELDS-200KHZ",
+      "drug_id": "cisplatin",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_3_mechanism_only",
+      "mechanism_link": "7369aa72-9fd1-481c-af07-51045f5b8533",
+      "resistance_mechanism_link": "b0b73514-2c55-4867-bd59-8154f69be1e3",
+      "source_study": [
+        "doi:10.1007/s11060-023-04308-4",
+        "pmid:9861196"
+      ],
+      "curator_notes": "[Mechanistic Bridging -- model-generated hypothesis, not a tested result] Tumor Treating Fields (TTFields, 200 kHz) induces a dna_damage signature (death_promoting) in U-87 MG; Cisplatin's reported resistance mechanism runs through the same pathway (ERCC1/XPF nucleotide excision repair (NER)). Because the modifier's effect on this pathway is death-promoting (suppresses the pathway the drug's resistance depends on), this is surfaced as a synergy candidate. This combination has not been evaluated together in any cited study -- it is a candidate for testing, generated by matching independently-curated signature and resistance-mechanism evidence, not a direct or inferred empirical finding.",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Tumor Treating Fields (TTFields, 200 kHz)",
+      "modifier_type": "mechanical_radiative",
+      "modifier_infrastructure_requirement": "high",
+      "cell_line_name": "U-87 MG",
+      "tissue_origin": "Central nervous system",
+      "drug_name": "Cisplatin",
+      "drug_class": "Platinum agent",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "5702198",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+      "resistance_mechanism": {
+        "id": "b0b73514-2c55-4867-bd59-8154f69be1e3",
+        "drug_id": "cisplatin",
+        "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
+        "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
+        "source": "pmid:9861196",
+        "signature_panel": "dna_damage"
+      },
+      "is_bridging_candidate": true,
+      "low_resource_relevance": false,
+      "priority_score": 0.5333,
+      "priority_components": {
+        "convergent_evidence": 0.6667,
+        "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
@@ -246,11 +337,12 @@
     "4T1",
     "A549",
     "MCF-7",
-    "RKO"
+    "RKO",
+    "U-87 MG"
   ],
   "resistance_mechanisms": [
     {
-      "id": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+      "id": "b0b73514-2c55-4867-bd59-8154f69be1e3",
       "drug_id": "cisplatin",
       "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
       "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",

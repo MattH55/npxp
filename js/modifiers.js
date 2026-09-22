@@ -27,6 +27,10 @@ function protocolSummary(params) {
     if (p.o2_percent) bits.push(`${p.o2_percent}% O₂`);
     if (p.duration_hr) bits.push(`${p.duration_hr} h`);
     if (p.duration_min) bits.push(`${p.duration_min} min`);
+    if (p.glutamine_concentration) bits.push(`glutamine ${p.glutamine_concentration}`);
+    if (p.frequency_kHz) bits.push(`${p.frequency_kHz} kHz`);
+    if (p.field_strength_V_cm) bits.push(`${p.field_strength_V_cm} V/cm`);
+    if (p.magnetic_flux_uT_range) bits.push(`${p.magnetic_flux_uT_range} µT`);
     return bits.join(" · ") || "see detail";
 }
 

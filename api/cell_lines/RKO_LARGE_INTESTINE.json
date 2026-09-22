@@ -14,15 +14,15 @@
     }
   ],
   "source": "CCLE/DepMap",
-  "oncotree_code": null,
-  "oncotree_primary_disease": null,
-  "oncotree_subtype": null,
+  "oncotree_code": "COAD",
+  "oncotree_primary_disease": "Colorectal Adenocarcinoma",
+  "oncotree_subtype": "Colon Adenocarcinoma",
   "ncit_code": null,
   "tumor_concordance_score": null,
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
+      "id": "80a389e0-82f5-4790-b5c7-bf19a0327902",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "signature_panel": "dna_damage",
@@ -37,7 +37,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "27ce9c01-6828-4ccf-9fb8-c278f82fb5e7",
+      "id": "9f96f2c2-44ca-4376-9bdc-227b2bca2c8c",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -79,7 +79,7 @@
       }
     },
     {
-      "id": "26961df0-73bd-450d-88a9-44859359dccf",
+      "id": "97f5545f-d72a-4d52-bae8-640e64d79f7b",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "oxaliplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -110,18 +110,18 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.275,
+      "priority_score": 0.25,
       "priority_components": {
         "convergent_evidence": 0.0,
         "coverage_gap": 0.5,
-        "trial_saturation_inverse": 0.5,
+        "trial_saturation_inverse": 0.3333,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
         "disease_burden": null
       }
     },
     {
-      "id": "564e8e33-8240-45f4-ba39-cda55827b28b",
+      "id": "a65fb81d-bad0-4172-93f4-8813201191b1",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -163,7 +163,7 @@
       }
     },
     {
-      "id": "679e123c-a9c0-4a43-90be-1a7272dafd34",
+      "id": "ec471293-5daa-42aa-98a5-d06f35874d54",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -194,18 +194,18 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.35,
+      "priority_score": 0.275,
       "priority_components": {
         "convergent_evidence": 0.0,
         "coverage_gap": 0.5,
-        "trial_saturation_inverse": 1.0,
+        "trial_saturation_inverse": 0.5,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
         "disease_burden": null
       }
     },
     {
-      "id": "2355caee-28cb-42b7-90e5-b46973f5fc6b",
+      "id": "914f50df-9556-4c44-b393-abab224c8429",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -247,14 +247,14 @@
       }
     },
     {
-      "id": "07bc4531-82c2-458c-a766-fc5d8ad603d4",
+      "id": "8e59231f-da27-4ae4-9b5d-6f117d3bd644",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1667/RR1858.1",
@@ -289,15 +289,15 @@
       }
     },
     {
-      "id": "266cabaa-880e-45f0-9d6e-f0086991b829",
+      "id": "f701c866-ce6b-42a6-ada3-0dc47910f9a1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
-      "resistance_mechanism_link": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
+      "resistance_mechanism_link": "b0b73514-2c55-4867-bd59-8154f69be1e3",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -318,7 +318,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+        "id": "b0b73514-2c55-4867-bd59-8154f69be1e3",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -327,10 +327,10 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.5833,
+      "priority_score": 0.5333,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.5,
+        "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
@@ -338,15 +338,15 @@
       }
     },
     {
-      "id": "2fc0aaaf-4fc8-436b-826c-274b2d814eec",
+      "id": "214ed824-6420-4212-9068-725ef764993b",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "oxaliplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
-      "resistance_mechanism_link": "904cb200-3c0d-4063-a37e-9e23bfa38acd",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
+      "resistance_mechanism_link": "2fe5772d-dbb0-4ab8-be50-a1e788e527c5",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -367,7 +367,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "904cb200-3c0d-4063-a37e-9e23bfa38acd",
+        "id": "2fe5772d-dbb0-4ab8-be50-a1e788e527c5",
         "drug_id": "oxaliplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -376,26 +376,26 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.5083,
+      "priority_score": 0.4333,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.5,
-        "trial_saturation_inverse": 0.5,
+        "coverage_gap": 0.3333,
+        "trial_saturation_inverse": 0.3333,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
         "disease_burden": null
       }
     },
     {
-      "id": "51e18e94-b46d-4394-a53b-c91af31ff7a7",
+      "id": "437e9eaa-df52-4076-be44-cc1e74822a8d",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
-      "resistance_mechanism_link": "5e7f1b66-0c96-4b78-afd0-4bc1e0d46527",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
+      "resistance_mechanism_link": "9db4f74d-e37b-4782-9f2f-e0bb9cb40bdf",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -416,7 +416,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "5e7f1b66-0c96-4b78-afd0-4bc1e0d46527",
+        "id": "9db4f74d-e37b-4782-9f2f-e0bb9cb40bdf",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -425,10 +425,10 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.5833,
+      "priority_score": 0.5333,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.5,
+        "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,

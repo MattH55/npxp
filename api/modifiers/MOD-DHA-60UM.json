@@ -3,8 +3,8 @@
   "modifier_type": "dietary_metabolic",
   "agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
   "protocol_parameters": {
-    "in_vitro": "DHA 60 uM on a control fatty-acid background (OALA: 40 uM linoleic + 40 uM oleic) vs OALA alone",
-    "in_vivo": "nutritionally complete diet with 2.8 g/100 g DHA (P:S ratio 0.5) vs matched control diet in nu/nu mice bearing MDA-MB-231 xenografts",
+    "in_vitro_leg": "DHA 60 uM on a control fatty-acid background (OALA: 40 uM linoleic + 40 uM oleic) vs OALA alone",
+    "in_vivo_leg": "nutritionally complete diet with 2.8 g/100 g DHA (P:S ratio 0.5) vs matched control diet in nu/nu mice bearing MDA-MB-231 xenografts",
     "drug_leg": "doxorubicin 0.41 uM (in vitro); 5 mg/kg DOX 2x/week for 4 weeks (in vivo)",
     "readout": "viability; microarray/protein apoptosis and cell-cycle markers; tumour volume"
   },
@@ -14,7 +14,7 @@
   "estimated_relative_cost_note": "Omega-3 (DHA) dietary supplement; low-cost, widely available over the counter.",
   "signature_scores": [
     {
-      "id": "cb2331e2-86d9-4ea6-8054-f2b0de1c7bf8",
+      "id": "36883601-6518-4c2d-a052-21329ae604ec",
       "modifier_id": "MOD-DHA-60UM",
       "cell_line_id": "MDAMB231_BREAST",
       "signature_panel": "other",
@@ -27,14 +27,14 @@
   ],
   "interactions": [
     {
-      "id": "2d89cadb-31e9-451f-9117-3f34631cb543",
+      "id": "1de938ea-87f4-4a9d-b06b-724e41c5a2ef",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "cb2331e2-86d9-4ea6-8054-f2b0de1c7bf8",
+      "mechanism_link": "36883601-6518-4c2d-a052-21329ae604ec",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1093/jn/nxy224",

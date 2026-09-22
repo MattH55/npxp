@@ -33,14 +33,26 @@ function crossRefChips(d) {
 }
 
 let allDrugs = [];
-const state = { clinical_status: "", q: "" };
+const state = { clinical_status: "", q: "", showAll: false };
+
+//: default page load stays to the curated set (~13 drugs with real
+//: evidence); the DepMap bulk registry (~7,000 zero-interaction compounds)
+//: is opt-in via the "show full registry" toggle, and even then capped
+//: unless the viewer is actively searching -- rendering 7,000 DOM cards
+//: unconditionally would make the page unusably heavy for no benefit.
+const MAX_UNFILTERED_BULK_ROWS = 300;
 
 function applyFilters(rows) {
     const q = state.q.toLowerCase();
-    return rows.filter((d) =>
+    const pool = state.showAll ? rows : rows.filter((d) => d.interaction_count || d.response_count);
+    const filtered = pool.filter((d) =>
         (!state.clinical_status || d.clinical_status === state.clinical_status) &&
         (!q || [d.name, d.drug_class, d.target, d.mechanism_of_action].some(
             (f) => (f || "").toLowerCase().includes(q))));
+    if (state.showAll && !q && filtered.length > MAX_UNFILTERED_BULK_ROWS) {
+        return { rows: filtered.slice(0, MAX_UNFILTERED_BULK_ROWS), truncated: filtered.length };
+    }
+    return { rows: filtered, truncated: null };
 }
 
 async function loadList() {
@@ -48,8 +60,12 @@ async function loadList() {
     status.textContent = "Loading…";
     try {
         if (!allDrugs.length) allDrugs = await apiGet("/drugs");
-        const rows = applyFilters(allDrugs);
-        status.textContent = `${rows.length} of ${allDrugs.length} drug(s)`;
+        const { rows, truncated } = applyFilters(allDrugs);
+        const scopeNote = state.showAll ? "" : " (curated only — check “show full registry” for all)";
+        status.textContent = `${truncated || rows.length} of ${allDrugs.length} drug(s)${scopeNote}`;
+        document.getElementById("drug-list-more").textContent = truncated
+            ? `Showing first ${MAX_UNFILTERED_BULK_ROWS} of ${truncated} — type a search term to narrow.`
+            : "";
         document.getElementById("drug-list").innerHTML = rows.map((d) => `
           <div class="row-link bg-slate-800/60 border border-slate-700 rounded-xl p-4" data-id="${escapeHtml(d.drug_id)}">
             <div class="flex items-start justify-between gap-2">
@@ -73,9 +89,35 @@ async function loadList() {
     }
 }
 
+function minimalDrugCard(d) {
+    // DepMap bulk-registry compounds (zero interactions/responses) never get
+    // a precomputed static detail file (see scripts/export_static.py) --
+    // render what the list payload already has rather than a failed fetch.
+    return `
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-6">
+        <div class="flex items-start justify-between gap-2">
+          <h2 class="text-xl font-bold text-white mb-1">${escapeHtml(d.name)}
+            <span class="text-slate-500 text-sm font-normal ml-2">${escapeHtml(d.drug_id)}</span></h2>
+          ${statusBadge(d.clinical_status)}
+        </div>
+        <div class="text-slate-400 text-sm mb-1">${escapeHtml(d.drug_class || "—")}</div>
+        <div class="text-slate-400 text-sm mb-3">${escapeHtml(d.mechanism_of_action || d.target || "")}</div>
+        <div class="flex flex-wrap gap-2 mb-2">${crossRefChips(d)}</div>
+        ${(d.synonyms || []).length ? `<div class="text-slate-500 text-xs mb-4">Also known as: ${d.synonyms.map(escapeHtml).join(", ")}</div>` : ""}
+        <div class="text-slate-500 text-sm">Part of the bulk DepMap compound registry (${escapeHtml(d.source || "")});
+          no interactions or drug_response rows curated for it yet.</div>
+      </div>`;
+}
+
 async function loadDetail(drugId) {
     const box = document.getElementById("drug-detail");
     box.innerHTML = `<div class="text-slate-400 text-sm">Loading ${escapeHtml(drugId)}…</div>`;
+    const listed = allDrugs.find((d) => d.drug_id === drugId);
+    if (listed && !listed.interaction_count && !listed.response_count) {
+        box.innerHTML = minimalDrugCard(listed);
+        box.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+    }
     try {
         const d = await apiGet(`/drugs/${encodeURIComponent(drugId)}`);
         const intRows = (d.interactions || []).map((it) => `
@@ -146,6 +188,10 @@ document.getElementById("flt-q").addEventListener("input", () => {
         state.q = document.getElementById("flt-q").value.trim();
         loadList();
     }, 250);
+});
+document.getElementById("flt-show-all").addEventListener("change", (e) => {
+    state.showAll = e.target.checked;
+    loadList();
 });
 
 loadList().then(() => {

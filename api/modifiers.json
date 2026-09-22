@@ -36,8 +36,8 @@
     "modifier_type": "dietary_metabolic",
     "agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
     "protocol_parameters": {
-      "in_vitro": "DHA 60 uM on a control fatty-acid background (OALA: 40 uM linoleic + 40 uM oleic) vs OALA alone",
-      "in_vivo": "nutritionally complete diet with 2.8 g/100 g DHA (P:S ratio 0.5) vs matched control diet in nu/nu mice bearing MDA-MB-231 xenografts",
+      "in_vitro_leg": "DHA 60 uM on a control fatty-acid background (OALA: 40 uM linoleic + 40 uM oleic) vs OALA alone",
+      "in_vivo_leg": "nutritionally complete diet with 2.8 g/100 g DHA (P:S ratio 0.5) vs matched control diet in nu/nu mice bearing MDA-MB-231 xenografts",
       "drug_leg": "doxorubicin 0.41 uM (in vitro); 5 mg/kg DOX 2x/week for 4 weeks (in vivo)",
       "readout": "viability; microarray/protein apoptosis and cell-cycle markers; tumour volume"
     },
@@ -65,6 +65,22 @@
     "interaction_count": 3
   },
   {
+    "modifier_id": "MOD-GLUTAMINE-RESTRICT",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Glutamine restriction (glutamine-free/deprived medium)",
+    "protocol_parameters": {
+      "glutamine_concentration": "0 (deprivation)",
+      "line_context": "MDA-MB-231 (basal/TNBC) glutamine-dependent; MCF-7 (luminal) glutamine-independent via glutamine synthetase expression (Kung et al. 2011)",
+      "readout": "viability/proliferation; RNA-seq (GSE26370)"
+    },
+    "source_study": "doi:10.1371/journal.pgen.1002229",
+    "source_dataset_accession": "GSE26370",
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol; no equipment.",
+    "signature_count": 2,
+    "interaction_count": 2
+  },
+  {
     "modifier_id": "MOD-GLUCOSE-LOW-DU145",
     "modifier_type": "dietary_metabolic",
     "agent": "Low-glucose medium (metformin co-treatment context)",
@@ -77,6 +93,23 @@
     "estimated_relative_cost_note": "Dietary/glycemic-control protocol; no equipment.",
     "signature_count": 0,
     "interaction_count": 1
+  },
+  {
+    "modifier_id": "MOD-METHIONINE-RESTRICT",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
+    "protocol_parameters": {
+      "medium": "methionine-restricted vs standard",
+      "line_context": "HCT116 (GSE72131); human cancer cell lines + mouse liver (GSE103602)",
+      "readout": "H3K4me3 ChIP-seq + RNA-seq (one-carbon-metabolism/SAM sensing)",
+      "clinical_precedent": "Phase I/II feasibility: dietary methionine restriction + FOLFOX (5-FU + oxaliplatin) in metastatic colorectal cancer (Durando et al. 2010, PMID 20424491) -- see [C3]"
+    },
+    "source_study": "pmid:26411344",
+    "source_dataset_accession": "GSE72131",
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Specialized low-methionine diet; no equipment, though the Durando et al. feasibility trial noted poor long-term palatability as a real adherence barrier.",
+    "signature_count": 1,
+    "interaction_count": 2
   },
   {
     "modifier_id": "MOD-SERINE-GLYCINE-FREE",
@@ -146,6 +179,22 @@
     "interaction_count": 0
   },
   {
+    "modifier_id": "MOD-HBOT",
+    "modifier_type": "hypoxic",
+    "agent": "Hyperbaric oxygen therapy (HBOT)",
+    "protocol_parameters": {
+      "line_context": "A549, H1299 NSCLC (hypoxic culture reversed by HBO)",
+      "note": "Exact pressure (ATA)/exposure duration per Zhang et al. 2021 Methods, pending curation from source tables; acts via HIF-1alpha/PFKP axis suppression of the Warburg effect and EMT",
+      "readout": "Warburg-effect/EMT markers; in vivo Lewis lung carcinoma growth (Pfkp-dependent)"
+    },
+    "source_study": "doi:10.3389/fonc.2021.691762",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "high",
+    "estimated_relative_cost_note": "Requires a dedicated hyperbaric chamber facility and clinical staff -- dedicated clinical infrastructure, not a bedside or outpatient intervention.",
+    "signature_count": 1,
+    "interaction_count": 1
+  },
+  {
     "modifier_id": "MOD-HYP-1O2-24H",
     "modifier_type": "hypoxic",
     "agent": "Hypoxia (1% O2)",
@@ -178,6 +227,25 @@
     "interaction_count": 6
   },
   {
+    "modifier_id": "MOD-PEMF-XRBK11",
+    "modifier_type": "mechanical_radiative",
+    "agent": "Pulsed electromagnetic field (PEMF), XR-BK11 sequence",
+    "protocol_parameters": {
+      "sequence": "XR-BK11: 11 base frequencies (40, 150, 230, 490, 720, 780, 1830, 5100, 7500, 8000, 10000 Hz), 5 min each",
+      "duration_min": 55,
+      "days": 4,
+      "magnetic_flux_uT_range": "10-400",
+      "line_context": "U-87 MG, T98 glioblastoma",
+      "readout": "viability, apoptosis (caspase-3), stemness markers (OCT4/NANOG); see also Sandberg et al. 2025 (PMID 40278322) genomic-profiling in bladder cancer HT-1197 (monotherapy, no drug combination tested)"
+    },
+    "source_study": "doi:10.1038/s41598-026-47481-y",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "moderate",
+    "estimated_relative_cost_note": "Portable PEMF device; moderate cost range relative to dietary/fasting protocols, well below TTFields/HBOT.",
+    "signature_count": 1,
+    "interaction_count": 1
+  },
+  {
     "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
     "modifier_type": "mechanical_radiative",
     "agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -197,6 +265,25 @@
     "estimated_relative_cost_note": "Not a patient-deliverable intervention -- an in-vitro biomaterial culture system only, so no infrastructure_requirement tier applies (left unassessed rather than forced into a category).",
     "signature_count": 0,
     "interaction_count": 4
+  },
+  {
+    "modifier_id": "MOD-TTFIELDS-200KHZ",
+    "modifier_type": "mechanical_radiative",
+    "agent": "Tumor Treating Fields (TTFields, 200 kHz)",
+    "protocol_parameters": {
+      "frequency_kHz": 200,
+      "field_strength_V_cm": 0.83,
+      "duration_hr": 72,
+      "device": "inovitro (research); clinical delivery via Optune transducer arrays",
+      "line_context": "U-87 MG, LN-229, U-118 MG, LN-18 glioblastoma (+ TMZ-resistant U-87 MG/U-118 MG derivatives)",
+      "readout": "viability, apoptosis, clonogenic assay"
+    },
+    "source_study": "doi:10.1007/s11060-023-04308-4",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "high",
+    "estimated_relative_cost_note": "FDA-approved Optune device: portable field generator plus adhesive transducer arrays replaced every few days -- high recurring cost, though it is a wearable/outpatient device rather than an inpatient procedure.",
+    "signature_count": 1,
+    "interaction_count": 5
   },
   {
     "modifier_id": "MOD-HT-42C-60M-HIPEC",

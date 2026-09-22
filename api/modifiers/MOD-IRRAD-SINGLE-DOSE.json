@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device.",
   "signature_scores": [
     {
-      "id": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
+      "id": "80a389e0-82f5-4790-b5c7-bf19a0327902",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "signature_panel": "dna_damage",
@@ -26,14 +26,14 @@
   ],
   "interactions": [
     {
-      "id": "07bc4531-82c2-458c-a766-fc5d8ad603d4",
+      "id": "8e59231f-da27-4ae4-9b5d-6f117d3bd644",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1667/RR1858.1",
@@ -68,7 +68,7 @@
       }
     },
     {
-      "id": "654c7b76-779c-44b1-ae36-4e370e193d88",
+      "id": "d152a96b-3477-42f7-89ba-48748a23e604",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "HELA_CERVIX",
@@ -110,7 +110,7 @@
       }
     },
     {
-      "id": "249fb01e-a260-4277-8244-3e53c7cbd822",
+      "id": "179c459c-2998-421b-bbbd-5541f8a35d9a",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "CASKI_CERVIX",
@@ -152,15 +152,15 @@
       }
     },
     {
-      "id": "266cabaa-880e-45f0-9d6e-f0086991b829",
+      "id": "f701c866-ce6b-42a6-ada3-0dc47910f9a1",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
-      "resistance_mechanism_link": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
+      "resistance_mechanism_link": "b0b73514-2c55-4867-bd59-8154f69be1e3",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -181,7 +181,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "bbe054c6-1577-4715-bc15-b767476bc0ca",
+        "id": "b0b73514-2c55-4867-bd59-8154f69be1e3",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -190,10 +190,10 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.5833,
+      "priority_score": 0.5333,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.5,
+        "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
@@ -201,15 +201,15 @@
       }
     },
     {
-      "id": "2fc0aaaf-4fc8-436b-826c-274b2d814eec",
+      "id": "214ed824-6420-4212-9068-725ef764993b",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "oxaliplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
-      "resistance_mechanism_link": "904cb200-3c0d-4063-a37e-9e23bfa38acd",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
+      "resistance_mechanism_link": "2fe5772d-dbb0-4ab8-be50-a1e788e527c5",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -230,7 +230,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "904cb200-3c0d-4063-a37e-9e23bfa38acd",
+        "id": "2fe5772d-dbb0-4ab8-be50-a1e788e527c5",
         "drug_id": "oxaliplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -239,26 +239,26 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.5083,
+      "priority_score": 0.4333,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.5,
-        "trial_saturation_inverse": 0.5,
+        "coverage_gap": 0.3333,
+        "trial_saturation_inverse": 0.3333,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
         "disease_burden": null
       }
     },
     {
-      "id": "51e18e94-b46d-4394-a53b-c91af31ff7a7",
+      "id": "437e9eaa-df52-4076-be44-cc1e74822a8d",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "6fa3e98c-da65-4b0e-9b50-d1a338d4d4bc",
-      "resistance_mechanism_link": "5e7f1b66-0c96-4b78-afd0-4bc1e0d46527",
+      "mechanism_link": "80a389e0-82f5-4790-b5c7-bf19a0327902",
+      "resistance_mechanism_link": "9db4f74d-e37b-4782-9f2f-e0bb9cb40bdf",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -279,7 +279,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "5e7f1b66-0c96-4b78-afd0-4bc1e0d46527",
+        "id": "9db4f74d-e37b-4782-9f2f-e0bb9cb40bdf",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -288,10 +288,10 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.5833,
+      "priority_score": 0.5333,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.5,
+        "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,

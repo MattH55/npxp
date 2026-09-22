@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol (no cystine supplementation); no equipment. Clinical translation would likely be a specialized diet, not a device.",
   "signature_scores": [
     {
-      "id": "77970e0b-a705-4d83-86e5-7a61658e0b64",
+      "id": "47b44fe8-c526-4693-9511-3eb90d1dee43",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "cell_line_id": "MDAMB231_BREAST",
       "signature_panel": "nrf2_ferroptosis",
@@ -26,14 +26,14 @@
   ],
   "interactions": [
     {
-      "id": "f6057eaf-6dd5-43d0-a7a2-f7977af8105f",
+      "id": "0c75f562-4da5-4982-ad6b-91b3e8a23284",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "erastin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "77970e0b-a705-4d83-86e5-7a61658e0b64",
+      "mechanism_link": "47b44fe8-c526-4693-9511-3eb90d1dee43",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -57,10 +57,10 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.3767,
+      "priority_score": 0.3667,
       "priority_components": {
         "convergent_evidence": 0.3333,
-        "coverage_gap": 0.2,
+        "coverage_gap": 0.1667,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
@@ -68,15 +68,15 @@
       }
     },
     {
-      "id": "96d1789a-a69f-472a-87a8-984341396e5d",
+      "id": "c0f21b3f-7fed-4069-879e-88186f10fa43",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "metformin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "77970e0b-a705-4d83-86e5-7a61658e0b64",
-      "resistance_mechanism_link": "986f0a04-47c4-4466-9450-a6a63b8a3fac",
+      "mechanism_link": "47b44fe8-c526-4693-9511-3eb90d1dee43",
+      "resistance_mechanism_link": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
         "pmid:34162423"
@@ -97,7 +97,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "986f0a04-47c4-4466-9450-a6a63b8a3fac",
+        "id": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -106,10 +106,10 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": true,
-      "priority_score": 0.5762,
+      "priority_score": 0.5708,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.1429,
+        "coverage_gap": 0.125,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 1.0,

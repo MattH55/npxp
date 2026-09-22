@@ -14,15 +14,15 @@
     }
   ],
   "source": "CCLE/DepMap",
-  "oncotree_code": null,
-  "oncotree_primary_disease": null,
-  "oncotree_subtype": null,
+  "oncotree_code": "PRAD",
+  "oncotree_primary_disease": "Prostate Adenocarcinoma",
+  "oncotree_subtype": "Prostate Adenocarcinoma",
   "ncit_code": null,
   "tumor_concordance_score": null,
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "bc0381f6-189f-44f5-851a-194c1088da73",
+      "id": "446d02d0-024a-4dea-8133-22e0bdbb305b",
       "modifier_id": "MOD-HYP-1O2-24H",
       "cell_line_id": "DU145_PROSTATE",
       "signature_panel": "other",
@@ -37,7 +37,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "d24759c7-abf4-40fa-8547-893989b9971f",
+      "id": "3c9778a6-4dc6-43c2-b810-057b886b599d",
       "modifier_id": "MOD-GLUCOSE-LOW-DU145",
       "drug_id": "metformin",
       "cell_line_id": "DU145_PROSTATE",
@@ -68,10 +68,10 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": true,
-      "priority_score": 0.3429,
+      "priority_score": 0.3375,
       "priority_components": {
         "convergent_evidence": 0.0,
-        "coverage_gap": 0.1429,
+        "coverage_gap": 0.125,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 1.0,
@@ -79,14 +79,14 @@
       }
     },
     {
-      "id": "139b420c-b145-45a8-b58c-7b846b985485",
+      "id": "8c9d292a-62ec-4211-b468-f00fe49ca1d1",
       "modifier_id": "MOD-HYP-1O2-24H",
       "drug_id": "doxorubicin",
       "cell_line_id": "DU145_PROSTATE",
       "combined_effect_metric": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "bc0381f6-189f-44f5-851a-194c1088da73",
+      "mechanism_link": "446d02d0-024a-4dea-8133-22e0bdbb305b",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.drup.2011.03.001",

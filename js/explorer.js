@@ -31,6 +31,10 @@ function modifierColHeader(m) {
     if (params.o2_percent) bits.push(`${params.o2_percent}% O₂`);
     if (params.duration_hr) bits.push(`${params.duration_hr} h`);
     if (params.duration_min) bits.push(`${params.duration_min} min`);
+    if (params.glutamine_concentration) bits.push(`glutamine ${params.glutamine_concentration}`);
+    if (params.frequency_kHz) bits.push(`${params.frequency_kHz} kHz`);
+    if (params.field_strength_V_cm) bits.push(`${params.field_strength_V_cm} V/cm`);
+    if (params.magnetic_flux_uT_range) bits.push(`${params.magnetic_flux_uT_range} µT`);
     return `<div class="text-white text-xs font-semibold leading-tight">${escapeHtml(m.agent)}</div>
             <div class="text-slate-500 text-[0.65rem]">${escapeHtml(MOD_TYPE_LABEL[m.modifier_type] || m.modifier_type)}</div>
             <div class="text-slate-400 text-[0.65rem]">${escapeHtml(bits.join(" · "))}</div>`;

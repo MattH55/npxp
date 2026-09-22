@@ -18,7 +18,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "679e123c-a9c0-4a43-90be-1a7272dafd34",
+      "id": "ec471293-5daa-42aa-98a5-d06f35874d54",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -49,23 +49,66 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.35,
+      "priority_score": 0.275,
       "priority_components": {
         "convergent_evidence": 0.0,
         "coverage_gap": 0.5,
-        "trial_saturation_inverse": 1.0,
+        "trial_saturation_inverse": 0.5,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,
+        "disease_burden": null
+      }
+    },
+    {
+      "id": "5f18dde7-1113-4edf-b884-a11e57e2a0ef",
+      "modifier_id": "MOD-METHIONINE-RESTRICT",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_2_inferred",
+      "mechanism_link": "99d98f59-ea2e-4caa-90a5-c87b1f35cea5",
+      "resistance_mechanism_link": null,
+      "source_study": [
+        "pmid:26411344",
+        "pmid:20424491"
+      ],
+      "curator_notes": "Modifier leg: methionine restriction remodels one-carbon metabolism/H3K4me3 in HCT116 (Mentch et al. 2015). Drug leg: 5-FU is the antimetabolite component of the FOLFOX regimen shown feasible with dietary methionine restriction in a Phase I/II colorectal-cancer trial (Durando et al. 2010, PMID 20424491; see [C3]). No cell-line-level combination viability readout exists in either source -- inferred via the shared one-carbon-metabolism/antimetabolite-sensitization mechanism and human trial precedent.",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
+      "modifier_type": "dietary_metabolic",
+      "modifier_infrastructure_requirement": "minimal",
+      "cell_line_name": "HCT116",
+      "tissue_origin": "Large intestine",
+      "drug_name": "5-Fluorouracil",
+      "drug_class": "Antimetabolite (fluoropyrimidine)",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "3385",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 2 \u2014 Inferred",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": true,
+      "priority_score": 0.4917,
+      "priority_components": {
+        "convergent_evidence": 0.3333,
+        "coverage_gap": 0.5,
+        "trial_saturation_inverse": 0.5,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 1.0,
         "disease_burden": null
       }
     }
   ],
   "cell_lines": [
+    "HCT116",
     "RKO"
   ],
   "resistance_mechanisms": [
     {
-      "id": "93b7fc14-9285-4279-9828-1874cefebff7",
+      "id": "ba9678fe-68b1-40d4-b059-297b47131093",
       "drug_id": "5-fluorouracil",
       "pathway_or_gene": "TYMS (thymidylate synthase) overexpression",
       "mechanism_description": "Elevated thymidylate synthase overcomes 5-FU's TYMS-inhibitory mechanism, restoring dTMP synthesis (Longley et al. 2003).",

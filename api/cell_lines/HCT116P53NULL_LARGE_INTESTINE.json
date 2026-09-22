@@ -22,7 +22,7 @@
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "5e9501e9-5312-4f94-9971-061eaf552978",
+      "id": "13326494-14b5-4ee1-91b4-e845962129f1",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "signature_panel": "nrf2_ferroptosis",
@@ -37,14 +37,14 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "3af24b10-df5b-4541-9436-13983320f528",
+      "id": "b572fdbd-0f3e-45eb-b542-3c1ef0bf5a2f",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "doxorubicin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "5e9501e9-5312-4f94-9971-061eaf552978",
+      "mechanism_link": "13326494-14b5-4ee1-91b4-e845962129f1",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1038/nature11743",
@@ -79,15 +79,15 @@
       }
     },
     {
-      "id": "462cc94c-4a13-4174-acfb-3dcf272aa511",
+      "id": "3eda7cfd-f6e3-4a7f-b9d0-9037b475e5fd",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "metformin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "5e9501e9-5312-4f94-9971-061eaf552978",
-      "resistance_mechanism_link": "986f0a04-47c4-4466-9450-a6a63b8a3fac",
+      "mechanism_link": "13326494-14b5-4ee1-91b4-e845962129f1",
+      "resistance_mechanism_link": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
       "source_study": [
         "pmid:23242140",
         "pmid:34162423"
@@ -108,7 +108,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "986f0a04-47c4-4466-9450-a6a63b8a3fac",
+        "id": "4c5a4abf-38be-4c94-be83-ea6f4a13445e",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -117,10 +117,10 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": true,
-      "priority_score": 0.5762,
+      "priority_score": 0.5708,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.1429,
+        "coverage_gap": 0.125,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 1.0,
@@ -128,15 +128,15 @@
       }
     },
     {
-      "id": "69ab4543-31cb-41cf-b929-94bf65a4463d",
+      "id": "b36fa5f2-8a91-4dc8-bbb0-153053f5c16c",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "erastin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "5e9501e9-5312-4f94-9971-061eaf552978",
-      "resistance_mechanism_link": "82dc7cd6-872f-421e-9946-08ac16b567eb",
+      "mechanism_link": "13326494-14b5-4ee1-91b4-e845962129f1",
+      "resistance_mechanism_link": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
       "source_study": [
         "pmid:23242140",
         "pmid:24439385"
@@ -157,7 +157,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "82dc7cd6-872f-421e-9946-08ac16b567eb",
+        "id": "e86f9c5c-e67f-4cfc-9d37-411245033a2c",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -166,10 +166,10 @@
       },
       "is_bridging_candidate": true,
       "low_resource_relevance": false,
-      "priority_score": 0.4933,
+      "priority_score": 0.4833,
       "priority_components": {
         "convergent_evidence": 0.6667,
-        "coverage_gap": 0.2,
+        "coverage_gap": 0.1667,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 0.0,

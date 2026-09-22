@@ -14,15 +14,15 @@
     }
   ],
   "source": "CCLE/DepMap",
-  "oncotree_code": null,
-  "oncotree_primary_disease": null,
-  "oncotree_subtype": null,
+  "oncotree_code": "BRCA",
+  "oncotree_primary_disease": "Invasive Breast Carcinoma",
+  "oncotree_subtype": "Invasive Breast Carcinoma",
   "ncit_code": null,
   "tumor_concordance_score": null,
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "d1f2ad4f-6fc5-42f5-972c-d991a365af94",
+      "id": "8ec398ed-81af-4024-9010-c89a619ad750",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "cell_line_id": "MCF7_BREAST",
       "signature_panel": "other",
@@ -34,7 +34,7 @@
       "modifier_type": "dietary_metabolic"
     },
     {
-      "id": "56e3a08c-003d-4d3f-b1a9-6c9ad286365f",
+      "id": "1fdacb92-db8c-4fac-8f24-165c3db8167e",
       "modifier_id": "MOD-BHB-10MM-96H",
       "cell_line_id": "MCF7_BREAST",
       "signature_panel": "other",
@@ -46,7 +46,7 @@
       "modifier_type": "dietary_metabolic"
     },
     {
-      "id": "304f28a0-d5fa-4c92-8239-546f667bc6d2",
+      "id": "07b1d56e-dfb1-4a21-810d-6d78f713ccb9",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "cell_line_id": "MCF7_BREAST",
       "signature_panel": "hsf1_hsp",
@@ -56,19 +56,31 @@
       "notes": "Malignant breast lines mount a distinct heat-shock transcriptional response vs MCF-10A; series premise is enhanced malignant susceptibility to 42-45 degC hyperthermia.",
       "modifier_agent": "Hyperthermic shock (45 degC)",
       "modifier_type": "thermal"
+    },
+    {
+      "id": "fdd20c40-5420-448e-b7d4-2abf2b8d3620",
+      "modifier_id": "MOD-GLUTAMINE-RESTRICT",
+      "cell_line_id": "MCF7_BREAST",
+      "signature_panel": "other",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE26370 (Kung et al. 2011, PMID 21852960)",
+      "directionality": "protective_resistance",
+      "notes": "MCF-7 (luminal) is glutamine-independent via glutamine synthetase expression, which bypasses the deprivation and represses glutaminase (Kung et al. 2011). Panel=other: this bypass is biosynthetic, not the xCT/ferroptosis axis the MDA-MB-231 leg above runs through.",
+      "modifier_agent": "Glutamine restriction (glutamine-free/deprived medium)",
+      "modifier_type": "dietary_metabolic"
     }
   ],
   "drug_responses": [],
   "interactions": [
     {
-      "id": "926d01c8-78d3-49f7-8197-0accff307c0b",
+      "id": "d230fda9-d266-4214-b9fa-5dffbc1477c1",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "d1f2ad4f-6fc5-42f5-972c-d991a365af94",
+      "mechanism_link": "8ec398ed-81af-4024-9010-c89a619ad750",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:33281976",
@@ -92,10 +104,10 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": true,
-      "priority_score": 0.4595,
+      "priority_score": 0.4542,
       "priority_components": {
         "convergent_evidence": 0.3333,
-        "coverage_gap": 0.1429,
+        "coverage_gap": 0.125,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
         "low_resource_boost": 1.0,
@@ -103,14 +115,14 @@
       }
     },
     {
-      "id": "9ae628e2-a7e9-480c-82f3-d2b364a2160b",
+      "id": "e101955e-93e1-438e-8cac-9da66660dd8c",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "drug_id": "cisplatin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "304f28a0-d5fa-4c92-8239-546f667bc6d2",
+      "mechanism_link": "07b1d56e-dfb1-4a21-810d-6d78f713ccb9",
       "resistance_mechanism_link": null,
       "source_study": [
         "geo:GSE48398",
@@ -145,7 +157,7 @@
       }
     },
     {
-      "id": "eb251a1e-23b8-4dbd-8aca-5c791d34cdac",
+      "id": "4ccf8d3d-7eec-422e-8983-323110e88b9d",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF7_BREAST",
@@ -187,7 +199,7 @@
       }
     },
     {
-      "id": "389e1a10-78c7-4757-adc8-2c8fafb27a46",
+      "id": "25ef590a-7407-4ea2-8729-8cc2f1c50a48",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MCF7_BREAST",

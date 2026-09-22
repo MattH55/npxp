@@ -30,10 +30,15 @@
       </select>
       <input id="flt-q" type="text" placeholder="Search name, class, target…"
              class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 w-72" />
+      <label class="flex items-center gap-2 text-sm text-slate-300 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2">
+        <input id="flt-show-all" type="checkbox" class="accent-emerald-500" />
+        Show full DepMap registry (~7,000 compounds, no curated evidence yet)
+      </label>
     </div>
 
     <div id="drug-status" class="text-slate-400 text-sm mb-3"></div>
     <div id="drug-list" class="grid md:grid-cols-2 gap-3"></div>
+    <div id="drug-list-more" class="text-center mt-4"></div>
     <div id="drug-detail" class="mt-8"></div>
   </main>
 
