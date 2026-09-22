@@ -1,0 +1,159 @@
+{
+  "id": "da3d23c0-e5f4-4798-8fff-144f88e0c676",
+  "modifier_id": "MOD-HT-42C-60M-HIPEC",
+  "drug_id": "carboplatin",
+  "cell_line_id": "RKO_LARGE_INTESTINE",
+  "combined_effect_metric": null,
+  "interaction_type": "synergistic",
+  "evidence_tier": "tier_1_direct",
+  "mechanism_link": null,
+  "source_study": [
+    "doi:10.3390/cells9081775",
+    "pmid:32722384"
+  ],
+  "curator_notes": "As for cisplatin: temperature-dependent synergy at >=41 degC (Helderman et al. 2020).",
+  "model_run_id": null,
+  "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
+  "modifier_type": "thermal",
+  "cell_line_name": "RKO",
+  "tissue_origin": "Large intestine",
+  "drug_name": "Carboplatin",
+  "drug_class": "Platinum agent",
+  "evidence_tier_label": "Tier 1 \u2014 Direct",
+  "modifier": {
+    "modifier_id": "MOD-HT-42C-60M-HIPEC",
+    "modifier_type": "thermal",
+    "agent": "Fever-range hyperthermia (HIPEC-mimetic)",
+    "protocol_parameters": {
+      "temperature_C": 42.0,
+      "duration_min": 60,
+      "note": "Representative of the studied range 38-43 degC for 60 min (Helderman et al. 2020)"
+    },
+    "source_study": "doi:10.3390/cells9081775",
+    "source_dataset_accession": null
+  },
+  "cell_line": {
+    "cell_line_id": "RKO_LARGE_INTESTINE",
+    "name": "RKO",
+    "tissue_origin": "Large intestine",
+    "cancer_subtype": "Colorectal adenocarcinoma (MSI-H)",
+    "key_mutations": [
+      {
+        "gene": "BRAF",
+        "variant": "V600E"
+      },
+      {
+        "gene": "TP53",
+        "variant": "wild-type"
+      }
+    ],
+    "source": "CCLE/DepMap"
+  },
+  "drug": {
+    "drug_id": "carboplatin",
+    "name": "Carboplatin",
+    "drug_class": "Platinum agent",
+    "target": "DNA crosslinking (intrastrand adducts)",
+    "source": "curated seed"
+  },
+  "mechanism": null,
+  "evidence_tier_definition": {
+    "label": "Tier 1 \u2014 Direct",
+    "short_label": "T1",
+    "definition": "The combination was tested empirically in the same study: drug and modifier were applied together and death/viability was measured."
+  },
+  "related": [
+    {
+      "id": "7daa743b-57d0-4092-9ebb-1a1cccf020c9",
+      "modifier_id": "MOD-HT-42C-60M-HIPEC",
+      "drug_id": "cisplatin",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "source_study": [
+        "doi:10.3390/cells9081775",
+        "pmid:32722384"
+      ],
+      "curator_notes": "Platinum drugs showed temperature-dependent synergy with heat at >=41 degC (increased platinum uptake ~2x, increased DNA damage and apoptosis; thermosensitization ratio > 1). Quantitative per-line TER pending curation from source tables.",
+      "model_run_id": null,
+      "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
+      "modifier_type": "thermal",
+      "cell_line_name": "RKO",
+      "tissue_origin": "Large intestine",
+      "drug_name": "Cisplatin",
+      "drug_class": "Platinum agent",
+      "evidence_tier_label": "Tier 1 \u2014 Direct"
+    },
+    {
+      "id": "3e0dc207-514b-46ec-b1b3-9eaa16e9f161",
+      "modifier_id": "MOD-HT-42C-60M-HIPEC",
+      "drug_id": "oxaliplatin",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "source_study": [
+        "doi:10.3390/cells9081775",
+        "pmid:32722384"
+      ],
+      "curator_notes": "As for cisplatin: temperature-dependent synergy at >=41 degC (Helderman et al. 2020).",
+      "model_run_id": null,
+      "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
+      "modifier_type": "thermal",
+      "cell_line_name": "RKO",
+      "tissue_origin": "Large intestine",
+      "drug_name": "Oxaliplatin",
+      "drug_class": "Platinum agent",
+      "evidence_tier_label": "Tier 1 \u2014 Direct"
+    },
+    {
+      "id": "3769a087-496c-42cf-be73-d287f87e43cc",
+      "modifier_id": "MOD-HT-42C-60M-HIPEC",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "combined_effect_metric": null,
+      "interaction_type": "additive",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "source_study": [
+        "doi:10.3390/cells9081775",
+        "pmid:32722384"
+      ],
+      "curator_notes": "Apoptosis increased after 5-FU but without temperature-dependent synergy with heat (Helderman et al. 2020).",
+      "model_run_id": null,
+      "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
+      "modifier_type": "thermal",
+      "cell_line_name": "RKO",
+      "tissue_origin": "Large intestine",
+      "drug_name": "5-Fluorouracil",
+      "drug_class": "Antimetabolite (fluoropyrimidine)",
+      "evidence_tier_label": "Tier 1 \u2014 Direct"
+    },
+    {
+      "id": "13abe896-6e71-4488-a3af-e2bfefb9668c",
+      "modifier_id": "MOD-HT-42C-60M-HIPEC",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "combined_effect_metric": null,
+      "interaction_type": "additive",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "source_study": [
+        "doi:10.3390/cells9081775",
+        "pmid:32722384"
+      ],
+      "curator_notes": "MMC induced apoptosis but no temperature-dependent synergy with heat (Helderman et al. 2020).",
+      "model_run_id": null,
+      "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
+      "modifier_type": "thermal",
+      "cell_line_name": "RKO",
+      "tissue_origin": "Large intestine",
+      "drug_name": "Mitomycin C",
+      "drug_class": "Antibiotic alkylating agent",
+      "evidence_tier_label": "Tier 1 \u2014 Direct"
+    }
+  ]
+}

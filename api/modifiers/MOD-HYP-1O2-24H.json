@@ -1,0 +1,56 @@
+{
+  "modifier_id": "MOD-HYP-1O2-24H",
+  "modifier_type": "hypoxic",
+  "agent": "Hypoxia (1% O2)",
+  "protocol_parameters": {
+    "o2_percent": 1.0,
+    "duration_hr": 24,
+    "note": "Representative protocol parameters; this row is anchored to review-level evidence (Rohwer & Cramer 2011), not a single experiment"
+  },
+  "source_study": "doi:10.1016/j.drup.2011.03.001",
+  "source_dataset_accession": null,
+  "signature_scores": [
+    {
+      "id": "4ad2bfb2-3f6b-47aa-9ec7-99e477ab13d5",
+      "modifier_id": "MOD-HYP-1O2-24H",
+      "cell_line_id": "DU145_PROSTATE",
+      "signature_panel": "other",
+      "score": null,
+      "raw_deg_evidence_ref": "Review-level: Rohwer & Cramer 2011 (PMID 21466972)",
+      "directionality": "protective_resistance",
+      "notes": "HIF-1-driven hypoxia response attenuates drug-induced apoptosis (review-level evidence; no single experiment anchors this row).",
+      "cell_line_name": "DU-145"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "0e9072c2-9bdd-4376-a03a-1df029b00384",
+      "modifier_id": "MOD-HYP-1O2-24H",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "DU145_PROSTATE",
+      "combined_effect_metric": null,
+      "interaction_type": "antagonistic",
+      "evidence_tier": "tier_3_mechanism_only",
+      "mechanism_link": "4ad2bfb2-3f6b-47aa-9ec7-99e477ab13d5",
+      "source_study": [
+        "doi:10.1016/j.drup.2011.03.001",
+        "pmid:21466972"
+      ],
+      "curator_notes": "Review-level evidence that HIF-1 activity attenuates drug-induced apoptosis (hypoxia-mediated drug resistance); no line-specific combination readout. Representative hypoxia protocol parameters.",
+      "model_run_id": null,
+      "modifier_agent": "Hypoxia (1% O2)",
+      "modifier_type": "hypoxic",
+      "cell_line_name": "DU-145",
+      "tissue_origin": "Prostate",
+      "drug_name": "Doxorubicin",
+      "drug_class": "Anthracycline (topoisomerase II inhibitor)",
+      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only"
+    }
+  ],
+  "cell_lines": [
+    "DU-145"
+  ],
+  "drugs": [
+    "doxorubicin"
+  ]
+}

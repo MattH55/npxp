@@ -1,0 +1,37 @@
+{
+  "cell_line_id": "MDAMB231_BREAST",
+  "name": "MDA-MB-231",
+  "tissue_origin": "Breast",
+  "cancer_subtype": "Triple-negative breast cancer (basal-like)",
+  "key_mutations": [
+    {
+      "gene": "KRAS",
+      "variant": "G13D"
+    },
+    {
+      "gene": "BRAF",
+      "variant": "G464V"
+    },
+    {
+      "gene": "TP53",
+      "variant": "R280K"
+    }
+  ],
+  "source": "CCLE/DepMap",
+  "signature_scores": [
+    {
+      "id": "6146f1bf-6820-4bf2-81b5-fffc878f5b41",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "cell_line_id": "MDAMB231_BREAST",
+      "signature_panel": "hsf1_hsp",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE48398 series (submitter publication PMID 27245201)",
+      "directionality": "death_promoting",
+      "notes": "As for MCF-7: distinct malignant heat-shock response (GSE48398).",
+      "modifier_agent": "Hyperthermic shock (45 degC)",
+      "modifier_type": "thermal"
+    }
+  ],
+  "drug_responses": [],
+  "interactions": []
+}

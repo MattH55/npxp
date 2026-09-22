@@ -1,0 +1,98 @@
+{
+  "id": "1ebbb579-c724-4110-9422-5edac7fff24f",
+  "modifier_id": "MOD-HT-45C-GSE48398",
+  "drug_id": "cisplatin",
+  "cell_line_id": "MCF7_BREAST",
+  "combined_effect_metric": null,
+  "interaction_type": "unknown",
+  "evidence_tier": "tier_3_mechanism_only",
+  "mechanism_link": "d8b5ca14-2bd8-4742-8ecf-d75bc69b3fe5",
+  "source_study": [
+    "geo:GSE48398",
+    "pmid:32722384"
+  ],
+  "curator_notes": "Heat-shock response measured in MCF-7 (expression only, GSE48398); platinum-heat synergy measured in CRC lines, not MCF-7 (Helderman et al. 2020). Mechanism-only.",
+  "model_run_id": null,
+  "modifier_agent": "Hyperthermic shock (45 degC)",
+  "modifier_type": "thermal",
+  "cell_line_name": "MCF-7",
+  "tissue_origin": "Breast",
+  "drug_name": "Cisplatin",
+  "drug_class": "Platinum agent",
+  "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+  "modifier": {
+    "modifier_id": "MOD-HT-45C-GSE48398",
+    "modifier_type": "thermal",
+    "agent": "Hyperthermic shock (45 degC)",
+    "protocol_parameters": {
+      "temperature_C": 45.0,
+      "note": "Exposure time/timepoints per GEO series page GSE48398; series compares malignant vs non-malignant breast lines under heat shock"
+    },
+    "source_study": "geo:GSE48398",
+    "source_dataset_accession": "GSE48398"
+  },
+  "cell_line": {
+    "cell_line_id": "MCF7_BREAST",
+    "name": "MCF-7",
+    "tissue_origin": "Breast",
+    "cancer_subtype": "Breast adenocarcinoma, ER+/HER2- (luminal A)",
+    "key_mutations": [
+      {
+        "gene": "PIK3CA",
+        "variant": "E545K"
+      },
+      {
+        "gene": "GATA3",
+        "variant": "frameshift"
+      }
+    ],
+    "source": "CCLE/DepMap"
+  },
+  "drug": {
+    "drug_id": "cisplatin",
+    "name": "Cisplatin",
+    "drug_class": "Platinum agent",
+    "target": "DNA crosslinking (intrastrand adducts)",
+    "source": "curated seed"
+  },
+  "mechanism": {
+    "id": "d8b5ca14-2bd8-4742-8ecf-d75bc69b3fe5",
+    "modifier_id": "MOD-HT-45C-GSE48398",
+    "cell_line_id": "MCF7_BREAST",
+    "signature_panel": "hsf1_hsp",
+    "score": null,
+    "raw_deg_evidence_ref": "GSE48398 series (submitter publication PMID 27245201)",
+    "directionality": "death_promoting",
+    "notes": "Malignant breast lines mount a distinct heat-shock transcriptional response vs MCF-10A; series premise is enhanced malignant susceptibility to 42-45 degC hyperthermia."
+  },
+  "evidence_tier_definition": {
+    "label": "Tier 3 \u2014 Mechanism-only",
+    "short_label": "T3",
+    "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+  },
+  "related": [
+    {
+      "id": "3c4e0537-7cb5-41f5-9072-a5e9f2db6f8d",
+      "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+      "drug_id": "metformin",
+      "cell_line_id": "MCF7_BREAST",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_2_inferred",
+      "mechanism_link": "6fd1dadf-aad7-4a8a-a521-7ee47fdd29bf",
+      "source_study": [
+        "pmid:33281976",
+        "pmid:24338509"
+      ],
+      "curator_notes": "Modifier leg: glucose deprivation engaged Hippo-pathway DEGs in MCF-7 (GSE153830). Drug leg: metformin impairs MCF-7 growth via AMPK-dependent and -independent mechanisms (Hadad et al. 2014). Hypothesized energetic-stress synergy; no combination viability readout exists.",
+      "model_run_id": null,
+      "modifier_agent": "Glucose restriction (5% of standard medium glucose)",
+      "modifier_type": "dietary_metabolic",
+      "cell_line_name": "MCF-7",
+      "tissue_origin": "Breast",
+      "drug_name": "Metformin",
+      "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
+      "evidence_tier_label": "Tier 2 \u2014 Inferred"
+    }
+  ]
+}

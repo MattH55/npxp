@@ -1,0 +1,71 @@
+{
+  "id": "e30065a1-4cb5-41cd-872d-ab0dbb8ab818",
+  "modifier_id": "MOD-HT-41C-30M",
+  "drug_id": "doxorubicin",
+  "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
+  "combined_effect_metric": null,
+  "interaction_type": "unknown",
+  "evidence_tier": "tier_3_mechanism_only",
+  "mechanism_link": "07e8350b-ef79-495f-8554-586e5d651fa5",
+  "source_study": [
+    "doi:10.1080/02656730802140777",
+    "pmid:18608577"
+  ],
+  "curator_notes": "Series reports no drug readout; the paper's introduction notes literature observations of mild-hyperthermia synergism with anti-cancer drugs. Mechanism-only entry pending a combination study. Note protective HSF1 program at this temperature argues against naive synergy assumptions.",
+  "model_run_id": null,
+  "modifier_agent": "Mild hyperthermia (41 degC, 30 min)",
+  "modifier_type": "thermal",
+  "cell_line_name": "U-937",
+  "tissue_origin": "Haematopoietic and lymphoid tissue",
+  "drug_name": "Doxorubicin",
+  "drug_class": "Anthracycline (topoisomerase II inhibitor)",
+  "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+  "modifier": {
+    "modifier_id": "MOD-HT-41C-30M",
+    "modifier_type": "thermal",
+    "agent": "Mild hyperthermia (41 degC, 30 min)",
+    "protocol_parameters": {
+      "temperature_C": 41.0,
+      "duration_min": 30,
+      "post_treatment_timepoint_hr": 3
+    },
+    "source_study": "doi:10.1080/02656730802140777",
+    "source_dataset_accession": "GSE10043"
+  },
+  "cell_line": {
+    "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
+    "name": "U-937",
+    "tissue_origin": "Haematopoietic and lymphoid tissue",
+    "cancer_subtype": "Histiocytic lymphoma",
+    "key_mutations": [
+      {
+        "gene": "TP53",
+        "variant": "deficient"
+      }
+    ],
+    "source": "CCLE/DepMap"
+  },
+  "drug": {
+    "drug_id": "doxorubicin",
+    "name": "Doxorubicin",
+    "drug_class": "Anthracycline (topoisomerase II inhibitor)",
+    "target": "Topoisomerase II; redox cycling",
+    "source": "curated seed"
+  },
+  "mechanism": {
+    "id": "07e8350b-ef79-495f-8554-586e5d651fa5",
+    "modifier_id": "MOD-HT-41C-30M",
+    "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
+    "signature_panel": "hsf1_hsp",
+    "score": null,
+    "raw_deg_evidence_ref": "GSE10043; Tabuchi et al. 2008 (PMID 18608577)",
+    "directionality": "protective_resistance",
+    "notes": "41 degC/30 min induced HSF1 with Hsp40/Hsp70 up-regulation and no apoptosis, consistent with a protective heat-shock program (thermotolerance) rather than death."
+  },
+  "evidence_tier_definition": {
+    "label": "Tier 3 \u2014 Mechanism-only",
+    "short_label": "T3",
+    "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+  },
+  "related": []
+}

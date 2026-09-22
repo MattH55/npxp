@@ -1,0 +1,22 @@
+[
+  {
+    "name": "bliss",
+    "description": "Bliss independence: expected E = Ea + Eb - Ea*Eb (probabilistic independent action).",
+    "requires_edge_fit": false
+  },
+  {
+    "name": "hsa",
+    "description": "Highest single agent: expected E = max(Ea, Eb).",
+    "requires_edge_fit": false
+  },
+  {
+    "name": "loewe",
+    "description": "Loewe additivity: CI = da/Da + db/Db from Hill fits to the two monotherapy edges; reported score = 1 - CI (CI < 1 = synergy).",
+    "requires_edge_fit": true
+  },
+  {
+    "name": "zip",
+    "description": "ZIP-style delta: observed effect minus Bliss expectation over Hill-fitted single-agent surfaces (zero interaction potency).",
+    "requires_edge_fit": true
+  }
+]

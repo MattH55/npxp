@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synergy Scoring — NPxP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="text-slate-200 min-h-screen">
+  <div id="nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-extrabold text-white mb-1"><i class="fa-solid fa-calculator mr-2 text-emerald-400"></i>Synergy Scoring</h1>
+    <p class="text-slate-400 text-sm mb-4">
+      Prediction Layer, Step 1: classical synergy quantification (Bliss, HSA, Loewe, ZIP) for a
+      modifier-level × drug-dose viability matrix — e.g. BHB concentration × drug dose, or
+      temperature × drug dose. Scores are effect excess: <b class="text-emerald-300">positive = synergistic</b>,
+      <b class="text-sky-300">negative = antagonistic</b>. Results are computed on demand and never
+      written into the database.
+    </p>
+
+    <div id="readiness" class="mb-5"></div>
+
+    <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-5 mb-6">
+      <label class="kv-key" for="matrix-input">Matrix (CSV: header row = drug doses, first column = modifier levels, control 0 first)</label>
+      <textarea id="matrix-input" rows="6" class="w-full mt-1 bg-slate-900 border border-slate-700 rounded-lg p-3 text-sm text-slate-200 font-mono"
+        placeholder="level \ dose,0,0.5,1,2&#10;0,1,0.667,0.5,0.333&#10;0.5,0.667,0.3,0.2,0.12&#10;1,0.5,0.18,0.1,0.05&#10;2,0.333,0.1,0.05,0.02"></textarea>
+      <div class="flex flex-wrap items-center gap-4 mt-3">
+        <label class="text-sm text-slate-400">Viability scale
+          <select id="scale" class="bg-slate-900 border border-slate-700 text-slate-200 text-sm rounded-lg px-2 py-1 ml-1">
+            <option value="fraction">fraction (0–1)</option>
+            <option value="percent">percent (0–100)</option>
+          </select>
+        </label>
+        <span class="text-sm text-slate-400">Models:</span>
+        <span id="model-checks" class="flex flex-wrap gap-3 text-sm"></span>
+        <button id="score-btn" class="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-4 py-2 rounded-lg">
+          <i class="fa-solid fa-play mr-1"></i>Score</button>
+      </div>
+      <div id="input-error" class="text-rose-400 text-sm mt-2"></div>
+    </div>
+
+    <div id="results"></div>
+
+    <footer class="text-center text-slate-500 text-xs mt-12">
+      Loewe/ZIP fit Hill curves to the monotherapy edges (≥3 dose points each); ZIP is the
+      delta score over fitted surfaces, not SynergyFinder's exact curve-shift correction.
+    </footer>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/scoring-client.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/scoring.js"></script>
+</body>
+</html>

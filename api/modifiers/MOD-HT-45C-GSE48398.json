@@ -1,0 +1,88 @@
+{
+  "modifier_id": "MOD-HT-45C-GSE48398",
+  "modifier_type": "thermal",
+  "agent": "Hyperthermic shock (45 degC)",
+  "protocol_parameters": {
+    "temperature_C": 45.0,
+    "note": "Exposure time/timepoints per GEO series page GSE48398; series compares malignant vs non-malignant breast lines under heat shock"
+  },
+  "source_study": "geo:GSE48398",
+  "source_dataset_accession": "GSE48398",
+  "signature_scores": [
+    {
+      "id": "d8b5ca14-2bd8-4742-8ecf-d75bc69b3fe5",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "cell_line_id": "MCF7_BREAST",
+      "signature_panel": "hsf1_hsp",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE48398 series (submitter publication PMID 27245201)",
+      "directionality": "death_promoting",
+      "notes": "Malignant breast lines mount a distinct heat-shock transcriptional response vs MCF-10A; series premise is enhanced malignant susceptibility to 42-45 degC hyperthermia.",
+      "cell_line_name": "MCF-7"
+    },
+    {
+      "id": "6146f1bf-6820-4bf2-81b5-fffc878f5b41",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "cell_line_id": "MDAMB231_BREAST",
+      "signature_panel": "hsf1_hsp",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE48398 series (submitter publication PMID 27245201)",
+      "directionality": "death_promoting",
+      "notes": "As for MCF-7: distinct malignant heat-shock response (GSE48398).",
+      "cell_line_name": "MDA-MB-231"
+    },
+    {
+      "id": "8fe495ff-a04a-4d50-841e-4ce1003add92",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "cell_line_id": "MDAMB468_BREAST",
+      "signature_panel": "hsf1_hsp",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE48398 series (submitter publication PMID 27245201)",
+      "directionality": "death_promoting",
+      "notes": "As for MCF-7: distinct malignant heat-shock response (GSE48398).",
+      "cell_line_name": "MDA-MB-468"
+    },
+    {
+      "id": "ea666f9f-ce46-4ab4-9d03-90568f2b7589",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "cell_line_id": "MCF10A_BREAST",
+      "signature_panel": "hsf1_hsp",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE48398 series (submitter publication PMID 27245201)",
+      "directionality": "ambiguous",
+      "notes": "Non-malignant comparator; relative thermoresistance is the series premise. Directionality ambiguous at signature level.",
+      "cell_line_name": "MCF-10A"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "1ebbb579-c724-4110-9422-5edac7fff24f",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "drug_id": "cisplatin",
+      "cell_line_id": "MCF7_BREAST",
+      "combined_effect_metric": null,
+      "interaction_type": "unknown",
+      "evidence_tier": "tier_3_mechanism_only",
+      "mechanism_link": "d8b5ca14-2bd8-4742-8ecf-d75bc69b3fe5",
+      "source_study": [
+        "geo:GSE48398",
+        "pmid:32722384"
+      ],
+      "curator_notes": "Heat-shock response measured in MCF-7 (expression only, GSE48398); platinum-heat synergy measured in CRC lines, not MCF-7 (Helderman et al. 2020). Mechanism-only.",
+      "model_run_id": null,
+      "modifier_agent": "Hyperthermic shock (45 degC)",
+      "modifier_type": "thermal",
+      "cell_line_name": "MCF-7",
+      "tissue_origin": "Breast",
+      "drug_name": "Cisplatin",
+      "drug_class": "Platinum agent",
+      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only"
+    }
+  ],
+  "cell_lines": [
+    "MCF-7"
+  ],
+  "drugs": [
+    "cisplatin"
+  ]
+}

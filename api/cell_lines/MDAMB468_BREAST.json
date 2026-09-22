@@ -1,0 +1,37 @@
+{
+  "cell_line_id": "MDAMB468_BREAST",
+  "name": "MDA-MB-468",
+  "tissue_origin": "Breast",
+  "cancer_subtype": "Triple-negative breast cancer (basal-like)",
+  "key_mutations": [
+    {
+      "gene": "PTEN",
+      "variant": "homozygous deletion"
+    },
+    {
+      "gene": "TP53",
+      "variant": "R273H"
+    },
+    {
+      "gene": "EGFR",
+      "variant": "amplification"
+    }
+  ],
+  "source": "CCLE/DepMap",
+  "signature_scores": [
+    {
+      "id": "8fe495ff-a04a-4d50-841e-4ce1003add92",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "cell_line_id": "MDAMB468_BREAST",
+      "signature_panel": "hsf1_hsp",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE48398 series (submitter publication PMID 27245201)",
+      "directionality": "death_promoting",
+      "notes": "As for MCF-7: distinct malignant heat-shock response (GSE48398).",
+      "modifier_agent": "Hyperthermic shock (45 degC)",
+      "modifier_type": "thermal"
+    }
+  ],
+  "drug_responses": [],
+  "interactions": []
+}

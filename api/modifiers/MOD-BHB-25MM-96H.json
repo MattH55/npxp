@@ -1,0 +1,28 @@
+{
+  "modifier_id": "MOD-BHB-25MM-96H",
+  "modifier_type": "dietary_metabolic",
+  "agent": "beta-Hydroxybutyrate (sodium salt)",
+  "protocol_parameters": {
+    "concentration_mM": 25.0,
+    "duration_hr": 96,
+    "readout": "RNA-seq"
+  },
+  "source_study": "doi:10.3892/ol.2020.12326",
+  "source_dataset_accession": "GSE153830",
+  "signature_scores": [
+    {
+      "id": "b43aac97-2e86-4db5-8933-2b027a585777",
+      "modifier_id": "MOD-BHB-25MM-96H",
+      "cell_line_id": "T47D_BREAST",
+      "signature_panel": "other",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE153830; Zhang et al. 2021 (PMID 33281976)",
+      "directionality": "ambiguous",
+      "notes": "No significant pathway enrichment detected for 25 mM BHB in T47D (series summary: limited transcriptional impact).",
+      "cell_line_name": "T47D"
+    }
+  ],
+  "interactions": [],
+  "cell_lines": [],
+  "drugs": []
+}

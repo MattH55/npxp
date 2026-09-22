@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorer — NPxP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="text-slate-200 min-h-screen">
+  <div id="nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
+      <div>
+        <h1 class="text-2xl font-extrabold text-white"><i class="fa-solid fa-table-cells-large mr-2 text-emerald-400"></i>Interaction Explorer</h1>
+        <p class="text-slate-400 text-sm mt-1">
+          Select a drug (or drug class): rows are cell lines, columns are non-pharmacological
+          modifiers. Colour = interaction type; border/label = evidence tier. Click a cell
+          for full details and citations.
+        </p>
+      </div>
+      <div class="flex items-center gap-3">
+        <label class="text-slate-400 text-sm" for="drug-select">Drug</label>
+        <select id="drug-select" class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 min-w-[220px]"></select>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-300 mb-4">
+      <span><span class="hm-legend-swatch" style="background:#f43f5e"></span> Synergistic</span>
+      <span><span class="hm-legend-swatch" style="background:#f59e0b"></span> Additive</span>
+      <span><span class="hm-legend-swatch" style="background:#38bdf8"></span> Antagonistic</span>
+      <span><span class="hm-legend-swatch" style="background:#64748b"></span> Unknown</span>
+      <span><span class="hm-legend-swatch" style="background:#1e293b;border:1px dashed #334155"></span> No data</span>
+      <span class="text-slate-500">|</span>
+      <span>Border: <b class="text-white">solid</b> T1 · <b class="text-white/60">light</b> T2 · <b class="text-violet-300">dashed</b> T2b (model-predicted) · <b class="text-white/40">dotted</b> T3 (evidence tier)</span>
+    </div>
+
+    <div id="explorer-status" class="text-slate-400 text-sm mb-4"></div>
+    <div id="heatmap" class="overflow-x-auto"></div>
+
+    <footer class="text-center text-slate-500 text-xs mt-12">
+      Empty cells mean no curated interaction exists — not evidence of no effect.
+    </footer>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/explorer.js"></script>
+</body>
+</html>

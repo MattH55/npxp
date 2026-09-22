@@ -1,0 +1,99 @@
+{
+  "id": "0e9072c2-9bdd-4376-a03a-1df029b00384",
+  "modifier_id": "MOD-HYP-1O2-24H",
+  "drug_id": "doxorubicin",
+  "cell_line_id": "DU145_PROSTATE",
+  "combined_effect_metric": null,
+  "interaction_type": "antagonistic",
+  "evidence_tier": "tier_3_mechanism_only",
+  "mechanism_link": "4ad2bfb2-3f6b-47aa-9ec7-99e477ab13d5",
+  "source_study": [
+    "doi:10.1016/j.drup.2011.03.001",
+    "pmid:21466972"
+  ],
+  "curator_notes": "Review-level evidence that HIF-1 activity attenuates drug-induced apoptosis (hypoxia-mediated drug resistance); no line-specific combination readout. Representative hypoxia protocol parameters.",
+  "model_run_id": null,
+  "modifier_agent": "Hypoxia (1% O2)",
+  "modifier_type": "hypoxic",
+  "cell_line_name": "DU-145",
+  "tissue_origin": "Prostate",
+  "drug_name": "Doxorubicin",
+  "drug_class": "Anthracycline (topoisomerase II inhibitor)",
+  "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+  "modifier": {
+    "modifier_id": "MOD-HYP-1O2-24H",
+    "modifier_type": "hypoxic",
+    "agent": "Hypoxia (1% O2)",
+    "protocol_parameters": {
+      "o2_percent": 1.0,
+      "duration_hr": 24,
+      "note": "Representative protocol parameters; this row is anchored to review-level evidence (Rohwer & Cramer 2011), not a single experiment"
+    },
+    "source_study": "doi:10.1016/j.drup.2011.03.001",
+    "source_dataset_accession": null
+  },
+  "cell_line": {
+    "cell_line_id": "DU145_PROSTATE",
+    "name": "DU-145",
+    "tissue_origin": "Prostate",
+    "cancer_subtype": "Prostate adenocarcinoma (androgen-independent)",
+    "key_mutations": [
+      {
+        "gene": "TP53",
+        "variant": "P223L/V274F"
+      },
+      {
+        "gene": "RB1",
+        "variant": "mutant"
+      }
+    ],
+    "source": "CCLE/DepMap"
+  },
+  "drug": {
+    "drug_id": "doxorubicin",
+    "name": "Doxorubicin",
+    "drug_class": "Anthracycline (topoisomerase II inhibitor)",
+    "target": "Topoisomerase II; redox cycling",
+    "source": "curated seed"
+  },
+  "mechanism": {
+    "id": "4ad2bfb2-3f6b-47aa-9ec7-99e477ab13d5",
+    "modifier_id": "MOD-HYP-1O2-24H",
+    "cell_line_id": "DU145_PROSTATE",
+    "signature_panel": "other",
+    "score": null,
+    "raw_deg_evidence_ref": "Review-level: Rohwer & Cramer 2011 (PMID 21466972)",
+    "directionality": "protective_resistance",
+    "notes": "HIF-1-driven hypoxia response attenuates drug-induced apoptosis (review-level evidence; no single experiment anchors this row)."
+  },
+  "evidence_tier_definition": {
+    "label": "Tier 3 \u2014 Mechanism-only",
+    "short_label": "T3",
+    "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+  },
+  "related": [
+    {
+      "id": "b6a21b6d-4d88-4062-8484-bc36b753e20f",
+      "modifier_id": "MOD-GLUCOSE-LOW-DU145",
+      "drug_id": "metformin",
+      "cell_line_id": "DU145_PROSTATE",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "source_study": [
+        "doi:10.3390/ijms20102593",
+        "pmid:31137785"
+      ],
+      "curator_notes": "Metformin anti-proliferative effect was glucose-concentration-dependent: low glucose potentiated metformin-mediated DU-145 cell death (MTT/xCELLigence); HO-1 inhibition further sensitized cells.",
+      "model_run_id": null,
+      "modifier_agent": "Low-glucose medium (metformin co-treatment context)",
+      "modifier_type": "dietary_metabolic",
+      "cell_line_name": "DU-145",
+      "tissue_origin": "Prostate",
+      "drug_name": "Metformin",
+      "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
+      "evidence_tier_label": "Tier 1 \u2014 Direct"
+    }
+  ]
+}

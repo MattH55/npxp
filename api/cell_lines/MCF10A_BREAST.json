@@ -1,0 +1,29 @@
+{
+  "cell_line_id": "MCF10A_BREAST",
+  "name": "MCF-10A",
+  "tissue_origin": "Breast",
+  "cancer_subtype": "Non-malignant mammary epithelial (basal)",
+  "key_mutations": [
+    {
+      "gene": "CDKN2A",
+      "variant": "homozygous deletion"
+    }
+  ],
+  "source": "CCLE/DepMap",
+  "signature_scores": [
+    {
+      "id": "ea666f9f-ce46-4ab4-9d03-90568f2b7589",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "cell_line_id": "MCF10A_BREAST",
+      "signature_panel": "hsf1_hsp",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE48398 series (submitter publication PMID 27245201)",
+      "directionality": "ambiguous",
+      "notes": "Non-malignant comparator; relative thermoresistance is the series premise. Directionality ambiguous at signature level.",
+      "modifier_agent": "Hyperthermic shock (45 degC)",
+      "modifier_type": "thermal"
+    }
+  ],
+  "drug_responses": [],
+  "interactions": []
+}

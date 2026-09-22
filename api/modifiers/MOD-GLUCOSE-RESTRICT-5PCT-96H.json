@@ -1,0 +1,91 @@
+{
+  "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+  "modifier_type": "dietary_metabolic",
+  "agent": "Glucose restriction (5% of standard medium glucose)",
+  "protocol_parameters": {
+    "glucose_percent_of_standard": 5.0,
+    "duration_hr": 96,
+    "readout": "RNA-seq"
+  },
+  "source_study": "doi:10.3892/ol.2020.12326",
+  "source_dataset_accession": "GSE153830",
+  "signature_scores": [
+    {
+      "id": "5b2e836c-3e97-4b21-900e-412a37da1733",
+      "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+      "cell_line_id": "T47D_BREAST",
+      "signature_panel": "nrf2_ferroptosis",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE153830 DEG table; Zhang et al. 2021 (PMID 33281976)",
+      "directionality": "death_promoting",
+      "notes": "Glucose-deprivation DEGs implicated the NRF2-ferroptosis axis in T47D (GSE153830 series summary). Quantitative ssGSEA score pending pipeline re-computation from raw counts.",
+      "cell_line_name": "T47D"
+    },
+    {
+      "id": "6fd1dadf-aad7-4a8a-a521-7ee47fdd29bf",
+      "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+      "cell_line_id": "MCF7_BREAST",
+      "signature_panel": "other",
+      "score": null,
+      "raw_deg_evidence_ref": "GSE153830 DEG table; Zhang et al. 2021 (PMID 33281976)",
+      "directionality": "ambiguous",
+      "notes": "Glucose-deprivation DEGs indicated Hippo pathway involvement in MCF-7 (GSE153830 series summary). Panel=other (no Hippo panel defined in spec).",
+      "cell_line_name": "MCF-7"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "4bfccd50-a678-4f9f-8f10-c6612c669e84",
+      "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+      "drug_id": "metformin",
+      "cell_line_id": "T47D_BREAST",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_2_inferred",
+      "mechanism_link": "5b2e836c-3e97-4b21-900e-412a37da1733",
+      "source_study": [
+        "pmid:33281976",
+        "pmid:34162423"
+      ],
+      "curator_notes": "Modifier leg: glucose deprivation engaged the NRF2-ferroptosis axis in T47D (GSE153830; Zhang et al. 2021). Drug leg: metformin induces ferroptosis in breast cancer cells via SLC7A11 UFMylation inhibition (Yang et al. 2021). No combination viability readout exists in either study \u2014 inferred via shared ferroptosis mechanism.",
+      "model_run_id": null,
+      "modifier_agent": "Glucose restriction (5% of standard medium glucose)",
+      "modifier_type": "dietary_metabolic",
+      "cell_line_name": "T47D",
+      "tissue_origin": "Breast",
+      "drug_name": "Metformin",
+      "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
+      "evidence_tier_label": "Tier 2 \u2014 Inferred"
+    },
+    {
+      "id": "3c4e0537-7cb5-41f5-9072-a5e9f2db6f8d",
+      "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+      "drug_id": "metformin",
+      "cell_line_id": "MCF7_BREAST",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_2_inferred",
+      "mechanism_link": "6fd1dadf-aad7-4a8a-a521-7ee47fdd29bf",
+      "source_study": [
+        "pmid:33281976",
+        "pmid:24338509"
+      ],
+      "curator_notes": "Modifier leg: glucose deprivation engaged Hippo-pathway DEGs in MCF-7 (GSE153830). Drug leg: metformin impairs MCF-7 growth via AMPK-dependent and -independent mechanisms (Hadad et al. 2014). Hypothesized energetic-stress synergy; no combination viability readout exists.",
+      "model_run_id": null,
+      "modifier_agent": "Glucose restriction (5% of standard medium glucose)",
+      "modifier_type": "dietary_metabolic",
+      "cell_line_name": "MCF-7",
+      "tissue_origin": "Breast",
+      "drug_name": "Metformin",
+      "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
+      "evidence_tier_label": "Tier 2 \u2014 Inferred"
+    }
+  ],
+  "cell_lines": [
+    "MCF-7",
+    "T47D"
+  ],
+  "drugs": [
+    "metformin"
+  ]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cell Lines — NPxP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="text-slate-200 min-h-screen">
+  <div id="nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-extrabold text-white mb-1"><i class="fa-solid fa-vial mr-2 text-emerald-400"></i>Cell Lines</h1>
+    <p class="text-slate-400 text-sm mb-5">
+      Cancer cell lines with curated stress signatures and drug × modifier interaction claims.
+      Click a row for lineage, mutations, signatures, and interactions.
+    </p>
+
+    <div class="flex flex-wrap gap-3 mb-5">
+      <input id="flt-q" type="text" placeholder="Search name / tissue / subtype…"
+             class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 w-72" />
+      <input id="flt-tissue" type="text" placeholder="Tissue (e.g. Breast)…"
+             class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 w-56" />
+      <input id="flt-mutation" type="text" placeholder="Mutation gene (e.g. TP53)…"
+             class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 w-56" />
+      <button id="flt-clear" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 text-sm rounded-lg px-3 py-2">Clear</button>
+    </div>
+
+    <div id="cl-status" class="text-slate-400 text-sm mb-3"></div>
+    <div class="overflow-x-auto bg-slate-800/60 border border-slate-700 rounded-xl">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="text-left text-slate-400 border-b border-slate-700">
+            <th class="px-4 py-3">Name</th>
+            <th class="px-4 py-3">Tissue</th>
+            <th class="px-4 py-3">Subtype</th>
+            <th class="px-4 py-3">Key mutations</th>
+            <th class="px-4 py-3 text-center">Signatures</th>
+            <th class="px-4 py-3 text-center">Interactions</th>
+          </tr>
+        </thead>
+        <tbody id="cl-tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="cl-detail" class="mt-8"></div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/cell-lines.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+[
+  {
+    "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Glucose restriction (5% of standard medium glucose)",
+    "protocol_parameters": {
+      "glucose_percent_of_standard": 5.0,
+      "duration_hr": 96,
+      "readout": "RNA-seq"
+    },
+    "source_study": "doi:10.3892/ol.2020.12326",
+    "source_dataset_accession": "GSE153830",
+    "signature_count": 2,
+    "interaction_count": 2
+  },
+  {
+    "modifier_id": "MOD-GLUCOSE-LOW-DU145",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Low-glucose medium (metformin co-treatment context)",
+    "protocol_parameters": {
+      "glucose_concentration": "low vs standard; exact concentration and duration per Raffaele et al. 2019 Methods (PMID 31137785)"
+    },
+    "source_study": "doi:10.3390/ijms20102593",
+    "source_dataset_accession": null,
+    "signature_count": 0,
+    "interaction_count": 1
+  },
+  {
+    "modifier_id": "MOD-BHB-10MM-96H",
+    "modifier_type": "dietary_metabolic",
+    "agent": "beta-Hydroxybutyrate (sodium salt)",
+    "protocol_parameters": {
+      "concentration_mM": 10.0,
+      "duration_hr": 96,
+      "readout": "RNA-seq"
+    },
+    "source_study": "doi:10.3892/ol.2020.12326",
+    "source_dataset_accession": "GSE153830",
+    "signature_count": 1,
+    "interaction_count": 0
+  },
+  {
+    "modifier_id": "MOD-BHB-25MM-96H",
+    "modifier_type": "dietary_metabolic",
+    "agent": "beta-Hydroxybutyrate (sodium salt)",
+    "protocol_parameters": {
+      "concentration_mM": 25.0,
+      "duration_hr": 96,
+      "readout": "RNA-seq"
+    },
+    "source_study": "doi:10.3892/ol.2020.12326",
+    "source_dataset_accession": "GSE153830",
+    "signature_count": 1,
+    "interaction_count": 0
+  },
+  {
+    "modifier_id": "MOD-HYP-1O2-24H",
+    "modifier_type": "hypoxic",
+    "agent": "Hypoxia (1% O2)",
+    "protocol_parameters": {
+      "o2_percent": 1.0,
+      "duration_hr": 24,
+      "note": "Representative protocol parameters; this row is anchored to review-level evidence (Rohwer & Cramer 2011), not a single experiment"
+    },
+    "source_study": "doi:10.1016/j.drup.2011.03.001",
+    "source_dataset_accession": null,
+    "signature_count": 1,
+    "interaction_count": 1
+  },
+  {
+    "modifier_id": "MOD-HT-42C-60M-HIPEC",
+    "modifier_type": "thermal",
+    "agent": "Fever-range hyperthermia (HIPEC-mimetic)",
+    "protocol_parameters": {
+      "temperature_C": 42.0,
+      "duration_min": 60,
+      "note": "Representative of the studied range 38-43 degC for 60 min (Helderman et al. 2020)"
+    },
+    "source_study": "doi:10.3390/cells9081775",
+    "source_dataset_accession": null,
+    "signature_count": 0,
+    "interaction_count": 5
+  },
+  {
+    "modifier_id": "MOD-HT-45C-GSE48398",
+    "modifier_type": "thermal",
+    "agent": "Hyperthermic shock (45 degC)",
+    "protocol_parameters": {
+      "temperature_C": 45.0,
+      "note": "Exposure time/timepoints per GEO series page GSE48398; series compares malignant vs non-malignant breast lines under heat shock"
+    },
+    "source_study": "geo:GSE48398",
+    "source_dataset_accession": "GSE48398",
+    "signature_count": 4,
+    "interaction_count": 1
+  },
+  {
+    "modifier_id": "MOD-HT-41C-30M",
+    "modifier_type": "thermal",
+    "agent": "Mild hyperthermia (41 degC, 30 min)",
+    "protocol_parameters": {
+      "temperature_C": 41.0,
+      "duration_min": 30,
+      "post_treatment_timepoint_hr": 3
+    },
+    "source_study": "doi:10.1080/02656730802140777",
+    "source_dataset_accession": "GSE10043",
+    "signature_count": 1,
+    "interaction_count": 1
+  }
+]
