@@ -22,6 +22,10 @@
         </p>
       </div>
       <div class="flex items-center gap-3">
+        <label class="flex items-center gap-2 text-sm text-slate-300 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2">
+          <input id="flt-low-resource" type="checkbox" class="accent-teal-500" />
+          Low-resource relevant only
+        </label>
         <label class="text-slate-400 text-sm" for="drug-select">Drug</label>
         <select id="drug-select" class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 min-w-[220px]"></select>
       </div>
@@ -38,7 +42,8 @@
       <span>Border: <b class="text-white">solid</b> T1 · <b class="text-white/60">light</b> T2 · <b class="text-violet-300">dashed</b> T2b (model-predicted) · <b class="text-white/40">dotted</b> T3 (evidence tier)</span>
     </div>
 
-    <div id="explorer-status" class="text-slate-400 text-sm mb-4"></div>
+    <div id="explorer-status" class="text-slate-400 text-sm mb-1"></div>
+    <div id="drug-meta" class="text-xs mb-4 flex flex-wrap gap-2 items-center"></div>
     <div id="heatmap" class="overflow-x-auto"></div>
 
     <footer class="text-center text-slate-500 text-xs mt-12">

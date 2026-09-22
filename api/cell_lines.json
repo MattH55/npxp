@@ -1,5 +1,76 @@
 [
   {
+    "cell_line_id": "4T1_BREAST",
+    "name": "4T1",
+    "tissue_origin": "Breast (mouse)",
+    "cancer_subtype": "Murine mammary carcinoma (BALB/c; highly metastatic; triple-negative)",
+    "key_mutations": [
+      {
+        "gene": "AKT",
+        "variant": "short-term starvation increases AKT/S6K phosphorylation - sensitizing stress response (Lee et al. 2012)"
+      },
+      {
+        "gene": "ESR1/ERBB2",
+        "variant": "triple-negative phenotype"
+      }
+    ],
+    "source": "Primary literature (Lee et al. 2012, PMID 22323820); murine line, not CCLE/DepMap-registered",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
+    "signature_count": 1,
+    "interaction_count": 5
+  },
+  {
+    "cell_line_id": "A549_LUNG",
+    "name": "A549",
+    "tissue_origin": "Lung",
+    "cancer_subtype": "Lung adenocarcinoma (NSCLC)",
+    "key_mutations": [
+      {
+        "gene": "KRAS",
+        "variant": "G12S"
+      },
+      {
+        "gene": "STK11",
+        "variant": "loss-of-function"
+      }
+    ],
+    "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
+    "signature_count": 1,
+    "interaction_count": 1
+  },
+  {
+    "cell_line_id": "CASKI_CERVIX",
+    "name": "Ca Ski",
+    "tissue_origin": "Cervix",
+    "cancer_subtype": "Cervical squamous cell carcinoma (HPV16-positive)",
+    "key_mutations": [
+      {
+        "gene": "HPV16",
+        "variant": "E6/E7 oncoprotein expression; TP53/RB1 pathway silenced (virally silenced p53 per Kunos et al. 2009)"
+      }
+    ],
+    "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
+    "signature_count": 0,
+    "interaction_count": 1
+  },
+  {
     "cell_line_id": "DU145_PROSTATE",
     "name": "DU-145",
     "tissue_origin": "Prostate",
@@ -15,8 +86,85 @@
       }
     ],
     "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
     "signature_count": 1,
     "interaction_count": 2
+  },
+  {
+    "cell_line_id": "HCT116_LARGE_INTESTINE",
+    "name": "HCT116",
+    "tissue_origin": "Large intestine",
+    "cancer_subtype": "Colorectal adenocarcinoma (KRAS-mutant; mismatch-repair deficient)",
+    "key_mutations": [
+      {
+        "gene": "KRAS",
+        "variant": "G13D"
+      },
+      {
+        "gene": "TP53",
+        "variant": "wild-type (parental line; p53+/+)"
+      }
+    ],
+    "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
+    "signature_count": 1,
+    "interaction_count": 2
+  },
+  {
+    "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
+    "name": "HCT116 p53-/-",
+    "tissue_origin": "Large intestine",
+    "cancer_subtype": "Colorectal adenocarcinoma, isogenic TP53 knockout derivative of HCT116",
+    "key_mutations": [
+      {
+        "gene": "KRAS",
+        "variant": "G13D"
+      },
+      {
+        "gene": "TP53",
+        "variant": "homozygous knockout (isogenic p53-/- derivative)"
+      }
+    ],
+    "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
+    "signature_count": 1,
+    "interaction_count": 3
+  },
+  {
+    "cell_line_id": "HELA_CERVIX",
+    "name": "HeLa",
+    "tissue_origin": "Cervix",
+    "cancer_subtype": "Cervical adenocarcinoma (HPV18-positive)",
+    "key_mutations": [
+      {
+        "gene": "HPV18",
+        "variant": "E6/E7 oncoprotein expression; E6 targets TP53 and E7 targets RB1 for degradation (virally silenced p53 per Kunos et al. 2009)"
+      }
+    ],
+    "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
+    "signature_count": 0,
+    "interaction_count": 1
   },
   {
     "cell_line_id": "MCF10A_BREAST",
@@ -30,6 +178,12 @@
       }
     ],
     "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
     "signature_count": 1,
     "interaction_count": 0
   },
@@ -49,8 +203,14 @@
       }
     ],
     "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
     "signature_count": 3,
-    "interaction_count": 2
+    "interaction_count": 4
   },
   {
     "cell_line_id": "MDAMB231_BREAST",
@@ -72,8 +232,14 @@
       }
     ],
     "source": "CCLE/DepMap",
-    "signature_count": 1,
-    "interaction_count": 0
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
+    "signature_count": 3,
+    "interaction_count": 5
   },
   {
     "cell_line_id": "MDAMB468_BREAST",
@@ -95,6 +261,12 @@
       }
     ],
     "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
     "signature_count": 1,
     "interaction_count": 0
   },
@@ -114,8 +286,14 @@
       }
     ],
     "source": "CCLE/DepMap",
-    "signature_count": 0,
-    "interaction_count": 5
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
+    "signature_count": 1,
+    "interaction_count": 9
   },
   {
     "cell_line_id": "T47D_BREAST",
@@ -133,8 +311,14 @@
       }
     ],
     "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
     "signature_count": 2,
-    "interaction_count": 1
+    "interaction_count": 2
   },
   {
     "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
@@ -148,6 +332,12 @@
       }
     ],
     "source": "CCLE/DepMap",
+    "oncotree_code": null,
+    "oncotree_primary_disease": null,
+    "oncotree_subtype": null,
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed",
     "signature_count": 1,
     "interaction_count": 1
   }

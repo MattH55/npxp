@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drugs — NPxP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="text-slate-200 min-h-screen">
+  <div id="nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-extrabold text-white mb-1"><i class="fa-solid fa-capsules mr-2 text-emerald-400"></i>Drug Library</h1>
+    <p class="text-slate-400 text-sm mb-5">
+      Pharmacological agents in the interaction database, cross-referenced against PubChem/ChEMBL/DrugBank
+      where verified. <code class="text-slate-300">induced_expression_signature_ref</code> is a pointer to a
+      LINCS L1000 signature — set only once the LINCS ingestion pipeline is enabled, so a drug can be
+      represented the same way a modifier is (via its stress signature) for the Step 2 prediction layer.
+    </p>
+
+    <div class="flex flex-wrap gap-3 mb-5 items-center">
+      <select id="flt-status" class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2">
+        <option value="">All clinical statuses</option>
+        <option value="approved">Approved</option>
+        <option value="investigational">Investigational</option>
+        <option value="preclinical">Preclinical</option>
+        <option value="withdrawn">Withdrawn</option>
+      </select>
+      <input id="flt-q" type="text" placeholder="Search name, class, target…"
+             class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 w-72" />
+    </div>
+
+    <div id="drug-status" class="text-slate-400 text-sm mb-3"></div>
+    <div id="drug-list" class="grid md:grid-cols-2 gap-3"></div>
+    <div id="drug-detail" class="mt-8"></div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/drugs.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "drug_id": "cyclophosphamide",
+  "name": "Cyclophosphamide",
+  "drug_class": "Nitrogen mustard alkylating agent (oxazaphosphorine prodrug)",
+  "target": "DNA crosslinking (via hepatic CYP450 activation to phosphoramide mustard)",
+  "source": "curated seed",
+  "synonyms": [
+    "Cytoxan",
+    "Endoxan"
+  ],
+  "pubchem_cid": "2907",
+  "chembl_id": null,
+  "drugbank_id": null,
+  "mechanism_of_action": "Prodrug bioactivated by hepatic CYP450 to phosphoramide mustard, which crosslinks DNA",
+  "clinical_status": "approved",
+  "induced_expression_signature_ref": null,
+  "cost_accessibility_tier": "essential_generic",
+  "drug_responses": [],
+  "interactions": [
+    {
+      "id": "a8255afd-9162-4dd3-a6ee-3196de608a38",
+      "modifier_id": "MOD-FAST-CYCLES-48-60H",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "4T1_BREAST",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "resistance_mechanism_link": null,
+      "source_study": [
+        "doi:10.1126/scitranslmed.3003293",
+        "pmid:22323820"
+      ],
+      "curator_notes": "Serum from 48-h-fasted mice also sensitized 4T1 cells to cyclophosphamide (CP) in the in-vitro serum-transfer assay (Lee et al. 2012). The paper's in-vivo arms are reported against DXR and other agents; per-figure CP dosing pending curation.",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Short-term fasting cycles (48-60 h, water ad libitum)",
+      "modifier_type": "dietary_metabolic",
+      "modifier_infrastructure_requirement": "minimal",
+      "cell_line_name": "4T1",
+      "tissue_origin": "Breast (mouse)",
+      "drug_name": "Cyclophosphamide",
+      "drug_class": "Nitrogen mustard alkylating agent (oxazaphosphorine prodrug)",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "2907",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 1 \u2014 Direct",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": true,
+      "priority_score": 0.225,
+      "priority_components": {
+        "convergent_evidence": 0.0,
+        "coverage_gap": 0.0,
+        "trial_saturation_inverse": 0.5,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 1.0,
+        "disease_burden": null
+      }
+    }
+  ],
+  "cell_lines": [
+    "4T1"
+  ],
+  "resistance_mechanisms": []
+}

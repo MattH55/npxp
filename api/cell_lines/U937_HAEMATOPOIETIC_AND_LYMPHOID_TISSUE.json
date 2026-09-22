@@ -10,9 +10,15 @@
     }
   ],
   "source": "CCLE/DepMap",
+  "oncotree_code": null,
+  "oncotree_primary_disease": null,
+  "oncotree_subtype": null,
+  "ncit_code": null,
+  "tumor_concordance_score": null,
+  "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "07e8350b-ef79-495f-8554-586e5d651fa5",
+      "id": "e1a3f0da-0136-473c-b908-e790d6dc3459",
       "modifier_id": "MOD-HT-41C-30M",
       "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
       "signature_panel": "hsf1_hsp",
@@ -27,27 +33,46 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "e30065a1-4cb5-41cd-872d-ab0dbb8ab818",
+      "id": "e4586280-f142-4631-af88-5ca9700655ea",
       "modifier_id": "MOD-HT-41C-30M",
       "drug_id": "doxorubicin",
       "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "07e8350b-ef79-495f-8554-586e5d651fa5",
+      "mechanism_link": "e1a3f0da-0136-473c-b908-e790d6dc3459",
+      "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1080/02656730802140777",
         "pmid:18608577"
       ],
       "curator_notes": "Series reports no drug readout; the paper's introduction notes literature observations of mild-hyperthermia synergism with anti-cancer drugs. Mechanism-only entry pending a combination study. Note protective HSF1 program at this temperature argues against naive synergy assumptions.",
       "model_run_id": null,
+      "trial_builder_ref": null,
       "modifier_agent": "Mild hyperthermia (41 degC, 30 min)",
       "modifier_type": "thermal",
+      "modifier_infrastructure_requirement": "low",
       "cell_line_name": "U-937",
       "tissue_origin": "Haematopoietic and lymphoid tissue",
       "drug_name": "Doxorubicin",
       "drug_class": "Anthracycline (topoisomerase II inhibitor)",
-      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only"
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "31703",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": true,
+      "priority_score": 0.4917,
+      "priority_components": {
+        "convergent_evidence": 0.3333,
+        "coverage_gap": 0.5,
+        "trial_saturation_inverse": 0.5,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 1.0,
+        "disease_burden": null
+      }
     }
   ]
 }

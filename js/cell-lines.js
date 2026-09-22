@@ -16,10 +16,11 @@ async function loadList() {
             <td class="px-4 py-3 text-slate-300">${escapeHtml(cl.tissue_origin)}</td>
             <td class="px-4 py-3 text-slate-400">${escapeHtml(cl.cancer_subtype)}</td>
             <td class="px-4 py-3">${mutationChips(cl.key_mutations)}</td>
+            <td class="px-4 py-3">${concordanceBadge(cl.tumor_concordance_flag, cl.tumor_concordance_score)}</td>
             <td class="px-4 py-3 text-center text-slate-300">${cl.signature_count}</td>
             <td class="px-4 py-3 text-center text-slate-300">${cl.interaction_count}</td>
           </tr>`).join("") ||
-          `<tr><td colspan="6" class="px-4 py-6 text-center text-slate-500">No cell lines match.</td></tr>`;
+          `<tr><td colspan="7" class="px-4 py-6 text-center text-slate-500">No cell lines match.</td></tr>`;
         tbody.querySelectorAll("tr.row-link").forEach((tr) =>
             tr.addEventListener("click", () => {
                 location.hash = tr.dataset.id;
@@ -76,7 +77,15 @@ async function loadDetail(cellLineId) {
           <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-6">
             <h2 class="text-xl font-bold text-white mb-1">${escapeHtml(cl.name)}
               <span class="text-slate-500 text-sm font-normal ml-2">${escapeHtml(cl.cell_line_id)}</span></h2>
-            <div class="text-slate-400 text-sm mb-4">${escapeHtml(cl.tissue_origin)} · ${escapeHtml(cl.cancer_subtype)} · Source: ${escapeHtml(cl.source)}</div>
+            <div class="text-slate-400 text-sm mb-3">${escapeHtml(cl.tissue_origin)} · ${escapeHtml(cl.cancer_subtype)} · Source: ${escapeHtml(cl.source)}</div>
+            <div class="mb-2">${concordanceBadge(cl.tumor_concordance_flag, cl.tumor_concordance_score)}
+              ${cl.tumor_concordance_flag === "unassessed" ? '<span class="text-slate-500 text-xs ml-2">Not yet run through Celligner — ingest/celligner.py is a structured stub pending the figshare release.</span>' : ""}</div>
+            <div class="mb-4 text-xs text-slate-400">
+              ${cl.oncotree_code
+                ? `<span class="cite-chip">OncoTree ${escapeHtml(cl.oncotree_code)}${cl.oncotree_subtype ? ` · ${escapeHtml(cl.oncotree_subtype)}` : ""}</span>
+                   ${cl.ncit_code ? `<span class="cite-chip">NCIt ${escapeHtml(cl.ncit_code)}</span>` : ""}`
+                : '<span class="text-slate-500">No OncoTree/NCIt annotation yet — pending DepMap Model.csv ingestion.</span>'}
+            </div>
             <div class="mb-4"><span class="kv-key mr-2">Key mutations</span>${mutationChips(cl.key_mutations)}</div>
             <h3 class="text-white font-semibold mt-5"><i class="fa-solid fa-wave-square mr-2 text-emerald-400"></i>Stress signatures</h3>
             ${signatureTable(cl.signature_scores)}

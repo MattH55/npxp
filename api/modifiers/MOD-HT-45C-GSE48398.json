@@ -8,9 +8,11 @@
   },
   "source_study": "geo:GSE48398",
   "source_dataset_accession": "GSE48398",
+  "infrastructure_requirement": "low",
+  "estimated_relative_cost_note": "Basic heating/water-bath equipment; no specialized device.",
   "signature_scores": [
     {
-      "id": "d8b5ca14-2bd8-4742-8ecf-d75bc69b3fe5",
+      "id": "304f28a0-d5fa-4c92-8239-546f667bc6d2",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "cell_line_id": "MCF7_BREAST",
       "signature_panel": "hsf1_hsp",
@@ -21,7 +23,7 @@
       "cell_line_name": "MCF-7"
     },
     {
-      "id": "6146f1bf-6820-4bf2-81b5-fffc878f5b41",
+      "id": "970fa479-44e5-48d7-8e78-e1ce8e114516",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "cell_line_id": "MDAMB231_BREAST",
       "signature_panel": "hsf1_hsp",
@@ -32,7 +34,7 @@
       "cell_line_name": "MDA-MB-231"
     },
     {
-      "id": "8fe495ff-a04a-4d50-841e-4ce1003add92",
+      "id": "440c1e1c-2b4a-4ba3-97ef-f302e7082a0f",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "cell_line_id": "MDAMB468_BREAST",
       "signature_panel": "hsf1_hsp",
@@ -43,7 +45,7 @@
       "cell_line_name": "MDA-MB-468"
     },
     {
-      "id": "ea666f9f-ce46-4ab4-9d03-90568f2b7589",
+      "id": "ae37828b-4f9b-4e87-9f51-f6674f85751a",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "cell_line_id": "MCF10A_BREAST",
       "signature_panel": "hsf1_hsp",
@@ -56,27 +58,46 @@
   ],
   "interactions": [
     {
-      "id": "1ebbb579-c724-4110-9422-5edac7fff24f",
+      "id": "9ae628e2-a7e9-480c-82f3-d2b364a2160b",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "drug_id": "cisplatin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "d8b5ca14-2bd8-4742-8ecf-d75bc69b3fe5",
+      "mechanism_link": "304f28a0-d5fa-4c92-8239-546f667bc6d2",
+      "resistance_mechanism_link": null,
       "source_study": [
         "geo:GSE48398",
         "pmid:32722384"
       ],
       "curator_notes": "Heat-shock response measured in MCF-7 (expression only, GSE48398); platinum-heat synergy measured in CRC lines, not MCF-7 (Helderman et al. 2020). Mechanism-only.",
       "model_run_id": null,
+      "trial_builder_ref": null,
       "modifier_agent": "Hyperthermic shock (45 degC)",
       "modifier_type": "thermal",
+      "modifier_infrastructure_requirement": "low",
       "cell_line_name": "MCF-7",
       "tissue_origin": "Breast",
       "drug_name": "Cisplatin",
       "drug_class": "Platinum agent",
-      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only"
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "5702198",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": true,
+      "priority_score": 0.5167,
+      "priority_components": {
+        "convergent_evidence": 0.3333,
+        "coverage_gap": 0.3333,
+        "trial_saturation_inverse": 1.0,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 1.0,
+        "disease_burden": null
+      }
     }
   ],
   "cell_lines": [

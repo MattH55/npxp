@@ -36,14 +36,51 @@ function modifierColHeader(m) {
             <div class="text-slate-400 text-[0.65rem]">${escapeHtml(bits.join(" · "))}</div>`;
 }
 
+function drugMetaLine(drug) {
+    if (!drug) return "";
+    const chips = [];
+    if (drug.clinical_status) chips.push(`<span class="cite-chip">${escapeHtml(drug.clinical_status)}</span>`);
+    if (drug.pubchem_cid) chips.push(`<a class="cite-chip" target="_blank" rel="noopener" href="https://pubchem.ncbi.nlm.nih.gov/compound/${encodeURIComponent(drug.pubchem_cid)}">PubChem ${escapeHtml(drug.pubchem_cid)} <i class="fa-solid fa-arrow-up-right-from-square text-[0.6rem]"></i></a>`);
+    chips.push(drug.induced_expression_signature_ref
+        ? `<span class="cite-chip">LINCS signature: ${escapeHtml(drug.induced_expression_signature_ref)}</span>`
+        : '<span class="text-slate-500">No LINCS L1000 signature yet — not usable as Step 2 model input</span>');
+    chips.push(`<a class="text-emerald-400 hover:underline" href="drugs.html#${encodeURIComponent(drug.drug_id)}">Drug detail →</a>`);
+    return chips.join("");
+}
+
+/* build spec v6: low_resource_relevance = drug cost_accessibility_tier in
+   {essential_generic, generic_available} AND modifier infrastructure_
+   requirement in {minimal, low}. Computed here from data already in the
+   matrix payload (drug is constant per matrix, modifiers carry their own
+   tier) rather than a second API round-trip. */
+const LOW_RESOURCE_COST = new Set(["essential_generic", "generic_available"]);
+const LOW_RESOURCE_INFRA = new Set(["minimal", "low"]);
+let lowResourceOnly = false;
+
 function renderMatrix(data) {
     const status = document.getElementById("explorer-status");
+    document.getElementById("drug-meta").innerHTML = drugMetaLine(data.drug);
     if (!data.cells.length) {
         status.textContent = "No curated interactions for this selection yet.";
         document.getElementById("heatmap").innerHTML = "";
         return;
     }
     const drugName = data.drug ? data.drug.name : (data.drug_class || "");
+    const drugQualifies = data.drug && LOW_RESOURCE_COST.has(data.drug.cost_accessibility_tier);
+    let modifiers = data.modifiers;
+    if (lowResourceOnly) {
+        modifiers = drugQualifies
+            ? data.modifiers.filter((m) => LOW_RESOURCE_INFRA.has(m.infrastructure_requirement))
+            : [];
+    }
+    if (lowResourceOnly && !modifiers.length) {
+        status.textContent = drugQualifies
+            ? "No low-infrastructure modifiers have curated interactions with this drug yet."
+            : `${drugName} isn't tagged low-cost/generic — no low-resource-relevant cells for this drug.`;
+        document.getElementById("heatmap").innerHTML = "";
+        return;
+    }
+    data = { ...data, modifiers };
     status.textContent = `${data.cells.length} interaction claim(s) · ${data.cell_lines.length} cell line(s) · ${data.modifiers.length} modifier(s)`;
 
     const cellMap = new Map(data.cells.map((c) => [`${c.cell_line_id}|${c.modifier_id}`, c]));
@@ -84,17 +121,24 @@ function renderMatrix(data) {
     document.getElementById("heatmap").innerHTML = html;
 }
 
+let lastMatrixData = null;
+
 async function loadMatrix(drugId) {
     const status = document.getElementById("explorer-status");
     status.textContent = "Loading…";
     try {
-        const data = await apiGet("/explorer/matrix", { drug_id: drugId });
-        renderMatrix(data);
+        lastMatrixData = await apiGet("/explorer/matrix", { drug_id: drugId });
+        renderMatrix(lastMatrixData);
     } catch (e) {
         status.textContent = `Failed to load matrix: ${e.message}`;
         document.getElementById("heatmap").innerHTML = "";
     }
 }
+
+document.getElementById("flt-low-resource").addEventListener("change", (e) => {
+    lowResourceOnly = e.target.checked;
+    if (lastMatrixData) renderMatrix(lastMatrixData);
+});
 
 (async () => {
     const select = document.getElementById("drug-select");
@@ -103,7 +147,7 @@ async function loadMatrix(drugId) {
         const withData = drugs.filter((d) => d.interaction_count > 0);
         select.innerHTML =
             withData.map((d) =>
-                `<option value="${escapeHtml(d.drug_id)}">${escapeHtml(d.name)}${d.drug_class ? ` (${escapeHtml(d.drug_class)})` : ""} — ${d.interaction_count}</option>`
+                `<option value="${escapeHtml(d.drug_id)}">${d.induced_expression_signature_ref ? "◆ " : ""}${escapeHtml(d.name)}${d.drug_class ? ` (${escapeHtml(d.drug_class)})` : ""} — ${d.interaction_count}</option>`
             ).join("");
         const params = new URLSearchParams(location.search);
         const requested = params.get("drug_id");

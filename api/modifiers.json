@@ -1,5 +1,54 @@
 [
   {
+    "modifier_id": "MOD-ALICIN-NSCLC",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Allicin (garlic organosulfur thiosulfinate)",
+    "protocol_parameters": {
+      "oxygenation": "parallel normoxic and hypoxic arms (hypoxia confers cisplatin resistance in A549; exact O2% per source Methods pending curation)",
+      "dose": "per Pandey et al. Methods (dose/timepoints pending curation from source tables; not stated in abstract)",
+      "readout": "MTT viability; flow cytometry (cell cycle, apoptosis, ROS); scratch and transwell migration; genome-wide methylation dot blot; HIF-1alpha/HIF-2alpha immunoblot"
+    },
+    "source_study": "pmid:32809300",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Garlic-derived compound / dietary organosulfur; low-cost, widely available.",
+    "signature_count": 1,
+    "interaction_count": 1
+  },
+  {
+    "modifier_id": "MOD-CYS-WITHDRAWAL",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Cystine withdrawal (cysteine/cystine-free medium)",
+    "protocol_parameters": {
+      "cystine_concentration": "0 (withdrawal)",
+      "readout": "RNA-seq + viability",
+      "note": "Exact duration/timepoints per GSE237928 Methods (Swanda et al. 2023); combined with System Xc- inhibitors (erastin, sulfasalazine) and AhR modulators in the source study."
+    },
+    "source_study": "doi:10.1016/j.molcel.2023.08.004",
+    "source_dataset_accession": "GSE237928",
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol (no cystine supplementation); no equipment. Clinical translation would likely be a specialized diet, not a device.",
+    "signature_count": 1,
+    "interaction_count": 2
+  },
+  {
+    "modifier_id": "MOD-DHA-60UM",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
+    "protocol_parameters": {
+      "in_vitro": "DHA 60 uM on a control fatty-acid background (OALA: 40 uM linoleic + 40 uM oleic) vs OALA alone",
+      "in_vivo": "nutritionally complete diet with 2.8 g/100 g DHA (P:S ratio 0.5) vs matched control diet in nu/nu mice bearing MDA-MB-231 xenografts",
+      "drug_leg": "doxorubicin 0.41 uM (in vitro); 5 mg/kg DOX 2x/week for 4 weeks (in vivo)",
+      "readout": "viability; microarray/protein apoptosis and cell-cycle markers; tumour volume"
+    },
+    "source_study": "pmid:30601995",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Omega-3 (DHA) dietary supplement; low-cost, widely available over the counter.",
+    "signature_count": 1,
+    "interaction_count": 1
+  },
+  {
     "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
     "modifier_type": "dietary_metabolic",
     "agent": "Glucose restriction (5% of standard medium glucose)",
@@ -10,8 +59,10 @@
     },
     "source_study": "doi:10.3892/ol.2020.12326",
     "source_dataset_accession": "GSE153830",
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Dietary/fasting-style protocol; no equipment.",
     "signature_count": 2,
-    "interaction_count": 2
+    "interaction_count": 3
   },
   {
     "modifier_id": "MOD-GLUCOSE-LOW-DU145",
@@ -22,8 +73,45 @@
     },
     "source_study": "doi:10.3390/ijms20102593",
     "source_dataset_accession": null,
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Dietary/glycemic-control protocol; no equipment.",
     "signature_count": 0,
     "interaction_count": 1
+  },
+  {
+    "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Serine/glycine starvation (-SG medium; dietary serine/glycine depletion in vivo)",
+    "protocol_parameters": {
+      "medium": "MEM (21090) + 1x MEM vitamins (11120) + 10% dialysed FBS + 2 mM L-glutamine + 25 mM D-glucose; complete media additionally contains serine 0.4 mM and glycine 0.4 mM; starvation media omit both (-SG)",
+      "in_vivo_leg": "serine/glycine-depleted diet (LC-MS-confirmed drop in serum serine/glycine) in HCT116 xenografts",
+      "line_context": "HCT116 p53+/+ vs isogenic p53-/-; RKO (Supp. Fig. 2); primary MEFs",
+      "readout": "proliferation/viability; LC-MS metabolic flux; p53/p21 immunoblot"
+    },
+    "source_study": "pmid:23242140",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Specialized diet formulation; no equipment, though compliance monitoring (dietary counseling) adds some real-world overhead.",
+    "signature_count": 2,
+    "interaction_count": 5
+  },
+  {
+    "modifier_id": "MOD-FAST-CYCLES-48-60H",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Short-term fasting cycles (48-60 h, water ad libitum)",
+    "protocol_parameters": {
+      "fasting_window_hr": "48-60 (complete food withdrawal; water ad libitum)",
+      "in_vitro_leg": "serum from 48-h fasted mice vs ad-lib serum, with/without doxorubicin (DXR) or cyclophosphamide (CP)",
+      "in_vivo_leg": "two full fasting cycles in the 4T1 subcutaneous allograft arm (breast cancer); allografts also tested: GL26 glioma, B16 melanoma, neuroblastoma (NXS2, Neuro-2a); human xenografts: OVCAR3, MDA-MB-231",
+      "refeeding": "mice returned to near pre-fast weight after each cycle",
+      "readout": "viability/cell death (in vitro); tumour growth retardation and chemotherapy effectiveness (in vivo)"
+    },
+    "source_study": "pmid:22323820",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Fasting protocol; food withdrawal only, no equipment.",
+    "signature_count": 1,
+    "interaction_count": 5
   },
   {
     "modifier_id": "MOD-BHB-10MM-96H",
@@ -36,6 +124,8 @@
     },
     "source_study": "doi:10.3892/ol.2020.12326",
     "source_dataset_accession": "GSE153830",
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Oral ketone-body supplement (BHB salts); low unit cost.",
     "signature_count": 1,
     "interaction_count": 0
   },
@@ -50,6 +140,8 @@
     },
     "source_study": "doi:10.3892/ol.2020.12326",
     "source_dataset_accession": "GSE153830",
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Oral ketone-body supplement (BHB salts); low unit cost.",
     "signature_count": 1,
     "interaction_count": 0
   },
@@ -64,8 +156,47 @@
     },
     "source_study": "doi:10.1016/j.drup.2011.03.001",
     "source_dataset_accession": null,
+    "infrastructure_requirement": "low",
+    "estimated_relative_cost_note": "Tumor-microenvironment condition, not a directly patient-applied intervention; basic hypoxia-chamber/gas-mixing equipment would be needed for any lab replication.",
     "signature_count": 1,
     "interaction_count": 1
+  },
+  {
+    "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+    "modifier_type": "mechanical_radiative",
+    "agent": "Ionizing radiation (single-dose radiosensitization context)",
+    "protocol_parameters": {
+      "dose_and_fractionation": "single-dose study design; exact Gy per gamma/cell-cycle figure tables pending curation (Kunos et al. 2009)",
+      "sequencing": "3-AP treatment (RNR inhibition) combined with ionizing radiation; effects read as radiation cytotoxicity, RNR activity, persistence of DNA damage, cell-cycle arrest",
+      "readout": "radiation-related cytotoxicity rescue-block readout; radiation-induced DNA damage duration; G1/S arrest"
+    },
+    "source_study": "pmid:19929413",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "high",
+    "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device.",
+    "signature_count": 1,
+    "interaction_count": 6
+  },
+  {
+    "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+    "modifier_type": "mechanical_radiative",
+    "agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
+    "protocol_parameters": {
+      "stiffness_kPa": 52.99,
+      "hydrogel_formulation": "5G5P (tunable 3D hydrogel)",
+      "comparator_conditions_kPa": [
+        7.02,
+        15.83
+      ],
+      "comparator_format": "2D culture control",
+      "readout": "IC50 (48 h drug exposure)"
+    },
+    "source_study": "doi:10.1021/acsbiomaterials.4c01636",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": null,
+    "estimated_relative_cost_note": "Not a patient-deliverable intervention -- an in-vitro biomaterial culture system only, so no infrastructure_requirement tier applies (left unassessed rather than forced into a category).",
+    "signature_count": 0,
+    "interaction_count": 4
   },
   {
     "modifier_id": "MOD-HT-42C-60M-HIPEC",
@@ -78,6 +209,8 @@
     },
     "source_study": "doi:10.3390/cells9081775",
     "source_dataset_accession": null,
+    "infrastructure_requirement": "high",
+    "estimated_relative_cost_note": "HIPEC is an intraoperative procedure requiring cytoreductive surgery plus dedicated heated-perfusion equipment and an OR team -- dedicated clinical infrastructure, not a bedside intervention.",
     "signature_count": 0,
     "interaction_count": 5
   },
@@ -91,6 +224,8 @@
     },
     "source_study": "geo:GSE48398",
     "source_dataset_accession": "GSE48398",
+    "infrastructure_requirement": "low",
+    "estimated_relative_cost_note": "Basic heating/water-bath equipment; no specialized device.",
     "signature_count": 4,
     "interaction_count": 1
   },
@@ -105,6 +240,8 @@
     },
     "source_study": "doi:10.1080/02656730802140777",
     "source_dataset_accession": "GSE10043",
+    "infrastructure_requirement": "low",
+    "estimated_relative_cost_note": "Basic heating equipment (e.g. heating pads/blankets).",
     "signature_count": 1,
     "interaction_count": 1
   }

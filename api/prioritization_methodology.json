@@ -1,0 +1,20 @@
+{
+  "weights": {
+    "convergent_evidence": 0.35,
+    "coverage_gap": 0.3,
+    "trial_saturation_inverse": 0.15,
+    "tumor_representativeness": 0.1,
+    "low_resource_boost": 0.1,
+    "disease_burden": 0.0
+  },
+  "component_descriptions": {
+    "convergent_evidence": "How many independent signals agree for this row (mechanism-signature link, resistance-mechanism link, a quantitative combined-effect metric) -- more signals is more confident, scored 0-1.",
+    "coverage_gap": "From the Coverage Gap Analysis: resistance-mechanism richness for this drug relative to how little has been tested against it in this modifier_type, normalized 0-1.",
+    "trial_saturation_inverse": "Inverse of how many clinical_evidence rows already exist for this drug -- heavily-trialed combinations score lower, since the gap is already being addressed.",
+    "tumor_representativeness": "cell_line.tumor_concordance_score-based: good_model=1.0, unassessed=0.5 (neutral, not yet assessed), poor_model_mesenchymal_shift=0.0.",
+    "low_resource_boost": "1.0 if low_resource_relevance is true, else 0.0 -- a configurable boost per the spec, not a hard filter.",
+    "disease_burden": "NOT YET WIRED (weight 0.0): pending confirmation of a data source (GLOBOCAN vs. OSMF's Right to Try / Montana SB 535 therapeutic-adequacy work) -- see build spec Open Questions."
+  },
+  "formula": "priority_score = sum(weight[c] * component[c] for c in components)",
+  "note": "disease_burden carries weight 0.0 pending a confirmed data source (GLOBOCAN vs. OSMF's Right to Try / Montana SB 535 therapeutic-adequacy work) \u2014 see build spec Open Questions."
+}

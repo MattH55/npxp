@@ -81,7 +81,7 @@ async function loadDetail(modifierId) {
           </tr>`).join("");
         const intRows = (m.interactions || []).map((it) => `
           <tr class="row-link border-b border-slate-700/60" onclick="location.href='interaction.html?id=${it.id}'">
-            <td class="py-2 pr-3 text-white">${escapeHtml(it.drug_name)}</td>
+            <td class="py-2 pr-3 text-white">${escapeHtml(it.drug_name)}${it.drug_lincs_signature_ref ? ' <i class="fa-solid fa-dna text-[0.6rem] text-emerald-400" title="LINCS-backed"></i>' : ""}</td>
             <td class="py-2 pr-3 text-slate-300">${escapeHtml(it.cell_line_name)}</td>
             <td class="py-2 pr-3">${typeBadge(it.interaction_type)}</td>
             <td class="py-2 pr-3">${tierBadge(it.evidence_tier)}</td>
@@ -95,6 +95,10 @@ async function loadDetail(modifierId) {
               ${escapeHtml(MOD_TYPE_LABEL[m.modifier_type] || m.modifier_type)} ·
               Source: ${citationChips([m.source_study])}
               ${m.source_dataset_accession ? citationChips(["geo:" + m.source_dataset_accession]) : ""}
+            </div>
+            <div class="text-xs text-slate-400 mb-4">
+              Infrastructure requirement: <span class="cite-chip">${escapeHtml(m.infrastructure_requirement || "unassessed")}</span>
+              ${m.estimated_relative_cost_note ? `<span class="ml-2">${escapeHtml(m.estimated_relative_cost_note)}</span>` : ""}
             </div>
             <h3 class="text-white font-semibold mb-2"><i class="fa-solid fa-sliders mr-2 text-emerald-400"></i>Protocol parameters</h3>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mb-4">${protocolKv(m.protocol_parameters)}</div>

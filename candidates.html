@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candidates — NPxP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="text-slate-200 min-h-screen">
+  <div id="nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-extrabold text-white mb-1"><i class="fa-solid fa-flask-vial mr-2 text-violet-400"></i>Mechanistic Bridging Candidates</h1>
+    <div class="bg-violet-500/10 border border-violet-500/40 rounded-lg p-4 text-sm text-violet-200 mb-5">
+      <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+      Every row below is a <b>model-generated hypothesis, not a tested result</b>.
+      Each one matches a modifier's induced stress signature against a drug's known
+      resistance mechanism (same pathway, opposing direction) — nothing here has been
+      evaluated in the same study. Evidence tier is always <b>Tier 3 — mechanism only</b>.
+      Antagonistic-direction matches (the modifier reinforces the drug's defense
+      mechanism instead) are logged but deliberately excluded from this list.
+    </div>
+
+    <div class="flex flex-wrap gap-3 mb-3 items-center">
+      <select id="flt-drug" class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 min-w-[200px]">
+        <option value="">All drugs</option>
+      </select>
+      <input id="flt-tissue" type="text" placeholder="Tissue (tumor-type proxy)…"
+             class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2 w-64" />
+      <label class="flex items-center gap-2 text-sm text-slate-300 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2">
+        <input id="flt-low-resource" type="checkbox" class="accent-teal-500" />
+        Low-resource relevant only
+      </label>
+      <select id="flt-sort" class="bg-slate-800 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-2">
+        <option value="priority_score">Sort: priority score (worklist order)</option>
+        <option value="">Sort: name (stable order)</option>
+      </select>
+    </div>
+
+    <details class="bg-slate-800/40 border border-slate-700 rounded-lg mb-5">
+      <summary class="cursor-pointer px-4 py-2 text-sm text-slate-300 font-semibold">
+        <i class="fa-solid fa-scale-balanced mr-1"></i>Prioritization methodology (published weights)
+      </summary>
+      <div id="methodology" class="px-4 pb-4 text-sm text-slate-400"></div>
+    </details>
+
+    <div id="cand-status" class="text-slate-400 text-sm mb-3"></div>
+    <div id="cand-list" class="space-y-3"></div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/candidates.js"></script>
+</body>
+</html>

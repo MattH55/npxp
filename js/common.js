@@ -32,10 +32,12 @@ const STATIC_FILES = {
     "/explorer/matrix": "api/explorer_matrix.json",
     "/scoring/models": "api/scoring_models.json",
     "/prediction/readiness": "api/prediction_readiness.json",
+    "/coverage-gaps": "api/coverage_gaps.json",
+    "/prioritization/methodology": "api/prioritization_methodology.json",
 };
 
 async function staticApiGet(path, params = {}) {
-    const detail = path.match(/^\/(cell_lines|modifiers|interactions)\/([^/]+)$/);
+    const detail = path.match(/^\/(cell_lines|modifiers|interactions|drugs)\/([^/]+)$/);
     const file = detail ? `api/${detail[1]}/${detail[2]}.json` : STATIC_FILES[path];
     if (!file) throw new Error(`No static snapshot for ${path}`);
     const res = await fetch(file);
@@ -48,7 +50,38 @@ async function staticApiGet(path, params = {}) {
             evidence_tier_definitions: data.evidence_tier_definitions,
         };
     }
+    // /interactions/candidates matches the generic per-id detail pattern
+    // (same file layout as api/interactions/<uuid>.json), but it's a list
+    // that still needs its own query-param filtering/sorting applied
+    // client-side, same as the live backend does server-side.
+    if (path === "/interactions/candidates") {
+        return applyCandidateParams(data, params);
+    }
     return detail ? data : filterStaticList(path, data, params);
+}
+
+function applyCandidateParams(rows, params) {
+    let out = rows;
+    if (params.drug_id) out = out.filter((it) => it.drug_id === params.drug_id);
+    if (params.cell_line_id) out = out.filter((it) => it.cell_line_id === params.cell_line_id);
+    if (params.tissue_origin) {
+        const t = String(params.tissue_origin).toLowerCase();
+        out = out.filter((it) => (it.tissue_origin || "").toLowerCase().includes(t));
+    }
+    if (params.low_resource_relevance !== undefined && params.low_resource_relevance !== "") {
+        const want = params.low_resource_relevance === true || params.low_resource_relevance === "true";
+        out = out.filter((it) => it.low_resource_relevance === want);
+    }
+    out = [...out];
+    if (params.sort === "priority_score") {
+        out.sort((a, b) => b.priority_score - a.priority_score);
+    } else {
+        out.sort((a, b) =>
+            (a.drug_name || "").localeCompare(b.drug_name || "") ||
+            (a.cell_line_name || "").localeCompare(b.cell_line_name || "") ||
+            (a.modifier_agent || "").localeCompare(b.modifier_agent || ""));
+    }
+    return out;
 }
 
 function filterStaticList(path, rows, params) {
@@ -68,7 +101,9 @@ function filterStaticList(path, rows, params) {
     }
     if (path === "/interactions") {
         const keys = ["cell_line_id", "modifier_id", "drug_id", "evidence_tier", "interaction_type", "modifier_type"];
-        return rows.filter((it) => keys.every((k) => !params[k] || it[k] === params[k]));
+        return rows.filter((it) => keys.every((k) => !params[k] || it[k] === params[k]) &&
+            (params.low_resource_relevance === undefined || params.low_resource_relevance === "" ||
+             it.low_resource_relevance === (params.low_resource_relevance === true || params.low_resource_relevance === "true")));
     }
     return rows;
 }
@@ -86,6 +121,9 @@ const NAV_ITEMS = [
     { href: "explorer.html", label: "Explorer" },
     { href: "cell-lines.html", label: "Cell Lines" },
     { href: "modifiers.html", label: "Modifiers" },
+    { href: "drugs.html", label: "Drugs" },
+    { href: "candidates.html", label: "Candidates" },
+    { href: "coverage.html", label: "Coverage Gaps" },
     { href: "scoring.html", label: "Scoring" },
 ];
 
@@ -174,4 +212,31 @@ function mutationChips(muts) {
     return (muts || []).map((m) =>
         `<span class="cite-chip">${escapeHtml(m.gene)}${m.variant ? ` · ${escapeHtml(m.variant)}` : ""}</span>`
     ).join("");
+}
+
+/* ---------- Celligner tumor-concordance (build spec v3) ---------- */
+
+const CONCORDANCE_LABEL = {
+    good_model: "Good tumor model",
+    poor_model_mesenchymal_shift: "Poor model (mesenchymal shift)",
+    unassessed: "Unassessed",
+};
+const CONCORDANCE_STYLE = {
+    good_model: "bg-emerald-600",
+    poor_model_mesenchymal_shift: "bg-rose-700",
+    unassessed: "bg-slate-600",
+};
+
+/* ---------- low-resource relevance (build spec v6) ---------- */
+
+function lowResourceBadge(isRelevant) {
+    if (!isRelevant) return "";
+    return `<span class="bg-teal-600 text-white text-xs font-semibold px-2 py-0.5 rounded-full" title="Both the drug (essential/generic) and the modifier (minimal/low infrastructure) qualify as low-resource-setting relevant"><i class="fa-solid fa-globe mr-1"></i>Low-resource relevant</span>`;
+}
+
+function concordanceBadge(flag, score) {
+    const cls = CONCORDANCE_STYLE[flag] || "bg-slate-600";
+    const label = CONCORDANCE_LABEL[flag] || flag || "Unassessed";
+    const scoreText = (score === null || score === undefined) ? "" : ` (${Number(score).toFixed(2)})`;
+    return `<span class="${cls} text-white text-xs font-semibold px-2 py-0.5 rounded-full" title="Celligner tumor-transcriptome concordance">${escapeHtml(label)}${escapeHtml(scoreText)}</span>`;
 }

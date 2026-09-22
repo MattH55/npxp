@@ -6,7 +6,18 @@
         "name": "5-Fluorouracil",
         "drug_class": "Antimetabolite (fluoropyrimidine)",
         "target": "Thymidylate synthase; RNA/DNA incorporation",
-        "source": "curated seed"
+        "source": "curated seed",
+        "synonyms": [
+          "5-FU",
+          "Adrucil"
+        ],
+        "pubchem_cid": "3385",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Thymidylate synthase inhibition and misincorporation into RNA/DNA",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "essential_generic"
       },
       "drug_class": null,
       "cell_lines": [
@@ -25,7 +36,13 @@
               "variant": "wild-type"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
@@ -39,12 +56,14 @@
             "note": "Representative of the studied range 38-43 degC for 60 min (Helderman et al. 2020)"
           },
           "source_study": "doi:10.3390/cells9081775",
-          "source_dataset_accession": null
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "HIPEC is an intraoperative procedure requiring cytoreductive surgery plus dedicated heated-perfusion equipment and an OR team -- dedicated clinical infrastructure, not a bedside intervention."
         }
       ],
       "cells": [
         {
-          "interaction_id": "3769a087-496c-42cf-be73-d287f87e43cc",
+          "interaction_id": "679e123c-a9c0-4a43-90be-1a7272dafd34",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "5-fluorouracil",
@@ -82,10 +101,43 @@
         "name": "Carboplatin",
         "drug_class": "Platinum agent",
         "target": "DNA crosslinking (intrastrand adducts)",
-        "source": "curated seed"
+        "source": "curated seed",
+        "synonyms": [
+          "Paraplatin"
+        ],
+        "pubchem_cid": "426756",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Platinum-DNA intrastrand crosslinks (cyclobutanedicarboxylate leaving group; lower nephrotoxicity than cisplatin)",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "essential_generic"
       },
       "drug_class": null,
       "cell_lines": [
+        {
+          "cell_line_id": "4T1_BREAST",
+          "name": "4T1",
+          "tissue_origin": "Breast (mouse)",
+          "cancer_subtype": "Murine mammary carcinoma (BALB/c; highly metastatic; triple-negative)",
+          "key_mutations": [
+            {
+              "gene": "AKT",
+              "variant": "short-term starvation increases AKT/S6K phosphorylation - sensitizing stress response (Lee et al. 2012)"
+            },
+            {
+              "gene": "ESR1/ERBB2",
+              "variant": "triple-negative phenotype"
+            }
+          ],
+          "source": "Primary literature (Lee et al. 2012, PMID 22323820); murine line, not CCLE/DepMap-registered",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
         {
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "name": "RKO",
@@ -101,10 +153,46 @@
               "variant": "wild-type"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
+        {
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Short-term fasting cycles (48-60 h, water ad libitum)",
+          "protocol_parameters": {
+            "fasting_window_hr": "48-60 (complete food withdrawal; water ad libitum)",
+            "in_vitro_leg": "serum from 48-h fasted mice vs ad-lib serum, with/without doxorubicin (DXR) or cyclophosphamide (CP)",
+            "in_vivo_leg": "two full fasting cycles in the 4T1 subcutaneous allograft arm (breast cancer); allografts also tested: GL26 glioma, B16 melanoma, neuroblastoma (NXS2, Neuro-2a); human xenografts: OVCAR3, MDA-MB-231",
+            "refeeding": "mice returned to near pre-fast weight after each cycle",
+            "readout": "viability/cell death (in vitro); tumour growth retardation and chemotherapy effectiveness (in vivo)"
+          },
+          "source_study": "pmid:22323820",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Fasting protocol; food withdrawal only, no equipment."
+        },
+        {
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Ionizing radiation (single-dose radiosensitization context)",
+          "protocol_parameters": {
+            "dose_and_fractionation": "single-dose study design; exact Gy per gamma/cell-cycle figure tables pending curation (Kunos et al. 2009)",
+            "sequencing": "3-AP treatment (RNR inhibition) combined with ionizing radiation; effects read as radiation cytotoxicity, RNR activity, persistence of DNA damage, cell-cycle arrest",
+            "readout": "radiation-related cytotoxicity rescue-block readout; radiation-induced DNA damage duration; G1/S arrest"
+          },
+          "source_study": "pmid:19929413",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device."
+        },
         {
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "modifier_type": "thermal",
@@ -115,17 +203,37 @@
             "note": "Representative of the studied range 38-43 degC for 60 min (Helderman et al. 2020)"
           },
           "source_study": "doi:10.3390/cells9081775",
-          "source_dataset_accession": null
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "HIPEC is an intraoperative procedure requiring cytoreductive surgery plus dedicated heated-perfusion equipment and an OR team -- dedicated clinical infrastructure, not a bedside intervention."
         }
       ],
       "cells": [
         {
-          "interaction_id": "da3d23c0-e5f4-4798-8fff-144f88e0c676",
+          "interaction_id": "564e8e33-8240-45f4-ba39-cda55827b28b",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "carboplatin",
           "interaction_type": "synergistic",
           "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "d76abe80-52b2-4273-bdd3-847a84135e1b",
+          "cell_line_id": "4T1_BREAST",
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "drug_id": "carboplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "51e18e94-b46d-4394-a53b-c91af31ff7a7",
+          "cell_line_id": "RKO_LARGE_INTESTINE",
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "carboplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
           "combined_effect_metric": null
         }
       ],
@@ -158,10 +266,67 @@
         "name": "Cisplatin",
         "drug_class": "Platinum agent",
         "target": "DNA crosslinking (intrastrand adducts)",
-        "source": "curated seed"
+        "source": "curated seed",
+        "synonyms": [
+          "cis-Diamminedichloroplatinum(II)",
+          "CDDP"
+        ],
+        "pubchem_cid": "5702198",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Platinum-DNA intrastrand crosslinks trigger DNA-damage response and apoptosis",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "essential_generic"
       },
       "drug_class": null,
       "cell_lines": [
+        {
+          "cell_line_id": "4T1_BREAST",
+          "name": "4T1",
+          "tissue_origin": "Breast (mouse)",
+          "cancer_subtype": "Murine mammary carcinoma (BALB/c; highly metastatic; triple-negative)",
+          "key_mutations": [
+            {
+              "gene": "AKT",
+              "variant": "short-term starvation increases AKT/S6K phosphorylation - sensitizing stress response (Lee et al. 2012)"
+            },
+            {
+              "gene": "ESR1/ERBB2",
+              "variant": "triple-negative phenotype"
+            }
+          ],
+          "source": "Primary literature (Lee et al. 2012, PMID 22323820); murine line, not CCLE/DepMap-registered",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "A549_LUNG",
+          "name": "A549",
+          "tissue_origin": "Lung",
+          "cancer_subtype": "Lung adenocarcinoma (NSCLC)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G12S"
+            },
+            {
+              "gene": "STK11",
+              "variant": "loss-of-function"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
         {
           "cell_line_id": "MCF7_BREAST",
           "name": "MCF-7",
@@ -177,7 +342,13 @@
               "variant": "frameshift"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         },
         {
           "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -194,10 +365,60 @@
               "variant": "wild-type"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
+        {
+          "modifier_id": "MOD-ALICIN-NSCLC",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Allicin (garlic organosulfur thiosulfinate)",
+          "protocol_parameters": {
+            "oxygenation": "parallel normoxic and hypoxic arms (hypoxia confers cisplatin resistance in A549; exact O2% per source Methods pending curation)",
+            "dose": "per Pandey et al. Methods (dose/timepoints pending curation from source tables; not stated in abstract)",
+            "readout": "MTT viability; flow cytometry (cell cycle, apoptosis, ROS); scratch and transwell migration; genome-wide methylation dot blot; HIF-1alpha/HIF-2alpha immunoblot"
+          },
+          "source_study": "pmid:32809300",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Garlic-derived compound / dietary organosulfur; low-cost, widely available."
+        },
+        {
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Short-term fasting cycles (48-60 h, water ad libitum)",
+          "protocol_parameters": {
+            "fasting_window_hr": "48-60 (complete food withdrawal; water ad libitum)",
+            "in_vitro_leg": "serum from 48-h fasted mice vs ad-lib serum, with/without doxorubicin (DXR) or cyclophosphamide (CP)",
+            "in_vivo_leg": "two full fasting cycles in the 4T1 subcutaneous allograft arm (breast cancer); allografts also tested: GL26 glioma, B16 melanoma, neuroblastoma (NXS2, Neuro-2a); human xenografts: OVCAR3, MDA-MB-231",
+            "refeeding": "mice returned to near pre-fast weight after each cycle",
+            "readout": "viability/cell death (in vitro); tumour growth retardation and chemotherapy effectiveness (in vivo)"
+          },
+          "source_study": "pmid:22323820",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Fasting protocol; food withdrawal only, no equipment."
+        },
+        {
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Ionizing radiation (single-dose radiosensitization context)",
+          "protocol_parameters": {
+            "dose_and_fractionation": "single-dose study design; exact Gy per gamma/cell-cycle figure tables pending curation (Kunos et al. 2009)",
+            "sequencing": "3-AP treatment (RNR inhibition) combined with ionizing radiation; effects read as radiation cytotoxicity, RNR activity, persistence of DNA damage, cell-cycle arrest",
+            "readout": "radiation-related cytotoxicity rescue-block readout; radiation-induced DNA damage duration; G1/S arrest"
+          },
+          "source_study": "pmid:19929413",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device."
+        },
         {
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "modifier_type": "thermal",
@@ -208,7 +429,9 @@
             "note": "Representative of the studied range 38-43 degC for 60 min (Helderman et al. 2020)"
           },
           "source_study": "doi:10.3390/cells9081775",
-          "source_dataset_accession": null
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "HIPEC is an intraoperative procedure requiring cytoreductive surgery plus dedicated heated-perfusion equipment and an OR team -- dedicated clinical infrastructure, not a bedside intervention."
         },
         {
           "modifier_id": "MOD-HT-45C-GSE48398",
@@ -219,12 +442,14 @@
             "note": "Exposure time/timepoints per GEO series page GSE48398; series compares malignant vs non-malignant breast lines under heat shock"
           },
           "source_study": "geo:GSE48398",
-          "source_dataset_accession": "GSE48398"
+          "source_dataset_accession": "GSE48398",
+          "infrastructure_requirement": "low",
+          "estimated_relative_cost_note": "Basic heating/water-bath equipment; no specialized device."
         }
       ],
       "cells": [
         {
-          "interaction_id": "7daa743b-57d0-4092-9ebb-1a1cccf020c9",
+          "interaction_id": "27ce9c01-6828-4ccf-9fb8-c278f82fb5e7",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "cisplatin",
@@ -233,12 +458,136 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "1ebbb579-c724-4110-9422-5edac7fff24f",
+          "interaction_id": "9ae628e2-a7e9-480c-82f3-d2b364a2160b",
           "cell_line_id": "MCF7_BREAST",
           "modifier_id": "MOD-HT-45C-GSE48398",
           "drug_id": "cisplatin",
           "interaction_type": "unknown",
           "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "b4bcf8ba-aafc-42b0-ba1c-79038235cdac",
+          "cell_line_id": "A549_LUNG",
+          "modifier_id": "MOD-ALICIN-NSCLC",
+          "drug_id": "cisplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "c34afd9a-df0a-4294-8b15-63fff23cb129",
+          "cell_line_id": "4T1_BREAST",
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "drug_id": "cisplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "266cabaa-880e-45f0-9d6e-f0086991b829",
+          "cell_line_id": "RKO_LARGE_INTESTINE",
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "cisplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        }
+      ],
+      "evidence_tier_definitions": {
+        "tier_1_direct": {
+          "label": "Tier 1 \u2014 Direct",
+          "short_label": "T1",
+          "definition": "The combination was tested empirically in the same study: drug and modifier were applied together and death/viability was measured."
+        },
+        "tier_2_inferred": {
+          "label": "Tier 2 \u2014 Inferred",
+          "short_label": "T2",
+          "definition": "Drug response and modifier response were measured separately, then joined via a shared cell line and a biologically plausible shared mechanism. No combined-treatment readout exists."
+        },
+        "tier_2b_model_predicted": {
+          "label": "Tier 2b \u2014 Model-predicted",
+          "short_label": "T2b",
+          "definition": "Generated by the learned prediction layer (Step 2) for an untested drug x modifier x cell-line combination \u2014 distinct from Tier 2, which is a manual join of separate single-factor studies. Every Tier 2b row stores the model version / training-run ID it came from so predictions can be invalidated and regenerated as data and models improve. Experimental: low-confidence until validated against a critical mass of Tier 1 labels."
+        },
+        "tier_3_mechanism_only": {
+          "label": "Tier 3 \u2014 Mechanism-only",
+          "short_label": "T3",
+          "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+        }
+      }
+    },
+    "cyclophosphamide": {
+      "drug": {
+        "drug_id": "cyclophosphamide",
+        "name": "Cyclophosphamide",
+        "drug_class": "Nitrogen mustard alkylating agent (oxazaphosphorine prodrug)",
+        "target": "DNA crosslinking (via hepatic CYP450 activation to phosphoramide mustard)",
+        "source": "curated seed",
+        "synonyms": [
+          "Cytoxan",
+          "Endoxan"
+        ],
+        "pubchem_cid": "2907",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Prodrug bioactivated by hepatic CYP450 to phosphoramide mustard, which crosslinks DNA",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "essential_generic"
+      },
+      "drug_class": null,
+      "cell_lines": [
+        {
+          "cell_line_id": "4T1_BREAST",
+          "name": "4T1",
+          "tissue_origin": "Breast (mouse)",
+          "cancer_subtype": "Murine mammary carcinoma (BALB/c; highly metastatic; triple-negative)",
+          "key_mutations": [
+            {
+              "gene": "AKT",
+              "variant": "short-term starvation increases AKT/S6K phosphorylation - sensitizing stress response (Lee et al. 2012)"
+            },
+            {
+              "gene": "ESR1/ERBB2",
+              "variant": "triple-negative phenotype"
+            }
+          ],
+          "source": "Primary literature (Lee et al. 2012, PMID 22323820); murine line, not CCLE/DepMap-registered",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        }
+      ],
+      "modifiers": [
+        {
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Short-term fasting cycles (48-60 h, water ad libitum)",
+          "protocol_parameters": {
+            "fasting_window_hr": "48-60 (complete food withdrawal; water ad libitum)",
+            "in_vitro_leg": "serum from 48-h fasted mice vs ad-lib serum, with/without doxorubicin (DXR) or cyclophosphamide (CP)",
+            "in_vivo_leg": "two full fasting cycles in the 4T1 subcutaneous allograft arm (breast cancer); allografts also tested: GL26 glioma, B16 melanoma, neuroblastoma (NXS2, Neuro-2a); human xenografts: OVCAR3, MDA-MB-231",
+            "refeeding": "mice returned to near pre-fast weight after each cycle",
+            "readout": "viability/cell death (in vitro); tumour growth retardation and chemotherapy effectiveness (in vivo)"
+          },
+          "source_study": "pmid:22323820",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Fasting protocol; food withdrawal only, no equipment."
+        }
+      ],
+      "cells": [
+        {
+          "interaction_id": "a8255afd-9162-4dd3-a6ee-3196de608a38",
+          "cell_line_id": "4T1_BREAST",
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "drug_id": "cyclophosphamide",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_1_direct",
           "combined_effect_metric": null
         }
       ],
@@ -271,10 +620,43 @@
         "name": "Doxorubicin",
         "drug_class": "Anthracycline (topoisomerase II inhibitor)",
         "target": "Topoisomerase II; redox cycling",
-        "source": "curated seed"
+        "source": "curated seed",
+        "synonyms": [
+          "Adriamycin"
+        ],
+        "pubchem_cid": "31703",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Topoisomerase II poisoning and intercalation; redox cycling generates ROS",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "essential_generic"
       },
       "drug_class": null,
       "cell_lines": [
+        {
+          "cell_line_id": "4T1_BREAST",
+          "name": "4T1",
+          "tissue_origin": "Breast (mouse)",
+          "cancer_subtype": "Murine mammary carcinoma (BALB/c; highly metastatic; triple-negative)",
+          "key_mutations": [
+            {
+              "gene": "AKT",
+              "variant": "short-term starvation increases AKT/S6K phosphorylation - sensitizing stress response (Lee et al. 2012)"
+            },
+            {
+              "gene": "ESR1/ERBB2",
+              "variant": "triple-negative phenotype"
+            }
+          ],
+          "source": "Primary literature (Lee et al. 2012, PMID 22323820); murine line, not CCLE/DepMap-registered",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
         {
           "cell_line_id": "DU145_PROSTATE",
           "name": "DU-145",
@@ -290,7 +672,86 @@
               "variant": "mutant"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
+          "name": "HCT116 p53-/-",
+          "tissue_origin": "Large intestine",
+          "cancer_subtype": "Colorectal adenocarcinoma, isogenic TP53 knockout derivative of HCT116",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "TP53",
+              "variant": "homozygous knockout (isogenic p53-/- derivative)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "MCF7_BREAST",
+          "name": "MCF-7",
+          "tissue_origin": "Breast",
+          "cancer_subtype": "Breast adenocarcinoma, ER+/HER2- (luminal A)",
+          "key_mutations": [
+            {
+              "gene": "PIK3CA",
+              "variant": "E545K"
+            },
+            {
+              "gene": "GATA3",
+              "variant": "frameshift"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "MDAMB231_BREAST",
+          "name": "MDA-MB-231",
+          "tissue_origin": "Breast",
+          "cancer_subtype": "Triple-negative breast cancer (basal-like)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "BRAF",
+              "variant": "G464V"
+            },
+            {
+              "gene": "TP53",
+              "variant": "R280K"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         },
         {
           "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
@@ -303,10 +764,62 @@
               "variant": "deficient"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
+        {
+          "modifier_id": "MOD-DHA-60UM",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
+          "protocol_parameters": {
+            "in_vitro": "DHA 60 uM on a control fatty-acid background (OALA: 40 uM linoleic + 40 uM oleic) vs OALA alone",
+            "in_vivo": "nutritionally complete diet with 2.8 g/100 g DHA (P:S ratio 0.5) vs matched control diet in nu/nu mice bearing MDA-MB-231 xenografts",
+            "drug_leg": "doxorubicin 0.41 uM (in vitro); 5 mg/kg DOX 2x/week for 4 weeks (in vivo)",
+            "readout": "viability; microarray/protein apoptosis and cell-cycle markers; tumour volume"
+          },
+          "source_study": "pmid:30601995",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Omega-3 (DHA) dietary supplement; low-cost, widely available over the counter."
+        },
+        {
+          "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Serine/glycine starvation (-SG medium; dietary serine/glycine depletion in vivo)",
+          "protocol_parameters": {
+            "medium": "MEM (21090) + 1x MEM vitamins (11120) + 10% dialysed FBS + 2 mM L-glutamine + 25 mM D-glucose; complete media additionally contains serine 0.4 mM and glycine 0.4 mM; starvation media omit both (-SG)",
+            "in_vivo_leg": "serine/glycine-depleted diet (LC-MS-confirmed drop in serum serine/glycine) in HCT116 xenografts",
+            "line_context": "HCT116 p53+/+ vs isogenic p53-/-; RKO (Supp. Fig. 2); primary MEFs",
+            "readout": "proliferation/viability; LC-MS metabolic flux; p53/p21 immunoblot"
+          },
+          "source_study": "pmid:23242140",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Specialized diet formulation; no equipment, though compliance monitoring (dietary counseling) adds some real-world overhead."
+        },
+        {
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Short-term fasting cycles (48-60 h, water ad libitum)",
+          "protocol_parameters": {
+            "fasting_window_hr": "48-60 (complete food withdrawal; water ad libitum)",
+            "in_vitro_leg": "serum from 48-h fasted mice vs ad-lib serum, with/without doxorubicin (DXR) or cyclophosphamide (CP)",
+            "in_vivo_leg": "two full fasting cycles in the 4T1 subcutaneous allograft arm (breast cancer); allografts also tested: GL26 glioma, B16 melanoma, neuroblastoma (NXS2, Neuro-2a); human xenografts: OVCAR3, MDA-MB-231",
+            "refeeding": "mice returned to near pre-fast weight after each cycle",
+            "readout": "viability/cell death (in vitro); tumour growth retardation and chemotherapy effectiveness (in vivo)"
+          },
+          "source_study": "pmid:22323820",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Fasting protocol; food withdrawal only, no equipment."
+        },
         {
           "modifier_id": "MOD-HYP-1O2-24H",
           "modifier_type": "hypoxic",
@@ -317,7 +830,28 @@
             "note": "Representative protocol parameters; this row is anchored to review-level evidence (Rohwer & Cramer 2011), not a single experiment"
           },
           "source_study": "doi:10.1016/j.drup.2011.03.001",
-          "source_dataset_accession": null
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "low",
+          "estimated_relative_cost_note": "Tumor-microenvironment condition, not a directly patient-applied intervention; basic hypoxia-chamber/gas-mixing equipment would be needed for any lab replication."
+        },
+        {
+          "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
+          "protocol_parameters": {
+            "stiffness_kPa": 52.99,
+            "hydrogel_formulation": "5G5P (tunable 3D hydrogel)",
+            "comparator_conditions_kPa": [
+              7.02,
+              15.83
+            ],
+            "comparator_format": "2D culture control",
+            "readout": "IC50 (48 h drug exposure)"
+          },
+          "source_study": "doi:10.1021/acsbiomaterials.4c01636",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": null,
+          "estimated_relative_cost_note": "Not a patient-deliverable intervention -- an in-vitro biomaterial culture system only, so no infrastructure_requirement tier applies (left unassessed rather than forced into a category)."
         },
         {
           "modifier_id": "MOD-HT-41C-30M",
@@ -329,12 +863,14 @@
             "post_treatment_timepoint_hr": 3
           },
           "source_study": "doi:10.1080/02656730802140777",
-          "source_dataset_accession": "GSE10043"
+          "source_dataset_accession": "GSE10043",
+          "infrastructure_requirement": "low",
+          "estimated_relative_cost_note": "Basic heating equipment (e.g. heating pads/blankets)."
         }
       ],
       "cells": [
         {
-          "interaction_id": "e30065a1-4cb5-41cd-872d-ab0dbb8ab818",
+          "interaction_id": "e4586280-f142-4631-af88-5ca9700655ea",
           "cell_line_id": "U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE",
           "modifier_id": "MOD-HT-41C-30M",
           "drug_id": "doxorubicin",
@@ -343,11 +879,277 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "0e9072c2-9bdd-4376-a03a-1df029b00384",
+          "interaction_id": "139b420c-b145-45a8-b58c-7b846b985485",
           "cell_line_id": "DU145_PROSTATE",
           "modifier_id": "MOD-HYP-1O2-24H",
           "drug_id": "doxorubicin",
           "interaction_type": "antagonistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "4167d635-0906-447e-8f7d-07cd750b559f",
+          "cell_line_id": "MDAMB231_BREAST",
+          "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+          "drug_id": "doxorubicin",
+          "interaction_type": "antagonistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "eb251a1e-23b8-4dbd-8aca-5c791d34cdac",
+          "cell_line_id": "MCF7_BREAST",
+          "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+          "drug_id": "doxorubicin",
+          "interaction_type": "antagonistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "2b00f42f-b6c1-4872-951d-df7f2daa2feb",
+          "cell_line_id": "4T1_BREAST",
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "drug_id": "doxorubicin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "2d89cadb-31e9-451f-9117-3f34631cb543",
+          "cell_line_id": "MDAMB231_BREAST",
+          "modifier_id": "MOD-DHA-60UM",
+          "drug_id": "doxorubicin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "3af24b10-df5b-4541-9436-13983320f528",
+          "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
+          "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "drug_id": "doxorubicin",
+          "interaction_type": "unknown",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        }
+      ],
+      "evidence_tier_definitions": {
+        "tier_1_direct": {
+          "label": "Tier 1 \u2014 Direct",
+          "short_label": "T1",
+          "definition": "The combination was tested empirically in the same study: drug and modifier were applied together and death/viability was measured."
+        },
+        "tier_2_inferred": {
+          "label": "Tier 2 \u2014 Inferred",
+          "short_label": "T2",
+          "definition": "Drug response and modifier response were measured separately, then joined via a shared cell line and a biologically plausible shared mechanism. No combined-treatment readout exists."
+        },
+        "tier_2b_model_predicted": {
+          "label": "Tier 2b \u2014 Model-predicted",
+          "short_label": "T2b",
+          "definition": "Generated by the learned prediction layer (Step 2) for an untested drug x modifier x cell-line combination \u2014 distinct from Tier 2, which is a manual join of separate single-factor studies. Every Tier 2b row stores the model version / training-run ID it came from so predictions can be invalidated and regenerated as data and models improve. Experimental: low-confidence until validated against a critical mass of Tier 1 labels."
+        },
+        "tier_3_mechanism_only": {
+          "label": "Tier 3 \u2014 Mechanism-only",
+          "short_label": "T3",
+          "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+        }
+      }
+    },
+    "erastin": {
+      "drug": {
+        "drug_id": "erastin",
+        "name": "Erastin",
+        "drug_class": "System Xc- inhibitor (ferroptosis inducer)",
+        "target": "SLC7A11/system Xc- cystine-glutamate antiporter",
+        "source": "curated seed",
+        "synonyms": [],
+        "pubchem_cid": "11214940",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "System Xc- inhibition depletes intracellular cystine, collapsing glutathione synthesis and inducing ferroptosis",
+        "clinical_status": "preclinical",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "unknown"
+      },
+      "drug_class": null,
+      "cell_lines": [
+        {
+          "cell_line_id": "HCT116_LARGE_INTESTINE",
+          "name": "HCT116",
+          "tissue_origin": "Large intestine",
+          "cancer_subtype": "Colorectal adenocarcinoma (KRAS-mutant; mismatch-repair deficient)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "TP53",
+              "variant": "wild-type (parental line; p53+/+)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
+          "name": "HCT116 p53-/-",
+          "tissue_origin": "Large intestine",
+          "cancer_subtype": "Colorectal adenocarcinoma, isogenic TP53 knockout derivative of HCT116",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "TP53",
+              "variant": "homozygous knockout (isogenic p53-/- derivative)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "MDAMB231_BREAST",
+          "name": "MDA-MB-231",
+          "tissue_origin": "Breast",
+          "cancer_subtype": "Triple-negative breast cancer (basal-like)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "BRAF",
+              "variant": "G464V"
+            },
+            {
+              "gene": "TP53",
+              "variant": "R280K"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "T47D_BREAST",
+          "name": "T47D",
+          "tissue_origin": "Breast",
+          "cancer_subtype": "Breast ductal carcinoma, ER+/HER2- (luminal A)",
+          "key_mutations": [
+            {
+              "gene": "PIK3CA",
+              "variant": "H1047R"
+            },
+            {
+              "gene": "TP53",
+              "variant": "L194F"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        }
+      ],
+      "modifiers": [
+        {
+          "modifier_id": "MOD-CYS-WITHDRAWAL",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Cystine withdrawal (cysteine/cystine-free medium)",
+          "protocol_parameters": {
+            "cystine_concentration": "0 (withdrawal)",
+            "readout": "RNA-seq + viability",
+            "note": "Exact duration/timepoints per GSE237928 Methods (Swanda et al. 2023); combined with System Xc- inhibitors (erastin, sulfasalazine) and AhR modulators in the source study."
+          },
+          "source_study": "doi:10.1016/j.molcel.2023.08.004",
+          "source_dataset_accession": "GSE237928",
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol (no cystine supplementation); no equipment. Clinical translation would likely be a specialized diet, not a device."
+        },
+        {
+          "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Glucose restriction (5% of standard medium glucose)",
+          "protocol_parameters": {
+            "glucose_percent_of_standard": 5.0,
+            "duration_hr": 96,
+            "readout": "RNA-seq"
+          },
+          "source_study": "doi:10.3892/ol.2020.12326",
+          "source_dataset_accession": "GSE153830",
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Dietary/fasting-style protocol; no equipment."
+        },
+        {
+          "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Serine/glycine starvation (-SG medium; dietary serine/glycine depletion in vivo)",
+          "protocol_parameters": {
+            "medium": "MEM (21090) + 1x MEM vitamins (11120) + 10% dialysed FBS + 2 mM L-glutamine + 25 mM D-glucose; complete media additionally contains serine 0.4 mM and glycine 0.4 mM; starvation media omit both (-SG)",
+            "in_vivo_leg": "serine/glycine-depleted diet (LC-MS-confirmed drop in serum serine/glycine) in HCT116 xenografts",
+            "line_context": "HCT116 p53+/+ vs isogenic p53-/-; RKO (Supp. Fig. 2); primary MEFs",
+            "readout": "proliferation/viability; LC-MS metabolic flux; p53/p21 immunoblot"
+          },
+          "source_study": "pmid:23242140",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Specialized diet formulation; no equipment, though compliance monitoring (dietary counseling) adds some real-world overhead."
+        }
+      ],
+      "cells": [
+        {
+          "interaction_id": "f6057eaf-6dd5-43d0-a7a2-f7977af8105f",
+          "cell_line_id": "MDAMB231_BREAST",
+          "modifier_id": "MOD-CYS-WITHDRAWAL",
+          "drug_id": "erastin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "7cfb0913-3977-461d-b5e5-09db5859bdb6",
+          "cell_line_id": "T47D_BREAST",
+          "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+          "drug_id": "erastin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "380f5681-5b6a-490a-b6fd-cd6626d1a570",
+          "cell_line_id": "HCT116_LARGE_INTESTINE",
+          "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "drug_id": "erastin",
+          "interaction_type": "antagonistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "69ab4543-31cb-41cf-b929-94bf65a4463d",
+          "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
+          "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "drug_id": "erastin",
+          "interaction_type": "synergistic",
           "evidence_tier": "tier_3_mechanism_only",
           "combined_effect_metric": null
         }
@@ -381,7 +1183,18 @@
         "name": "Metformin",
         "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
         "target": "Mitochondrial ETC complex I; AMPK activation",
-        "source": "curated seed"
+        "source": "curated seed",
+        "synonyms": [
+          "Glucophage",
+          "Dimethylbiguanide"
+        ],
+        "pubchem_cid": "4091",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Complex I inhibition -> AMPK activation -> reduced hepatic gluconeogenesis and cellular energetic stress",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "essential_generic"
       },
       "drug_class": null,
       "cell_lines": [
@@ -400,7 +1213,59 @@
               "variant": "mutant"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "HCT116_LARGE_INTESTINE",
+          "name": "HCT116",
+          "tissue_origin": "Large intestine",
+          "cancer_subtype": "Colorectal adenocarcinoma (KRAS-mutant; mismatch-repair deficient)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "TP53",
+              "variant": "wild-type (parental line; p53+/+)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
+          "name": "HCT116 p53-/-",
+          "tissue_origin": "Large intestine",
+          "cancer_subtype": "Colorectal adenocarcinoma, isogenic TP53 knockout derivative of HCT116",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "TP53",
+              "variant": "homozygous knockout (isogenic p53-/- derivative)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         },
         {
           "cell_line_id": "MCF7_BREAST",
@@ -417,7 +1282,40 @@
               "variant": "frameshift"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "MDAMB231_BREAST",
+          "name": "MDA-MB-231",
+          "tissue_origin": "Breast",
+          "cancer_subtype": "Triple-negative breast cancer (basal-like)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "BRAF",
+              "variant": "G464V"
+            },
+            {
+              "gene": "TP53",
+              "variant": "R280K"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         },
         {
           "cell_line_id": "T47D_BREAST",
@@ -434,10 +1332,30 @@
               "variant": "L194F"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
+        {
+          "modifier_id": "MOD-CYS-WITHDRAWAL",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Cystine withdrawal (cysteine/cystine-free medium)",
+          "protocol_parameters": {
+            "cystine_concentration": "0 (withdrawal)",
+            "readout": "RNA-seq + viability",
+            "note": "Exact duration/timepoints per GSE237928 Methods (Swanda et al. 2023); combined with System Xc- inhibitors (erastin, sulfasalazine) and AhR modulators in the source study."
+          },
+          "source_study": "doi:10.1016/j.molcel.2023.08.004",
+          "source_dataset_accession": "GSE237928",
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol (no cystine supplementation); no equipment. Clinical translation would likely be a specialized diet, not a device."
+        },
         {
           "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
           "modifier_type": "dietary_metabolic",
@@ -448,7 +1366,9 @@
             "readout": "RNA-seq"
           },
           "source_study": "doi:10.3892/ol.2020.12326",
-          "source_dataset_accession": "GSE153830"
+          "source_dataset_accession": "GSE153830",
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Dietary/fasting-style protocol; no equipment."
         },
         {
           "modifier_id": "MOD-GLUCOSE-LOW-DU145",
@@ -458,12 +1378,29 @@
             "glucose_concentration": "low vs standard; exact concentration and duration per Raffaele et al. 2019 Methods (PMID 31137785)"
           },
           "source_study": "doi:10.3390/ijms20102593",
-          "source_dataset_accession": null
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Dietary/glycemic-control protocol; no equipment."
+        },
+        {
+          "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Serine/glycine starvation (-SG medium; dietary serine/glycine depletion in vivo)",
+          "protocol_parameters": {
+            "medium": "MEM (21090) + 1x MEM vitamins (11120) + 10% dialysed FBS + 2 mM L-glutamine + 25 mM D-glucose; complete media additionally contains serine 0.4 mM and glycine 0.4 mM; starvation media omit both (-SG)",
+            "in_vivo_leg": "serine/glycine-depleted diet (LC-MS-confirmed drop in serum serine/glycine) in HCT116 xenografts",
+            "line_context": "HCT116 p53+/+ vs isogenic p53-/-; RKO (Supp. Fig. 2); primary MEFs",
+            "readout": "proliferation/viability; LC-MS metabolic flux; p53/p21 immunoblot"
+          },
+          "source_study": "pmid:23242140",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Specialized diet formulation; no equipment, though compliance monitoring (dietary counseling) adds some real-world overhead."
         }
       ],
       "cells": [
         {
-          "interaction_id": "b6a21b6d-4d88-4062-8484-bc36b753e20f",
+          "interaction_id": "d24759c7-abf4-40fa-8547-893989b9971f",
           "cell_line_id": "DU145_PROSTATE",
           "modifier_id": "MOD-GLUCOSE-LOW-DU145",
           "drug_id": "metformin",
@@ -472,7 +1409,7 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "4bfccd50-a678-4f9f-8f10-c6612c669e84",
+          "interaction_id": "2a5b54d9-a1f3-43a5-b751-83fc2730951c",
           "cell_line_id": "T47D_BREAST",
           "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
           "drug_id": "metformin",
@@ -481,12 +1418,39 @@
           "combined_effect_metric": null
         },
         {
-          "interaction_id": "3c4e0537-7cb5-41f5-9072-a5e9f2db6f8d",
+          "interaction_id": "926d01c8-78d3-49f7-8197-0accff307c0b",
           "cell_line_id": "MCF7_BREAST",
           "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
           "drug_id": "metformin",
           "interaction_type": "synergistic",
           "evidence_tier": "tier_2_inferred",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "96d1789a-a69f-472a-87a8-984341396e5d",
+          "cell_line_id": "MDAMB231_BREAST",
+          "modifier_id": "MOD-CYS-WITHDRAWAL",
+          "drug_id": "metformin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "114f8a72-3229-4ff0-b51c-3e295ff467d0",
+          "cell_line_id": "HCT116_LARGE_INTESTINE",
+          "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "drug_id": "metformin",
+          "interaction_type": "antagonistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "462cc94c-4a13-4174-acfb-3dcf272aa511",
+          "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
+          "modifier_id": "MOD-SERINE-GLYCINE-FREE",
+          "drug_id": "metformin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
           "combined_effect_metric": null
         }
       ],
@@ -519,7 +1483,18 @@
         "name": "Mitomycin C",
         "drug_class": "Antibiotic alkylating agent",
         "target": "DNA crosslinking (bioreductive activation)",
-        "source": "curated seed"
+        "source": "curated seed",
+        "synonyms": [
+          "Mitomycin",
+          "Mutamycin"
+        ],
+        "pubchem_cid": "5746",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Bioreductive activation to a DNA-crosslinking alkylating agent",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "generic_available"
       },
       "drug_class": null,
       "cell_lines": [
@@ -538,7 +1513,13 @@
               "variant": "wild-type"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
@@ -552,12 +1533,14 @@
             "note": "Representative of the studied range 38-43 degC for 60 min (Helderman et al. 2020)"
           },
           "source_study": "doi:10.3390/cells9081775",
-          "source_dataset_accession": null
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "HIPEC is an intraoperative procedure requiring cytoreductive surgery plus dedicated heated-perfusion equipment and an OR team -- dedicated clinical infrastructure, not a bedside intervention."
         }
       ],
       "cells": [
         {
-          "interaction_id": "13abe896-6e71-4488-a3af-e2bfefb9668c",
+          "interaction_id": "2355caee-28cb-42b7-90e5-b46973f5fc6b",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "mitomycin-c",
@@ -595,10 +1578,43 @@
         "name": "Oxaliplatin",
         "drug_class": "Platinum agent",
         "target": "DNA crosslinking (intrastrand adducts)",
-        "source": "curated seed"
+        "source": "curated seed",
+        "synonyms": [
+          "Eloxatin"
+        ],
+        "pubchem_cid": "9887053",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Platinum-DNA intrastrand crosslinks (oxalate leaving group; third-generation platinum agent)",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "essential_generic"
       },
       "drug_class": null,
       "cell_lines": [
+        {
+          "cell_line_id": "4T1_BREAST",
+          "name": "4T1",
+          "tissue_origin": "Breast (mouse)",
+          "cancer_subtype": "Murine mammary carcinoma (BALB/c; highly metastatic; triple-negative)",
+          "key_mutations": [
+            {
+              "gene": "AKT",
+              "variant": "short-term starvation increases AKT/S6K phosphorylation - sensitizing stress response (Lee et al. 2012)"
+            },
+            {
+              "gene": "ESR1/ERBB2",
+              "variant": "triple-negative phenotype"
+            }
+          ],
+          "source": "Primary literature (Lee et al. 2012, PMID 22323820); murine line, not CCLE/DepMap-registered",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
         {
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "name": "RKO",
@@ -614,10 +1630,46 @@
               "variant": "wild-type"
             }
           ],
-          "source": "CCLE/DepMap"
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
         }
       ],
       "modifiers": [
+        {
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "modifier_type": "dietary_metabolic",
+          "agent": "Short-term fasting cycles (48-60 h, water ad libitum)",
+          "protocol_parameters": {
+            "fasting_window_hr": "48-60 (complete food withdrawal; water ad libitum)",
+            "in_vitro_leg": "serum from 48-h fasted mice vs ad-lib serum, with/without doxorubicin (DXR) or cyclophosphamide (CP)",
+            "in_vivo_leg": "two full fasting cycles in the 4T1 subcutaneous allograft arm (breast cancer); allografts also tested: GL26 glioma, B16 melanoma, neuroblastoma (NXS2, Neuro-2a); human xenografts: OVCAR3, MDA-MB-231",
+            "refeeding": "mice returned to near pre-fast weight after each cycle",
+            "readout": "viability/cell death (in vitro); tumour growth retardation and chemotherapy effectiveness (in vivo)"
+          },
+          "source_study": "pmid:22323820",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "minimal",
+          "estimated_relative_cost_note": "Fasting protocol; food withdrawal only, no equipment."
+        },
+        {
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Ionizing radiation (single-dose radiosensitization context)",
+          "protocol_parameters": {
+            "dose_and_fractionation": "single-dose study design; exact Gy per gamma/cell-cycle figure tables pending curation (Kunos et al. 2009)",
+            "sequencing": "3-AP treatment (RNR inhibition) combined with ionizing radiation; effects read as radiation cytotoxicity, RNR activity, persistence of DNA damage, cell-cycle arrest",
+            "readout": "radiation-related cytotoxicity rescue-block readout; radiation-induced DNA damage duration; G1/S arrest"
+          },
+          "source_study": "pmid:19929413",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device."
+        },
         {
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "modifier_type": "thermal",
@@ -628,17 +1680,37 @@
             "note": "Representative of the studied range 38-43 degC for 60 min (Helderman et al. 2020)"
           },
           "source_study": "doi:10.3390/cells9081775",
-          "source_dataset_accession": null
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "HIPEC is an intraoperative procedure requiring cytoreductive surgery plus dedicated heated-perfusion equipment and an OR team -- dedicated clinical infrastructure, not a bedside intervention."
         }
       ],
       "cells": [
         {
-          "interaction_id": "3e0dc207-514b-46ec-b1b3-9eaa16e9f161",
+          "interaction_id": "26961df0-73bd-450d-88a9-44859359dccf",
           "cell_line_id": "RKO_LARGE_INTESTINE",
           "modifier_id": "MOD-HT-42C-60M-HIPEC",
           "drug_id": "oxaliplatin",
           "interaction_type": "synergistic",
           "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "f670dfee-98b9-45f1-ae3d-c3342e103095",
+          "cell_line_id": "4T1_BREAST",
+          "modifier_id": "MOD-FAST-CYCLES-48-60H",
+          "drug_id": "oxaliplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "2fc0aaaf-4fc8-436b-826c-274b2d814eec",
+          "cell_line_id": "RKO_LARGE_INTESTINE",
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "oxaliplatin",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_3_mechanism_only",
           "combined_effect_metric": null
         }
       ],
@@ -671,12 +1743,263 @@
         "name": "Paclitaxel",
         "drug_class": "Taxane (microtubule stabilizer)",
         "target": "beta-Tubulin",
-        "source": "curated seed"
+        "source": "curated seed",
+        "synonyms": [
+          "Taxol"
+        ],
+        "pubchem_cid": "36314",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Microtubule stabilization blocks mitotic spindle disassembly, arresting cells in mitosis",
+        "clinical_status": "approved",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "essential_generic"
       },
       "drug_class": null,
-      "cell_lines": [],
-      "modifiers": [],
-      "cells": [],
+      "cell_lines": [
+        {
+          "cell_line_id": "MCF7_BREAST",
+          "name": "MCF-7",
+          "tissue_origin": "Breast",
+          "cancer_subtype": "Breast adenocarcinoma, ER+/HER2- (luminal A)",
+          "key_mutations": [
+            {
+              "gene": "PIK3CA",
+              "variant": "E545K"
+            },
+            {
+              "gene": "GATA3",
+              "variant": "frameshift"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "MDAMB231_BREAST",
+          "name": "MDA-MB-231",
+          "tissue_origin": "Breast",
+          "cancer_subtype": "Triple-negative breast cancer (basal-like)",
+          "key_mutations": [
+            {
+              "gene": "KRAS",
+              "variant": "G13D"
+            },
+            {
+              "gene": "BRAF",
+              "variant": "G464V"
+            },
+            {
+              "gene": "TP53",
+              "variant": "R280K"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        }
+      ],
+      "modifiers": [
+        {
+          "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
+          "protocol_parameters": {
+            "stiffness_kPa": 52.99,
+            "hydrogel_formulation": "5G5P (tunable 3D hydrogel)",
+            "comparator_conditions_kPa": [
+              7.02,
+              15.83
+            ],
+            "comparator_format": "2D culture control",
+            "readout": "IC50 (48 h drug exposure)"
+          },
+          "source_study": "doi:10.1021/acsbiomaterials.4c01636",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": null,
+          "estimated_relative_cost_note": "Not a patient-deliverable intervention -- an in-vitro biomaterial culture system only, so no infrastructure_requirement tier applies (left unassessed rather than forced into a category)."
+        }
+      ],
+      "cells": [
+        {
+          "interaction_id": "433dc48d-1e9c-4729-8274-86739144e870",
+          "cell_line_id": "MDAMB231_BREAST",
+          "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+          "drug_id": "paclitaxel",
+          "interaction_type": "antagonistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "389e1a10-78c7-4757-adc8-2c8fafb27a46",
+          "cell_line_id": "MCF7_BREAST",
+          "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+          "drug_id": "paclitaxel",
+          "interaction_type": "antagonistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        }
+      ],
+      "evidence_tier_definitions": {
+        "tier_1_direct": {
+          "label": "Tier 1 \u2014 Direct",
+          "short_label": "T1",
+          "definition": "The combination was tested empirically in the same study: drug and modifier were applied together and death/viability was measured."
+        },
+        "tier_2_inferred": {
+          "label": "Tier 2 \u2014 Inferred",
+          "short_label": "T2",
+          "definition": "Drug response and modifier response were measured separately, then joined via a shared cell line and a biologically plausible shared mechanism. No combined-treatment readout exists."
+        },
+        "tier_2b_model_predicted": {
+          "label": "Tier 2b \u2014 Model-predicted",
+          "short_label": "T2b",
+          "definition": "Generated by the learned prediction layer (Step 2) for an untested drug x modifier x cell-line combination \u2014 distinct from Tier 2, which is a manual join of separate single-factor studies. Every Tier 2b row stores the model version / training-run ID it came from so predictions can be invalidated and regenerated as data and models improve. Experimental: low-confidence until validated against a critical mass of Tier 1 labels."
+        },
+        "tier_3_mechanism_only": {
+          "label": "Tier 3 \u2014 Mechanism-only",
+          "short_label": "T3",
+          "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+        }
+      }
+    },
+    "triapine": {
+      "drug": {
+        "drug_id": "triapine",
+        "name": "Triapine (3-AP)",
+        "drug_class": "Ribonucleotide reductase (RNR) inhibitor",
+        "target": "Ribonucleotide reductase M2 subunit (iron chelation of the tyrosyl radical site)",
+        "source": "curated seed",
+        "synonyms": [
+          "3-AP",
+          "3-aminopyridine-2-carboxaldehyde thiosemicarbazone"
+        ],
+        "pubchem_cid": "9571836",
+        "chembl_id": null,
+        "drugbank_id": null,
+        "mechanism_of_action": "Iron chelation inactivates the RNR tyrosyl radical, depleting dNTP pools and impairing DNA-damage repair",
+        "clinical_status": "investigational",
+        "induced_expression_signature_ref": null,
+        "cost_accessibility_tier": "unknown"
+      },
+      "drug_class": null,
+      "cell_lines": [
+        {
+          "cell_line_id": "CASKI_CERVIX",
+          "name": "Ca Ski",
+          "tissue_origin": "Cervix",
+          "cancer_subtype": "Cervical squamous cell carcinoma (HPV16-positive)",
+          "key_mutations": [
+            {
+              "gene": "HPV16",
+              "variant": "E6/E7 oncoprotein expression; TP53/RB1 pathway silenced (virally silenced p53 per Kunos et al. 2009)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "HELA_CERVIX",
+          "name": "HeLa",
+          "tissue_origin": "Cervix",
+          "cancer_subtype": "Cervical adenocarcinoma (HPV18-positive)",
+          "key_mutations": [
+            {
+              "gene": "HPV18",
+              "variant": "E6/E7 oncoprotein expression; E6 targets TP53 and E7 targets RB1 for degradation (virally silenced p53 per Kunos et al. 2009)"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        },
+        {
+          "cell_line_id": "RKO_LARGE_INTESTINE",
+          "name": "RKO",
+          "tissue_origin": "Large intestine",
+          "cancer_subtype": "Colorectal adenocarcinoma (MSI-H)",
+          "key_mutations": [
+            {
+              "gene": "BRAF",
+              "variant": "V600E"
+            },
+            {
+              "gene": "TP53",
+              "variant": "wild-type"
+            }
+          ],
+          "source": "CCLE/DepMap",
+          "oncotree_code": null,
+          "oncotree_primary_disease": null,
+          "oncotree_subtype": null,
+          "ncit_code": null,
+          "tumor_concordance_score": null,
+          "tumor_concordance_flag": "unassessed"
+        }
+      ],
+      "modifiers": [
+        {
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "modifier_type": "mechanical_radiative",
+          "agent": "Ionizing radiation (single-dose radiosensitization context)",
+          "protocol_parameters": {
+            "dose_and_fractionation": "single-dose study design; exact Gy per gamma/cell-cycle figure tables pending curation (Kunos et al. 2009)",
+            "sequencing": "3-AP treatment (RNR inhibition) combined with ionizing radiation; effects read as radiation cytotoxicity, RNR activity, persistence of DNA damage, cell-cycle arrest",
+            "readout": "radiation-related cytotoxicity rescue-block readout; radiation-induced DNA damage duration; G1/S arrest"
+          },
+          "source_study": "pmid:19929413",
+          "source_dataset_accession": null,
+          "infrastructure_requirement": "high",
+          "estimated_relative_cost_note": "Requires radiotherapy delivery equipment and a trained clinical team -- dedicated clinical infrastructure, comparable in tier to TTFields/HBOT, not a bedside or outpatient device."
+        }
+      ],
+      "cells": [
+        {
+          "interaction_id": "07bc4531-82c2-458c-a766-fc5d8ad603d4",
+          "cell_line_id": "RKO_LARGE_INTESTINE",
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "triapine",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "654c7b76-779c-44b1-ae36-4e370e193d88",
+          "cell_line_id": "HELA_CERVIX",
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "triapine",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        },
+        {
+          "interaction_id": "249fb01e-a260-4277-8244-3e53c7cbd822",
+          "cell_line_id": "CASKI_CERVIX",
+          "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
+          "drug_id": "triapine",
+          "interaction_type": "synergistic",
+          "evidence_tier": "tier_1_direct",
+          "combined_effect_metric": null
+        }
+      ],
       "evidence_tier_definitions": {
         "tier_1_direct": {
           "label": "Tier 1 \u2014 Direct",

@@ -5,6 +5,17 @@
     "drug_class": "Antimetabolite (fluoropyrimidine)",
     "target": "Thymidylate synthase; RNA/DNA incorporation",
     "source": "curated seed",
+    "synonyms": [
+      "5-FU",
+      "Adrucil"
+    ],
+    "pubchem_cid": "3385",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Thymidylate synthase inhibition and misincorporation into RNA/DNA",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic",
     "interaction_count": 1,
     "response_count": 0
   },
@@ -14,7 +25,17 @@
     "drug_class": "Platinum agent",
     "target": "DNA crosslinking (intrastrand adducts)",
     "source": "curated seed",
-    "interaction_count": 1,
+    "synonyms": [
+      "Paraplatin"
+    ],
+    "pubchem_cid": "426756",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Platinum-DNA intrastrand crosslinks (cyclobutanedicarboxylate leaving group; lower nephrotoxicity than cisplatin)",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic",
+    "interaction_count": 3,
     "response_count": 0
   },
   {
@@ -23,7 +44,38 @@
     "drug_class": "Platinum agent",
     "target": "DNA crosslinking (intrastrand adducts)",
     "source": "curated seed",
-    "interaction_count": 2,
+    "synonyms": [
+      "cis-Diamminedichloroplatinum(II)",
+      "CDDP"
+    ],
+    "pubchem_cid": "5702198",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Platinum-DNA intrastrand crosslinks trigger DNA-damage response and apoptosis",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic",
+    "interaction_count": 5,
+    "response_count": 0
+  },
+  {
+    "drug_id": "cyclophosphamide",
+    "name": "Cyclophosphamide",
+    "drug_class": "Nitrogen mustard alkylating agent (oxazaphosphorine prodrug)",
+    "target": "DNA crosslinking (via hepatic CYP450 activation to phosphoramide mustard)",
+    "source": "curated seed",
+    "synonyms": [
+      "Cytoxan",
+      "Endoxan"
+    ],
+    "pubchem_cid": "2907",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Prodrug bioactivated by hepatic CYP450 to phosphoramide mustard, which crosslinks DNA",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic",
+    "interaction_count": 1,
     "response_count": 0
   },
   {
@@ -32,7 +84,34 @@
     "drug_class": "Anthracycline (topoisomerase II inhibitor)",
     "target": "Topoisomerase II; redox cycling",
     "source": "curated seed",
-    "interaction_count": 2,
+    "synonyms": [
+      "Adriamycin"
+    ],
+    "pubchem_cid": "31703",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Topoisomerase II poisoning and intercalation; redox cycling generates ROS",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic",
+    "interaction_count": 7,
+    "response_count": 0
+  },
+  {
+    "drug_id": "erastin",
+    "name": "Erastin",
+    "drug_class": "System Xc- inhibitor (ferroptosis inducer)",
+    "target": "SLC7A11/system Xc- cystine-glutamate antiporter",
+    "source": "curated seed",
+    "synonyms": [],
+    "pubchem_cid": "11214940",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "System Xc- inhibition depletes intracellular cystine, collapsing glutathione synthesis and inducing ferroptosis",
+    "clinical_status": "preclinical",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "unknown",
+    "interaction_count": 4,
     "response_count": 0
   },
   {
@@ -41,7 +120,18 @@
     "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
     "target": "Mitochondrial ETC complex I; AMPK activation",
     "source": "curated seed",
-    "interaction_count": 3,
+    "synonyms": [
+      "Glucophage",
+      "Dimethylbiguanide"
+    ],
+    "pubchem_cid": "4091",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Complex I inhibition -> AMPK activation -> reduced hepatic gluconeogenesis and cellular energetic stress",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic",
+    "interaction_count": 6,
     "response_count": 0
   },
   {
@@ -50,6 +140,17 @@
     "drug_class": "Antibiotic alkylating agent",
     "target": "DNA crosslinking (bioreductive activation)",
     "source": "curated seed",
+    "synonyms": [
+      "Mitomycin",
+      "Mutamycin"
+    ],
+    "pubchem_cid": "5746",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Bioreductive activation to a DNA-crosslinking alkylating agent",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "generic_available",
     "interaction_count": 1,
     "response_count": 0
   },
@@ -59,7 +160,17 @@
     "drug_class": "Platinum agent",
     "target": "DNA crosslinking (intrastrand adducts)",
     "source": "curated seed",
-    "interaction_count": 1,
+    "synonyms": [
+      "Eloxatin"
+    ],
+    "pubchem_cid": "9887053",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Platinum-DNA intrastrand crosslinks (oxalate leaving group; third-generation platinum agent)",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic",
+    "interaction_count": 3,
     "response_count": 0
   },
   {
@@ -68,7 +179,37 @@
     "drug_class": "Taxane (microtubule stabilizer)",
     "target": "beta-Tubulin",
     "source": "curated seed",
-    "interaction_count": 0,
+    "synonyms": [
+      "Taxol"
+    ],
+    "pubchem_cid": "36314",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Microtubule stabilization blocks mitotic spindle disassembly, arresting cells in mitosis",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "essential_generic",
+    "interaction_count": 2,
+    "response_count": 0
+  },
+  {
+    "drug_id": "triapine",
+    "name": "Triapine (3-AP)",
+    "drug_class": "Ribonucleotide reductase (RNR) inhibitor",
+    "target": "Ribonucleotide reductase M2 subunit (iron chelation of the tyrosyl radical site)",
+    "source": "curated seed",
+    "synonyms": [
+      "3-AP",
+      "3-aminopyridine-2-carboxaldehyde thiosemicarbazone"
+    ],
+    "pubchem_cid": "9571836",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Iron chelation inactivates the RNR tyrosyl radical, depleting dNTP pools and impairing DNA-damage repair",
+    "clinical_status": "investigational",
+    "induced_expression_signature_ref": null,
+    "cost_accessibility_tier": "unknown",
+    "interaction_count": 3,
     "response_count": 0
   }
 ]

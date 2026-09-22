@@ -7,10 +7,12 @@
   },
   "source_study": "doi:10.3390/ijms20102593",
   "source_dataset_accession": null,
+  "infrastructure_requirement": "minimal",
+  "estimated_relative_cost_note": "Dietary/glycemic-control protocol; no equipment.",
   "signature_scores": [],
   "interactions": [
     {
-      "id": "b6a21b6d-4d88-4062-8484-bc36b753e20f",
+      "id": "d24759c7-abf4-40fa-8547-893989b9971f",
       "modifier_id": "MOD-GLUCOSE-LOW-DU145",
       "drug_id": "metformin",
       "cell_line_id": "DU145_PROSTATE",
@@ -18,19 +20,38 @@
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
+      "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3390/ijms20102593",
         "pmid:31137785"
       ],
       "curator_notes": "Metformin anti-proliferative effect was glucose-concentration-dependent: low glucose potentiated metformin-mediated DU-145 cell death (MTT/xCELLigence); HO-1 inhibition further sensitized cells.",
       "model_run_id": null,
+      "trial_builder_ref": null,
       "modifier_agent": "Low-glucose medium (metformin co-treatment context)",
       "modifier_type": "dietary_metabolic",
+      "modifier_infrastructure_requirement": "minimal",
       "cell_line_name": "DU-145",
       "tissue_origin": "Prostate",
       "drug_name": "Metformin",
       "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
-      "evidence_tier_label": "Tier 1 \u2014 Direct"
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "4091",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 1 \u2014 Direct",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": true,
+      "priority_score": 0.3429,
+      "priority_components": {
+        "convergent_evidence": 0.0,
+        "coverage_gap": 0.1429,
+        "trial_saturation_inverse": 1.0,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 1.0,
+        "disease_burden": null
+      }
     }
   ],
   "cell_lines": [
