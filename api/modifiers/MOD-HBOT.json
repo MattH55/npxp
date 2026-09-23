@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Requires a dedicated hyperbaric chamber facility and clinical staff -- dedicated clinical infrastructure, not a bedside or outpatient intervention.",
   "signature_scores": [
     {
-      "id": "e1c40693-df6c-49d9-85bc-2c7df3a364db",
+      "id": "0916f461-03d0-4803-ad85-36689581cd6f",
       "modifier_id": "MOD-HBOT",
       "cell_line_id": "A549_LUNG",
       "signature_panel": "other",
@@ -26,14 +26,15 @@
   ],
   "interactions": [
     {
-      "id": "726ad23e-d733-4283-b4e3-4ece0ed1a54c",
+      "id": "f4b8cbfd-0bb4-458d-b920-0e640dc20bcf",
       "modifier_id": "MOD-HBOT",
       "drug_id": "cisplatin",
       "cell_line_id": "A549_LUNG",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "e1c40693-df6c-49d9-85bc-2c7df3a364db",
+      "mechanism_link": "0916f461-03d0-4803-ad85-36689581cd6f",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3389/fonc.2021.691762",

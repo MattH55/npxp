@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Tumor-microenvironment condition, not a directly patient-applied intervention; basic hypoxia-chamber/gas-mixing equipment would be needed for any lab replication.",
   "signature_scores": [
     {
-      "id": "79ffcaec-5937-4be0-a654-15b3684656bd",
+      "id": "ed4d5725-5aba-493d-bc43-2c884ee18eec",
       "modifier_id": "MOD-HYP-1O2-24H",
       "cell_line_id": "DU145_PROSTATE",
       "signature_panel": "other",
@@ -26,14 +26,15 @@
   ],
   "interactions": [
     {
-      "id": "3bdfd5b5-64aa-4699-980e-27a8d89731b1",
+      "id": "ff7c6440-3d53-4795-80e5-3f70226f524a",
       "modifier_id": "MOD-HYP-1O2-24H",
       "drug_id": "doxorubicin",
       "cell_line_id": "DU145_PROSTATE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "79ffcaec-5937-4be0-a654-15b3684656bd",
+      "mechanism_link": "ed4d5725-5aba-493d-bc43-2c884ee18eec",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.drup.2011.03.001",

@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol; no equipment.",
   "signature_scores": [
     {
-      "id": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "id": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "cell_line_id": "MDAMB231_BREAST",
       "signature_panel": "nrf2_ferroptosis",
@@ -24,7 +24,7 @@
       "cell_line_name": "MDA-MB-231"
     },
     {
-      "id": "c3efdf9c-5e02-47dd-ac99-3174e4a94291",
+      "id": "4f89b9f4-1a7d-496d-bc86-cefbeb9c0478",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "cell_line_id": "MCF7_BREAST",
       "signature_panel": "other",
@@ -37,15 +37,16 @@
   ],
   "interactions": [
     {
-      "id": "cb8574dc-a1bf-44be-a8e8-454265b043ea",
+      "id": "fc81bab1-690a-4cdb-bd6a-6151b9cce735",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "metformin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
-      "resistance_mechanism_link": "15fbee41-5318-4044-b2d9-ca1ee1ec3695",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
+      "resistance_mechanism_link": "72ce7344-402c-4e04-a02b-0e4fc4d9e35d",
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
         "pmid:34162423"
@@ -66,7 +67,7 @@
       "drug_lincs_signature_ref": "lincs:REP.A024_MCF7_24H:P13",
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "15fbee41-5318-4044-b2d9-ca1ee1ec3695",
+        "id": "72ce7344-402c-4e04-a02b-0e4fc4d9e35d",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -86,15 +87,16 @@
       }
     },
     {
-      "id": "8dae1caa-9cf5-4089-9247-f657d7d87121",
+      "id": "d79f4bce-522b-4696-9f3f-cd1cd8a2b94d",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "erastin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
-      "resistance_mechanism_link": "47ae3764-61ef-451e-a794-0341ae5de1bc",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
+      "resistance_mechanism_link": "7404ea30-ab58-4b19-9d43-f398d22806b6",
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
         "pmid:24439385"
@@ -115,7 +117,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "47ae3764-61ef-451e-a794-0341ae5de1bc",
+        "id": "7404ea30-ab58-4b19-9d43-f398d22806b6",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -135,14 +137,15 @@
       }
     },
     {
-      "id": "553f1c1f-987d-4e77-baec-dc97d6cf7440",
+      "id": "bc1f3d0e-9949-49cc-8e03-cd759cd6ec56",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-000296",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -177,14 +180,15 @@
       }
     },
     {
-      "id": "83a1057a-4847-4ebf-98ee-4124012439b6",
+      "id": "ae4ce13f-91ef-4b81-90b2-2f8984893a92",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-000594",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -219,14 +223,15 @@
       }
     },
     {
-      "id": "c4d0f26d-0909-4113-a0f2-0b1f907d7a87",
+      "id": "0507ad09-5b34-46eb-a6b2-e5a820d95b82",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-000727",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -261,14 +266,15 @@
       }
     },
     {
-      "id": "3f600c62-8921-4120-8ed1-46108949ef7f",
+      "id": "c4af9db7-55da-45d0-8aa5-93ce00495311",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-000906",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -303,14 +309,15 @@
       }
     },
     {
-      "id": "e9f48fb1-5ee4-4b2a-8236-070bf63c32a4",
+      "id": "ae54649d-2786-423b-a0c3-931dad241809",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-000908",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -345,14 +352,15 @@
       }
     },
     {
-      "id": "df4f904e-d5a4-46fb-90ba-5433fc49f01a",
+      "id": "864d6bb4-498d-4239-ab23-2b324f3700fb",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-001388",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -387,14 +395,15 @@
       }
     },
     {
-      "id": "8cbf399c-490e-4d75-9355-0307c27e9571",
+      "id": "f5fca6f3-f1e1-4609-8970-123921d528ed",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-001799",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -429,14 +438,15 @@
       }
     },
     {
-      "id": "0c78e5d5-ced4-4362-9823-40b18a06334b",
+      "id": "eed28d00-5780-4c2b-8fd5-faedb1c85b7e",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-002262",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -471,14 +481,15 @@
       }
     },
     {
-      "id": "dd28df7a-a663-4973-a2c6-51fcccf56861",
+      "id": "06030eae-400b-4b85-bb13-e3b78959ce8f",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-002400",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -513,14 +524,15 @@
       }
     },
     {
-      "id": "164e60fa-b4fd-424b-a929-b30713b4939a",
+      "id": "dc40ea75-6105-4af9-bd0a-cb2f2109c9a2",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-002462",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -555,14 +567,15 @@
       }
     },
     {
-      "id": "4e5e375a-92e8-4f3d-b1fb-6b93e33959de",
+      "id": "7535bb0c-5851-448d-91e2-42716e9f8ea8",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-002691",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -597,14 +610,15 @@
       }
     },
     {
-      "id": "473eec67-829a-4880-b65a-10124e6d0dbc",
+      "id": "ee5bcabf-63b6-4b19-9685-8d8f468ee5e7",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-002746",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -639,14 +653,15 @@
       }
     },
     {
-      "id": "4a2dd6e7-48e8-4c77-a422-aaa93e3fc774",
+      "id": "e49fabbc-1cf1-46df-828e-7cdb1c88329d",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-003028",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -681,14 +696,15 @@
       }
     },
     {
-      "id": "4a34cd37-04e6-4b92-8c1d-202e798bb760",
+      "id": "4ee88c71-395f-4d6a-8c7c-de701aee3dcc",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-003709",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -723,14 +739,15 @@
       }
     },
     {
-      "id": "f593cbf1-aa22-44d6-89fc-8e5f10977563",
+      "id": "00cbb6c5-9eee-48fb-bcea-3ab83a9412c8",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-003711",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -765,14 +782,15 @@
       }
     },
     {
-      "id": "bc7f4eab-13aa-4132-9df8-3e84ebb203b3",
+      "id": "1244110b-c075-41e3-be59-b24a6525af31",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-004294",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -807,14 +825,15 @@
       }
     },
     {
-      "id": "28c97368-4ad4-4e12-a879-50c0aa839c69",
+      "id": "cc5ac3cb-690d-434e-89da-77a915dff4e0",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-004603",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -849,14 +868,15 @@
       }
     },
     {
-      "id": "05462759-0489-421b-9f77-5218bde09024",
+      "id": "e26b5af2-70dc-4ab0-8d81-1d67299b70ea",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-004762",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -891,14 +911,15 @@
       }
     },
     {
-      "id": "4681209d-fa0e-4671-8fec-9f10472e04ca",
+      "id": "05e6eacd-f5db-4609-9178-d4b0029bec44",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-005349",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -933,14 +954,15 @@
       }
     },
     {
-      "id": "95e59a1d-a8bd-4adf-ac09-a30d6b6a14fa",
+      "id": "9b6608d6-dc43-448f-a53a-f479692485aa",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-005578",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -975,14 +997,15 @@
       }
     },
     {
-      "id": "829864b6-a919-4e0c-8980-39acaca7731f",
+      "id": "8131be11-7853-4d41-bb7d-a0dfb4a9b6f8",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-005685",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -1017,14 +1040,15 @@
       }
     },
     {
-      "id": "3907c03f-3ea7-41d0-b197-c87dbe497abc",
+      "id": "08be123c-c39d-4670-9dc4-df2221d24319",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-006137",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -1059,14 +1083,15 @@
       }
     },
     {
-      "id": "6f5ac148-7fc5-4e2e-a25c-83b1d578f283",
+      "id": "397abdd9-78c5-4466-bf57-1c6e3fb6ef27",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-006173",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -1101,14 +1126,15 @@
       }
     },
     {
-      "id": "75fd8a9a-38d5-41ec-b14c-06105899ae20",
+      "id": "ba941bd7-0afa-44fe-9a2d-b0aa97976e7c",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-006179",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -1143,14 +1169,15 @@
       }
     },
     {
-      "id": "88ac9db2-b99b-4d71-b57f-8607e8ed101e",
+      "id": "8acde318-d7f2-4c8a-9c1f-b749b9921cc8",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-006452",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",
@@ -1185,14 +1212,15 @@
       }
     },
     {
-      "id": "1732d9d7-873b-4f55-aeaa-acec18ffaf02",
+      "id": "f19bdaa7-0656-47ba-a3bc-e2b48dd2a8a1",
       "modifier_id": "MOD-GLUTAMINE-RESTRICT",
       "drug_id": "DPC-006777",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "7a2f8060-3811-412f-b6e0-dd8fcc77e27b",
+      "mechanism_link": "a379ac9e-744a-4c46-b134-6e63745eceaa",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1371/journal.pgen.1002229",

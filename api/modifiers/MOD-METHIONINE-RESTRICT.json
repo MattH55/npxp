@@ -14,7 +14,7 @@
   "estimated_relative_cost_note": "Specialized low-methionine diet; no equipment, though the Durando et al. feasibility trial noted poor long-term palatability as a real adherence barrier.",
   "signature_scores": [
     {
-      "id": "afcc48f6-0faa-4292-8757-22800aea51cb",
+      "id": "3edc6802-90f7-4c46-bb73-7fe8a568dd61",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "signature_panel": "other",
@@ -27,14 +27,15 @@
   ],
   "interactions": [
     {
-      "id": "53e05927-0272-45e8-a4bf-f00afbdd5328",
+      "id": "465ed671-8611-47c7-b590-66a481b2c475",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "afcc48f6-0faa-4292-8757-22800aea51cb",
+      "mechanism_link": "3edc6802-90f7-4c46-bb73-7fe8a568dd61",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:26411344",
@@ -69,14 +70,15 @@
       }
     },
     {
-      "id": "601d132e-ad27-499f-bd6e-21747806b576",
+      "id": "460eeebf-7d55-4bd5-ab50-7d7f55cc0c95",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "oxaliplatin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "afcc48f6-0faa-4292-8757-22800aea51cb",
+      "mechanism_link": "3edc6802-90f7-4c46-bb73-7fe8a568dd61",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:26411344",
@@ -111,11 +113,12 @@
       }
     },
     {
-      "id": "dce5e5a0-191a-49b0-9359-c6eca308e060",
+      "id": "9cf7ee18-59ff-42a6-8112-2f2713c3be1b",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -124,7 +127,7 @@
         "pmid:26411344",
         "pmid:20424491"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in RKO] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.40, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in RKO itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in RKO] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.58, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in RKO itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
@@ -153,11 +156,12 @@
       }
     },
     {
-      "id": "73532958-b32c-411d-859a-c0f8e470da0a",
+      "id": "2e5567c8-cf5f-47bf-b020-c0e05ab3babe",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -166,7 +170,7 @@
         "pmid:26411344",
         "pmid:20424491"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.80, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.80, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
@@ -195,11 +199,12 @@
       }
     },
     {
-      "id": "a3bcbde2-12ef-4dbc-91f7-4c49a5f2e78a",
+      "id": "54e70507-c772-4a01-b456-6dd91cd0acf7",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "oxaliplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -208,7 +213,7 @@
         "pmid:26411344",
         "pmid:20424491"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in RKO] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.40, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in RKO itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in RKO] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.58, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in RKO itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
@@ -237,11 +242,12 @@
       }
     },
     {
-      "id": "b89ccbdf-b7a9-43e2-9c34-4eafb15bce4a",
+      "id": "4a52d361-6baf-40b3-bd20-e0a2fab01e4f",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "oxaliplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -250,7 +256,7 @@
         "pmid:26411344",
         "pmid:20424491"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.80, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.80, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",

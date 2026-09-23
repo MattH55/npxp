@@ -19,11 +19,12 @@
   "signature_scores": [],
   "interactions": [
     {
-      "id": "c51267f1-c896-4473-b8aa-02fa9827457e",
+      "id": "96cd1289-6609-4735-a1c3-d8a9cf54433f",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": 4.71,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -61,11 +62,12 @@
       }
     },
     {
-      "id": "991cac8a-5aef-47a5-ae56-e713da4fb2be",
+      "id": "046108bf-4fd6-4769-b9b3-1b1d4a8ae670",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": 6.65,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -103,11 +105,12 @@
       }
     },
     {
-      "id": "cf5c1d00-43d1-4b79-bcf0-614dd486a431",
+      "id": "3870a692-6fe7-48f9-a499-2c2075d514c1",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": 4.3,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -145,11 +148,12 @@
       }
     },
     {
-      "id": "81c101e9-dd3f-4c74-b53d-cba05c2da8c0",
+      "id": "09371622-1d5a-4c7a-a8b1-33a0fb739a0b",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": 3.77,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -187,11 +191,12 @@
       }
     },
     {
-      "id": "09358ff1-4a8d-4417-86ca-2bb2467c40ab",
+      "id": "a446c103-b209-46cd-a3bd-3baa3d2f84da",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "T47D_BREAST",
-      "combined_effect_metric": 4.496086956521739,
+      "combined_effect_metric": 4.4976160922798964,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -200,7 +205,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T47D] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MCF-7 (similarity=0.60, antagonistic, metric=4.3); MDA-MB-231 (similarity=0.55, antagonistic, metric=4.71). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in T47D itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T47D] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MCF-7 (similarity=0.72, antagonistic, metric=4.3); MDA-MB-231 (similarity=0.67, antagonistic, metric=4.71). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in T47D itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -229,11 +234,12 @@
       }
     },
     {
-      "id": "a0d37d56-2536-4473-bb9c-8fb8e0b0b07b",
+      "id": "f84bd8d0-8267-4d15-9363-81793a624dea",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB468_BREAST",
-      "combined_effect_metric": 4.531739130434782,
+      "combined_effect_metric": 4.517623589801078,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -242,7 +248,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MDA-MB-468] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.52, antagonistic, metric=4.71); MCF-7 (similarity=0.40, antagonistic, metric=4.3). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MDA-MB-468 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MDA-MB-468] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.66, antagonistic, metric=4.71); MCF-7 (similarity=0.58, antagonistic, metric=4.3). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MDA-MB-468 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -271,11 +277,12 @@
       }
     },
     {
-      "id": "966cf4aa-e216-48e4-bafc-8a6536d6a9bd",
+      "id": "2c9b52e6-3f65-4575-a4e9-984f25be86d5",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": 4.505,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -284,7 +291,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, antagonistic, metric=4.71); MCF-7 (similarity=0.20, antagonistic, metric=4.3). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, antagonistic, metric=4.71); MCF-7 (similarity=0.20, antagonistic, metric=4.3). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -313,11 +320,12 @@
       }
     },
     {
-      "id": "71dba2cd-4aa9-4f83-b761-e83932050c5d",
+      "id": "153d5c79-7f48-4a56-98a9-8d700dce31f6",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "T47D_BREAST",
-      "combined_effect_metric": 5.147391304347828,
+      "combined_effect_metric": 5.158132550649033,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -326,7 +334,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T47D] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MCF-7 (similarity=0.60, antagonistic, metric=3.77); MDA-MB-231 (similarity=0.55, antagonistic, metric=6.65). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in T47D itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T47D] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MCF-7 (similarity=0.72, antagonistic, metric=3.77); MDA-MB-231 (similarity=0.67, antagonistic, metric=6.65). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in T47D itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -355,11 +363,12 @@
       }
     },
     {
-      "id": "c71df46d-fbea-4d3b-8ca6-41617d7f7d05",
+      "id": "027647fc-875d-4e68-89b4-32b562c7797a",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MDAMB468_BREAST",
-      "combined_effect_metric": 5.397826086956521,
+      "combined_effect_metric": 5.298673021041714,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -368,7 +377,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MDA-MB-468] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.52, antagonistic, metric=6.65); MCF-7 (similarity=0.40, antagonistic, metric=3.77). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MDA-MB-468 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MDA-MB-468] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.66, antagonistic, metric=6.65); MCF-7 (similarity=0.58, antagonistic, metric=3.77). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MDA-MB-468 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -397,11 +406,12 @@
       }
     },
     {
-      "id": "dbc054ad-d651-40e5-8214-b37e99e47943",
+      "id": "1d96e386-61b4-4d50-a3f9-b2e6f3ef74b1",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": 5.21,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -410,7 +420,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, antagonistic, metric=6.65); MCF-7 (similarity=0.20, antagonistic, metric=3.77). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, antagonistic, metric=6.65); MCF-7 (similarity=0.20, antagonistic, metric=3.77). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",

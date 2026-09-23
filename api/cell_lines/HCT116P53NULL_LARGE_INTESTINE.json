@@ -22,7 +22,7 @@
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "id": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "signature_panel": "nrf2_ferroptosis",
@@ -37,14 +37,15 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "79c17772-f5eb-4346-a724-1b57f28f769d",
+      "id": "55e14b46-0484-447a-b88d-dffbb5ca93ba",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "doxorubicin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1038/nature11743",
@@ -79,15 +80,16 @@
       }
     },
     {
-      "id": "fa8c07a1-1318-4607-a18e-d24df055b454",
+      "id": "6bc5ef4d-d444-423c-a2ea-2bffc5d0a28c",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "metformin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
-      "resistance_mechanism_link": "15fbee41-5318-4044-b2d9-ca1ee1ec3695",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
+      "resistance_mechanism_link": "72ce7344-402c-4e04-a02b-0e4fc4d9e35d",
       "source_study": [
         "pmid:23242140",
         "pmid:34162423"
@@ -108,7 +110,7 @@
       "drug_lincs_signature_ref": "lincs:REP.A024_MCF7_24H:P13",
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "15fbee41-5318-4044-b2d9-ca1ee1ec3695",
+        "id": "72ce7344-402c-4e04-a02b-0e4fc4d9e35d",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -128,15 +130,16 @@
       }
     },
     {
-      "id": "8417811b-35ad-42f0-b242-9783e56c5b5f",
+      "id": "4344b7ec-53e4-4065-a070-34da11f4f552",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "erastin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
-      "resistance_mechanism_link": "47ae3764-61ef-451e-a794-0341ae5de1bc",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
+      "resistance_mechanism_link": "7404ea30-ab58-4b19-9d43-f398d22806b6",
       "source_study": [
         "pmid:23242140",
         "pmid:24439385"
@@ -157,7 +160,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "47ae3764-61ef-451e-a794-0341ae5de1bc",
+        "id": "7404ea30-ab58-4b19-9d43-f398d22806b6",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -177,11 +180,12 @@
       }
     },
     {
-      "id": "752329eb-ef1a-4319-87d1-7206f622643e",
+      "id": "f00f82c1-52b8-4b81-ac3d-c5a5ec1aae3c",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -190,7 +194,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -219,11 +223,12 @@
       }
     },
     {
-      "id": "4bd8dbfd-ae43-4096-91d8-cc969da0a446",
+      "id": "fb5d6847-8072-4328-ba91-babf323210ff",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "oxaliplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -232,7 +237,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -261,11 +266,12 @@
       }
     },
     {
-      "id": "fe5ae32f-e0b3-4523-b783-0dfdaf6cbc19",
+      "id": "871dd684-c7c6-4b63-ba16-1045dba82b9e",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": 3.8,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -274,7 +280,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic, metric=3.8). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic, metric=3.8). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -303,11 +309,12 @@
       }
     },
     {
-      "id": "cf7f01dc-5fd7-4704-913a-5c8ec5e30f02",
+      "id": "c3a821c7-3e04-4cd7-9115-b473d0dda105",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -316,7 +323,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -345,11 +352,12 @@
       }
     },
     {
-      "id": "4f2cb9cd-622b-480c-9354-11ffc3c9101b",
+      "id": "f1f2aa44-7f79-4e8b-803c-19aa4c01d4a6",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -358,7 +366,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -387,11 +395,12 @@
       }
     },
     {
-      "id": "ad5a4db0-c091-4daa-8544-408341448cdd",
+      "id": "c6da96f4-8d67-4f40-b2c4-23272a368d3b",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -400,7 +409,7 @@
         "doi:10.1667/RR1858.1",
         "pmid:19929413"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Ionizing radiation (single-dose radiosensitization context)",
@@ -429,11 +438,12 @@
       }
     },
     {
-      "id": "73532958-b32c-411d-859a-c0f8e470da0a",
+      "id": "2e5567c8-cf5f-47bf-b020-c0e05ab3babe",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -442,7 +452,7 @@
         "pmid:26411344",
         "pmid:20424491"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.80, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.80, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
@@ -471,11 +481,12 @@
       }
     },
     {
-      "id": "b89ccbdf-b7a9-43e2-9c34-4eafb15bce4a",
+      "id": "4a52d361-6baf-40b3-bd20-e0a2fab01e4f",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "oxaliplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -484,7 +495,7 @@
         "pmid:26411344",
         "pmid:20424491"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.80, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): HCT116 (similarity=0.80, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Methionine restriction (-Met medium; dietary methionine restriction in vivo)",
@@ -513,14 +524,15 @@
       }
     },
     {
-      "id": "19407222-562f-47af-9d05-0fa689d3c6bb",
+      "id": "9a885259-7050-4c70-9203-c57436d1c13b",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000296",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -555,14 +567,15 @@
       }
     },
     {
-      "id": "ef899aa8-38fb-42e1-abe2-64a58b362f3b",
+      "id": "0b29875d-4751-4677-b58a-427c9638caaf",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000594",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -597,14 +610,15 @@
       }
     },
     {
-      "id": "235e9acc-91cd-40ee-86ee-b6379d124333",
+      "id": "4162b5b7-8b1c-4ab5-80cb-971e2ccfdf99",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000727",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -639,14 +653,15 @@
       }
     },
     {
-      "id": "0c7f214b-7b4d-4d65-b808-449b09f43f3d",
+      "id": "f850a752-8403-4c5c-b308-7c2e05973d97",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000906",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -681,14 +696,15 @@
       }
     },
     {
-      "id": "86e0661a-3b09-4bcd-b218-daec62e9d456",
+      "id": "84cc1aef-4a06-4a41-a60b-178d591aaf18",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000908",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -723,14 +739,15 @@
       }
     },
     {
-      "id": "d4e4f4e3-72f2-4248-a2e5-bdf80c894e2d",
+      "id": "2f4c3cf7-ae52-42fb-943c-d099a3a0e50d",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-001388",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -765,14 +782,15 @@
       }
     },
     {
-      "id": "c4467597-32ec-4a3b-83b1-4238b364281d",
+      "id": "4cd22b14-42b6-4c3c-bc46-1cab19c77792",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-001799",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -807,14 +825,15 @@
       }
     },
     {
-      "id": "10f91c6f-4e3f-4213-a79c-c0387093b71b",
+      "id": "7b6d1e5c-4eb0-46fc-8211-f4f8423070ef",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002262",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -849,14 +868,15 @@
       }
     },
     {
-      "id": "838ff2a1-763d-4705-bb48-3a15c0329c85",
+      "id": "dd606b34-8a21-43a4-9acf-86e7203c16c0",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002400",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -891,14 +911,15 @@
       }
     },
     {
-      "id": "749a199b-0d77-4ade-91d7-b02fff1437f4",
+      "id": "49d7a9bb-efbe-410e-be59-f1e44fc20414",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002462",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -933,14 +954,15 @@
       }
     },
     {
-      "id": "aaa874d3-a238-47f3-b0ac-0aefad987e35",
+      "id": "89d6c5bb-df5d-4f5c-af30-abab732f7a28",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002691",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -975,14 +997,15 @@
       }
     },
     {
-      "id": "4d7c169c-fbc5-491f-97ee-c0a8b36ac247",
+      "id": "c87dbce8-46e1-4bd2-bcf2-3f60e873b16e",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002746",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1017,14 +1040,15 @@
       }
     },
     {
-      "id": "5e9c09e9-4781-46ef-8ae3-546ea08c051d",
+      "id": "6ebd42d9-e533-48fc-beec-db44d93e6d42",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-003028",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1059,14 +1083,15 @@
       }
     },
     {
-      "id": "bed92c8f-d4b5-4aca-8995-dcd950cd9077",
+      "id": "56447267-e4b1-4a78-94e4-25b072570579",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-003709",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1101,14 +1126,15 @@
       }
     },
     {
-      "id": "78c5e278-7cb6-424c-8b91-5afe8fdaf07e",
+      "id": "dd473582-1f80-46ac-bedf-be1041af5393",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-003711",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1143,14 +1169,15 @@
       }
     },
     {
-      "id": "6bc75004-8188-4b54-8f48-f26995dce9a6",
+      "id": "bf281796-e0bc-4443-ad7b-0ef2b4e19f8c",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-004294",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1185,14 +1212,15 @@
       }
     },
     {
-      "id": "7647cee3-d728-4f3a-bf6f-08ab229cd271",
+      "id": "bdfb9f80-4f74-4e95-a9b8-3bd239eef6d5",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-004603",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1227,14 +1255,15 @@
       }
     },
     {
-      "id": "f3416983-7618-413a-a15a-b5cbe8959015",
+      "id": "f0defd42-8609-4f7e-9652-c7ca46413198",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-004762",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1269,14 +1298,15 @@
       }
     },
     {
-      "id": "0431a822-5e75-46f8-a970-8b6c9567a840",
+      "id": "3a9fa26f-9025-4c6f-8c6d-dbe5b4b7a34d",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-005349",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1311,14 +1341,15 @@
       }
     },
     {
-      "id": "2b1caf31-e9e2-4233-9627-199e8e8b2545",
+      "id": "176af6df-1156-4644-85dd-7e2fe2e0ec3e",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-005578",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1353,14 +1384,15 @@
       }
     },
     {
-      "id": "298b6a85-3886-4a40-98d0-dde7ef3b4c70",
+      "id": "fb1158b9-4856-4170-9f7b-470690bc335a",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-005685",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1395,14 +1427,15 @@
       }
     },
     {
-      "id": "94742b8b-9744-44f9-ad7e-81f744774800",
+      "id": "9e870ab3-8ff1-4f63-b814-0d6a75b9c64c",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006137",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1437,14 +1470,15 @@
       }
     },
     {
-      "id": "2b8e0cc9-5ee7-4a83-81fb-85769b151a4d",
+      "id": "0420fe8f-e2ca-4859-a6a8-80c4866a3e5f",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006173",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1479,14 +1513,15 @@
       }
     },
     {
-      "id": "94d0cefc-45df-41b0-b317-9bd8c8a47493",
+      "id": "58ef94f4-6de2-4f70-8c6e-64a5f5e7d320",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006179",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1521,14 +1556,15 @@
       }
     },
     {
-      "id": "fa9b1fa2-6fe4-43a1-902b-e03579a35de1",
+      "id": "f27d94c5-d2fb-4bcf-8085-b24c8b0201ea",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006452",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1563,14 +1599,15 @@
       }
     },
     {
-      "id": "5f22335a-d57c-4ca5-a97a-fd41cd729e70",
+      "id": "e9daaf06-7002-4ea2-836e-3571a3710b0d",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006777",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "1baf7715-eaf7-41f3-8395-ad8ffe9305ea",
+      "mechanism_link": "ca62a894-acbe-45d8-bdc1-495e722a2c3f",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",

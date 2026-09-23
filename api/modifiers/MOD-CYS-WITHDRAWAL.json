@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Dietary/nutrient-restriction protocol (no cystine supplementation); no equipment. Clinical translation would likely be a specialized diet, not a device.",
   "signature_scores": [
     {
-      "id": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "id": "abf05188-952f-42a6-8e79-ce45400a376c",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "cell_line_id": "MDAMB231_BREAST",
       "signature_panel": "nrf2_ferroptosis",
@@ -26,14 +26,15 @@
   ],
   "interactions": [
     {
-      "id": "37c06779-e7f1-4a5c-8bea-f8898e9aafe6",
+      "id": "b25b664b-d0f6-4758-80a2-e742cffab65e",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "erastin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -68,15 +69,16 @@
       }
     },
     {
-      "id": "3379d1f9-3780-400d-be3a-bd6bf27bd051",
+      "id": "31bce7e0-89a9-400a-a01b-6a3cf401bebd",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "metformin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
-      "resistance_mechanism_link": "15fbee41-5318-4044-b2d9-ca1ee1ec3695",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
+      "resistance_mechanism_link": "72ce7344-402c-4e04-a02b-0e4fc4d9e35d",
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
         "pmid:34162423"
@@ -97,7 +99,7 @@
       "drug_lincs_signature_ref": "lincs:REP.A024_MCF7_24H:P13",
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "15fbee41-5318-4044-b2d9-ca1ee1ec3695",
+        "id": "72ce7344-402c-4e04-a02b-0e4fc4d9e35d",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -117,11 +119,12 @@
       }
     },
     {
-      "id": "d967984a-3e9d-4980-ad5c-b58a856ae7ce",
+      "id": "fd514f06-ce9f-4e7a-a864-2093b400e3f3",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "erastin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -130,7 +133,7 @@
         "doi:10.1016/j.molcel.2023.08.004",
         "geo:GSE237928"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-7] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.40, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-7 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-7] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.57, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-7 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Cystine withdrawal (cysteine/cystine-free medium)",
@@ -159,11 +162,12 @@
       }
     },
     {
-      "id": "94461a50-d631-429c-bf79-848ebe1771e6",
+      "id": "5e32e3e7-ce9a-44be-8b49-1a924f6a136f",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "erastin",
       "cell_line_id": "T47D_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -172,7 +176,7 @@
         "doi:10.1016/j.molcel.2023.08.004",
         "geo:GSE237928"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T47D] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.55, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in T47D itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T47D] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.67, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in T47D itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Cystine withdrawal (cysteine/cystine-free medium)",
@@ -201,11 +205,12 @@
       }
     },
     {
-      "id": "c0f90197-ac89-48ff-9218-febe76cb66c6",
+      "id": "4710d5af-6f58-4b4e-b6d7-48cbbf6e0099",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "erastin",
       "cell_line_id": "MDAMB468_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -214,7 +219,7 @@
         "doi:10.1016/j.molcel.2023.08.004",
         "geo:GSE237928"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MDA-MB-468] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.52, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MDA-MB-468 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MDA-MB-468] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.66, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MDA-MB-468 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Cystine withdrawal (cysteine/cystine-free medium)",
@@ -243,11 +248,12 @@
       }
     },
     {
-      "id": "cbd68249-ca3f-4387-8cbc-5ecf36416ac4",
+      "id": "d8aae50b-e24e-419b-99c6-51b7458699a9",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "erastin",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -256,7 +262,7 @@
         "doi:10.1016/j.molcel.2023.08.004",
         "geo:GSE237928"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Cystine withdrawal (cysteine/cystine-free medium)",
@@ -285,14 +291,15 @@
       }
     },
     {
-      "id": "ef2da5a4-29d3-4162-8347-c7adec6a91de",
+      "id": "911190b0-e1be-46ab-a3bc-77c2c4874354",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-000296",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -327,14 +334,15 @@
       }
     },
     {
-      "id": "16668516-b07b-4fc6-8016-f8e8eb1ce115",
+      "id": "bed62530-cef9-4260-9209-991ef77cfdc7",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-000594",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -369,14 +377,15 @@
       }
     },
     {
-      "id": "d3d89028-ebab-46a0-a647-743dee5c30de",
+      "id": "b54afe20-c727-49cc-ae49-de44cd9f6b2a",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-000727",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -411,14 +420,15 @@
       }
     },
     {
-      "id": "be4186bf-3ea6-4749-a2c9-420a22d97a03",
+      "id": "bebf83ea-af62-42a6-aa20-ee30f2681d0c",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-000906",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -453,14 +463,15 @@
       }
     },
     {
-      "id": "86d6a5b8-b21d-42fa-90f9-eaaffe7e39b8",
+      "id": "d054403d-ef96-4910-a19f-3e4c923ed463",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-000908",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -495,14 +506,15 @@
       }
     },
     {
-      "id": "bd2cee56-e24a-45c7-898d-3d943249da0a",
+      "id": "03ce8016-3d05-40f3-92c9-badc61cac870",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-001388",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -537,14 +549,15 @@
       }
     },
     {
-      "id": "37fea895-aaa5-4344-a822-96bcecb9448f",
+      "id": "603e9913-df0e-474a-aed1-f54a9403969d",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-001799",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -579,14 +592,15 @@
       }
     },
     {
-      "id": "cd1d6f86-cb75-4461-9fe3-fbe3056d5552",
+      "id": "393025a8-4ebc-47a9-a341-8eca32a45c63",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-002262",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -621,14 +635,15 @@
       }
     },
     {
-      "id": "92f12c18-9afd-4dfe-84f6-d0fc1bdbc9db",
+      "id": "e5de8b77-fa8c-4569-8ed6-02327cad0d60",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-002400",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -663,14 +678,15 @@
       }
     },
     {
-      "id": "f9cb6503-5b5b-4a74-b638-670c9025761b",
+      "id": "1be6a381-3fd3-4660-baf5-39d5250a1410",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-002462",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -705,14 +721,15 @@
       }
     },
     {
-      "id": "ac89f884-2f12-40d3-9560-24066e71ded4",
+      "id": "ddaa4e9b-362a-4418-8d9d-42af1af9b890",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-002691",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -747,14 +764,15 @@
       }
     },
     {
-      "id": "caa93c3a-1fce-4f8a-81ae-c3d374810735",
+      "id": "283409a7-1afe-4543-bfd7-44ffaa33c829",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-002746",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -789,14 +807,15 @@
       }
     },
     {
-      "id": "6f279a05-0f9c-49d0-abca-9159b78c13aa",
+      "id": "a8f63c5c-f9a6-4ee5-9ec9-58d889773e36",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-003028",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -831,14 +850,15 @@
       }
     },
     {
-      "id": "a7f6381e-4c24-4f6f-bc38-683abc821bdb",
+      "id": "f3b09a21-3d62-42f6-9af0-369df430ae37",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-003709",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -873,14 +893,15 @@
       }
     },
     {
-      "id": "e7c3ac94-e35a-41fe-998a-49147784c7c0",
+      "id": "d268bf61-cad3-488a-97b7-0ac71875e674",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-003711",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -915,14 +936,15 @@
       }
     },
     {
-      "id": "23cdd14d-6948-4b50-967c-8587cc6d73e1",
+      "id": "2940958e-4d38-4aeb-b761-a3b6893d677c",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-004294",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -957,14 +979,15 @@
       }
     },
     {
-      "id": "297d58cf-94b1-42a7-a95c-9a6c530785dd",
+      "id": "39a06d3b-4dd5-43fd-a633-1bae8f244576",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-004603",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -999,14 +1022,15 @@
       }
     },
     {
-      "id": "545428ff-003f-4596-b0d3-6b4346df6efa",
+      "id": "b2ccce4b-777b-437c-af6a-656fa4ae224a",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-004762",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -1041,14 +1065,15 @@
       }
     },
     {
-      "id": "8562e8e2-0de4-4ffd-adc6-d96e48c284d9",
+      "id": "82d0beb9-2fe5-4798-b3d9-4a35a3905275",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-005349",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -1083,14 +1108,15 @@
       }
     },
     {
-      "id": "8c2c3bab-e372-48e6-918b-3ae2de135570",
+      "id": "8ca235f5-819c-4bff-a421-ff8d1547351b",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-005578",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -1125,14 +1151,15 @@
       }
     },
     {
-      "id": "1c4ab4c4-eca0-4237-aab6-e25aeacb4dbc",
+      "id": "cf3cc2ff-2eb4-408c-b875-ec33453dab70",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-005685",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -1167,14 +1194,15 @@
       }
     },
     {
-      "id": "2f03c3f5-f89b-4552-b715-1f65d969b3fe",
+      "id": "749c214c-679b-4dc8-bf06-4cf87b421b4a",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-006137",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -1209,14 +1237,15 @@
       }
     },
     {
-      "id": "d4272d71-8fb3-4881-9360-ad4b00bac776",
+      "id": "fc7e0429-86e1-4f02-8cec-38252e132d84",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-006173",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -1251,14 +1280,15 @@
       }
     },
     {
-      "id": "a418c4ce-dfb5-486f-b556-1735f1b834aa",
+      "id": "45aead4f-3c53-44ac-bcdd-e3cb29125bc0",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-006179",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -1293,14 +1323,15 @@
       }
     },
     {
-      "id": "4e3ee929-27f1-4178-8972-4f91ac9f8550",
+      "id": "7a07dd0c-16b5-4b37-909b-83a1ff907b48",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-006452",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",
@@ -1335,14 +1366,15 @@
       }
     },
     {
-      "id": "5e6b0450-ba33-4a00-a67a-ed47dd43e9bf",
+      "id": "f813dc11-0448-4c8d-b0a0-63d893312425",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "DPC-006777",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "baf23aa9-d7a4-4a8a-8250-ed83fe471679",
+      "mechanism_link": "abf05188-952f-42a6-8e79-ce45400a376c",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.molcel.2023.08.004",

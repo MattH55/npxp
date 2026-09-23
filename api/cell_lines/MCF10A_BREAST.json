@@ -18,7 +18,7 @@
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "336b31ca-4805-49ca-9542-82a9093e9705",
+      "id": "3afc3546-1118-4319-9ce1-3ecb59190cc3",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "cell_line_id": "MCF10A_BREAST",
       "signature_panel": "hsf1_hsp",
@@ -33,11 +33,12 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "cbd68249-ca3f-4387-8cbc-5ecf36416ac4",
+      "id": "d8aae50b-e24e-419b-99c6-51b7458699a9",
       "modifier_id": "MOD-CYS-WITHDRAWAL",
       "drug_id": "erastin",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -46,7 +47,7 @@
         "doi:10.1016/j.molcel.2023.08.004",
         "geo:GSE237928"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Cystine withdrawal (cysteine/cystine-free medium)",
@@ -75,11 +76,12 @@
       }
     },
     {
-      "id": "966cf4aa-e216-48e4-bafc-8a6536d6a9bd",
+      "id": "2c9b52e6-3f65-4575-a4e9-984f25be86d5",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": 4.505,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -88,7 +90,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, antagonistic, metric=4.71); MCF-7 (similarity=0.20, antagonistic, metric=4.3). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, antagonistic, metric=4.71); MCF-7 (similarity=0.20, antagonistic, metric=4.3). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -117,11 +119,12 @@
       }
     },
     {
-      "id": "dbc054ad-d651-40e5-8214-b37e99e47943",
+      "id": "1d96e386-61b4-4d50-a3f9-b2e6f3ef74b1",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": 5.21,
+      "synergy_model_scores": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -130,7 +133,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, antagonistic, metric=6.65); MCF-7 (similarity=0.20, antagonistic, metric=3.77). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, antagonistic, metric=6.65); MCF-7 (similarity=0.20, antagonistic, metric=3.77). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -159,11 +162,12 @@
       }
     },
     {
-      "id": "84851484-5c21-48b5-9e21-6f868337326a",
+      "id": "81e2411b-4521-4afe-bf90-5a6978b07738",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -172,7 +176,7 @@
         "doi:10.1093/jn/nxy224",
         "pmid:30601995"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
@@ -201,11 +205,12 @@
       }
     },
     {
-      "id": "625889c2-49e8-45b4-8580-41992eebd036",
+      "id": "a0eeab98-5614-4aa7-87ad-d9c93c0c3f8e",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -215,7 +220,7 @@
         "pmid:34162423",
         "pmid:24338509"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): T47D (similarity=0.20, synergistic); MCF-7 (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 2 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): T47D (similarity=0.20, synergistic); MCF-7 (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Glucose restriction (5% of standard medium glucose)",

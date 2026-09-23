@@ -18,11 +18,12 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "116239c6-51b2-4f8c-ad31-cc80fee285b7",
+      "id": "7f0081a6-4ca5-408f-b9e8-185a254c4f1b",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -60,11 +61,12 @@
       }
     },
     {
-      "id": "7f70168e-d790-4c95-87df-1284ea4c854a",
+      "id": "1e1670bb-3907-452b-8626-4f81767fb034",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -73,7 +75,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.40, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.58, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -102,11 +104,12 @@
       }
     },
     {
-      "id": "4f2cb9cd-622b-480c-9354-11ffc3c9101b",
+      "id": "f1f2aa44-7f79-4e8b-803c-19aa4c01d4a6",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -115,7 +118,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -151,7 +154,7 @@
   ],
   "resistance_mechanisms": [
     {
-      "id": "44b390b1-d42d-427b-b4fe-5bbdd9f59a9a",
+      "id": "7cfae64f-a010-4ba0-830a-84715dd920eb",
       "drug_id": "mitomycin-c",
       "pathway_or_gene": "NQO1 (NAD(P)H:quinone oxidoreductase 1) bioreductive activation",
       "mechanism_description": "Mitomycin C requires bioreductive activation (quinone to hydroquinone/semiquinone) to form the DNA-crosslinking species; NQO1 is a major activating enzyme in vivo (Gustafson et al. 2003), so its loss/inhibition reduces effective drug activation -- the reverse of the more commonly cited overexpression-confers-resistance pattern seen for detox/efflux mechanisms elsewhere in this table.",

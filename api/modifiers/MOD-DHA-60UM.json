@@ -14,7 +14,7 @@
   "estimated_relative_cost_note": "Omega-3 (DHA) dietary supplement; low-cost, widely available over the counter.",
   "signature_scores": [
     {
-      "id": "cfbb6e8e-3bbd-4e7c-b0f5-862852f75ad7",
+      "id": "97c01ec7-0432-407b-95b1-8463eeb8e461",
       "modifier_id": "MOD-DHA-60UM",
       "cell_line_id": "MDAMB231_BREAST",
       "signature_panel": "other",
@@ -27,14 +27,15 @@
   ],
   "interactions": [
     {
-      "id": "fae1574b-fea3-4afb-9fa9-ab7ae471bf94",
+      "id": "c653995d-43ba-4dee-9a03-76b4a4d94ca7",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "cfbb6e8e-3bbd-4e7c-b0f5-862852f75ad7",
+      "mechanism_link": "97c01ec7-0432-407b-95b1-8463eeb8e461",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1093/jn/nxy224",
@@ -69,11 +70,12 @@
       }
     },
     {
-      "id": "8138e9b9-aa19-4468-86b1-d26412118882",
+      "id": "3bfc5e9d-ad63-4a6a-86c1-3240748f755c",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -82,7 +84,7 @@
         "doi:10.1093/jn/nxy224",
         "pmid:30601995"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-7] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.40, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-7 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-7] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.57, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-7 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
@@ -111,11 +113,12 @@
       }
     },
     {
-      "id": "63b5ae47-53dc-4dec-8be8-cea8a61c7cf6",
+      "id": "382530e7-7ea3-4787-9cbe-9725149ba3dd",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "T47D_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -124,7 +127,7 @@
         "doi:10.1093/jn/nxy224",
         "pmid:30601995"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T47D] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.55, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in T47D itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T47D] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.67, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in T47D itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
@@ -153,11 +156,12 @@
       }
     },
     {
-      "id": "9be471f7-827c-4c7e-a927-00613cc839b0",
+      "id": "14b1427d-7474-46b9-8359-bd2c53371252",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB468_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -166,7 +170,7 @@
         "doi:10.1093/jn/nxy224",
         "pmid:30601995"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MDA-MB-468] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.52, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MDA-MB-468 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MDA-MB-468] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.66, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MDA-MB-468 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",
@@ -195,11 +199,12 @@
       }
     },
     {
-      "id": "84851484-5c21-48b5-9e21-6f868337326a",
+      "id": "81e2411b-4521-4afe-bf90-5a6978b07738",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF10A_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -208,7 +213,7 @@
         "doi:10.1093/jn/nxy224",
         "pmid:30601995"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in MCF-10A] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): MDA-MB-231 (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in MCF-10A itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Docosahexaenoic acid (DHA, omega-3 PUFA)",

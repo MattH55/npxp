@@ -18,14 +18,15 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "a00b97c5-dbed-47ca-a45d-ca6ef75cd898",
+      "id": "c4ecf501-ec52-447e-a474-4e6da23f103e",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "lomustine",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "5ee7aa9f-f01d-4c49-be72-e2e6d95516ea",
+      "mechanism_link": "8b0acc32-78c6-4da6-8b0f-6f2b1cc89a8d",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
@@ -60,11 +61,12 @@
       }
     },
     {
-      "id": "bec5e19c-c7b0-480a-8800-db8c0eb099b8",
+      "id": "670e79f2-7093-428a-8ae4-ebf3c213c73d",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "lomustine",
       "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -73,7 +75,7 @@
         "doi:10.1007/s11060-023-04308-4",
         "pmid:37131108"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T98G] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): U-87 MG (similarity=0.60, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in T98G itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T98G] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): U-87 MG (similarity=0.72, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in T98G itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Tumor Treating Fields (TTFields, 200 kHz)",
@@ -108,7 +110,7 @@
   ],
   "resistance_mechanisms": [
     {
-      "id": "e5e54fda-fb00-425c-99a3-a3985ff3ecc9",
+      "id": "cb671f0e-f6a8-4461-ae28-cad80c5de5a4",
       "drug_id": "lomustine",
       "pathway_or_gene": "MGMT (O6-methylguanine-DNA methyltransferase)",
       "mechanism_description": "Like temozolomide, lomustine (CCNU) alkylates DNA at O6-guanine; MGMT-mediated repair of this lesion is a shared resistance mechanism across O6-alkylating agents (Hegi et al. 2005 established the correlation for TMZ specifically; extended here to CCNU by shared lesion chemistry, not a CCNU-specific clinical study).",

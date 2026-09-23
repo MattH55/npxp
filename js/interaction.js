@@ -106,6 +106,17 @@ async function load() {
               ${it.combined_effect_metric !== null
                 ? `<div class="mt-2 text-slate-300">Combined effect metric: <b class="text-white">${escapeHtml(it.combined_effect_metric)}</b></div>`
                 : '<div class="mt-2 text-slate-500">No quantitative combined-effect metric recorded (qualitative claim).</div>'}
+              ${it.synergy_model_scores
+                ? `<div class="mt-2 text-slate-300">
+                     <div class="text-xs text-slate-500 mb-1">Per-model synergy scores (Bliss/HSA/Loewe/ZIP) — shown separately, not collapsed to one number, since these can genuinely disagree (see <a class="underline" href="candidates.html">methodology</a>):</div>
+                     <div class="flex flex-wrap gap-2">
+                       ${Object.entries(it.synergy_model_scores).map(([name, d]) => `
+                         <span class="cite-chip" title="${d.n_cells} cell(s) scored">
+                           ${name.toUpperCase()}: <b>${d.mean !== null ? d.mean.toFixed(3) : "n/a"}</b> (${escapeHtml(d.classification)})
+                         </span>`).join("")}
+                     </div>
+                   </div>`
+                : ""}
               <div class="mt-2 text-slate-400">Priority score: <b class="text-white">${it.priority_score}</b>
                 <a class="text-emerald-400 hover:underline ml-1" href="candidates.html">(methodology)</a></div>
               ${it.model_run_id

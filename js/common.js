@@ -34,6 +34,8 @@ const STATIC_FILES = {
     "/prediction/readiness": "api/prediction_readiness.json",
     "/coverage-gaps": "api/coverage_gaps.json",
     "/prioritization/methodology": "api/prioritization_methodology.json",
+    "/opportunity/cell-lines": "api/opportunity_cell_lines.json",
+    "/opportunity/cancer-types": "api/opportunity_cancer_types.json",
 };
 
 async function staticApiGet(path, params = {}) {

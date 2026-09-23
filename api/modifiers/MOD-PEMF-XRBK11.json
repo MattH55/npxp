@@ -16,7 +16,7 @@
   "estimated_relative_cost_note": "Portable PEMF device; moderate cost range relative to dietary/fasting protocols, well below TTFields/HBOT.",
   "signature_scores": [
     {
-      "id": "214a4b86-f898-465b-b7f0-347fa8922307",
+      "id": "d199fca1-50f5-4fb7-ba88-3a97d0026edf",
       "modifier_id": "MOD-PEMF-XRBK11",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "signature_panel": "other",
@@ -29,14 +29,15 @@
   ],
   "interactions": [
     {
-      "id": "4e739bf6-6b10-42a8-b119-04682455d8cf",
+      "id": "afee9cac-2d91-4a3e-b3bb-6e7012e15070",
       "modifier_id": "MOD-PEMF-XRBK11",
       "drug_id": "temozolomide",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "214a4b86-f898-465b-b7f0-347fa8922307",
+      "mechanism_link": "d199fca1-50f5-4fb7-ba88-3a97d0026edf",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1038/s41598-026-47481-y",
@@ -71,11 +72,12 @@
       }
     },
     {
-      "id": "9265a48e-d2ec-4822-a985-e19392305909",
+      "id": "da27597e-149b-4a58-b0e7-b9dffca06dcf",
       "modifier_id": "MOD-PEMF-XRBK11",
       "drug_id": "temozolomide",
       "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -84,7 +86,7 @@
         "doi:10.1038/s41598-026-47481-y",
         "pmid:41957483"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T98G] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): U-87 MG (similarity=0.60, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in T98G itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in T98G] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): U-87 MG (similarity=0.72, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in T98G itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Pulsed electromagnetic field (PEMF), XR-BK11 sequence",

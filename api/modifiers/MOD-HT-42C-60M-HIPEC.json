@@ -14,11 +14,12 @@
   "signature_scores": [],
   "interactions": [
     {
-      "id": "fe09fa41-907d-4f57-bfc9-871cee6ba4ae",
+      "id": "074fc4ef-eb50-4833-b0e9-6f78ed0bbd91",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -56,11 +57,12 @@
       }
     },
     {
-      "id": "3aec4b5b-2242-4e7b-8c9b-5ef2d2919692",
+      "id": "56a8546d-a339-47fe-a31d-14997846dc9f",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "oxaliplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -98,11 +100,12 @@
       }
     },
     {
-      "id": "19e4533c-57d2-47a8-a00b-666d908fa953",
+      "id": "08ea783c-88b7-498a-9c4f-303c84e7e9d4",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": 3.8,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -140,11 +143,12 @@
       }
     },
     {
-      "id": "acda01d2-7ad2-4504-95f8-75087b366c43",
+      "id": "e5da98d7-59ed-4a37-8bc8-241614f57e95",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -182,11 +186,12 @@
       }
     },
     {
-      "id": "116239c6-51b2-4f8c-ad31-cc80fee285b7",
+      "id": "7f0081a6-4ca5-408f-b9e8-185a254c4f1b",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -224,11 +229,12 @@
       }
     },
     {
-      "id": "51c388a6-f98e-4530-8978-1e70852ca297",
+      "id": "93863ffd-5c79-48c9-a9ac-2c17079ff3a0",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -237,7 +243,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.40, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.58, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -266,11 +272,12 @@
       }
     },
     {
-      "id": "752329eb-ef1a-4319-87d1-7206f622643e",
+      "id": "f00f82c1-52b8-4b81-ac3d-c5a5ec1aae3c",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -279,7 +286,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -308,11 +315,12 @@
       }
     },
     {
-      "id": "8e0079e5-fb12-4c63-bf10-92536dac00cd",
+      "id": "81ddc0e9-f5d6-4270-b06e-b615f3dbce34",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "oxaliplatin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -321,7 +329,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.40, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.58, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -350,11 +358,12 @@
       }
     },
     {
-      "id": "4bd8dbfd-ae43-4096-91d8-cc969da0a446",
+      "id": "fb5d6847-8072-4328-ba91-babf323210ff",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "oxaliplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -363,7 +372,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -392,11 +401,12 @@
       }
     },
     {
-      "id": "3b148c0d-9640-4329-8db4-65b31f8cbbbe",
+      "id": "93e2bf8b-c13d-40c3-a01f-6e8de0838d96",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": 3.8,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -405,7 +415,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.40, synergistic, metric=3.8). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.58, synergistic, metric=3.8). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -434,11 +444,12 @@
       }
     },
     {
-      "id": "fe5ae32f-e0b3-4523-b783-0dfdaf6cbc19",
+      "id": "871dd684-c7c6-4b63-ba16-1045dba82b9e",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": 3.8,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -447,7 +458,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic, metric=3.8). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic, metric=3.8). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -476,11 +487,12 @@
       }
     },
     {
-      "id": "2f1d6cc5-00b5-4d5a-85fb-e0db51277810",
+      "id": "727fc6e1-2682-4145-9964-e6155092c60f",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -489,7 +501,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.40, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.58, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -518,11 +530,12 @@
       }
     },
     {
-      "id": "cf7f01dc-5fd7-4704-913a-5c8ec5e30f02",
+      "id": "c3a821c7-3e04-4cd7-9115-b473d0dda105",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -531,7 +544,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -560,11 +573,12 @@
       }
     },
     {
-      "id": "7f70168e-d790-4c95-87df-1284ea4c854a",
+      "id": "1e1670bb-3907-452b-8626-4f81767fb034",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -573,7 +587,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.40, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.58, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -602,11 +616,12 @@
       }
     },
     {
-      "id": "4f2cb9cd-622b-480c-9354-11ffc3c9101b",
+      "id": "f1f2aa44-7f79-4e8b-803c-19aa4c01d4a6",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "additive",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -615,7 +630,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, additive). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",

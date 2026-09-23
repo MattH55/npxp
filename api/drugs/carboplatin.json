@@ -16,7 +16,7 @@
   "cost_accessibility_tier": "essential_generic",
   "drug_responses": [
     {
-      "id": "333fc6a2-2636-4b66-9751-23797ade0035",
+      "id": "b5cee189-9301-4f6e-b945-2eb2c0d3ba56",
       "drug_id": "carboplatin",
       "cell_line_id": "MCF7_BREAST",
       "viability_metric": 0.189775170185,
@@ -24,7 +24,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "40997b85-091c-4ed1-8927-bc3ec6eba516",
+      "id": "2d3ffc35-8a27-46b5-9926-dd8a40712d2f",
       "drug_id": "carboplatin",
       "cell_line_id": "T47D_BREAST",
       "viability_metric": -0.686820921524,
@@ -32,7 +32,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "51bf8e76-22d9-42ce-8786-2ecc41a33439",
+      "id": "634ccc87-05bf-46c5-8110-5648777176e1",
       "drug_id": "carboplatin",
       "cell_line_id": "MDAMB231_BREAST",
       "viability_metric": -0.0824233086367,
@@ -40,7 +40,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "5c0446a1-dd4b-4634-9d9b-d88b156b261d",
+      "id": "5b31c8dc-b4a6-40c4-b8c8-4447156f7d6a",
       "drug_id": "carboplatin",
       "cell_line_id": "MDAMB468_BREAST",
       "viability_metric": -1.2462257844,
@@ -48,7 +48,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "0495517d-8f24-452f-845b-f4dab35d7e29",
+      "id": "ffd56a61-c4ee-403b-b569-dfb832062562",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "viability_metric": -0.927061759705,
@@ -56,7 +56,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "2529b15e-66de-4b2a-9e0b-21f6523e8ad6",
+      "id": "37b51e6f-fda6-450e-bd06-c6f8bef30294",
       "drug_id": "carboplatin",
       "cell_line_id": "A549_LUNG",
       "viability_metric": -0.641184793697,
@@ -64,7 +64,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "2a1dc0b2-15de-4516-90d6-371aae99ad1b",
+      "id": "777113ce-6fec-4c39-b736-378d31dc4c2d",
       "drug_id": "carboplatin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "viability_metric": -0.203981453066,
@@ -72,7 +72,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "c10d4c4d-a7d0-454a-b955-00fd52efd79f",
+      "id": "b07fbc14-857c-487c-be94-816015eb5768",
       "drug_id": "carboplatin",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "viability_metric": -0.124856419646,
@@ -80,7 +80,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "874d947c-ac88-47fb-b3d9-63b50d89b2e6",
+      "id": "9bc50aab-5902-4f8f-9261-534b9583853a",
       "drug_id": "carboplatin",
       "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
       "viability_metric": -0.275657055371,
@@ -90,11 +90,12 @@
   ],
   "interactions": [
     {
-      "id": "19e4533c-57d2-47a8-a00b-666d908fa953",
+      "id": "08ea783c-88b7-498a-9c4f-303c84e7e9d4",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": 3.8,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -132,15 +133,16 @@
       }
     },
     {
-      "id": "2f848919-b1d8-442f-b022-c77291fca911",
+      "id": "a70a0775-15f4-491c-82a8-8c625d7f9a93",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "carboplatin",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "cf31a76c-98a4-4ba3-8dc6-51d386693c9b",
-      "resistance_mechanism_link": "4666f45f-dd77-49ff-99ca-07ea38c55bc7",
+      "mechanism_link": "e8e0fac0-7c6a-4dc9-b7a2-39255a3b3781",
+      "resistance_mechanism_link": "1c4bf898-9564-438f-a5e6-267df558f5b1",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -161,7 +163,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "4666f45f-dd77-49ff-99ca-07ea38c55bc7",
+        "id": "1c4bf898-9564-438f-a5e6-267df558f5b1",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -181,15 +183,16 @@
       }
     },
     {
-      "id": "83203e9f-328f-4995-8fd3-6c7b1d343248",
+      "id": "e8644aac-23d7-4e5d-a2dc-bc1d070e17b9",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "8470889f-f20e-4905-a892-ba4c972b9c91",
-      "resistance_mechanism_link": "4666f45f-dd77-49ff-99ca-07ea38c55bc7",
+      "mechanism_link": "a66add61-012f-4193-96bc-a98af53a330f",
+      "resistance_mechanism_link": "1c4bf898-9564-438f-a5e6-267df558f5b1",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -210,7 +213,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "4666f45f-dd77-49ff-99ca-07ea38c55bc7",
+        "id": "1c4bf898-9564-438f-a5e6-267df558f5b1",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -230,15 +233,16 @@
       }
     },
     {
-      "id": "0202686a-fb7f-4fdd-9fe1-3103d9ec561c",
+      "id": "a4fddde3-54bd-4576-9b26-ca16196b171e",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "carboplatin",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "5ee7aa9f-f01d-4c49-be72-e2e6d95516ea",
-      "resistance_mechanism_link": "4666f45f-dd77-49ff-99ca-07ea38c55bc7",
+      "mechanism_link": "8b0acc32-78c6-4da6-8b0f-6f2b1cc89a8d",
+      "resistance_mechanism_link": "1c4bf898-9564-438f-a5e6-267df558f5b1",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:9861196"
@@ -259,7 +263,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "4666f45f-dd77-49ff-99ca-07ea38c55bc7",
+        "id": "1c4bf898-9564-438f-a5e6-267df558f5b1",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -279,11 +283,12 @@
       }
     },
     {
-      "id": "3b148c0d-9640-4329-8db4-65b31f8cbbbe",
+      "id": "93e2bf8b-c13d-40c3-a01f-6e8de0838d96",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "combined_effect_metric": 3.8,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -292,7 +297,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.40, synergistic, metric=3.8). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.58, synergistic, metric=3.8). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -321,11 +326,12 @@
       }
     },
     {
-      "id": "fe5ae32f-e0b3-4523-b783-0dfdaf6cbc19",
+      "id": "871dd684-c7c6-4b63-ba16-1045dba82b9e",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "combined_effect_metric": 3.8,
+      "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2c_nearest_neighbor",
       "mechanism_link": null,
@@ -334,7 +340,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic, metric=3.8). Similarity = 0.6 x Jaccard(key_mutations) + 0.4 x oncotree tissue match (see synlethality/nearest_neighbor.py). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
+      "curator_notes": "[Nearest-neighbor prediction -- not a direct test in HCT116 p53-/-] Borrowed from 1 real tier_1/tier_2 result(s) for the same modifier x drug pair in molecularly/tissue-similar cell line(s): RKO (similarity=0.20, synergistic, metric=3.8). Similarity = Jaccard(key_mutations) + oncotree tissue match, blended with real DepMap expression correlation where both lines have one (see synlethality/nearest_neighbor.py's cell_line_similarity for the exact weights). This is an extrapolation from a real measured result in a different cell line, not a tested result in HCT116 p53-/- itself, and not a model prediction.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -378,7 +384,7 @@
   ],
   "resistance_mechanisms": [
     {
-      "id": "4666f45f-dd77-49ff-99ca-07ea38c55bc7",
+      "id": "1c4bf898-9564-438f-a5e6-267df558f5b1",
       "drug_id": "carboplatin",
       "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
       "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
