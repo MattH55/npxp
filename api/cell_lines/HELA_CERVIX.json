@@ -17,10 +17,99 @@
   "tumor_concordance_score": null,
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [],
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "479c4a9c-7399-421a-8916-8a5eec988aad",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.305343,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "89ada3ec-6769-4fc7-907c-5578fd648b2b",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.304341,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "f1650cdf-1990-4fd1-9637-01126419c059",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.9679439999999999,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "0df4aabb-efc2-4018-a99a-1e053b8873fb",
+      "drug_id": "cisplatin",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.9891439999999999,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "8e8994ee-4b3b-48d3-9148-4481da168733",
+      "drug_id": "temozolomide",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.987875,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "1d17e25f-3787-4046-bc51-6c64b8603c2a",
+      "drug_id": "cisplatin",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.9873719999999999,
+      "metric_type": "auc",
+      "source": "GDSC2"
+    },
+    {
+      "id": "8f2d8e73-67da-49c6-8758-6c1368fe6b84",
+      "drug_id": "5-fluorouracil",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.973208,
+      "metric_type": "auc",
+      "source": "GDSC2"
+    },
+    {
+      "id": "99ea33e8-5751-4c91-accc-5a50a195cfe9",
+      "drug_id": "paclitaxel",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.969507,
+      "metric_type": "auc",
+      "source": "GDSC2"
+    },
+    {
+      "id": "06ca64a7-8ff4-4c76-9bb1-a21bf6de06a8",
+      "drug_id": "oxaliplatin",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.9918899999999999,
+      "metric_type": "auc",
+      "source": "GDSC2"
+    },
+    {
+      "id": "c8f4947f-1fcb-4812-ac7e-86f7c9fd45ef",
+      "drug_id": "temozolomide",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.9869829999999999,
+      "metric_type": "auc",
+      "source": "GDSC2"
+    },
+    {
+      "id": "f6dac9d5-88b0-4c3c-a510-c83534425e81",
+      "drug_id": "cyclophosphamide",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.991559,
+      "metric_type": "auc",
+      "source": "GDSC2"
+    }
+  ],
   "interactions": [
     {
-      "id": "d8bd9ed1-b4fe-41a0-a681-4eb227a6a9f7",
+      "id": "41317149-3312-4d9e-bdee-4caa4d392fcd",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "HELA_CERVIX",

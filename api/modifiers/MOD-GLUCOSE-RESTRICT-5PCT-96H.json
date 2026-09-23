@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Dietary/fasting-style protocol; no equipment.",
   "signature_scores": [
     {
-      "id": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "id": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "cell_line_id": "T47D_BREAST",
       "signature_panel": "nrf2_ferroptosis",
@@ -24,7 +24,7 @@
       "cell_line_name": "T47D"
     },
     {
-      "id": "cd2eb36b-d9c4-45ed-9cba-2159821c0cdb",
+      "id": "dccb17b5-6f0c-4179-9c19-5f8d4a773bd0",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "cell_line_id": "MCF7_BREAST",
       "signature_panel": "other",
@@ -37,7 +37,7 @@
   ],
   "interactions": [
     {
-      "id": "bf648fb4-c31a-4256-b531-8fcad20451c7",
+      "id": "f0575769-7cd6-45a7-bbfd-48172a29e8e2",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "T47D_BREAST",
@@ -45,7 +45,7 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:33281976",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "2a37be0f-b8f5-4cbe-ae97-99a94c3b9b99",
+      "id": "e141331f-4eea-449f-b418-8195cb4ea86b",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "MCF7_BREAST",
@@ -88,7 +88,7 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_2_inferred",
-      "mechanism_link": "cd2eb36b-d9c4-45ed-9cba-2159821c0cdb",
+      "mechanism_link": "dccb17b5-6f0c-4179-9c19-5f8d4a773bd0",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:33281976",
@@ -123,7 +123,7 @@
       }
     },
     {
-      "id": "97b89611-927f-451f-ad83-45624d623754",
+      "id": "343c2a13-b745-495e-a81e-ccf8e53ac839",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "erastin",
       "cell_line_id": "T47D_BREAST",
@@ -131,8 +131,8 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
-      "resistance_mechanism_link": "686409b8-0a3c-47b8-9666-481af53556fb",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
+      "resistance_mechanism_link": "7bf1705f-7096-4080-a5f6-7cf6b9385139",
       "source_study": [
         "doi:10.3892/ol.2020.12326",
         "pmid:24439385"
@@ -153,7 +153,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "686409b8-0a3c-47b8-9666-481af53556fb",
+        "id": "7bf1705f-7096-4080-a5f6-7cf6b9385139",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "id": "fda1d61e-a74e-4889-a5f3-6e25307aed4a",
+      "id": "34dc3b7b-d00a-4df7-ab28-40a32ca3c31f",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "MDAMB231_BREAST",
@@ -217,7 +217,7 @@
       }
     },
     {
-      "id": "e9935763-e805-4d3a-a255-a77909858fcd",
+      "id": "c0a5102a-f534-4b52-bc84-ba9f0f30f7ac",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "MDAMB468_BREAST",
@@ -261,7 +261,7 @@
       }
     },
     {
-      "id": "57ead985-b12f-41f5-97ff-371d7b8520c8",
+      "id": "d8bcb602-d860-42fb-a4e1-7c60a85e079d",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "metformin",
       "cell_line_id": "MCF10A_BREAST",
@@ -305,7 +305,7 @@
       }
     },
     {
-      "id": "73c6a68b-04cd-437d-8baf-60c579ac0df5",
+      "id": "fe515ee3-35da-4c01-84b1-02a3979165a5",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-000296",
       "cell_line_id": "T47D_BREAST",
@@ -313,7 +313,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -348,7 +348,7 @@
       }
     },
     {
-      "id": "4671fc77-b83b-46ee-9a7a-924bce39712f",
+      "id": "197a7331-0164-4d4e-a3eb-e08de86f3d41",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-000594",
       "cell_line_id": "T47D_BREAST",
@@ -356,7 +356,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -391,7 +391,7 @@
       }
     },
     {
-      "id": "67609d06-a36c-46af-a672-120c1e40e651",
+      "id": "53c1c106-ae5a-4f61-be52-663286f5b447",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-000727",
       "cell_line_id": "T47D_BREAST",
@@ -399,7 +399,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -434,7 +434,7 @@
       }
     },
     {
-      "id": "60e929cc-fbc0-4f43-897e-81acf28abce0",
+      "id": "9672d9da-4879-43f4-ab49-a6d9058a71f8",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-000906",
       "cell_line_id": "T47D_BREAST",
@@ -442,7 +442,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -477,7 +477,7 @@
       }
     },
     {
-      "id": "ff8b6851-652f-483b-915c-566722421e14",
+      "id": "231b5fd8-8960-4164-924a-a5a88ac97e01",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-000908",
       "cell_line_id": "T47D_BREAST",
@@ -485,7 +485,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -520,7 +520,7 @@
       }
     },
     {
-      "id": "6aa1f19e-bc39-438a-a6ff-13280b6b64a4",
+      "id": "a6b480b6-4859-45cc-adca-16dee0efd657",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-001388",
       "cell_line_id": "T47D_BREAST",
@@ -528,7 +528,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -563,7 +563,7 @@
       }
     },
     {
-      "id": "91cee798-14c4-46d6-80a4-5627715b572f",
+      "id": "108887ef-bddc-4b83-b285-c3f3ab6f89b8",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-001799",
       "cell_line_id": "T47D_BREAST",
@@ -571,7 +571,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -606,7 +606,7 @@
       }
     },
     {
-      "id": "ebc26883-ba76-4fc7-86bb-e50f9f2aef39",
+      "id": "8a904aed-4d2a-4fcb-b0e9-b9508761de32",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-002262",
       "cell_line_id": "T47D_BREAST",
@@ -614,7 +614,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -649,7 +649,7 @@
       }
     },
     {
-      "id": "50d83b30-2bef-4a0d-9e99-88c8694b23e1",
+      "id": "874a8108-599d-4700-884a-dd6e82abd2b6",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-002400",
       "cell_line_id": "T47D_BREAST",
@@ -657,7 +657,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -692,7 +692,7 @@
       }
     },
     {
-      "id": "5dc5d6d0-5c51-4169-ba86-2c761769473e",
+      "id": "9a5baf79-8af1-4ee4-b5d1-ba7330adaabf",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-002462",
       "cell_line_id": "T47D_BREAST",
@@ -700,7 +700,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -735,7 +735,7 @@
       }
     },
     {
-      "id": "a4f7e8c0-4ee7-4fad-a3c9-916c45d3a288",
+      "id": "2c75e68c-8c17-40b8-bdfa-6ded23b23e71",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-002691",
       "cell_line_id": "T47D_BREAST",
@@ -743,7 +743,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -778,7 +778,7 @@
       }
     },
     {
-      "id": "ef6c5ea5-603e-461c-805e-90d57867c87a",
+      "id": "32d42313-ccc3-40b6-a17a-934e270e0566",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-002746",
       "cell_line_id": "T47D_BREAST",
@@ -786,7 +786,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -821,7 +821,7 @@
       }
     },
     {
-      "id": "9627f1ae-20d6-4695-89ff-1bc0f76af6f0",
+      "id": "c3152a5a-b28c-4660-a76f-6ae90dc255e8",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-003028",
       "cell_line_id": "T47D_BREAST",
@@ -829,7 +829,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "c998e3d0-5307-45d2-bb39-99c3e0f0da44",
+      "id": "99deed94-b381-42c4-925c-4f4cf5355f89",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-003709",
       "cell_line_id": "T47D_BREAST",
@@ -872,7 +872,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -907,7 +907,7 @@
       }
     },
     {
-      "id": "4dcd69c1-6797-4abd-a410-76ac9cdb8f74",
+      "id": "0a8ad2ef-a216-4b2b-b641-b2987c099ce6",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-003711",
       "cell_line_id": "T47D_BREAST",
@@ -915,7 +915,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -950,7 +950,7 @@
       }
     },
     {
-      "id": "e99b285a-2119-4724-8565-2268a610b8ce",
+      "id": "8807a885-efd7-40a7-ae5f-729a1da2d8d3",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-004294",
       "cell_line_id": "T47D_BREAST",
@@ -958,7 +958,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -993,7 +993,7 @@
       }
     },
     {
-      "id": "d1f02695-45ba-49a4-8747-40f3484d1229",
+      "id": "f92813a3-7a3c-4b85-b68a-35bd52ebd2ce",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-004603",
       "cell_line_id": "T47D_BREAST",
@@ -1001,7 +1001,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1036,7 +1036,7 @@
       }
     },
     {
-      "id": "c65b67b7-8cca-4a4f-9a0c-3ad69f538380",
+      "id": "8b464471-1f6c-4b5c-9b9f-3ef62c6c645c",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-004762",
       "cell_line_id": "T47D_BREAST",
@@ -1044,7 +1044,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1079,7 +1079,7 @@
       }
     },
     {
-      "id": "3d95a1f7-eb38-47b0-a55d-49817bdc6b3b",
+      "id": "329c7bdf-f50c-4fb9-b14a-6ef8fe60f8b4",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-005349",
       "cell_line_id": "T47D_BREAST",
@@ -1087,7 +1087,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1122,7 +1122,7 @@
       }
     },
     {
-      "id": "36e4f965-009e-4d36-9b08-7cbae40a9c35",
+      "id": "53a532f8-36cd-4cbc-aa51-f64ddda7a682",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-005578",
       "cell_line_id": "T47D_BREAST",
@@ -1130,7 +1130,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1165,7 +1165,7 @@
       }
     },
     {
-      "id": "e16e9326-ced8-46a6-978f-632b5b498a52",
+      "id": "fe72793d-4869-4ad9-b1c3-18a3dd8e793c",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-005685",
       "cell_line_id": "T47D_BREAST",
@@ -1173,7 +1173,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1208,7 +1208,7 @@
       }
     },
     {
-      "id": "196ce15d-9667-4fc3-a4cf-820fa5c767f2",
+      "id": "18a2b687-a3d2-476f-b458-c438bd7d0f7f",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-006137",
       "cell_line_id": "T47D_BREAST",
@@ -1216,7 +1216,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1251,7 +1251,7 @@
       }
     },
     {
-      "id": "2a244ed4-5f5b-4382-81fd-5afe1a8e07a9",
+      "id": "5c259952-5506-45e8-a994-a4e9a7811352",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-006173",
       "cell_line_id": "T47D_BREAST",
@@ -1259,7 +1259,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1294,7 +1294,7 @@
       }
     },
     {
-      "id": "2fca369b-9175-4f1d-8651-787746709e34",
+      "id": "516125e5-e80c-4620-be5d-56e3e34dc92f",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-006179",
       "cell_line_id": "T47D_BREAST",
@@ -1302,7 +1302,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1337,7 +1337,7 @@
       }
     },
     {
-      "id": "9f587675-1b8e-480e-9597-267279a831db",
+      "id": "8ba52a09-c0e0-4b57-961a-386bb385edc9",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-006452",
       "cell_line_id": "T47D_BREAST",
@@ -1345,7 +1345,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",
@@ -1380,7 +1380,7 @@
       }
     },
     {
-      "id": "deed8e25-4f74-485e-8337-c3d6c2bd505f",
+      "id": "7f803744-7f65-4c90-887e-0f0def57cc50",
       "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
       "drug_id": "DPC-006777",
       "cell_line_id": "T47D_BREAST",
@@ -1388,7 +1388,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "91ff65f6-5069-4609-9649-4cfe7491c45c",
+      "mechanism_link": "8209da30-d7d0-44db-86fa-28c2a32a3ace",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3892/ol.2020.12326",

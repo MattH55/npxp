@@ -15,10 +15,99 @@
   "clinical_status": "approved",
   "induced_expression_signature_ref": "lincs:REP.A019_MCF7_24H:I07",
   "cost_accessibility_tier": "generic_available",
-  "drug_responses": [],
+  "drug_responses": [
+    {
+      "id": "59837f44-fd0f-48ce-be8c-4708678700c9",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.39072599999999996,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "6758853c-d529-4572-aa88-dae033b5c884",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
+      "viability_metric": 0.543404,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "d81bbd84-cefe-4a99-8928-26a7baa2348b",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "DU145_PROSTATE",
+      "viability_metric": 0.083003,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "a0b9ccbb-257a-49b7-b60d-af4eb7d6a9f9",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "HCT116_LARGE_INTESTINE",
+      "viability_metric": 0.510941,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "1555098b-2b1c-44dd-b557-e9180a303656",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "T47D_BREAST",
+      "viability_metric": 0.750147,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "cbce0072-9fa1-41bb-9749-ed630b27a263",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "MCF7_BREAST",
+      "viability_metric": 0.061214,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "7e3ed247-f689-40ef-bc3e-0eb992cd8589",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "MDAMB231_BREAST",
+      "viability_metric": 0.65831,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "f7120caf-37a9-4af2-a17b-1e390e18fdf1",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "CASKI_CERVIX",
+      "viability_metric": 0.145756,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "175800c2-13ab-40fb-90d0-ba481ffa20a1",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "MDAMB468_BREAST",
+      "viability_metric": 0.32924,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "369f7c3d-44e4-4f00-8b0c-03201fc3136f",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "RKO_LARGE_INTESTINE",
+      "viability_metric": 0.19805199999999998,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    },
+    {
+      "id": "89ada3ec-6769-4fc7-907c-5578fd648b2b",
+      "drug_id": "mitomycin-c",
+      "cell_line_id": "HELA_CERVIX",
+      "viability_metric": 0.304341,
+      "metric_type": "auc",
+      "source": "GDSC1"
+    }
+  ],
   "interactions": [
     {
-      "id": "b259842c-0e3f-42f6-b7aa-c44b77592471",
+      "id": "7e07174d-06c5-462d-986d-7ca76c78894f",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -61,7 +150,7 @@
       }
     },
     {
-      "id": "bb80a15d-5261-4e5f-afb6-e9733e8f29c4",
+      "id": "39e309a6-a4d9-49e5-ac13-b6b62e1cb9f0",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
@@ -104,7 +193,7 @@
       }
     },
     {
-      "id": "5b329987-0777-4452-936d-27dc47870375",
+      "id": "499513a9-a45b-4ef7-a856-fbfd2cf37847",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -148,13 +237,22 @@
     }
   ],
   "cell_lines": [
+    "Ca Ski",
+    "DU-145",
     "HCT116",
     "HCT116 p53-/-",
-    "RKO"
+    "HeLa",
+    "MCF-7",
+    "MDA-MB-231",
+    "MDA-MB-468",
+    "RKO",
+    "T47D",
+    "T98G",
+    "U-87 MG"
   ],
   "resistance_mechanisms": [
     {
-      "id": "50f067bf-0a16-4ac1-aa2b-1d450885c7aa",
+      "id": "56b1be10-1b14-45b0-9b7f-ffdf69121e09",
       "drug_id": "mitomycin-c",
       "pathway_or_gene": "NQO1 (NAD(P)H:quinone oxidoreductase 1) bioreductive activation",
       "mechanism_description": "Mitomycin C requires bioreductive activation (quinone to hydroquinone/semiquinone) to form the DNA-crosslinking species; NQO1 is a major activating enzyme in vivo (Gustafson et al. 2003), so its loss/inhibition reduces effective drug activation -- the reverse of the more commonly cited overexpression-confers-resistance pattern seen for detox/efflux mechanisms elsewhere in this table.",

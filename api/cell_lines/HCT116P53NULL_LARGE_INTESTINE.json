@@ -22,7 +22,7 @@
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "id": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
       "signature_panel": "nrf2_ferroptosis",
@@ -37,7 +37,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "34d1b082-eabe-4420-a527-ffe2061d06a6",
+      "id": "a5c8b60f-d27c-422d-8d34-8cd8f8da4eb4",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "doxorubicin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -45,7 +45,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1038/nature11743",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "d3c36711-a694-4ae3-87bf-7a1828b6b0a9",
+      "id": "c0a66853-4df5-4626-878b-d5b396617330",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "metformin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -88,8 +88,8 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
-      "resistance_mechanism_link": "cccccde9-06b0-4e9b-a923-31efa7178e0d",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
+      "resistance_mechanism_link": "b45543e6-3cd3-4fdb-a850-4b89c7916aa6",
       "source_study": [
         "pmid:23242140",
         "pmid:34162423"
@@ -110,7 +110,7 @@
       "drug_lincs_signature_ref": "lincs:REP.A024_MCF7_24H:P13",
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "cccccde9-06b0-4e9b-a923-31efa7178e0d",
+        "id": "b45543e6-3cd3-4fdb-a850-4b89c7916aa6",
         "drug_id": "metformin",
         "pathway_or_gene": "SLC7A11/xCT cystine-glutamate antiporter",
         "mechanism_description": "High SLC7A11/xCT expression sustains cystine import and glutathione synthesis, protecting against metformin-induced ferroptosis; metformin acts in part by destabilizing SLC7A11 via UFMylation inhibition (Yang et al. 2021, [S8] above).",
@@ -130,7 +130,7 @@
       }
     },
     {
-      "id": "61e00ac8-83da-4632-8139-7bb69b170724",
+      "id": "f8061982-eba8-4aa3-965a-506160e249d3",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "erastin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -138,8 +138,8 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
-      "resistance_mechanism_link": "686409b8-0a3c-47b8-9666-481af53556fb",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
+      "resistance_mechanism_link": "7bf1705f-7096-4080-a5f6-7cf6b9385139",
       "source_study": [
         "pmid:23242140",
         "pmid:24439385"
@@ -160,7 +160,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "686409b8-0a3c-47b8-9666-481af53556fb",
+        "id": "7bf1705f-7096-4080-a5f6-7cf6b9385139",
         "drug_id": "erastin",
         "pathway_or_gene": "GPX4-dependent lipid-peroxide detoxification",
         "mechanism_description": "GPX4 detoxifies lipid peroxides downstream of cystine/glutathione depletion; sufficient GPX4 activity (or an intact glutathione pool feeding it) can rescue cells from erastin's system Xc- blockade despite cystine starvation (Dixon et al. 2012; Yang et al. 2014).",
@@ -180,7 +180,7 @@
       }
     },
     {
-      "id": "b9d5da8f-48d8-49e0-a083-0f3d979d68d6",
+      "id": "86cbc1e3-c463-41a9-8631-20f80158a1b7",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -223,7 +223,7 @@
       }
     },
     {
-      "id": "20f82209-e4f8-4135-93e0-be0970d35ca1",
+      "id": "e8cd3c84-d76c-4ff2-8520-fff928ed1062",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "oxaliplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -266,7 +266,7 @@
       }
     },
     {
-      "id": "0ab3bd21-2add-41e2-bb89-3b1016dffdb9",
+      "id": "df0456b8-ec47-4cc8-97cd-28c1f94c9cb2",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -309,7 +309,7 @@
       }
     },
     {
-      "id": "84680b92-2ae0-4064-b6be-dd2cba75e3fd",
+      "id": "8aa5bb4b-c535-4628-a07f-caa5e2556cab",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -352,7 +352,7 @@
       }
     },
     {
-      "id": "5b329987-0777-4452-936d-27dc47870375",
+      "id": "499513a9-a45b-4ef7-a856-fbfd2cf37847",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -395,7 +395,7 @@
       }
     },
     {
-      "id": "cefe53e5-29fa-43c5-910b-d071fc890e16",
+      "id": "e20710db-b5e9-4e3b-9df4-23d0c8100256",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "triapine",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -438,7 +438,7 @@
       }
     },
     {
-      "id": "b7389125-a561-4443-b122-384849b4781a",
+      "id": "c478ec26-f5e8-4c06-a94d-3ae3f135eca4",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -481,7 +481,7 @@
       }
     },
     {
-      "id": "ad41a890-b0f3-49cb-91c1-e87c46cc9280",
+      "id": "b118cb94-d9ba-4e2a-94e2-85b27b82d1a1",
       "modifier_id": "MOD-METHIONINE-RESTRICT",
       "drug_id": "oxaliplatin",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "9d16f4a1-9389-45ec-ae38-aa4ade1940d2",
+      "id": "1288af00-38fd-485b-8b98-64e556bd39a4",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000296",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -532,7 +532,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -567,7 +567,7 @@
       }
     },
     {
-      "id": "bbc8f654-c81c-4cc4-b58b-52760e14a8b4",
+      "id": "4e014412-353c-49c1-9693-e2da8ad4a621",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000594",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -575,7 +575,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -610,7 +610,7 @@
       }
     },
     {
-      "id": "5cbed620-a5a3-43e9-9f80-ca3a66abe6f6",
+      "id": "8e9b9ebb-ee4e-4597-8cd4-1190782b6ef7",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000727",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -618,7 +618,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -653,7 +653,7 @@
       }
     },
     {
-      "id": "717f1240-c3e9-4dcf-96bc-3df9ec06f5a5",
+      "id": "d5627ebe-b52e-4636-ada5-268bfdd31aae",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000906",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -661,7 +661,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -696,7 +696,7 @@
       }
     },
     {
-      "id": "8505151f-9847-4cef-a1a4-dcc821ff06e6",
+      "id": "e5f1c80c-1edf-4846-9a35-f2f0fa2eac75",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-000908",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -704,7 +704,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -739,7 +739,7 @@
       }
     },
     {
-      "id": "47bec9d0-17ee-4334-882e-d1fdb913fb51",
+      "id": "267c397e-0d0d-4e6b-8282-3d937920daad",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-001388",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -747,7 +747,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -782,7 +782,7 @@
       }
     },
     {
-      "id": "f5afe190-6c16-44ce-966d-5c83a054d36c",
+      "id": "04b4ec77-99f9-4ab1-ab70-744cfdb7c027",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-001799",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -790,7 +790,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -825,7 +825,7 @@
       }
     },
     {
-      "id": "1ad1c0f8-e3a8-455f-befd-8f9b2091edee",
+      "id": "11220c77-a164-4825-85b2-2ef8fab1c46f",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002262",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -833,7 +833,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -868,7 +868,7 @@
       }
     },
     {
-      "id": "8c349985-1e6a-46a7-96de-f2cae6686914",
+      "id": "e7c787ef-c440-4ff9-9f8b-49e72eeba589",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002400",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -876,7 +876,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -911,7 +911,7 @@
       }
     },
     {
-      "id": "3ff8b7ac-fca6-42cb-8232-9728415a47d7",
+      "id": "051ac194-3b08-4fcd-9192-09d35e0734d2",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002462",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -919,7 +919,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -954,7 +954,7 @@
       }
     },
     {
-      "id": "6df4ef21-bcd2-4ce5-a90e-44149a554bd2",
+      "id": "ce85d3e0-0f72-4b86-a9b9-f0e302912ac6",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002691",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -962,7 +962,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -997,7 +997,7 @@
       }
     },
     {
-      "id": "a9d55c70-a146-4b5c-bf19-f4e1858bed8e",
+      "id": "d19e6622-4085-44bd-b0e5-fdb0c422c73d",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-002746",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1005,7 +1005,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1040,7 +1040,7 @@
       }
     },
     {
-      "id": "9bc52ad7-b020-4c9e-bd68-110361f68e2a",
+      "id": "2b3b9662-67c6-4f5d-b58e-7b98442542b6",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-003028",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1048,7 +1048,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1083,7 +1083,7 @@
       }
     },
     {
-      "id": "76468783-786c-468a-9ede-2136c66d0490",
+      "id": "de7e04ea-7b6b-4d17-8b65-2f38cf7c4f98",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-003709",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1091,7 +1091,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1126,7 +1126,7 @@
       }
     },
     {
-      "id": "3885d092-b518-4e72-97a5-0c217e52ce46",
+      "id": "d0dd8cbf-75b1-4146-a8d6-bd588ba8db40",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-003711",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1134,7 +1134,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1169,7 +1169,7 @@
       }
     },
     {
-      "id": "c3f35fb9-bb39-4aa9-9864-ad1af79c8640",
+      "id": "9937cdbb-99c3-4a49-8868-b871a27ca1a6",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-004294",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1177,7 +1177,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1212,7 +1212,7 @@
       }
     },
     {
-      "id": "0736d6d6-9a81-4001-aa62-caa80f70031c",
+      "id": "85e968db-87b0-40b7-b635-af1eb0419279",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-004603",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1220,7 +1220,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1255,7 +1255,7 @@
       }
     },
     {
-      "id": "06c66003-8c65-497f-b173-ee56d01ef8d4",
+      "id": "791ae5bf-a094-4e4e-8fcd-99fb980a3e29",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-004762",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1263,7 +1263,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1298,7 +1298,7 @@
       }
     },
     {
-      "id": "1e334e50-0962-4313-94ce-35b5d83c1bad",
+      "id": "d7b642f5-9bfc-4c1c-96a3-c7ac4566af4b",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-005349",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1306,7 +1306,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1341,7 +1341,7 @@
       }
     },
     {
-      "id": "2e0c6022-db28-4a2f-bf27-09d121dd3740",
+      "id": "c2985eef-b14b-4f35-a928-0e3c3e5bd556",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-005578",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1349,7 +1349,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "id": "40cf48e3-f34c-4052-82bf-b3239e12f094",
+      "id": "91a5b635-f472-45ef-8ca0-f28ff203b7bd",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-005685",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1392,7 +1392,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1427,7 +1427,7 @@
       }
     },
     {
-      "id": "95b4af90-2da4-4089-aaa4-3f6446cbdd68",
+      "id": "3ad07fab-9446-4b8b-ba8e-df3febcc03f2",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006137",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1435,7 +1435,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1470,7 +1470,7 @@
       }
     },
     {
-      "id": "79682535-7f2c-4817-984d-fb7c725bc2b3",
+      "id": "55144c1e-0029-4f9e-b8e9-c54bf02d0532",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006173",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1478,7 +1478,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1513,7 +1513,7 @@
       }
     },
     {
-      "id": "00bb076f-6357-40d4-bdf2-a5cb8d389931",
+      "id": "c5edc372-9b15-4fce-adbb-a95df347049f",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006179",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1521,7 +1521,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1556,7 +1556,7 @@
       }
     },
     {
-      "id": "9693f8aa-0f00-417f-a9c0-81fa99652246",
+      "id": "ca27f377-763a-4a8a-94cd-0bc8401ead60",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006452",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1564,7 +1564,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
@@ -1599,7 +1599,7 @@
       }
     },
     {
-      "id": "51fe06db-157e-4397-8e11-4d96813478c7",
+      "id": "ceefc3a1-9c69-457f-98e0-de0f6f6db2aa",
       "modifier_id": "MOD-SERINE-GLYCINE-FREE",
       "drug_id": "DPC-006777",
       "cell_line_id": "HCT116P53NULL_LARGE_INTESTINE",
@@ -1607,7 +1607,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "e62ad878-cd1d-471a-bb62-89d39e2e5385",
+      "mechanism_link": "fedf1583-dfd7-41b8-8257-1527f460e9c4",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:23242140",
