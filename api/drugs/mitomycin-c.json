@@ -13,12 +13,12 @@
   "drugbank_id": null,
   "mechanism_of_action": "Bioreductive activation to a DNA-crosslinking alkylating agent",
   "clinical_status": "approved",
-  "induced_expression_signature_ref": null,
+  "induced_expression_signature_ref": "lincs:REP.A019_MCF7_24H:I07",
   "cost_accessibility_tier": "generic_available",
   "drug_responses": [],
   "interactions": [
     {
-      "id": "300fc84e-6cb9-4c49-b3f3-a90971de97f8",
+      "id": "d88f1f7f-71cb-42f5-a07f-d33efcdd176f",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -44,7 +44,7 @@
       "drug_cost_accessibility_tier": "generic_available",
       "drug_pubchem_cid": "5746",
       "drug_clinical_status": "approved",
-      "drug_lincs_signature_ref": null,
+      "drug_lincs_signature_ref": "lincs:REP.A019_MCF7_24H:I07",
       "evidence_tier_label": "Tier 1 \u2014 Direct",
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
@@ -65,7 +65,7 @@
   ],
   "resistance_mechanisms": [
     {
-      "id": "d2e6003a-98a2-44df-aabb-1ff83df7b123",
+      "id": "0ecea2b8-50ba-4049-b300-717bd873bc33",
       "drug_id": "mitomycin-c",
       "pathway_or_gene": "NQO1 (NAD(P)H:quinone oxidoreductase 1) bioreductive activation",
       "mechanism_description": "Mitomycin C requires bioreductive activation (quinone to hydroquinone/semiquinone) to form the DNA-crosslinking species; NQO1 is a major activating enzyme in vivo (Gustafson et al. 2003), so its loss/inhibition reduces effective drug activation -- the reverse of the more commonly cited overexpression-confers-resistance pattern seen for detox/efflux mechanisms elsewhere in this table.",

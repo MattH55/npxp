@@ -13,7 +13,7 @@
   "estimated_relative_cost_note": "Tumor-microenvironment condition, not a directly patient-applied intervention; basic hypoxia-chamber/gas-mixing equipment would be needed for any lab replication.",
   "signature_scores": [
     {
-      "id": "95a3becd-01bc-4346-8f6d-11ee6e9e02ae",
+      "id": "bfe643e5-04b4-4b80-9a53-9a53057fcfc9",
       "modifier_id": "MOD-HYP-1O2-24H",
       "cell_line_id": "DU145_PROSTATE",
       "signature_panel": "other",
@@ -26,14 +26,14 @@
   ],
   "interactions": [
     {
-      "id": "eb450feb-9537-4792-896c-aecaaa6d9863",
+      "id": "36687eff-9cbd-4065-a3d0-e873e8d5c135",
       "modifier_id": "MOD-HYP-1O2-24H",
       "drug_id": "doxorubicin",
       "cell_line_id": "DU145_PROSTATE",
       "combined_effect_metric": null,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "95a3becd-01bc-4346-8f6d-11ee6e9e02ae",
+      "mechanism_link": "bfe643e5-04b4-4b80-9a53-9a53057fcfc9",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1016/j.drup.2011.03.001",
@@ -52,7 +52,7 @@
       "drug_cost_accessibility_tier": "essential_generic",
       "drug_pubchem_cid": "31703",
       "drug_clinical_status": "approved",
-      "drug_lincs_signature_ref": null,
+      "drug_lincs_signature_ref": "lincs:REP.A026_MCF7_24H:L19",
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": null,
       "is_bridging_candidate": false,

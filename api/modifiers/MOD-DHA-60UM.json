@@ -14,7 +14,7 @@
   "estimated_relative_cost_note": "Omega-3 (DHA) dietary supplement; low-cost, widely available over the counter.",
   "signature_scores": [
     {
-      "id": "f01956b7-1109-4369-b288-4ece025c19f5",
+      "id": "3cb278c2-74a6-405a-988c-2d14e1d0744d",
       "modifier_id": "MOD-DHA-60UM",
       "cell_line_id": "MDAMB231_BREAST",
       "signature_panel": "other",
@@ -27,14 +27,14 @@
   ],
   "interactions": [
     {
-      "id": "ffae40d1-fe8f-4c10-a208-e6d936bcf670",
+      "id": "945fee58-e641-4802-9b0e-26f092ca681f",
       "modifier_id": "MOD-DHA-60UM",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB231_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "f01956b7-1109-4369-b288-4ece025c19f5",
+      "mechanism_link": "3cb278c2-74a6-405a-988c-2d14e1d0744d",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1093/jn/nxy224",
@@ -53,7 +53,7 @@
       "drug_cost_accessibility_tier": "essential_generic",
       "drug_pubchem_cid": "31703",
       "drug_clinical_status": "approved",
-      "drug_lincs_signature_ref": null,
+      "drug_lincs_signature_ref": "lincs:REP.A026_MCF7_24H:L19",
       "evidence_tier_label": "Tier 1 \u2014 Direct",
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
