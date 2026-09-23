@@ -624,22 +624,6 @@
     "gap_score": 1.0
   },
   {
-    "drug_id": "5-fluorouracil",
-    "drug_name": "5-Fluorouracil",
-    "modifier_type": "dietary_metabolic",
-    "mechanism_count": 1,
-    "interaction_count": 1,
-    "gap_score": 0.5
-  },
-  {
-    "drug_id": "5-fluorouracil",
-    "drug_name": "5-Fluorouracil",
-    "modifier_type": "thermal",
-    "mechanism_count": 1,
-    "interaction_count": 1,
-    "gap_score": 0.5
-  },
-  {
     "drug_id": "DPC-002651",
     "drug_name": "ETOPOSIDE",
     "modifier_type": "dietary_metabolic",
@@ -651,14 +635,6 @@
     "drug_id": "carboplatin",
     "drug_name": "Carboplatin",
     "modifier_type": "dietary_metabolic",
-    "mechanism_count": 1,
-    "interaction_count": 1,
-    "gap_score": 0.5
-  },
-  {
-    "drug_id": "carboplatin",
-    "drug_name": "Carboplatin",
-    "modifier_type": "thermal",
     "mechanism_count": 1,
     "interaction_count": 1,
     "gap_score": 0.5
@@ -696,30 +672,6 @@
     "gap_score": 0.5
   },
   {
-    "drug_id": "lomustine",
-    "drug_name": "Lomustine (CCNU)",
-    "modifier_type": "mechanical_radiative",
-    "mechanism_count": 1,
-    "interaction_count": 1,
-    "gap_score": 0.5
-  },
-  {
-    "drug_id": "mitomycin-c",
-    "drug_name": "Mitomycin C",
-    "modifier_type": "thermal",
-    "mechanism_count": 1,
-    "interaction_count": 1,
-    "gap_score": 0.5
-  },
-  {
-    "drug_id": "oxaliplatin",
-    "drug_name": "Oxaliplatin",
-    "modifier_type": "thermal",
-    "mechanism_count": 1,
-    "interaction_count": 1,
-    "gap_score": 0.5
-  },
-  {
     "drug_id": "triapine",
     "drug_name": "Triapine (3-AP)",
     "modifier_type": "dietary_metabolic",
@@ -754,22 +706,14 @@
   {
     "drug_id": "cisplatin",
     "drug_name": "Cisplatin",
-    "modifier_type": "thermal",
-    "mechanism_count": 1,
-    "interaction_count": 2,
-    "gap_score": 0.3333
-  },
-  {
-    "drug_id": "cisplatin",
-    "drug_name": "Cisplatin",
     "modifier_type": "mechanical_radiative",
     "mechanism_count": 1,
     "interaction_count": 2,
     "gap_score": 0.3333
   },
   {
-    "drug_id": "doxorubicin",
-    "drug_name": "Doxorubicin",
+    "drug_id": "lomustine",
+    "drug_name": "Lomustine (CCNU)",
     "modifier_type": "mechanical_radiative",
     "mechanism_count": 1,
     "interaction_count": 2,
@@ -778,65 +722,121 @@
   {
     "drug_id": "oxaliplatin",
     "drug_name": "Oxaliplatin",
-    "modifier_type": "dietary_metabolic",
-    "mechanism_count": 1,
-    "interaction_count": 2,
-    "gap_score": 0.3333
-  },
-  {
-    "drug_id": "oxaliplatin",
-    "drug_name": "Oxaliplatin",
     "modifier_type": "mechanical_radiative",
     "mechanism_count": 1,
     "interaction_count": 2,
     "gap_score": 0.3333
   },
   {
-    "drug_id": "paclitaxel",
-    "drug_name": "Paclitaxel",
-    "modifier_type": "mechanical_radiative",
-    "mechanism_count": 1,
-    "interaction_count": 2,
-    "gap_score": 0.3333
-  },
-  {
-    "drug_id": "temozolomide",
-    "drug_name": "Temozolomide",
-    "modifier_type": "mechanical_radiative",
-    "mechanism_count": 1,
-    "interaction_count": 2,
-    "gap_score": 0.3333
-  },
-  {
-    "drug_id": "doxorubicin",
-    "drug_name": "Doxorubicin",
+    "drug_id": "5-fluorouracil",
+    "drug_name": "5-Fluorouracil",
     "modifier_type": "dietary_metabolic",
     "mechanism_count": 1,
     "interaction_count": 3,
     "gap_score": 0.25
   },
   {
-    "drug_id": "triapine",
-    "drug_name": "Triapine (3-AP)",
+    "drug_id": "5-fluorouracil",
+    "drug_name": "5-Fluorouracil",
+    "modifier_type": "thermal",
+    "mechanism_count": 1,
+    "interaction_count": 3,
+    "gap_score": 0.25
+  },
+  {
+    "drug_id": "carboplatin",
+    "drug_name": "Carboplatin",
+    "modifier_type": "thermal",
+    "mechanism_count": 1,
+    "interaction_count": 3,
+    "gap_score": 0.25
+  },
+  {
+    "drug_id": "mitomycin-c",
+    "drug_name": "Mitomycin C",
+    "modifier_type": "thermal",
+    "mechanism_count": 1,
+    "interaction_count": 3,
+    "gap_score": 0.25
+  },
+  {
+    "drug_id": "oxaliplatin",
+    "drug_name": "Oxaliplatin",
+    "modifier_type": "thermal",
+    "mechanism_count": 1,
+    "interaction_count": 3,
+    "gap_score": 0.25
+  },
+  {
+    "drug_id": "cisplatin",
+    "drug_name": "Cisplatin",
+    "modifier_type": "thermal",
+    "mechanism_count": 1,
+    "interaction_count": 4,
+    "gap_score": 0.2
+  },
+  {
+    "drug_id": "oxaliplatin",
+    "drug_name": "Oxaliplatin",
+    "modifier_type": "dietary_metabolic",
+    "mechanism_count": 1,
+    "interaction_count": 4,
+    "gap_score": 0.2
+  },
+  {
+    "drug_id": "temozolomide",
+    "drug_name": "Temozolomide",
     "modifier_type": "mechanical_radiative",
     "mechanism_count": 1,
     "interaction_count": 4,
     "gap_score": 0.2
   },
   {
+    "drug_id": "doxorubicin",
+    "drug_name": "Doxorubicin",
+    "modifier_type": "mechanical_radiative",
+    "mechanism_count": 1,
+    "interaction_count": 5,
+    "gap_score": 0.1667
+  },
+  {
+    "drug_id": "paclitaxel",
+    "drug_name": "Paclitaxel",
+    "modifier_type": "mechanical_radiative",
+    "mechanism_count": 1,
+    "interaction_count": 5,
+    "gap_score": 0.1667
+  },
+  {
+    "drug_id": "triapine",
+    "drug_name": "Triapine (3-AP)",
+    "modifier_type": "mechanical_radiative",
+    "mechanism_count": 1,
+    "interaction_count": 6,
+    "gap_score": 0.1429
+  },
+  {
+    "drug_id": "doxorubicin",
+    "drug_name": "Doxorubicin",
+    "modifier_type": "dietary_metabolic",
+    "mechanism_count": 1,
+    "interaction_count": 7,
+    "gap_score": 0.125
+  },
+  {
     "drug_id": "erastin",
     "drug_name": "Erastin",
     "modifier_type": "dietary_metabolic",
     "mechanism_count": 1,
-    "interaction_count": 5,
-    "gap_score": 0.1667
+    "interaction_count": 9,
+    "gap_score": 0.1
   },
   {
     "drug_id": "metformin",
     "drug_name": "Metformin",
     "modifier_type": "dietary_metabolic",
     "mechanism_count": 1,
-    "interaction_count": 7,
-    "gap_score": 0.125
+    "interaction_count": 10,
+    "gap_score": 0.0909
   }
 ]

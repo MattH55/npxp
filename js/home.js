@@ -22,11 +22,12 @@ document.getElementById("source-list").innerHTML =
         document.getElementById("stat-drugs").textContent = stats.drugs;
         document.getElementById("stat-interactions").textContent = stats.interaction_effects;
 
-        const tierOrder = ["tier_1_direct", "tier_2_inferred", "tier_2b_model_predicted", "tier_3_mechanism_only"];
+        const tierOrder = ["tier_1_direct", "tier_2_inferred", "tier_2b_model_predicted", "tier_2c_nearest_neighbor", "tier_3_mechanism_only"];
         const tierColors = {
             tier_1_direct: "bg-emerald-500",
             tier_2_inferred: "bg-yellow-500",
             tier_2b_model_predicted: "bg-violet-500",
+            tier_2c_nearest_neighbor: "bg-indigo-500",
             tier_3_mechanism_only: "bg-orange-500",
         };
         const maxTier = Math.max(1, ...Object.values(stats.interactions_by_tier));

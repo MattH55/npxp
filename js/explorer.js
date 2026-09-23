@@ -6,6 +6,7 @@ const TIER_CLASS = {
     tier_1_direct: "t1",
     tier_2_inferred: "t2",
     tier_2b_model_predicted: "t2b",
+    tier_2c_nearest_neighbor: "t2c",
     tier_3_mechanism_only: "t3",
 };
 const MOD_TYPE_LABEL = {
