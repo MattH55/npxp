@@ -22,7 +22,7 @@
   "tumor_concordance_flag": "unassessed",
   "signature_scores": [
     {
-      "id": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "id": "91713ec9-d466-4eab-849d-659b59c70e51",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "cell_line_id": "4T1_BREAST",
       "signature_panel": "dna_damage",
@@ -37,7 +37,7 @@
   "drug_responses": [],
   "interactions": [
     {
-      "id": "4111a006-cb51-4dd4-a56b-b98658fda551",
+      "id": "ef38192a-92fe-4d5b-ad2f-e88fe962b887",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "doxorubicin",
       "cell_line_id": "4T1_BREAST",
@@ -45,7 +45,7 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.1126/scitranslmed.3003293",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "74bb595c-1932-4c47-b56b-f8499ec79682",
+      "id": "af03be48-b049-4b93-a1ee-17d770cf15a6",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "cyclophosphamide",
       "cell_line_id": "4T1_BREAST",
@@ -123,7 +123,7 @@
       }
     },
     {
-      "id": "96a96d27-62d1-4ca7-af2a-549c84609be2",
+      "id": "0a774441-a170-4828-aeaf-598ab66faa49",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "cisplatin",
       "cell_line_id": "4T1_BREAST",
@@ -131,8 +131,8 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
-      "resistance_mechanism_link": "41b5a4d7-c7d2-47b9-9021-e3386554ca06",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
+      "resistance_mechanism_link": "ae6dfcae-9891-4e89-b62d-c4e98796fddf",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -153,7 +153,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "41b5a4d7-c7d2-47b9-9021-e3386554ca06",
+        "id": "ae6dfcae-9891-4e89-b62d-c4e98796fddf",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "id": "3e12f01c-f23e-4429-94cd-a1b64bc39e4e",
+      "id": "7d0f7cfe-4274-4a31-ba91-a40a16b97940",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "oxaliplatin",
       "cell_line_id": "4T1_BREAST",
@@ -181,8 +181,8 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
-      "resistance_mechanism_link": "28adf475-3a2d-4e6c-b4ad-f50b4e1c8772",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
+      "resistance_mechanism_link": "5d49eb42-7643-4133-97b2-9624904e78e8",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -203,7 +203,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "28adf475-3a2d-4e6c-b4ad-f50b4e1c8772",
+        "id": "5d49eb42-7643-4133-97b2-9624904e78e8",
         "drug_id": "oxaliplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -223,7 +223,7 @@
       }
     },
     {
-      "id": "aff1efdc-caf7-462c-a189-ab36b526dbd4",
+      "id": "48b50158-d3b4-4b80-ae63-e03ec0e9f1d1",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "carboplatin",
       "cell_line_id": "4T1_BREAST",
@@ -231,8 +231,8 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
-      "resistance_mechanism_link": "54e6803d-17bb-42a7-940d-36cb94e869a9",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
+      "resistance_mechanism_link": "8cb1101a-6fee-41a6-be3c-c2a4e8f4dfbf",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -253,7 +253,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "54e6803d-17bb-42a7-940d-36cb94e869a9",
+        "id": "8cb1101a-6fee-41a6-be3c-c2a4e8f4dfbf",
         "drug_id": "carboplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "As for cisplatin: NER-mediated adduct removal is the principal resistance mechanism for platinum agents generally (Reed 1998).",
@@ -273,7 +273,7 @@
       }
     },
     {
-      "id": "08d8d5c7-4e42-4c7a-943d-03359952f771",
+      "id": "ed18e4fe-dd87-40a4-9a7b-1388c8c65de1",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "triapine",
       "cell_line_id": "4T1_BREAST",
@@ -281,8 +281,8 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
-      "resistance_mechanism_link": "6beb7b7f-fe40-4de6-8f7f-6cb87869f7e4",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
+      "resistance_mechanism_link": "6bece9b5-bcf8-426b-b7d9-56e9d4b78fb6",
       "source_study": [
         "pmid:22323820",
         "pmid:37588202"
@@ -303,7 +303,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "6beb7b7f-fe40-4de6-8f7f-6cb87869f7e4",
+        "id": "6bece9b5-bcf8-426b-b7d9-56e9d4b78fb6",
         "drug_id": "triapine",
         "pathway_or_gene": "RRM2 (ribonucleotide reductase M2 subunit) overexpression",
         "mechanism_description": "Triapine directly inhibits RRM2 (iron chelation of the tyrosyl radical); RRM2 overexpression -- the same target the drug itself acts on -- is a documented general resistance mechanism across multiple RNR-dependent chemotherapies (Zuo et al. 2024 review), consistent with a titration-out-the-inhibitor pattern.",
@@ -323,7 +323,7 @@
       }
     },
     {
-      "id": "c53f6a31-c873-4d6f-8fe2-dedec819bf27",
+      "id": "37b5f8c8-3607-4456-9820-3d313733dead",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002651",
       "cell_line_id": "4T1_BREAST",
@@ -331,8 +331,8 @@
       "synergy_model_scores": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
-      "resistance_mechanism_link": "fbe019f0-cbc4-4f1b-a78e-293383bf35cd",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
+      "resistance_mechanism_link": "240cc166-8cca-45fe-8fcc-7d28284cc3ac",
       "source_study": [
         "pmid:22323820",
         "pmid:22285073"
@@ -353,7 +353,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "fbe019f0-cbc4-4f1b-a78e-293383bf35cd",
+        "id": "240cc166-8cca-45fe-8fcc-7d28284cc3ac",
         "drug_id": "DPC-002651",
         "pathway_or_gene": "TOP2A (topoisomerase II alpha) downregulation",
         "mechanism_description": "Reduced TOP2A expression lowers the number of etoposide-DNA-topoisomerase cleavable complexes that can form, one of several mechanisms identified in etoposide-resistant MCF-7 cells (Kaplan & Gunduz 2012).",
@@ -373,7 +373,7 @@
       }
     },
     {
-      "id": "c770cba5-1fc0-4272-8c4a-c0decf7d48d8",
+      "id": "abc2ced3-dce2-49d5-9df5-8221896fad5b",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000001",
       "cell_line_id": "4T1_BREAST",
@@ -381,7 +381,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -416,7 +416,7 @@
       }
     },
     {
-      "id": "90fc122b-5d28-4f75-b419-c43c952b6fe4",
+      "id": "7ed33981-571b-49e3-aae1-1fa3ab9e99b0",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000025",
       "cell_line_id": "4T1_BREAST",
@@ -424,7 +424,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -459,7 +459,7 @@
       }
     },
     {
-      "id": "2fe341b0-fd7a-45e2-975b-feb4bff3b183",
+      "id": "64eeaa2a-65dd-43ba-9f92-a475c4798c6d",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000092",
       "cell_line_id": "4T1_BREAST",
@@ -467,7 +467,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -502,7 +502,7 @@
       }
     },
     {
-      "id": "2e69aee2-34e0-4495-9b9e-025086498d51",
+      "id": "8ba2d63e-bcb6-4cdc-bc73-a33da44baa45",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000121",
       "cell_line_id": "4T1_BREAST",
@@ -510,7 +510,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -545,7 +545,7 @@
       }
     },
     {
-      "id": "6b90464e-8d28-40ca-a501-fc4e6cff2f60",
+      "id": "07e13ce6-f709-417c-a5d2-4781d73ed646",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000179",
       "cell_line_id": "4T1_BREAST",
@@ -553,7 +553,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -588,7 +588,7 @@
       }
     },
     {
-      "id": "c7acac80-b21b-4605-bad2-54926ff98a3a",
+      "id": "eaacaf8d-89e6-4a79-bd95-2fb0385095a4",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000236",
       "cell_line_id": "4T1_BREAST",
@@ -596,7 +596,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -631,7 +631,7 @@
       }
     },
     {
-      "id": "d5c0aa57-824d-4a54-ae03-789c44e580d8",
+      "id": "d823e635-a5c5-405a-bda5-e9fd9e355e06",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000254",
       "cell_line_id": "4T1_BREAST",
@@ -639,7 +639,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -674,7 +674,7 @@
       }
     },
     {
-      "id": "7cbdab48-392b-4a1b-9801-68d65ff3c111",
+      "id": "ea85dd2c-e664-4ee7-af1e-23877e35832a",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000323",
       "cell_line_id": "4T1_BREAST",
@@ -682,7 +682,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -717,7 +717,7 @@
       }
     },
     {
-      "id": "ee6280de-e3eb-4885-8e7c-e9701438549f",
+      "id": "45dd87d8-9353-4a13-8177-d976fffc88ee",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000334",
       "cell_line_id": "4T1_BREAST",
@@ -725,7 +725,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -760,7 +760,7 @@
       }
     },
     {
-      "id": "005a5031-e4b0-45d1-a302-32e0b31e98a0",
+      "id": "ace7ffe8-5d82-40e9-99cb-1ab01478f1a0",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000335",
       "cell_line_id": "4T1_BREAST",
@@ -768,7 +768,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -803,7 +803,7 @@
       }
     },
     {
-      "id": "df2240f1-377e-4fd8-a3e5-6e86eeca0cb2",
+      "id": "4eac3c7d-89dd-4e5c-9551-10d655d3acf1",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000364",
       "cell_line_id": "4T1_BREAST",
@@ -811,7 +811,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -846,7 +846,7 @@
       }
     },
     {
-      "id": "8ee81c56-0223-4b82-9989-d201bace9c21",
+      "id": "824e6413-553d-49fc-b72a-126d470cbc55",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000367",
       "cell_line_id": "4T1_BREAST",
@@ -854,7 +854,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -889,7 +889,7 @@
       }
     },
     {
-      "id": "122368e8-7b11-46f2-b908-044c09d68cc5",
+      "id": "abd8026a-f35b-4812-ac48-5f64f86d52f5",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000554",
       "cell_line_id": "4T1_BREAST",
@@ -897,7 +897,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -932,7 +932,7 @@
       }
     },
     {
-      "id": "6eec4d71-684e-491f-94cb-81322f45eec9",
+      "id": "0a177a5f-cfed-4ba2-9d95-38b0bb1007c4",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000568",
       "cell_line_id": "4T1_BREAST",
@@ -940,7 +940,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -975,7 +975,7 @@
       }
     },
     {
-      "id": "c789f40c-f191-46bf-845f-89b2a703202d",
+      "id": "cdf4d8c7-b0f5-4b94-9e31-112361684def",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000569",
       "cell_line_id": "4T1_BREAST",
@@ -983,7 +983,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1018,7 +1018,7 @@
       }
     },
     {
-      "id": "05ab9616-9a65-428a-9c7e-d869c5e806cd",
+      "id": "687eef6e-fad0-47e9-839d-441287d2056e",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000740",
       "cell_line_id": "4T1_BREAST",
@@ -1026,7 +1026,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1061,7 +1061,7 @@
       }
     },
     {
-      "id": "f155ce54-0415-49db-948a-52ee40ad7952",
+      "id": "bd8d11a4-60d7-4729-9a86-2e13dc93076e",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000802",
       "cell_line_id": "4T1_BREAST",
@@ -1069,7 +1069,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "ca86b989-3452-4cdd-aa99-8507ecda7564",
+      "id": "4241c4e9-4497-4733-a80d-8c0df012936f",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000821",
       "cell_line_id": "4T1_BREAST",
@@ -1112,7 +1112,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1147,7 +1147,7 @@
       }
     },
     {
-      "id": "99d920ed-5078-45e4-acdc-102b05abb9ad",
+      "id": "77bfb09d-588c-4c7d-86d4-f4e911fae1ab",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000823",
       "cell_line_id": "4T1_BREAST",
@@ -1155,7 +1155,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1190,7 +1190,7 @@
       }
     },
     {
-      "id": "396e9e80-5747-4d78-ac82-077df88f6175",
+      "id": "0ad2c86e-dff8-491d-9e2a-01daa3a19edb",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000827",
       "cell_line_id": "4T1_BREAST",
@@ -1198,7 +1198,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1233,7 +1233,7 @@
       }
     },
     {
-      "id": "d7f3dd06-4a15-43a1-95ea-a9cb3e1e8354",
+      "id": "1aa6c1dd-966b-4a59-9d64-2d4960b2a255",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000833",
       "cell_line_id": "4T1_BREAST",
@@ -1241,7 +1241,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1276,7 +1276,7 @@
       }
     },
     {
-      "id": "a0a3dea2-1aeb-4492-9581-ae7fc7d982f6",
+      "id": "17f6785e-c427-4a39-868a-086c56653986",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000889",
       "cell_line_id": "4T1_BREAST",
@@ -1284,7 +1284,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1319,7 +1319,7 @@
       }
     },
     {
-      "id": "0f8bb4e3-750e-4f37-a535-aa7850710c8e",
+      "id": "b4adf502-5a50-400f-9ce9-f68eb71dd5e5",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000902",
       "cell_line_id": "4T1_BREAST",
@@ -1327,7 +1327,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1362,7 +1362,7 @@
       }
     },
     {
-      "id": "ea9aed25-378c-4c50-96d9-ec6a1089451a",
+      "id": "293f8c35-b7a9-4f62-8c2c-886b66732c5d",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-000967",
       "cell_line_id": "4T1_BREAST",
@@ -1370,7 +1370,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1405,7 +1405,7 @@
       }
     },
     {
-      "id": "7becc6fa-9d60-4a65-9205-0e35910e5ee4",
+      "id": "f113246e-8d27-4f91-a8e6-9ca37909f9f1",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001018",
       "cell_line_id": "4T1_BREAST",
@@ -1413,7 +1413,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1448,7 +1448,7 @@
       }
     },
     {
-      "id": "6d8f0107-de90-4674-b7a5-b709e50f91f1",
+      "id": "5599de6b-9313-4517-abf9-898308a521f3",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001027",
       "cell_line_id": "4T1_BREAST",
@@ -1456,7 +1456,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1491,7 +1491,7 @@
       }
     },
     {
-      "id": "8502c1e5-4d72-408e-a967-8b6dcd0d015e",
+      "id": "610c690f-d180-4651-a736-382816954a50",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001054",
       "cell_line_id": "4T1_BREAST",
@@ -1499,7 +1499,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1534,7 +1534,7 @@
       }
     },
     {
-      "id": "2c948d4e-20e3-42f9-89bc-c6e8b8340e8b",
+      "id": "b79e425d-7e91-490d-8037-56b033636064",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001111",
       "cell_line_id": "4T1_BREAST",
@@ -1542,7 +1542,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1577,7 +1577,7 @@
       }
     },
     {
-      "id": "0229046e-86bc-485c-a4c4-0dc6766bd94b",
+      "id": "11b4fcda-41c1-430d-9cdf-3d33951af1bb",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001314",
       "cell_line_id": "4T1_BREAST",
@@ -1585,7 +1585,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1620,7 +1620,7 @@
       }
     },
     {
-      "id": "0bf13449-b2a7-4e40-9cf9-c2c575195160",
+      "id": "89051575-06e8-440d-9390-0faeb82acbce",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001411",
       "cell_line_id": "4T1_BREAST",
@@ -1628,7 +1628,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1663,7 +1663,7 @@
       }
     },
     {
-      "id": "2b2894ef-1f32-4ff4-b505-41feeaa558ee",
+      "id": "85068346-91b3-4984-821d-caa3c2f970d1",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001496",
       "cell_line_id": "4T1_BREAST",
@@ -1671,7 +1671,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1706,7 +1706,7 @@
       }
     },
     {
-      "id": "97dad175-49ea-49db-8bf6-c04d29857382",
+      "id": "959223e0-a781-4a30-b1ba-aaef3bd610c5",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001610",
       "cell_line_id": "4T1_BREAST",
@@ -1714,7 +1714,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1749,7 +1749,7 @@
       }
     },
     {
-      "id": "405b30a2-e3d8-4403-bf09-15ba1f58f976",
+      "id": "8669ddce-ceb5-4717-8782-7e13c66f8ff7",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001615",
       "cell_line_id": "4T1_BREAST",
@@ -1757,7 +1757,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1792,7 +1792,7 @@
       }
     },
     {
-      "id": "4de2f173-6e4f-4f6c-a8ea-ca0447715b97",
+      "id": "1982b805-8b38-46be-b677-8768ef98edd8",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001636",
       "cell_line_id": "4T1_BREAST",
@@ -1800,7 +1800,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1835,7 +1835,7 @@
       }
     },
     {
-      "id": "5ad4a9c3-8764-4fe8-9a36-8cb76b5b45fa",
+      "id": "d7f1bb18-0478-4813-96a5-e78e40ff4aad",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001743",
       "cell_line_id": "4T1_BREAST",
@@ -1843,7 +1843,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1878,7 +1878,7 @@
       }
     },
     {
-      "id": "b25fcdc2-43fa-45c7-a217-6af43ebd5730",
+      "id": "b389449b-bb05-4ac1-a085-528105d2ae33",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001776",
       "cell_line_id": "4T1_BREAST",
@@ -1886,7 +1886,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1921,7 +1921,7 @@
       }
     },
     {
-      "id": "4c7b4118-86d9-4de1-a5b2-101c59ac63bf",
+      "id": "85fd2cd7-7af9-4923-bde1-3a826cb48093",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001786",
       "cell_line_id": "4T1_BREAST",
@@ -1929,7 +1929,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -1964,7 +1964,7 @@
       }
     },
     {
-      "id": "f621951c-5b26-4579-8ffc-87b89f36043d",
+      "id": "f42c6b96-1d66-4bb7-b37d-d8123129a704",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-001819",
       "cell_line_id": "4T1_BREAST",
@@ -1972,7 +1972,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2007,7 +2007,7 @@
       }
     },
     {
-      "id": "3af589d6-a457-4203-bc1b-596812f92a96",
+      "id": "a7503415-2b30-4acd-9d99-ac222fd3fde2",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002046",
       "cell_line_id": "4T1_BREAST",
@@ -2015,7 +2015,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2050,7 +2050,7 @@
       }
     },
     {
-      "id": "a82743d3-803c-491e-95e0-20ace81576a5",
+      "id": "1c5c9983-821b-46d1-9727-97b0468baaf9",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002089",
       "cell_line_id": "4T1_BREAST",
@@ -2058,7 +2058,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2093,7 +2093,7 @@
       }
     },
     {
-      "id": "492d539d-b248-4323-a542-4e2b82308e40",
+      "id": "07131e9b-29ac-462d-a675-e7a76a7fa970",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002182",
       "cell_line_id": "4T1_BREAST",
@@ -2101,7 +2101,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2136,7 +2136,7 @@
       }
     },
     {
-      "id": "80d9a346-d060-4196-b186-82cd4b8204f9",
+      "id": "db9b7a6b-1a3f-45e5-b5c2-5749a0f4fe79",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002196",
       "cell_line_id": "4T1_BREAST",
@@ -2144,7 +2144,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2179,7 +2179,7 @@
       }
     },
     {
-      "id": "be18228b-a2f5-4511-be34-b6a52628b7e2",
+      "id": "d0fc5342-ef32-48bd-921e-113c78a2dffb",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002353",
       "cell_line_id": "4T1_BREAST",
@@ -2187,7 +2187,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2222,7 +2222,7 @@
       }
     },
     {
-      "id": "cae1e7b9-6bc6-4d4f-a9c1-777a842c0681",
+      "id": "dfc35f73-0de5-45e3-a95b-25187196dd13",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002393",
       "cell_line_id": "4T1_BREAST",
@@ -2230,7 +2230,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2265,7 +2265,7 @@
       }
     },
     {
-      "id": "e8e2d6bc-00d0-4c2f-b5cf-d5b4daef9311",
+      "id": "53cc2dad-e1d6-4198-8caf-803c5323ba55",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002396",
       "cell_line_id": "4T1_BREAST",
@@ -2273,7 +2273,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2308,7 +2308,7 @@
       }
     },
     {
-      "id": "a7d84432-5b42-40ea-a28e-82a25d9c96a7",
+      "id": "e6caf2e8-c71c-4777-9a24-fb6ff56879dd",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002419",
       "cell_line_id": "4T1_BREAST",
@@ -2316,7 +2316,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2351,7 +2351,7 @@
       }
     },
     {
-      "id": "6de21748-41a0-4b2e-9a98-03992ba5db66",
+      "id": "18f7d2ef-54fa-489f-a410-f6ebd3bbb6ac",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002460",
       "cell_line_id": "4T1_BREAST",
@@ -2359,7 +2359,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2394,7 +2394,7 @@
       }
     },
     {
-      "id": "e6963fe2-2566-4aee-9f03-44c65af0aaa0",
+      "id": "b9cc45a7-0456-4d46-9725-4a2d1118e96a",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002463",
       "cell_line_id": "4T1_BREAST",
@@ -2402,7 +2402,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2437,7 +2437,7 @@
       }
     },
     {
-      "id": "e5583b2e-f5d5-428c-945a-84c22d7e8e32",
+      "id": "3796128f-2f45-44c5-ba01-d09319895f54",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002498",
       "cell_line_id": "4T1_BREAST",
@@ -2445,7 +2445,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2480,7 +2480,7 @@
       }
     },
     {
-      "id": "403d1e6c-022c-497b-9d61-af6275f2b996",
+      "id": "864e9ca1-60d0-406e-ae71-6e25dc4e6536",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002505",
       "cell_line_id": "4T1_BREAST",
@@ -2488,7 +2488,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2523,7 +2523,7 @@
       }
     },
     {
-      "id": "d38662d1-2697-41f6-a6bb-7e93a51c9d32",
+      "id": "7698756a-5c88-4585-800e-3e87ac813c36",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002597",
       "cell_line_id": "4T1_BREAST",
@@ -2531,7 +2531,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2566,7 +2566,7 @@
       }
     },
     {
-      "id": "deea1429-cb16-40cf-a9a1-1e0a3c4ab89c",
+      "id": "badc3d8d-0478-4194-afd6-bac244d6c26f",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002652",
       "cell_line_id": "4T1_BREAST",
@@ -2574,7 +2574,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2609,7 +2609,7 @@
       }
     },
     {
-      "id": "9a9641a0-ad91-4f4c-a034-64cf32c07b6a",
+      "id": "3ebb6d9c-4e34-4b19-8a4f-f7c39889abfb",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002657",
       "cell_line_id": "4T1_BREAST",
@@ -2617,7 +2617,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2652,7 +2652,7 @@
       }
     },
     {
-      "id": "21172dce-a48f-4ed0-8a18-a447e269b5ba",
+      "id": "2ecb7d7a-a54c-4239-832a-89b92145ad47",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002682",
       "cell_line_id": "4T1_BREAST",
@@ -2660,7 +2660,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2695,7 +2695,7 @@
       }
     },
     {
-      "id": "c1deccc2-098e-45c3-9f62-8c4e6092c5f4",
+      "id": "fddf6aa1-ef04-496a-a2e8-a2d5cb36f066",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002700",
       "cell_line_id": "4T1_BREAST",
@@ -2703,7 +2703,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2738,7 +2738,7 @@
       }
     },
     {
-      "id": "3a756a4e-c3f2-4623-8660-45af821dbd10",
+      "id": "dbce027a-0771-42d5-8b6f-46993bf16cab",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002791",
       "cell_line_id": "4T1_BREAST",
@@ -2746,7 +2746,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2781,7 +2781,7 @@
       }
     },
     {
-      "id": "17b27059-e0b3-4264-9325-181ede70a06b",
+      "id": "33031609-1af8-4fe5-8274-11fdf01ec5c0",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002816",
       "cell_line_id": "4T1_BREAST",
@@ -2789,7 +2789,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2824,7 +2824,7 @@
       }
     },
     {
-      "id": "6d5cd758-b7ee-4cc2-9333-ba7e117e1edc",
+      "id": "8c61c80c-4e7c-49a7-86f6-2626fa8e5d81",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002866",
       "cell_line_id": "4T1_BREAST",
@@ -2832,7 +2832,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2867,7 +2867,7 @@
       }
     },
     {
-      "id": "1585ffa2-708f-4a82-96ae-c4a58084e4ae",
+      "id": "c0d01d80-b506-4b3a-9bc4-44a30829ca18",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002944",
       "cell_line_id": "4T1_BREAST",
@@ -2875,7 +2875,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2910,7 +2910,7 @@
       }
     },
     {
-      "id": "7dec8c26-33cd-4fed-8e93-13126cccd29c",
+      "id": "a2a2fb00-99f1-43f4-b9bd-5f4cad248123",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002950",
       "cell_line_id": "4T1_BREAST",
@@ -2918,7 +2918,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2953,7 +2953,7 @@
       }
     },
     {
-      "id": "20f17d86-e7c4-4f93-bd74-d4e17c377812",
+      "id": "2d5999ea-a5c5-428a-8e69-7eb2ec3d8a86",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002987",
       "cell_line_id": "4T1_BREAST",
@@ -2961,7 +2961,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -2996,7 +2996,7 @@
       }
     },
     {
-      "id": "addce612-d851-462f-9555-754d317dce51",
+      "id": "3c8e2a67-43e6-48ee-a9ec-25cae66f5ff2",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002990",
       "cell_line_id": "4T1_BREAST",
@@ -3004,7 +3004,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3039,7 +3039,7 @@
       }
     },
     {
-      "id": "658c2b49-3f58-4b15-96d1-1cf1dedbece7",
+      "id": "0e7c4dc5-99af-41c6-a0ea-7d585ac9040c",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-002993",
       "cell_line_id": "4T1_BREAST",
@@ -3047,7 +3047,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3082,7 +3082,7 @@
       }
     },
     {
-      "id": "d90ec01b-6106-4ba1-af75-2a852d18fb95",
+      "id": "25ebf50a-4f6b-41a3-ad4b-b7f29c7c157c",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003298",
       "cell_line_id": "4T1_BREAST",
@@ -3090,7 +3090,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3125,7 +3125,7 @@
       }
     },
     {
-      "id": "709a1e6f-29fc-4f88-bb8b-12143bff4a3b",
+      "id": "77deae2c-a7ea-477f-b733-42b0e0b4c43d",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003346",
       "cell_line_id": "4T1_BREAST",
@@ -3133,7 +3133,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3168,7 +3168,7 @@
       }
     },
     {
-      "id": "d05f4536-cd9c-4fbf-995a-6dbb5887080d",
+      "id": "47137dc2-b986-4707-a0a1-f4c49eb8acb1",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003355",
       "cell_line_id": "4T1_BREAST",
@@ -3176,7 +3176,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3211,7 +3211,7 @@
       }
     },
     {
-      "id": "05e4758e-1d11-45dc-9afd-51098eec5dfd",
+      "id": "6b6bd3a8-f87c-4dbc-8a5a-ef2acd8cc7ad",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003361",
       "cell_line_id": "4T1_BREAST",
@@ -3219,7 +3219,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3254,7 +3254,7 @@
       }
     },
     {
-      "id": "32603053-88c9-44fc-a673-44909177644f",
+      "id": "aaa90870-8f80-487a-87de-a8f283ed260b",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003428",
       "cell_line_id": "4T1_BREAST",
@@ -3262,7 +3262,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3297,7 +3297,7 @@
       }
     },
     {
-      "id": "dbd20206-815c-4524-a05b-668824fc33f3",
+      "id": "c13e715b-fb1c-41fd-b203-a65d50d4e758",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003430",
       "cell_line_id": "4T1_BREAST",
@@ -3305,7 +3305,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3340,7 +3340,7 @@
       }
     },
     {
-      "id": "6b5203fe-26a2-4e1f-91b2-19f1243d9f33",
+      "id": "d601e318-67f7-420c-9207-ea3802adb009",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003469",
       "cell_line_id": "4T1_BREAST",
@@ -3348,7 +3348,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3383,7 +3383,7 @@
       }
     },
     {
-      "id": "9fddcf8d-c79d-48fd-9252-b84521391663",
+      "id": "e0f223ce-5538-40fb-9f56-3cca635013ad",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003606",
       "cell_line_id": "4T1_BREAST",
@@ -3391,7 +3391,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3426,7 +3426,7 @@
       }
     },
     {
-      "id": "11517fbb-cdf9-4612-a530-62b2bdc93dbb",
+      "id": "3fa49d34-0d42-4e97-b5d0-864dc12edc87",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003668",
       "cell_line_id": "4T1_BREAST",
@@ -3434,7 +3434,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3469,7 +3469,7 @@
       }
     },
     {
-      "id": "9e033185-09d1-4c27-a2af-06b17ddb87fd",
+      "id": "c3ffdc80-0816-435e-89ac-84531915e6cd",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003670",
       "cell_line_id": "4T1_BREAST",
@@ -3477,7 +3477,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3512,7 +3512,7 @@
       }
     },
     {
-      "id": "d49c9e0c-6333-4b82-98e2-09fabd05699a",
+      "id": "e2bedcc3-fe44-4c07-9258-94953268ced9",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003803",
       "cell_line_id": "4T1_BREAST",
@@ -3520,7 +3520,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3555,7 +3555,7 @@
       }
     },
     {
-      "id": "b4d0c8b4-8593-495c-b295-200151217360",
+      "id": "565420b1-41ba-40df-aa10-bd73792fd2c4",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003816",
       "cell_line_id": "4T1_BREAST",
@@ -3563,7 +3563,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3598,7 +3598,7 @@
       }
     },
     {
-      "id": "fa1c8e74-7dbd-4dc0-a1ad-bc2f1638eab2",
+      "id": "5dda21a0-148f-4374-add5-95379cbb2033",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003866",
       "cell_line_id": "4T1_BREAST",
@@ -3606,7 +3606,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3641,7 +3641,7 @@
       }
     },
     {
-      "id": "5f7b4edc-02be-4193-915d-c356580bf289",
+      "id": "8b88ef69-c166-49a7-90d6-d692184196a5",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-003904",
       "cell_line_id": "4T1_BREAST",
@@ -3649,7 +3649,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3684,7 +3684,7 @@
       }
     },
     {
-      "id": "9f19d40c-bb1e-44a4-a06a-05196589217b",
+      "id": "d3d6ff0d-69f3-4e1b-9a65-7414cecf69da",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004035",
       "cell_line_id": "4T1_BREAST",
@@ -3692,7 +3692,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3727,7 +3727,7 @@
       }
     },
     {
-      "id": "3d5811f7-f683-49de-9009-02896cadbfc6",
+      "id": "3ddc50ad-1636-4cd3-8901-0dceb7f09107",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004075",
       "cell_line_id": "4T1_BREAST",
@@ -3735,7 +3735,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3770,7 +3770,7 @@
       }
     },
     {
-      "id": "be951b42-cab5-4b21-b716-0e709c985614",
+      "id": "e7caed7d-0e30-4b1a-8ed0-cc74c2f250a3",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004078",
       "cell_line_id": "4T1_BREAST",
@@ -3778,7 +3778,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3813,7 +3813,7 @@
       }
     },
     {
-      "id": "dc5d06b7-1503-4ae6-9395-20b10f366842",
+      "id": "48b310f2-c2b8-4463-92c4-714f97c1a604",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004095",
       "cell_line_id": "4T1_BREAST",
@@ -3821,7 +3821,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3856,7 +3856,7 @@
       }
     },
     {
-      "id": "2b87d093-89e3-490e-b8aa-10be18c42f7d",
+      "id": "6c5d367f-0a15-4097-a75a-4b77f0486251",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004226",
       "cell_line_id": "4T1_BREAST",
@@ -3864,7 +3864,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3899,7 +3899,7 @@
       }
     },
     {
-      "id": "8a6daa30-4756-49b5-9917-521e4b3ae794",
+      "id": "01955462-ebb8-44d3-945f-156501abc8fa",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004229",
       "cell_line_id": "4T1_BREAST",
@@ -3907,7 +3907,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3942,7 +3942,7 @@
       }
     },
     {
-      "id": "3642901d-c111-4b6c-8aae-a8fbd181e228",
+      "id": "680b0103-7b24-4553-8eeb-7fd3556ba316",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004359",
       "cell_line_id": "4T1_BREAST",
@@ -3950,7 +3950,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -3985,7 +3985,7 @@
       }
     },
     {
-      "id": "7802089d-be98-4154-a8f9-db04cdb8a705",
+      "id": "617d97c8-f3b9-4761-a210-90e7b23e6169",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004517",
       "cell_line_id": "4T1_BREAST",
@@ -3993,7 +3993,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4028,7 +4028,7 @@
       }
     },
     {
-      "id": "adb705df-da0d-4670-9e09-7caa6e92332f",
+      "id": "e7af2048-63e4-49a6-89c1-b364d6a7ffb0",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004562",
       "cell_line_id": "4T1_BREAST",
@@ -4036,7 +4036,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4071,7 +4071,7 @@
       }
     },
     {
-      "id": "ab4332ad-0571-4270-8976-d78733e6c324",
+      "id": "bab4b5d6-6e6d-48b2-97d6-ab755cf04010",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004586",
       "cell_line_id": "4T1_BREAST",
@@ -4079,7 +4079,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4114,7 +4114,7 @@
       }
     },
     {
-      "id": "d7ae2621-d0a7-4b4b-996a-e2ad4b2147ea",
+      "id": "018d08c4-0b2b-4df8-9d87-ef50bd2e4999",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004634",
       "cell_line_id": "4T1_BREAST",
@@ -4122,7 +4122,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4157,7 +4157,7 @@
       }
     },
     {
-      "id": "a7c4868b-98b9-42cc-b35a-49c78acf06b9",
+      "id": "85fc4894-0852-4571-8832-bbaaaa320467",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004688",
       "cell_line_id": "4T1_BREAST",
@@ -4165,7 +4165,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4200,7 +4200,7 @@
       }
     },
     {
-      "id": "998e1c48-e657-4fbd-89ad-107dd09a6d9d",
+      "id": "9d523076-6dd3-4b7f-8b00-6ff73b3a950d",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004736",
       "cell_line_id": "4T1_BREAST",
@@ -4208,7 +4208,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4243,7 +4243,7 @@
       }
     },
     {
-      "id": "10cfcf3e-c969-4d51-af0e-bc12235154df",
+      "id": "22a5d4c0-3bc8-47d9-ac81-5eced0b728b7",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004744",
       "cell_line_id": "4T1_BREAST",
@@ -4251,7 +4251,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4286,7 +4286,7 @@
       }
     },
     {
-      "id": "521bbcff-03e8-4937-abb1-db59ddd0ae92",
+      "id": "5f567d74-6332-4f6a-9c38-56f9fee3a62c",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004889",
       "cell_line_id": "4T1_BREAST",
@@ -4294,7 +4294,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4329,7 +4329,7 @@
       }
     },
     {
-      "id": "0de9fb3c-3fe4-42ec-b789-ee3f7cf29337",
+      "id": "6c66208c-e919-492c-95d7-439795d6850e",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004903",
       "cell_line_id": "4T1_BREAST",
@@ -4337,7 +4337,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4372,7 +4372,7 @@
       }
     },
     {
-      "id": "4db6a323-97c6-4243-b2b9-90d81bf625ae",
+      "id": "65bc1b25-2b9e-4ced-9e16-881b8b70bafd",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004937",
       "cell_line_id": "4T1_BREAST",
@@ -4380,7 +4380,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4415,7 +4415,7 @@
       }
     },
     {
-      "id": "f9b77f2f-343b-4081-b17e-4b83bcb58fa8",
+      "id": "f3d44c2e-5cd2-4865-b116-2317dcf05dad",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004973",
       "cell_line_id": "4T1_BREAST",
@@ -4423,7 +4423,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4458,7 +4458,7 @@
       }
     },
     {
-      "id": "fafc68ce-bbd4-4087-9f78-22ca8c91a5a8",
+      "id": "15c26b12-7661-4b2b-af4d-0f3f5aafe670",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004982",
       "cell_line_id": "4T1_BREAST",
@@ -4466,7 +4466,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4501,7 +4501,7 @@
       }
     },
     {
-      "id": "1176a308-93df-425a-a738-bbb226798668",
+      "id": "02ab2c37-d80b-4615-bd40-248fd4d1c96d",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-004995",
       "cell_line_id": "4T1_BREAST",
@@ -4509,7 +4509,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4544,7 +4544,7 @@
       }
     },
     {
-      "id": "65712739-4872-468a-bb5b-dac15304d576",
+      "id": "d9022249-b161-4611-abd6-8f8ab627642b",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005195",
       "cell_line_id": "4T1_BREAST",
@@ -4552,7 +4552,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4587,7 +4587,7 @@
       }
     },
     {
-      "id": "ce171be4-77cc-4f0f-b1a9-d2486e7b15e2",
+      "id": "5a7d8fa1-ff14-4229-85ef-c1f9bdabc1f0",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005207",
       "cell_line_id": "4T1_BREAST",
@@ -4595,7 +4595,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4630,7 +4630,7 @@
       }
     },
     {
-      "id": "d948c69f-71b8-46f3-abfe-77b17297edca",
+      "id": "ef933c92-e0fb-4bcd-9551-85aa309a3500",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005232",
       "cell_line_id": "4T1_BREAST",
@@ -4638,7 +4638,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4673,7 +4673,7 @@
       }
     },
     {
-      "id": "d29f8525-d35e-451c-a980-b6512fc498bc",
+      "id": "fc639778-99b0-47f2-a3b7-6c86e5eef794",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005261",
       "cell_line_id": "4T1_BREAST",
@@ -4681,7 +4681,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4716,7 +4716,7 @@
       }
     },
     {
-      "id": "cfa3c770-2532-42a5-bdf7-afb85ed43242",
+      "id": "9e21b575-0acd-4bf3-b4f5-a2b79c8af549",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005596",
       "cell_line_id": "4T1_BREAST",
@@ -4724,7 +4724,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4759,7 +4759,7 @@
       }
     },
     {
-      "id": "54ff5fb5-b349-44ef-b29d-1bc745614ad8",
+      "id": "587c4274-bff7-4c36-b593-5590b7cd1799",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005656",
       "cell_line_id": "4T1_BREAST",
@@ -4767,7 +4767,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4802,7 +4802,7 @@
       }
     },
     {
-      "id": "17bb7a6c-7678-4176-b4a1-011f081f7ca4",
+      "id": "825b6db5-9738-4ece-aaac-238b67d1d3e3",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005691",
       "cell_line_id": "4T1_BREAST",
@@ -4810,7 +4810,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4845,7 +4845,7 @@
       }
     },
     {
-      "id": "e326dad9-843e-4ed6-8f77-129cd075ddfa",
+      "id": "aacc7e7f-dc38-406f-9868-78433ba2373a",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005710",
       "cell_line_id": "4T1_BREAST",
@@ -4853,7 +4853,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4888,7 +4888,7 @@
       }
     },
     {
-      "id": "c4009d8c-a108-44ec-aa74-17295e8ef489",
+      "id": "c4ac85f1-45db-44fd-b977-59ab154bfa66",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005728",
       "cell_line_id": "4T1_BREAST",
@@ -4896,7 +4896,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4931,7 +4931,7 @@
       }
     },
     {
-      "id": "5cc28b45-cb0f-41a2-920b-58ae91226966",
+      "id": "ec5644ce-5777-4beb-ab81-c43be931ab28",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005780",
       "cell_line_id": "4T1_BREAST",
@@ -4939,7 +4939,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -4974,7 +4974,7 @@
       }
     },
     {
-      "id": "f65e9c0f-75fd-4da3-a791-08cc53968059",
+      "id": "126bd998-31a6-4d84-9888-46fd20a611d6",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-005853",
       "cell_line_id": "4T1_BREAST",
@@ -4982,7 +4982,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5017,7 +5017,7 @@
       }
     },
     {
-      "id": "310a1279-7ff3-41bc-96cf-120cca89a95e",
+      "id": "e7cce2c1-75cf-4665-8080-42aa1d601b7d",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006002",
       "cell_line_id": "4T1_BREAST",
@@ -5025,7 +5025,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5060,7 +5060,7 @@
       }
     },
     {
-      "id": "27ef7693-e5a5-4a4f-b584-3d811e79dc7f",
+      "id": "9eca67c5-29a5-4ca0-b07f-82cd22df7631",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006015",
       "cell_line_id": "4T1_BREAST",
@@ -5068,7 +5068,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5103,7 +5103,7 @@
       }
     },
     {
-      "id": "e36a750a-40e9-4929-a696-bbc9915eacd7",
+      "id": "4cf83432-42cb-497a-89f8-1e77305ee573",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006030",
       "cell_line_id": "4T1_BREAST",
@@ -5111,7 +5111,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5146,7 +5146,7 @@
       }
     },
     {
-      "id": "42ee6419-79e6-4616-9354-58b537246145",
+      "id": "8313b964-3609-41b3-b5dd-eb647658b9eb",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006058",
       "cell_line_id": "4T1_BREAST",
@@ -5154,7 +5154,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5189,7 +5189,7 @@
       }
     },
     {
-      "id": "05f2e0ed-82b0-4714-be50-84d7c7f8bd4b",
+      "id": "14362c33-b040-4676-b221-33f8e518a79f",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006118",
       "cell_line_id": "4T1_BREAST",
@@ -5197,7 +5197,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5232,7 +5232,7 @@
       }
     },
     {
-      "id": "3972388a-c5a1-47a4-884b-09e9292b75cc",
+      "id": "e0c5f483-ff12-478a-bb7a-15f08fb90493",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006127",
       "cell_line_id": "4T1_BREAST",
@@ -5240,7 +5240,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5275,7 +5275,7 @@
       }
     },
     {
-      "id": "153398a1-a95a-4821-8e96-91cab0a1d417",
+      "id": "989ae87e-ae0a-4045-bf10-476d6508b2a1",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006246",
       "cell_line_id": "4T1_BREAST",
@@ -5283,7 +5283,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5318,7 +5318,7 @@
       }
     },
     {
-      "id": "e06ee2c8-507f-400d-976d-51a06207ae5c",
+      "id": "67d25f8d-017d-4f67-b75d-ef431e71dbea",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006279",
       "cell_line_id": "4T1_BREAST",
@@ -5326,7 +5326,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5361,7 +5361,7 @@
       }
     },
     {
-      "id": "50d02001-4aeb-4e15-b1ff-7462cdda0e3b",
+      "id": "a1d9ee1d-67fc-4693-8005-53ea986bad76",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006357",
       "cell_line_id": "4T1_BREAST",
@@ -5369,7 +5369,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5404,7 +5404,7 @@
       }
     },
     {
-      "id": "d8da987c-11c8-48ab-a247-38692e052b96",
+      "id": "bfae7e87-fc14-4e63-a14d-8a5cbd764687",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006378",
       "cell_line_id": "4T1_BREAST",
@@ -5412,7 +5412,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5447,7 +5447,7 @@
       }
     },
     {
-      "id": "1e007b62-136c-4a0b-be41-61d5b7478f46",
+      "id": "8222a633-9219-4948-9025-c819cc1a05d2",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006435",
       "cell_line_id": "4T1_BREAST",
@@ -5455,7 +5455,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5490,7 +5490,7 @@
       }
     },
     {
-      "id": "c4e9728c-1ee1-4c3a-b787-ad1a56702640",
+      "id": "80349648-29ca-4a91-8a3c-626a8ae36058",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006564",
       "cell_line_id": "4T1_BREAST",
@@ -5498,7 +5498,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5533,7 +5533,7 @@
       }
     },
     {
-      "id": "8e4070e7-b464-40a0-a600-98c688eb80bf",
+      "id": "5b1100c6-b8df-46cd-9bf0-a913c91b91bc",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006567",
       "cell_line_id": "4T1_BREAST",
@@ -5541,7 +5541,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5576,7 +5576,7 @@
       }
     },
     {
-      "id": "dd22f1dc-7ebd-4daa-b6b9-3cbdf5b8da05",
+      "id": "4f8164c8-e6af-46d4-85cb-288a0961a758",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006641",
       "cell_line_id": "4T1_BREAST",
@@ -5584,7 +5584,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5619,7 +5619,7 @@
       }
     },
     {
-      "id": "f2a62877-147b-4592-9c5f-85b9b5923c02",
+      "id": "d3b64f2a-dcd5-42a6-9440-ba4c93161de9",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006661",
       "cell_line_id": "4T1_BREAST",
@@ -5627,7 +5627,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5662,7 +5662,7 @@
       }
     },
     {
-      "id": "5b86ff0e-f9be-4cb5-85a7-a4e06e4ac1f3",
+      "id": "cc691331-e790-4977-96b6-2ba2d44685cd",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006673",
       "cell_line_id": "4T1_BREAST",
@@ -5670,7 +5670,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5705,7 +5705,7 @@
       }
     },
     {
-      "id": "1b297774-cd68-4c76-9871-8dbce94e5dff",
+      "id": "dba49d21-bc78-4b80-a66d-040422543d9d",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006764",
       "cell_line_id": "4T1_BREAST",
@@ -5713,7 +5713,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5748,7 +5748,7 @@
       }
     },
     {
-      "id": "3cb7dd23-55a9-4c76-97e5-50dd0f709984",
+      "id": "4237509f-2ed6-435b-bd1c-d698a65b6f83",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006787",
       "cell_line_id": "4T1_BREAST",
@@ -5756,7 +5756,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5791,7 +5791,7 @@
       }
     },
     {
-      "id": "7e070f85-c3da-45f1-9c52-362a0a053e99",
+      "id": "d37bc06f-559a-4dd3-a91b-d28408b5c572",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006796",
       "cell_line_id": "4T1_BREAST",
@@ -5799,7 +5799,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5834,7 +5834,7 @@
       }
     },
     {
-      "id": "8cc2a2d4-4411-4b73-9012-787c11aebf4b",
+      "id": "6c96602c-bcc1-4c12-8671-6058fc47085c",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006814",
       "cell_line_id": "4T1_BREAST",
@@ -5842,7 +5842,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
@@ -5877,7 +5877,7 @@
       }
     },
     {
-      "id": "9197e69d-e9b8-4d5b-a586-da9c308a9c34",
+      "id": "8c375400-23d8-493b-b284-caffd94438e9",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "DPC-006873",
       "cell_line_id": "4T1_BREAST",
@@ -5885,7 +5885,7 @@
       "synergy_model_scores": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_4_heuristic_target_match",
-      "mechanism_link": "f6ad5287-5766-4f59-a9bc-2bdd13486865",
+      "mechanism_link": "91713ec9-d466-4eab-849d-659b59c70e51",
       "resistance_mechanism_link": null,
       "source_study": [
         "pmid:22323820",
