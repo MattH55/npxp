@@ -1,0 +1,242 @@
+{
+  "id": "45ed06e5-0749-45dd-896f-e68a33fa9319",
+  "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+  "drug_id": "metformin",
+  "cell_line_id": "MCF7_BREAST",
+  "combined_effect_metric": null,
+  "interaction_type": "synergistic",
+  "evidence_tier": "tier_2_inferred",
+  "mechanism_link": "c003690c-c51b-4485-bf31-8e73599d82f5",
+  "resistance_mechanism_link": null,
+  "source_study": [
+    "pmid:33281976",
+    "pmid:24338509"
+  ],
+  "curator_notes": "Modifier leg: glucose deprivation engaged Hippo-pathway DEGs in MCF-7 (GSE153830). Drug leg: metformin impairs MCF-7 growth via AMPK-dependent and -independent mechanisms (Hadad et al. 2014). Hypothesized energetic-stress synergy; no combination viability readout exists.",
+  "model_run_id": null,
+  "trial_builder_ref": null,
+  "modifier_agent": "Glucose restriction (5% of standard medium glucose)",
+  "modifier_type": "dietary_metabolic",
+  "modifier_infrastructure_requirement": "minimal",
+  "cell_line_name": "MCF-7",
+  "tissue_origin": "Breast",
+  "drug_name": "Metformin",
+  "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
+  "drug_cost_accessibility_tier": "essential_generic",
+  "drug_pubchem_cid": "4091",
+  "drug_clinical_status": "approved",
+  "drug_lincs_signature_ref": "lincs:REP.A024_MCF7_24H:P13",
+  "evidence_tier_label": "Tier 2 \u2014 Inferred",
+  "resistance_mechanism": null,
+  "is_bridging_candidate": false,
+  "low_resource_relevance": true,
+  "priority_score": 0.4542,
+  "priority_components": {
+    "convergent_evidence": 0.3333,
+    "coverage_gap": 0.125,
+    "trial_saturation_inverse": 1.0,
+    "tumor_representativeness": 0.5,
+    "low_resource_boost": 1.0,
+    "disease_burden": null
+  },
+  "modifier": {
+    "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+    "modifier_type": "dietary_metabolic",
+    "agent": "Glucose restriction (5% of standard medium glucose)",
+    "protocol_parameters": {
+      "glucose_percent_of_standard": 5.0,
+      "duration_hr": 96,
+      "readout": "RNA-seq"
+    },
+    "source_study": "doi:10.3892/ol.2020.12326",
+    "source_dataset_accession": "GSE153830",
+    "infrastructure_requirement": "minimal",
+    "estimated_relative_cost_note": "Dietary/fasting-style protocol; no equipment."
+  },
+  "cell_line": {
+    "cell_line_id": "MCF7_BREAST",
+    "name": "MCF-7",
+    "tissue_origin": "Breast",
+    "cancer_subtype": "Breast adenocarcinoma, ER+/HER2- (luminal A)",
+    "key_mutations": [
+      {
+        "gene": "PIK3CA",
+        "variant": "E545K"
+      },
+      {
+        "gene": "GATA3",
+        "variant": "frameshift"
+      }
+    ],
+    "source": "CCLE/DepMap",
+    "oncotree_code": "BRCA",
+    "oncotree_primary_disease": "Invasive Breast Carcinoma",
+    "oncotree_subtype": "Invasive Breast Carcinoma",
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed"
+  },
+  "drug": {
+    "drug_id": "metformin",
+    "name": "Metformin",
+    "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
+    "target": "Mitochondrial ETC complex I; AMPK activation",
+    "source": "curated seed",
+    "synonyms": [
+      "Glucophage",
+      "Dimethylbiguanide"
+    ],
+    "pubchem_cid": "4091",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Complex I inhibition -> AMPK activation -> reduced hepatic gluconeogenesis and cellular energetic stress",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": "lincs:REP.A024_MCF7_24H:P13",
+    "cost_accessibility_tier": "essential_generic"
+  },
+  "mechanism": {
+    "id": "c003690c-c51b-4485-bf31-8e73599d82f5",
+    "modifier_id": "MOD-GLUCOSE-RESTRICT-5PCT-96H",
+    "cell_line_id": "MCF7_BREAST",
+    "signature_panel": "other",
+    "score": -1.9295532713378127,
+    "raw_deg_evidence_ref": "geo:GSE153830 FPKM matrix (Zhang et al. 2021, pmid:33281976); log2FC computed here",
+    "directionality": "ambiguous",
+    "notes": "Glucose-deprivation DEGs indicated Hippo pathway involvement in MCF-7 (GSE153830 series summary). Panel=other (no Hippo panel defined in spec). [Real DEG backfill 2026-09-22: ssGSEA-style z-score -1.930 for gene set 'KEGG_HIPPO_SIGNALING_PATHWAY' (162 genes measured), computed from 2 treatment vs 2 control real GSE153830 samples. This is a simple, uncorrected standardized-mean-difference statistic, not the paper's own (likely multiple-testing-corrected) pathway enrichment test -- a large |z| here does not necessarily mean the paper would call it significant, and vice versa. Treat as a real, reproducible number, not a replication of the paper's own significance call. See synlethality/signature_correlation.py for the method and its documented deviation from ssGSEA/GSVA proper.]"
+  },
+  "evidence_tier_definition": {
+    "label": "Tier 2 \u2014 Inferred",
+    "short_label": "T2",
+    "definition": "Drug response and modifier response were measured separately, then joined via a shared cell line and a biologically plausible shared mechanism. No combined-treatment readout exists."
+  },
+  "clinical_evidence": [],
+  "related": [
+    {
+      "id": "7040ca85-7dd9-4cf5-9982-bd30c8e05966",
+      "modifier_id": "MOD-HT-45C-GSE48398",
+      "drug_id": "cisplatin",
+      "cell_line_id": "MCF7_BREAST",
+      "combined_effect_metric": null,
+      "interaction_type": "unknown",
+      "evidence_tier": "tier_3_mechanism_only",
+      "mechanism_link": "a7642581-2706-4e1d-91e3-8dbd5c0d3236",
+      "resistance_mechanism_link": null,
+      "source_study": [
+        "geo:GSE48398",
+        "pmid:32722384"
+      ],
+      "curator_notes": "Heat-shock response measured in MCF-7 (expression only, GSE48398); platinum-heat synergy measured in CRC lines, not MCF-7 (Helderman et al. 2020). Mechanism-only.",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Hyperthermic shock (45 degC)",
+      "modifier_type": "thermal",
+      "modifier_infrastructure_requirement": "low",
+      "cell_line_name": "MCF-7",
+      "tissue_origin": "Breast",
+      "drug_name": "Cisplatin",
+      "drug_class": "Platinum agent",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "5702198",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": null,
+      "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": true,
+      "priority_score": 0.5167,
+      "priority_components": {
+        "convergent_evidence": 0.3333,
+        "coverage_gap": 0.3333,
+        "trial_saturation_inverse": 1.0,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 1.0,
+        "disease_burden": null
+      }
+    },
+    {
+      "id": "fa8451c9-fea4-48c3-b977-434eadf2e371",
+      "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+      "drug_id": "doxorubicin",
+      "cell_line_id": "MCF7_BREAST",
+      "combined_effect_metric": 4.3,
+      "interaction_type": "antagonistic",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "resistance_mechanism_link": null,
+      "source_study": [
+        "doi:10.1021/acsbiomaterials.4c01636",
+        "pmid:40013911"
+      ],
+      "curator_notes": "Real, exact quantitative metric (2026-09-23): IC50 fold-shift = 566.7 nM (5G5P) / 131.8 nM (2D control) = 4.30, from Chen et al. 2025's own directly-reported IC50 values (566.7 +/- 40.41 nM vs 131.8 +/- 12.45 nM) at 48h in MCF-7. Same metric definition as the MDA-MB-231 doxorubicin entry above (fold-shift, not a Bliss/Loewe/HSA/ZIP score). Notably a smaller fold-shift than MDA-MB-231's (4.71) -- a real, cross-line difference this data captures, not asserted.",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
+      "modifier_type": "mechanical_radiative",
+      "modifier_infrastructure_requirement": null,
+      "cell_line_name": "MCF-7",
+      "tissue_origin": "Breast",
+      "drug_name": "Doxorubicin",
+      "drug_class": "Anthracycline (topoisomerase II inhibitor)",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "31703",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": "lincs:REP.A026_MCF7_24H:L19",
+      "evidence_tier_label": "Tier 1 \u2014 Direct",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": false,
+      "priority_score": 0.3417,
+      "priority_components": {
+        "convergent_evidence": 0.3333,
+        "coverage_gap": 0.3333,
+        "trial_saturation_inverse": 0.5,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 0.0,
+        "disease_burden": null
+      }
+    },
+    {
+      "id": "822fbab4-e9fa-41d2-9809-52923e9c6f7e",
+      "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
+      "drug_id": "paclitaxel",
+      "cell_line_id": "MCF7_BREAST",
+      "combined_effect_metric": 3.77,
+      "interaction_type": "antagonistic",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "resistance_mechanism_link": null,
+      "source_study": [
+        "doi:10.1021/acsbiomaterials.4c01636",
+        "pmid:40013911"
+      ],
+      "curator_notes": "Real, exact quantitative metric (2026-09-23): IC50 fold-shift = 308.3 nM (5G5P) / 81.87 nM (2D control) = 3.77, from Chen et al. 2025's own directly-reported IC50 values (308.3 +/- 25.07 nM vs 81.87 +/- 15.80 nM) at 48h in MCF-7. Same metric definition as the other three entries above (fold-shift, not a Bliss/Loewe/HSA/ZIP score).",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
+      "modifier_type": "mechanical_radiative",
+      "modifier_infrastructure_requirement": null,
+      "cell_line_name": "MCF-7",
+      "tissue_origin": "Breast",
+      "drug_name": "Paclitaxel",
+      "drug_class": "Taxane (microtubule stabilizer)",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "36314",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": "lincs:REP.A009_MCF7_24H:H19",
+      "evidence_tier_label": "Tier 1 \u2014 Direct",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": false,
+      "priority_score": 0.4167,
+      "priority_components": {
+        "convergent_evidence": 0.3333,
+        "coverage_gap": 0.3333,
+        "trial_saturation_inverse": 1.0,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 0.0,
+        "disease_burden": null
+      }
+    }
+  ],
+  "related_truncated": false
+}

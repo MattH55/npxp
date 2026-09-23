@@ -19,11 +19,11 @@
   "signature_scores": [],
   "interactions": [
     {
-      "id": "c7f61d83-7b85-426a-888e-fb7fd9dbabc3",
+      "id": "8a5bb3d7-4c81-4407-b182-f01ba308fb3f",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MDAMB231_BREAST",
-      "combined_effect_metric": null,
+      "combined_effect_metric": 4.71,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -32,7 +32,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "Doxorubicin IC50 assessed at 48 h across 7.02/15.83/52.99 kPa hydrogel stiffness and 2D control in MDA-MB-231 (Chen et al. 2025); framed by the source study as stiffness-driven chemoresistance. Exact per-condition IC50 shift pending curation from source figures/tables.",
+      "curator_notes": "Real, exact quantitative metric (2026-09-23): IC50 fold-shift = 2311 nM (5G5P, ~53 kPa) / 490.7 nM (2D control) = 4.71, from Chen et al. 2025's own directly-reported IC50 values (mean +/- SD: 2311 +/- 356.7 nM vs 490.7 +/- 34.36 nM) at 48h in MDA-MB-231. This is an IC50 fold-shift (how much less potent the drug becomes on stiff matrix vs 2D), NOT a Bliss/Loewe/HSA/ZIP score from synlethality/scoring.py -- that engine needs a combined viability matrix at shared doses, which the paper reports as two separately-fit dose-response curves instead. Fold-shift > 1 = drug less effective on stiff matrix, consistent with the antagonistic call.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -50,9 +50,9 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.225,
+      "priority_score": 0.3417,
       "priority_components": {
-        "convergent_evidence": 0.0,
+        "convergent_evidence": 0.3333,
         "coverage_gap": 0.3333,
         "trial_saturation_inverse": 0.5,
         "tumor_representativeness": 0.5,
@@ -61,11 +61,11 @@
       }
     },
     {
-      "id": "8ccd113e-371f-4312-a5f6-0bf5dcd279bb",
+      "id": "fe3e0b90-3908-4835-b0dc-367ce605a5cf",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MDAMB231_BREAST",
-      "combined_effect_metric": null,
+      "combined_effect_metric": 6.65,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -74,7 +74,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "As for doxorubicin: paclitaxel IC50 assessed across the same stiffness range in MDA-MB-231 (Chen et al. 2025). Exact per-condition IC50 shift pending curation from source figures/tables.",
+      "curator_notes": "Real, exact quantitative metric (2026-09-23): IC50 fold-shift = 51.64 nM (5G5P) / 7.765 nM (2D control) = 6.65, from Chen et al. 2025's own directly-reported IC50 values (51.64 +/- 2.402 nM vs 7.765 +/- 0.2823 nM) at 48h in MDA-MB-231. Same metric definition as the doxorubicin entry above (fold-shift, not a Bliss/Loewe/HSA/ZIP score).",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -92,9 +92,9 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.3,
+      "priority_score": 0.4167,
       "priority_components": {
-        "convergent_evidence": 0.0,
+        "convergent_evidence": 0.3333,
         "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
@@ -103,11 +103,11 @@
       }
     },
     {
-      "id": "08f01481-2f3e-487a-ba4a-45e8a5ee234d",
+      "id": "fa8451c9-fea4-48c3-b977-434eadf2e371",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "doxorubicin",
       "cell_line_id": "MCF7_BREAST",
-      "combined_effect_metric": null,
+      "combined_effect_metric": 4.3,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -116,7 +116,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "Doxorubicin IC50 assessed across the same stiffness range in MCF-7 (Chen et al. 2025). Exact per-condition IC50 shift and any cross-line difference vs MDA-MB-231 pending curation from source data.",
+      "curator_notes": "Real, exact quantitative metric (2026-09-23): IC50 fold-shift = 566.7 nM (5G5P) / 131.8 nM (2D control) = 4.30, from Chen et al. 2025's own directly-reported IC50 values (566.7 +/- 40.41 nM vs 131.8 +/- 12.45 nM) at 48h in MCF-7. Same metric definition as the MDA-MB-231 doxorubicin entry above (fold-shift, not a Bliss/Loewe/HSA/ZIP score). Notably a smaller fold-shift than MDA-MB-231's (4.71) -- a real, cross-line difference this data captures, not asserted.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -134,9 +134,9 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.225,
+      "priority_score": 0.3417,
       "priority_components": {
-        "convergent_evidence": 0.0,
+        "convergent_evidence": 0.3333,
         "coverage_gap": 0.3333,
         "trial_saturation_inverse": 0.5,
         "tumor_representativeness": 0.5,
@@ -145,11 +145,11 @@
       }
     },
     {
-      "id": "863d3ed5-6502-4fd1-93a0-2f7efe8c3ac2",
+      "id": "822fbab4-e9fa-41d2-9809-52923e9c6f7e",
       "modifier_id": "MOD-STIFFNESS-53KPA-5G5P",
       "drug_id": "paclitaxel",
       "cell_line_id": "MCF7_BREAST",
-      "combined_effect_metric": null,
+      "combined_effect_metric": 3.77,
       "interaction_type": "antagonistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -158,7 +158,7 @@
         "doi:10.1021/acsbiomaterials.4c01636",
         "pmid:40013911"
       ],
-      "curator_notes": "As for doxorubicin: paclitaxel IC50 assessed across the same stiffness range in MCF-7 (Chen et al. 2025). Exact per-condition IC50 shift pending curation from source figures/tables.",
+      "curator_notes": "Real, exact quantitative metric (2026-09-23): IC50 fold-shift = 308.3 nM (5G5P) / 81.87 nM (2D control) = 3.77, from Chen et al. 2025's own directly-reported IC50 values (308.3 +/- 25.07 nM vs 81.87 +/- 15.80 nM) at 48h in MCF-7. Same metric definition as the other three entries above (fold-shift, not a Bliss/Loewe/HSA/ZIP score).",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Substrate stiffness (52.99 kPa, 3D hydrogel, formulation 5G5P)",
@@ -176,9 +176,9 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.3,
+      "priority_score": 0.4167,
       "priority_components": {
-        "convergent_evidence": 0.0,
+        "convergent_evidence": 0.3333,
         "coverage_gap": 0.3333,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,

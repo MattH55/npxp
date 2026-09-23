@@ -17,7 +17,7 @@
   "cost_accessibility_tier": "essential_generic",
   "drug_responses": [
     {
-      "id": "254ff294-265c-4f6c-844c-295c954df540",
+      "id": "76fea88a-62bd-4f52-8bba-5ac2c1c2c13e",
       "drug_id": "cisplatin",
       "cell_line_id": "MCF7_BREAST",
       "viability_metric": 0.500632045451,
@@ -25,7 +25,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "4691fda5-0842-41bb-ac96-0a014d6799ce",
+      "id": "e25c1d79-6f22-45d1-8fed-f0d1342ffdf3",
       "drug_id": "cisplatin",
       "cell_line_id": "T47D_BREAST",
       "viability_metric": 0.150843304503,
@@ -33,7 +33,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "f3271e1e-7412-4b12-9e3d-cdf6ce27b891",
+      "id": "fa682169-0954-4667-8a01-c51101bf594f",
       "drug_id": "cisplatin",
       "cell_line_id": "MDAMB231_BREAST",
       "viability_metric": -0.271138309391,
@@ -41,7 +41,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "4ed06dbd-ba0c-4005-972b-f6ad9d4cc2ba",
+      "id": "ddb3cedd-455c-45d9-a5b6-2ed8e6d67c0f",
       "drug_id": "cisplatin",
       "cell_line_id": "MDAMB468_BREAST",
       "viability_metric": -0.0439255037598,
@@ -49,7 +49,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "584283e2-0070-461d-a715-d2219ce7811e",
+      "id": "51e7149c-f956-4ca5-adcb-36df68007b5c",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "viability_metric": 0.075181567048,
@@ -57,7 +57,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "7d82764c-8764-4d62-870e-4299fca0cd25",
+      "id": "3e8160e4-606f-41af-94a1-bf0ec73d7299",
       "drug_id": "cisplatin",
       "cell_line_id": "A549_LUNG",
       "viability_metric": 0.224765602306,
@@ -65,7 +65,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "36e8378f-afb0-447e-8002-f202a7d668e3",
+      "id": "cf2c3315-37bf-4e1b-b8cd-979b0743d5b5",
       "drug_id": "cisplatin",
       "cell_line_id": "HCT116_LARGE_INTESTINE",
       "viability_metric": 0.143830543041,
@@ -73,7 +73,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "dbcc6a6d-3c22-487d-89da-6b0117f5f09e",
+      "id": "3ffc5287-3a7f-4aa4-9a7d-8a55a737516e",
       "drug_id": "cisplatin",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "viability_metric": 0.371715235906,
@@ -81,7 +81,7 @@
       "source": "PRISM Repurposing Public 24Q2 (2.5uM, 5-day; doi:10.6084/m9.figshare.25917643.v1)"
     },
     {
-      "id": "4bf56372-9e53-4ea1-bf7b-5c7c8229266f",
+      "id": "c6635fdc-8173-42ff-b433-c9c951d932ac",
       "drug_id": "cisplatin",
       "cell_line_id": "T98G_CENTRAL_NERVOUS_SYSTEM",
       "viability_metric": 0.146246034276,
@@ -91,7 +91,7 @@
   ],
   "interactions": [
     {
-      "id": "295e2b6c-6be2-47da-80ab-cc97bb28e7e8",
+      "id": "5645fc64-062a-4bc7-98d2-8d2d3984d4e8",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -104,7 +104,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "Platinum drugs showed temperature-dependent synergy with heat at >=41 degC (increased platinum uptake ~2x, increased DNA damage and apoptosis; thermosensitization ratio > 1). Quantitative per-line TER pending curation from source tables.",
+      "curator_notes": "Platinum drugs showed temperature-dependent synergy with heat at >=41 degC (increased platinum uptake ~2x, increased DNA damage and apoptosis; thermosensitization ratio > 1). Real TER=3.5 found (2026-09-23) but only at 43 degC, not this modifier's exact 42 degC protocol -- left as combined_effect_metric=None rather than assign a value from a different condition (see carboplatin's entry, which does have a real 42 degC-matched TER, for the metric definition).",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -133,14 +133,14 @@
       }
     },
     {
-      "id": "3bb98e6a-27e7-42cb-8bdc-588c7da3b6c7",
+      "id": "7040ca85-7dd9-4cf5-9982-bd30c8e05966",
       "modifier_id": "MOD-HT-45C-GSE48398",
       "drug_id": "cisplatin",
       "cell_line_id": "MCF7_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "unknown",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "6b639228-8425-4163-821b-f7af955de83b",
+      "mechanism_link": "a7642581-2706-4e1d-91e3-8dbd5c0d3236",
       "resistance_mechanism_link": null,
       "source_study": [
         "geo:GSE48398",
@@ -175,14 +175,14 @@
       }
     },
     {
-      "id": "4e834500-908b-4e54-a810-292841310ff4",
+      "id": "9132b44e-f986-4eb7-b46c-9146dd70006e",
       "modifier_id": "MOD-ALICIN-NSCLC",
       "drug_id": "cisplatin",
       "cell_line_id": "A549_LUNG",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
-      "mechanism_link": "2aeb25c0-c45c-47e7-8ad3-5b86119129c3",
+      "mechanism_link": "86239002-75ad-4ffc-8c1d-6d3b96ac02c5",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.33594/000000253",
@@ -217,14 +217,14 @@
       }
     },
     {
-      "id": "7564cb37-6e41-4bf1-ac56-41cda3fea717",
+      "id": "9f7d303c-13cd-4cc2-8b0c-39a4659a1d19",
       "modifier_id": "MOD-HBOT",
       "drug_id": "cisplatin",
       "cell_line_id": "A549_LUNG",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "3c6cc340-3925-4ff8-aadb-4c96eb7be45e",
+      "mechanism_link": "f4beb01c-52a5-4052-a398-4bff68cca57e",
       "resistance_mechanism_link": null,
       "source_study": [
         "doi:10.3389/fonc.2021.691762",
@@ -259,15 +259,15 @@
       }
     },
     {
-      "id": "126e263e-ecfe-495c-9720-71312832f0f3",
+      "id": "e5794077-6aa9-49e5-a100-b9634a654708",
       "modifier_id": "MOD-FAST-CYCLES-48-60H",
       "drug_id": "cisplatin",
       "cell_line_id": "4T1_BREAST",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "69f979af-3e80-449f-be5e-00c4805d1988",
-      "resistance_mechanism_link": "8dd73454-3c6c-4bf4-ae96-5ae2d7f11129",
+      "mechanism_link": "b58820e8-873d-4788-acfc-060a29547823",
+      "resistance_mechanism_link": "a263fd34-9f33-4ff5-b05b-bb44a01ce154",
       "source_study": [
         "pmid:22323820",
         "pmid:9861196"
@@ -288,7 +288,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "8dd73454-3c6c-4bf4-ae96-5ae2d7f11129",
+        "id": "a263fd34-9f33-4ff5-b05b-bb44a01ce154",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -308,15 +308,15 @@
       }
     },
     {
-      "id": "560d150c-5b3b-4e2e-91fb-34f0fd226ba5",
+      "id": "28be965f-5c05-444b-b48c-a5b66846c297",
       "modifier_id": "MOD-IRRAD-SINGLE-DOSE",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "ea1d1a8e-8cbf-4f60-b5da-66f9443c4f08",
-      "resistance_mechanism_link": "8dd73454-3c6c-4bf4-ae96-5ae2d7f11129",
+      "mechanism_link": "1678c00b-5f5b-4c40-a071-4180b2d7b2e6",
+      "resistance_mechanism_link": "a263fd34-9f33-4ff5-b05b-bb44a01ce154",
       "source_study": [
         "pmid:19929413",
         "pmid:9861196"
@@ -337,7 +337,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "8dd73454-3c6c-4bf4-ae96-5ae2d7f11129",
+        "id": "a263fd34-9f33-4ff5-b05b-bb44a01ce154",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -357,15 +357,15 @@
       }
     },
     {
-      "id": "4016b808-81f0-4392-bd00-6ee2fbd42f26",
+      "id": "ee3b7394-6ca8-4f7e-bd0f-bd6b9c0d5d69",
       "modifier_id": "MOD-TTFIELDS-200KHZ",
       "drug_id": "cisplatin",
       "cell_line_id": "U87MG_CENTRAL_NERVOUS_SYSTEM",
       "combined_effect_metric": null,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_3_mechanism_only",
-      "mechanism_link": "62d3ec2f-4e84-4c5c-98a5-4c27753329db",
-      "resistance_mechanism_link": "8dd73454-3c6c-4bf4-ae96-5ae2d7f11129",
+      "mechanism_link": "b4f105d4-524b-48b7-94e2-f0bbc5807037",
+      "resistance_mechanism_link": "a263fd34-9f33-4ff5-b05b-bb44a01ce154",
       "source_study": [
         "doi:10.1007/s11060-023-04308-4",
         "pmid:9861196"
@@ -386,7 +386,7 @@
       "drug_lincs_signature_ref": null,
       "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
       "resistance_mechanism": {
-        "id": "8dd73454-3c6c-4bf4-ae96-5ae2d7f11129",
+        "id": "a263fd34-9f33-4ff5-b05b-bb44a01ce154",
         "drug_id": "cisplatin",
         "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
         "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",
@@ -420,7 +420,7 @@
   ],
   "resistance_mechanisms": [
     {
-      "id": "8dd73454-3c6c-4bf4-ae96-5ae2d7f11129",
+      "id": "a263fd34-9f33-4ff5-b05b-bb44a01ce154",
       "drug_id": "cisplatin",
       "pathway_or_gene": "ERCC1/XPF nucleotide excision repair (NER)",
       "mechanism_description": "NER removes platinum-DNA intrastrand adducts before they trigger apoptosis; elevated ERCC1/XPF activity is a well-established platinum-resistance mechanism across tumor types (Reed 1998).",

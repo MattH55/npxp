@@ -14,7 +14,7 @@
   "signature_scores": [],
   "interactions": [
     {
-      "id": "295e2b6c-6be2-47da-80ab-cc97bb28e7e8",
+      "id": "5645fc64-062a-4bc7-98d2-8d2d3984d4e8",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "cisplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -27,7 +27,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "Platinum drugs showed temperature-dependent synergy with heat at >=41 degC (increased platinum uptake ~2x, increased DNA damage and apoptosis; thermosensitization ratio > 1). Quantitative per-line TER pending curation from source tables.",
+      "curator_notes": "Platinum drugs showed temperature-dependent synergy with heat at >=41 degC (increased platinum uptake ~2x, increased DNA damage and apoptosis; thermosensitization ratio > 1). Real TER=3.5 found (2026-09-23) but only at 43 degC, not this modifier's exact 42 degC protocol -- left as combined_effect_metric=None rather than assign a value from a different condition (see carboplatin's entry, which does have a real 42 degC-matched TER, for the metric definition).",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "49f1e442-3418-4671-82ac-55bdb7f05082",
+      "id": "403cf5f4-491a-4bb5-9dc9-908ef14a592b",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "oxaliplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -69,7 +69,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "As for cisplatin: temperature-dependent synergy at >=41 degC (Helderman et al. 2020).",
+      "curator_notes": "As for cisplatin: temperature-dependent synergy at >=41 degC (Helderman et al. 2020). Real TER=3.3 found (2026-09-23) but only at 43 degC, not this modifier's exact 42 degC protocol -- left as combined_effect_metric=None (see carboplatin's entry for the metric definition and the one real, protocol-matched value found).",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -98,11 +98,11 @@
       }
     },
     {
-      "id": "1894e940-4999-402e-9638-4b5860b618de",
+      "id": "8daace9c-29c9-4128-a2ab-3d59f7dbb431",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "carboplatin",
       "cell_line_id": "RKO_LARGE_INTESTINE",
-      "combined_effect_metric": null,
+      "combined_effect_metric": 3.8,
       "interaction_type": "synergistic",
       "evidence_tier": "tier_1_direct",
       "mechanism_link": null,
@@ -111,7 +111,7 @@
         "doi:10.3390/cells9081775",
         "pmid:32722384"
       ],
-      "curator_notes": "As for cisplatin: temperature-dependent synergy at >=41 degC (Helderman et al. 2020).",
+      "curator_notes": "Real, protocol-matched quantitative metric (2026-09-23): Thermal Enhancement Ratio (TER) = 3.8 at 42 degC in RKO, as directly reported by Helderman et al. 2020 (main text: 'TER ratios of 2.5, 3.8, and 7.2 at 41, 42, and 43 degC, respectively'). TER = IC50(37 degC) / IC50(hyperthermia) -- a real literature-reported synergy metric, NOT a Bliss/Loewe/HSA/ZIP score from synlethality/scoring.py (no raw dose x temperature viability matrix was accessible; the paper's own full supplementary PDF is blocked by MDPI's bot protection from every access path tried -- direct fetch, WebFetch, and PMC's own supplementary mirror all 403/404). Cisplatin (TER=3.5) and oxaliplatin (TER=3.3) also have real TER values in this paper, but only at 43 degC, not the exact 42 degC this modifier specifies -- left as combined_effect_metric=None rather than assign a value from a different condition than what's actually modeled here.",
       "model_run_id": null,
       "trial_builder_ref": null,
       "modifier_agent": "Fever-range hyperthermia (HIPEC-mimetic)",
@@ -129,9 +129,9 @@
       "resistance_mechanism": null,
       "is_bridging_candidate": false,
       "low_resource_relevance": false,
-      "priority_score": 0.35,
+      "priority_score": 0.4667,
       "priority_components": {
-        "convergent_evidence": 0.0,
+        "convergent_evidence": 0.3333,
         "coverage_gap": 0.5,
         "trial_saturation_inverse": 1.0,
         "tumor_representativeness": 0.5,
@@ -140,7 +140,7 @@
       }
     },
     {
-      "id": "7e645732-83dc-452c-8112-7ce7c90f7970",
+      "id": "28d775b5-818b-44be-9c09-d654365433fc",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "5-fluorouracil",
       "cell_line_id": "RKO_LARGE_INTESTINE",
@@ -182,7 +182,7 @@
       }
     },
     {
-      "id": "d88f1f7f-71cb-42f5-a07f-d33efcdd176f",
+      "id": "d583aa32-35c2-4420-a461-ed37af138056",
       "modifier_id": "MOD-HT-42C-60M-HIPEC",
       "drug_id": "mitomycin-c",
       "cell_line_id": "RKO_LARGE_INTESTINE",

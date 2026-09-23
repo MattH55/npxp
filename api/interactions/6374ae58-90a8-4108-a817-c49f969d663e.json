@@ -1,0 +1,157 @@
+{
+  "id": "6374ae58-90a8-4108-a817-c49f969d663e",
+  "modifier_id": "MOD-HYP-1O2-24H",
+  "drug_id": "doxorubicin",
+  "cell_line_id": "DU145_PROSTATE",
+  "combined_effect_metric": null,
+  "interaction_type": "antagonistic",
+  "evidence_tier": "tier_3_mechanism_only",
+  "mechanism_link": "ec885a4e-ec84-4cb5-8b10-dc936dd98f0f",
+  "resistance_mechanism_link": null,
+  "source_study": [
+    "doi:10.1016/j.drup.2011.03.001",
+    "pmid:21466972"
+  ],
+  "curator_notes": "Review-level evidence that HIF-1 activity attenuates drug-induced apoptosis (hypoxia-mediated drug resistance); no line-specific combination readout. Representative hypoxia protocol parameters.",
+  "model_run_id": null,
+  "trial_builder_ref": null,
+  "modifier_agent": "Hypoxia (1% O2)",
+  "modifier_type": "hypoxic",
+  "modifier_infrastructure_requirement": "low",
+  "cell_line_name": "DU-145",
+  "tissue_origin": "Prostate",
+  "drug_name": "Doxorubicin",
+  "drug_class": "Anthracycline (topoisomerase II inhibitor)",
+  "drug_cost_accessibility_tier": "essential_generic",
+  "drug_pubchem_cid": "31703",
+  "drug_clinical_status": "approved",
+  "drug_lincs_signature_ref": "lincs:REP.A026_MCF7_24H:L19",
+  "evidence_tier_label": "Tier 3 \u2014 Mechanism-only",
+  "resistance_mechanism": null,
+  "is_bridging_candidate": false,
+  "low_resource_relevance": true,
+  "priority_score": 0.4917,
+  "priority_components": {
+    "convergent_evidence": 0.3333,
+    "coverage_gap": 0.5,
+    "trial_saturation_inverse": 0.5,
+    "tumor_representativeness": 0.5,
+    "low_resource_boost": 1.0,
+    "disease_burden": null
+  },
+  "modifier": {
+    "modifier_id": "MOD-HYP-1O2-24H",
+    "modifier_type": "hypoxic",
+    "agent": "Hypoxia (1% O2)",
+    "protocol_parameters": {
+      "o2_percent": 1.0,
+      "duration_hr": 24,
+      "note": "Representative protocol parameters; this row is anchored to review-level evidence (Rohwer & Cramer 2011), not a single experiment"
+    },
+    "source_study": "doi:10.1016/j.drup.2011.03.001",
+    "source_dataset_accession": null,
+    "infrastructure_requirement": "low",
+    "estimated_relative_cost_note": "Tumor-microenvironment condition, not a directly patient-applied intervention; basic hypoxia-chamber/gas-mixing equipment would be needed for any lab replication."
+  },
+  "cell_line": {
+    "cell_line_id": "DU145_PROSTATE",
+    "name": "DU-145",
+    "tissue_origin": "Prostate",
+    "cancer_subtype": "Prostate adenocarcinoma (androgen-independent)",
+    "key_mutations": [
+      {
+        "gene": "TP53",
+        "variant": "P223L/V274F"
+      },
+      {
+        "gene": "RB1",
+        "variant": "mutant"
+      }
+    ],
+    "source": "CCLE/DepMap",
+    "oncotree_code": "PRAD",
+    "oncotree_primary_disease": "Prostate Adenocarcinoma",
+    "oncotree_subtype": "Prostate Adenocarcinoma",
+    "ncit_code": null,
+    "tumor_concordance_score": null,
+    "tumor_concordance_flag": "unassessed"
+  },
+  "drug": {
+    "drug_id": "doxorubicin",
+    "name": "Doxorubicin",
+    "drug_class": "Anthracycline (topoisomerase II inhibitor)",
+    "target": "Topoisomerase II; redox cycling",
+    "source": "curated seed",
+    "synonyms": [
+      "Adriamycin"
+    ],
+    "pubchem_cid": "31703",
+    "chembl_id": null,
+    "drugbank_id": null,
+    "mechanism_of_action": "Topoisomerase II poisoning and intercalation; redox cycling generates ROS",
+    "clinical_status": "approved",
+    "induced_expression_signature_ref": "lincs:REP.A026_MCF7_24H:L19",
+    "cost_accessibility_tier": "essential_generic"
+  },
+  "mechanism": {
+    "id": "ec885a4e-ec84-4cb5-8b10-dc936dd98f0f",
+    "modifier_id": "MOD-HYP-1O2-24H",
+    "cell_line_id": "DU145_PROSTATE",
+    "signature_panel": "other",
+    "score": null,
+    "raw_deg_evidence_ref": "Review-level: Rohwer & Cramer 2011 (PMID 21466972)",
+    "directionality": "protective_resistance",
+    "notes": "HIF-1-driven hypoxia response attenuates drug-induced apoptosis (review-level evidence; no single experiment anchors this row)."
+  },
+  "evidence_tier_definition": {
+    "label": "Tier 3 \u2014 Mechanism-only",
+    "short_label": "T3",
+    "definition": "Signature overlap suggests a plausible interaction, but no death/viability readout exists for either factor in combination."
+  },
+  "clinical_evidence": [],
+  "related": [
+    {
+      "id": "60fce9ff-abb2-449b-94f3-f7b195a39d92",
+      "modifier_id": "MOD-GLUCOSE-LOW-DU145",
+      "drug_id": "metformin",
+      "cell_line_id": "DU145_PROSTATE",
+      "combined_effect_metric": null,
+      "interaction_type": "synergistic",
+      "evidence_tier": "tier_1_direct",
+      "mechanism_link": null,
+      "resistance_mechanism_link": null,
+      "source_study": [
+        "doi:10.3390/ijms20102593",
+        "pmid:31137785"
+      ],
+      "curator_notes": "Metformin anti-proliferative effect was glucose-concentration-dependent: low glucose potentiated metformin-mediated DU-145 cell death (MTT/xCELLigence); HO-1 inhibition further sensitized cells.",
+      "model_run_id": null,
+      "trial_builder_ref": null,
+      "modifier_agent": "Low-glucose medium (metformin co-treatment context)",
+      "modifier_type": "dietary_metabolic",
+      "modifier_infrastructure_requirement": "minimal",
+      "cell_line_name": "DU-145",
+      "tissue_origin": "Prostate",
+      "drug_name": "Metformin",
+      "drug_class": "Biguanide (mitochondrial complex I inhibitor)",
+      "drug_cost_accessibility_tier": "essential_generic",
+      "drug_pubchem_cid": "4091",
+      "drug_clinical_status": "approved",
+      "drug_lincs_signature_ref": "lincs:REP.A024_MCF7_24H:P13",
+      "evidence_tier_label": "Tier 1 \u2014 Direct",
+      "resistance_mechanism": null,
+      "is_bridging_candidate": false,
+      "low_resource_relevance": true,
+      "priority_score": 0.3375,
+      "priority_components": {
+        "convergent_evidence": 0.0,
+        "coverage_gap": 0.125,
+        "trial_saturation_inverse": 1.0,
+        "tumor_representativeness": 0.5,
+        "low_resource_boost": 1.0,
+        "disease_burden": null
+      }
+    }
+  ],
+  "related_truncated": false
+}
