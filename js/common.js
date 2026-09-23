@@ -126,6 +126,7 @@ const NAV_ITEMS = [
     { href: "drugs.html", label: "Drugs" },
     { href: "candidates.html", label: "Candidates" },
     { href: "coverage.html", label: "Coverage Gaps" },
+    { href: "opportunity.html", label: "Opportunity" },
     { href: "scoring.html", label: "Scoring" },
 ];
 

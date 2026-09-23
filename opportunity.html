@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opportunity Ranking — NPxP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="text-slate-200 min-h-screen">
+  <div id="nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-extrabold text-white mb-1"><i class="fa-solid fa-map-location-dot mr-2 text-indigo-400"></i>Opportunity Ranking</h1>
+    <p class="text-slate-400 text-sm mb-3">
+      Where is non-pharm × drug research effort most under-allocated relative to what's
+      already been found? <b>opportunity_score = predicted_uplift × gap_weight</b> —
+      cell lines with a promising real signal but almost no direct testing rank highest;
+      already well-studied lines are suppressed even if their signal is strong.
+    </p>
+    <div class="bg-indigo-500/10 border border-indigo-500/40 rounded-lg p-4 text-sm text-indigo-200 mb-5">
+      <i class="fa-solid fa-circle-info mr-1"></i>
+      This is a <b>different question</b> from the <a class="underline" href="candidates.html">Candidates</a>
+      worklist: that page ranks individual drug × modifier × cell-line <i>rows</i> by an additive,
+      five-signal <code>priority_score</code>. This page ranks whole <i>cell lines</i> (and cancer
+      types) by a multiplicative two-factor formula — a cell line can only rank highly here if
+      it has <i>both</i> a real synergy signal <i>and</i> a real evidence gap; neither factor can
+      compensate for the other being weak.
+    </div>
+
+    <details class="bg-slate-800/40 border border-slate-700 rounded-lg mb-5">
+      <summary class="cursor-pointer px-4 py-2 text-sm text-slate-300 font-semibold">
+        <i class="fa-solid fa-scale-balanced mr-1"></i>Methodology
+      </summary>
+      <div class="px-4 pb-4 text-sm text-slate-400 space-y-2">
+        <p><b class="text-slate-200">predicted_uplift</b> (0–1): the fraction of a cell line's
+          genuinely-tested (Tier 1 direct or Tier 2 inferred) interactions that are synergistic.
+          Not a magnitude estimate — a Thermal Enhancement Ratio and an IC50 fold-shift aren't
+          comparable on one scale without real work to make them so, so this counts real
+          synergistic calls, not blended numbers.</p>
+        <p><b class="text-slate-200">gap_weight</b> = 1 / (1 + log(1 + tier_1_direct_count)):
+          a cell line with zero Tier 1 rows gets the maximum gap_weight (1.0) regardless of how
+          much Tier 2/2c/3/4 evidence exists around it; a well-tested line (many real Tier 1 rows)
+          is smoothly suppressed, never to exactly zero.</p>
+        <p>Cancer-type rows roll up their constituent cell lines' scores (mean and max), and are
+          flagged <b>low-confidence</b> when backed by only one cell line — shown, not hidden.</p>
+      </div>
+    </details>
+
+    <div class="flex items-center gap-3 mb-3">
+      <button id="tab-cell-lines" class="px-3 py-1.5 text-sm rounded-lg bg-indigo-600 text-white font-semibold">Cell lines</button>
+      <button id="tab-cancer-types" class="px-3 py-1.5 text-sm rounded-lg bg-slate-800 text-slate-300">Cancer types</button>
+    </div>
+
+    <div id="opp-status" class="text-slate-400 text-sm mb-3"></div>
+    <div id="opp-cell-lines"></div>
+    <div id="opp-cancer-types" class="hidden"></div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/opportunity.js"></script>
+</body>
+</html>
