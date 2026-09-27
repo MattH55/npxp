@@ -17,6 +17,10 @@ See `BUILD_SPEC.md` for the full data model, ingestion sources, API surface, and
   (Bliss/HSA/Loewe/ZIP), used by the scoring page in the static build.
 - `CNAME` — custom domain `npxp.opensourcemed.info`.
 
+- `pipeline/` — `npi_pharma`, a standalone Python package that scores NPI ×
+  drug interactions for an *individual* transcriptome by signature
+  composition (Tier 3, mechanism-only). See `pipeline/README.md`.
+
 The backend, ingestion pipeline, curation tooling, and tests live in the
 development workspace (`synlethality/` package). After any data or frontend
 change, regenerate this snapshot with:

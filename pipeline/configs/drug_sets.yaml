@@ -1,0 +1,20 @@
+# Named drug sets, as LINCS pert_iname (lower-case). CMap names rapamycin
+# "sirolimus"; ingest-lincs resolves that alias. Names absent from the
+# chosen LINCS release are reported by ingest-lincs, not silently dropped.
+drug_sets:
+  milestone:          # first milestone; add background with: ingest-lincs --random 20 --seed 0
+    - metformin
+    - sirolimus
+  metabolic:
+    - metformin
+    - sirolimus
+    - everolimus
+    - pioglitazone
+    - rosiglitazone
+    - fenofibrate
+    - simvastatin
+    - atorvastatin
+    - resveratrol
+    - berberine
+    - acarbose
+    - glibenclamide

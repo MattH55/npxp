@@ -1,0 +1,43 @@
+# Default scoring configuration. Every weight is exposed; nothing is hidden.
+# Override with: npi-pharma score ... --config my_scoring.yaml (keys merge over these).
+
+weights:
+  complementarity: 0.35        # combo reversal gain beyond best monotherapy, as share of headroom
+  orthogonality: 0.10          # 1 - |cos(s_N, s_D)| on patient focus genes (gated, see below)
+  monotherapy_correlation: 0.10  # cos(s_N, s_D); a feature, not a verdict (eLife 2020;9:e52707)
+  pathway_joint: 0.30          # DIPx-like pathway compatibility vs patient need
+  mono_reversal: 0.15          # mean reversal of s_P by each agent alone
+
+combine: unit_sum              # combo signature = s_N/|s_N| + s_D/|s_D|
+focus_top_k: 500               # "genes that matter in P": top-|s_P| genes
+reversal_space: focus          # focus | all: gene space for reverse(s_P, .)
+gate_orthogonality: true       # orthogonality counts only when both agents reverse s_P
+pathway_scale: 3.0             # tanh scale for pathway z-activity
+pathway_conflict_penalty: 1.0  # lambda for NPI/drug opposing on a needed pathway
+pathway_min_size: 5
+n_attribution_genes: 20
+
+# Confidence multipliers applied to composite_raw -> composite.
+shrink:
+  tissue_mismatch: 0.5
+  small_n: 0.6                 # NPI signature from < min_npi_n paired samples
+  exploratory: 0.7
+  unverified_metadata: 0.85
+  cross_species: 0.8
+  low_overlap: 0.8             # shared genes < low_overlap_genes
+min_npi_n: 6
+low_overlap_genes: 1000
+min_overlap_genes: 200
+
+flags:
+  redundancy_cos: 0.6          # cos(s_N,s_D) above this with both reversing -> redundancy flag
+  pathway_activity: 2.0        # |z-activity| threshold for pathway-level flags
+  xenobiotic_set: XENOBIOTIC_METABOLISM_CORE
+
+# Tissue synonyms -> canonical tissue. Compatibility is canonical equality.
+tissues:
+  adipose: [adipose, adipose_tissue, sat, subcutaneous_adipose, vat, visceral_adipose, fat]
+  skeletal_muscle: [skeletal_muscle, muscle, vastus_lateralis, quadriceps, gastrocnemius]
+  blood: [blood, whole_blood, pbmc, pbmcs, leukocytes, monocytes]
+  liver: [liver, hepatocyte, hepatic]
+  mammary: [mammary, breast, mammary_gland]

@@ -1,0 +1,165 @@
+# NPI signature catalog: one record per study / arm / tissue.
+#
+# Rules
+# - Never mix tissues or arms in one record; CR and exercise from the same
+#   study are two ids.
+# - Fields left null are NOT curated yet. Fill them from the paper / GEO
+#   record; do not guess. `ingest-npi` lists every uncurated field, and
+#   uncurated duration/intensity/sample_size set quality_flag=unverified_metadata
+#   (down-weighted at scoring time).
+# - sample_size < 6 paired subjects => quality_flag=small_n unless exploratory: true.
+# - inputs.* paths are relative to --raw-dir (default data/raw). inputs.pairing
+#   maps GEO "!Sample_characteristics_ch1" keys to pre/post (+ subject for pairing).
+#
+# Required: npi_id, modality, tissue, species, contrast, source_accessions.
+
+npis:
+  - npi_id: LCD_adipose_GSE95640
+    modality: diet
+    intensity: low_calorie_diet
+    duration: null
+    tissue: adipose
+    species: human
+    sample_size: null
+    contrast: post-intervention vs baseline, paired
+    source_accessions: [GSE95640]
+    paper: https://link.springer.com/article/10.1186/s12967-025-07424-z
+    notes: Human paired diet signature, previously queried against L1000 (see paper). Milestone NPI.
+    inputs:
+      series_matrix: GSE95640/GSE95640_series_matrix.txt.gz
+      probe_map: GSE95640/probe_map.tsv    # probe<TAB>symbol from the GPL annotation
+      pairing: {subject_field: null, time_field: null, pre: null, post: null}
+
+  - npi_id: LCD_adipose_GSE77962
+    modality: diet
+    intensity: LCD
+    duration: null
+    tissue: adipose
+    species: human
+    sample_size: null
+    contrast: post-intervention vs baseline, paired, LCD arm
+    source_accessions: [GSE77962]
+    notes: LCD vs VLCD time course; the arms are separate ids so intensity stays a feature.
+    inputs:
+      series_matrix: GSE77962/GSE77962_series_matrix.txt.gz
+      probe_map: GSE77962/probe_map.tsv
+      pairing: {subject_field: null, time_field: null, pre: null, post: null, filter: {}}
+
+  - npi_id: VLCD_adipose_GSE77962
+    modality: diet
+    intensity: VLCD
+    duration: null
+    tissue: adipose
+    species: human
+    sample_size: null
+    contrast: post-intervention vs baseline, paired, VLCD arm
+    source_accessions: [GSE77962]
+    inputs:
+      series_matrix: GSE77962/GSE77962_series_matrix.txt.gz
+      probe_map: GSE77962/probe_map.tsv
+      pairing: {subject_field: null, time_field: null, pre: null, post: null, filter: {}}
+
+  - npi_id: DIETEX_muscle_Wang2025
+    modality: diet_plus_exercise
+    intensity: null
+    duration: null
+    tissue: skeletal_muscle
+    species: human
+    sample_size: null
+    contrast: post weight-loss intervention vs baseline, paired
+    source_accessions: ["https://www.cell.com/cell-genomics/fulltext/S2666-979X(25)00207-1"]
+    notes: Individual-level responses and gene x lifestyle eQTLs; accession to be taken from the paper's data availability.
+
+  - npi_id: EXERCISE_adipose_Yang2022
+    modality: exercise
+    intensity: null
+    duration: null
+    tissue: adipose
+    species: null        # verify against the paper before use
+    sample_size: null
+    contrast: exercise vs sedentary (single-cell; pseudobulk per sample)
+    source_accessions: ["https://www.sciencedirect.com/science/article/pii/S1550413122003941"]
+    exploratory: true
+
+  - npi_id: EXERCISE_muscle_Yang2022
+    modality: exercise
+    intensity: null
+    duration: null
+    tissue: skeletal_muscle
+    species: null        # verify against the paper before use
+    sample_size: null
+    contrast: exercise vs sedentary (single-cell; pseudobulk per sample)
+    source_accessions: ["https://www.sciencedirect.com/science/article/pii/S1550413122003941"]
+    exploratory: true
+
+  # Same study, two arms -> two ids (CR and exercise are transcriptionally distinct).
+  - npi_id: CR_Nutrients2023
+    modality: caloric_restriction
+    intensity: null
+    duration: null
+    tissue: null         # to curate from the paper
+    species: mouse
+    sample_size: null
+    contrast: CR vs ad libitum
+    source_accessions: ["https://www.mdpi.com/2072-6643/15/4/1047"]
+
+  - npi_id: EX_Nutrients2023
+    modality: exercise
+    intensity: null
+    duration: null
+    tissue: null         # to curate from the paper
+    species: mouse
+    sample_size: null
+    contrast: exercise vs sedentary
+    source_accessions: ["https://www.mdpi.com/2072-6643/15/4/1047"]
+
+  - npi_id: CR_mammary_PMC2798590
+    modality: caloric_restriction
+    intensity: null
+    duration: null
+    tissue: mammary
+    species: null
+    sample_size: null
+    contrast: CR vs control
+    source_accessions: ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2798590"]
+
+  - npi_id: EX_mammary_PMC2798590
+    modality: exercise
+    intensity: null
+    duration: null
+    tissue: mammary
+    species: null
+    sample_size: null
+    contrast: exercise vs control
+    source_accessions: ["https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2798590"]
+
+  - npi_id: PSYCHOSOCIAL_blood_BBI2024
+    modality: psychosocial
+    intensity: null
+    duration: null
+    tissue: blood
+    species: human
+    sample_size: null
+    contrast: post vs pre intervention
+    source_accessions: ["https://www.sciencedirect.com/science/article/abs/pii/S0889159124005269"]
+    notes: Baseline TF activity predicted response to NPI class; useful for patient-side features.
+    exploratory: true
+
+# Joint NPI x drug transcriptomes: regression references, not NPI signatures.
+combination_references:
+  - ref_id: CR_x_rapamycin_PMC12078523
+    npi: caloric_restriction
+    drug: sirolimus
+    source: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12078523/
+    expectation: joint transcriptome differs from the stronger monotherapy (combo != max(mono))
+  - ref_id: fucoxanthin_x_LY294002_PONE2020
+    npi: fucoxanthin (nutraceutical)
+    drug: LY294002
+    source: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0239551
+
+# NPI -> drug mimic retrieval: regression reference for LCD vs L1000.
+retrieval_references:
+  - ref_id: LCD_adipose_L1000CDS2_mimics
+    npi_id: LCD_adipose_GSE95640
+    source: https://link.springer.com/article/10.1186/s12967-025-07424-z
+    expected_top_hits: null   # curate from the paper's reported L1000CDS2 hits
