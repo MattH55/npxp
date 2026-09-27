@@ -15,7 +15,7 @@ paired human NPI+drug labels.
 ```bash
 cd pipeline
 pip install -e ".[test]"      # numpy, pandas, pyarrow, pyyaml (+ h5py, pytest)
-pytest                        # 26 tests, ~3 s, no network
+pytest                        # 29 tests, ~3 s, no network
 npi-pharma demo --out out/demo  # offline milestone path on SYNTHETIC fixtures
 ```
 
@@ -86,13 +86,15 @@ series-matrix built in the same layout as the real files. To run the milestone
 where GEO is reachable:
 
 ```bash
-# 1. Drugs: LINCS Phase II Level 5 from GEO GSE70138 (GCTX + sig_info + gene_info [+ sig_metrics])
-npi-pharma ingest-lincs --level 5 --gctx GSE70138_Broad_LINCS_Level5_COMPZ_n118050x12328_2017-03-06.gctx \
-  --sig-info GSE70138_Broad_LINCS_sig_info_2017-03-06.txt --gene-info GSE70138_Broad_LINCS_gene_info_2017-03-06.txt \
+# 1. Drugs: LINCS Phase II Level 5 from GEO GSE70138 (~2 GB download; unpacked GCTX ~5 GB)
+npi-pharma fetch-lincs --gse GSE70138 --raw-dir data/raw      # prints the exact ingest-lincs command
+npi-pharma ingest-lincs --gctx data/raw/GSE70138/<...>.gctx --sig-info ... --gene-info ... \
   --drug-set milestone --random 20 --seed 0 --out data/processed/signatures/drugs.parquet
 
-# 2. NPI: put GSE95640_series_matrix.txt.gz + probe_map.tsv under data/raw/GSE95640/, curate
-#    inputs.pairing (and duration/sample_size) for LCD_adipose_GSE95640 in configs/npi_catalog.yaml
+# 2. NPI: series matrices + a probe->symbol map built from GEO's GPL .annot file
+npi-pharma fetch-geo GSE95640 GSE77962 --raw-dir data/raw
+npi-pharma inspect-geo data/raw/GSE95640/GSE95640_series_matrix.txt.gz   # shows subject/time fields
+#    -> fill inputs.pairing (+ duration/sample_size) for LCD_adipose_GSE95640 in configs/npi_catalog.yaml
 npi-pharma ingest-npi --ids LCD_adipose_GSE95640
 
 # 3. Patient: one frozen GEO adipose baseline, against healthy adipose references of the same platform
@@ -102,6 +104,8 @@ npi-pharma encode-patient --input patient.tsv --sample GSMxxxx --tissue adipose 
 npi-pharma score --patient patient.npz --npi LCD_adipose_GSE95640 --drug metformin --out report.json --tsv ranked.tsv
 npi-pharma rank  --patient patient.npz --npi-class diet --drug-set metabolic --top 25 --out rank.tsv --json rank.json
 ```
+
+`fetch-*` need HTTPS access to `ftp.ncbi.nlm.nih.gov`.
 
 For real Hallmark/KEGG analyses, pass `--gene-sets h.all.v2024.1.Hs.symbols.gmt`.
 The bundled `curated_core.gmt` holds 12 compact, hand-curated core sets

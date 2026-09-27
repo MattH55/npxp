@@ -156,6 +156,40 @@ def cmd_rank(a) -> int:
     return 0
 
 
+def cmd_fetch_geo(a) -> int:
+    from .ingest.fetch import fetch_geo_series
+
+    for gse in a.gse:
+        print(f"{gse}:")
+        fetch_geo_series(gse, a.raw_dir, overwrite=a.overwrite)
+    return 0
+
+
+def cmd_fetch_lincs(a) -> int:
+    from .ingest.fetch import fetch_lincs
+
+    got = fetch_lincs(a.gse, a.raw_dir, overwrite=a.overwrite)
+    print("next: npi-pharma ingest-lincs " + " ".join(
+        f"--{k.replace('_', '-')} {v}" for k, v in got.items()) + " --drug-set milestone --random 20 --out <drugs.parquet>")
+    return 0
+
+
+def cmd_inspect_geo(a) -> int:
+    """Print sample annotations so catalog `inputs.pairing` can be curated."""
+    from .ingest.geo import read_series_matrix
+
+    expr, samples = read_series_matrix(a.series_matrix)
+    print(f"{expr.shape[0]} probes/genes x {expr.shape[1]} samples")
+    with pd.option_context("display.width", 250, "display.max_columns", 50, "display.max_colwidth", 40):
+        print(samples.to_string())
+    print("\ncandidate fields (few distinct values):")
+    for c in samples.columns:
+        vals = samples[c].unique()
+        if 1 < len(vals) <= 12:
+            print(f"  {c}: {list(vals)}")
+    return 0
+
+
 def cmd_make_fixture(a) -> int:
     from .fixtures import write_fixture
 
@@ -244,6 +278,20 @@ def build_parser() -> argparse.ArgumentParser:
     rp.add_argument("--allow-mismatch", action="store_true", help="keep tissue-mismatched NPIs (down-weighted)")
     rp.add_argument("--json", help="also write JSON explanations for the top pairs")
 
+    s = sub.add_parser("fetch-geo", help="download GEO series matrices + platform probe maps")
+    s.add_argument("gse", nargs="+")
+    s.add_argument("--raw-dir", default="data/raw")
+    s.add_argument("--overwrite", action="store_true")
+    s.set_defaults(func=cmd_fetch_geo)
+    s = sub.add_parser("fetch-lincs", help="download LINCS Level 5 GCTX + metadata from GEO")
+    s.add_argument("--gse", default="GSE70138")
+    s.add_argument("--raw-dir", default="data/raw")
+    s.add_argument("--overwrite", action="store_true")
+    s.set_defaults(func=cmd_fetch_lincs)
+    s = sub.add_parser("inspect-geo", help="show sample annotations to curate pre/post pairing")
+    s.add_argument("series_matrix")
+    s.set_defaults(func=cmd_inspect_geo)
+
     s = sub.add_parser("make-fixture", help="write the synthetic 50-drug fixture")
     s.add_argument("--out", default="data/fixture")
     s.set_defaults(func=cmd_make_fixture)
@@ -254,8 +302,13 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    import urllib.error
+
     a = build_parser().parse_args(argv)
-    return a.func(a)
+    try:
+        return a.func(a)
+    except urllib.error.URLError as e:
+        raise SystemExit(f"download failed: {e.reason}. Is ftp.ncbi.nlm.nih.gov reachable from this network?")
 
 
 if __name__ == "__main__":
