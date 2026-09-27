@@ -55,3 +55,15 @@ def test_fetch_geo_series_offline(tmp_path, monkeypatch):
     assert (tmp_path / "GSE1234" / "probe_map.tsv").read_text() == "p1\tMTOR\n"
     with pytest.raises(OSError):  # suppl listing missing
         fetch.fetch_lincs("GSE1234", tmp_path, log=lambda *a, **k: None)
+
+
+def test_gene_info_to_id_map_prefers_protein_coding(tmp_path):
+    gi = tmp_path / "gi.gz"
+    with gzip.open(gi, "wt") as fh:
+        fh.write("#tax_id\tGeneID\tSymbol\tdbXrefs\ttype_of_gene\n"
+                 "9606\t1\tMTOR-AS\tEnsembl:ENSG1\tncRNA\n"
+                 "9606\t2\tMTOR\tMIM:1|HGNC:HGNC:2|Ensembl:ENSG1\tprotein-coding\n"
+                 "9606\t3\tRPTOR\tEnsembl:ENSG2|Ensembl:ENSG3\tprotein-coding\n"
+                 "9606\t4\tNOENS\t-\tprotein-coding\n")
+    out = fetch.gene_info_to_id_map(gi, tmp_path / "m.tsv")
+    assert out.read_text().splitlines() == ["ENSG1\tMTOR", "ENSG2\tRPTOR", "ENSG3\tRPTOR"]

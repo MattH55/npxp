@@ -89,8 +89,14 @@ def annot_to_probe_map(annot_gz: Path, out_tsv: Path) -> Path:
     return out_tsv
 
 
-def fetch_geo_series(gse: str, raw_dir: str | Path, overwrite: bool = False, log=print) -> dict[str, list[Path]]:
-    """Fetch all series matrices of a GSE plus a probe map per platform."""
+def fetch_geo_series(
+    gse: str, raw_dir: str | Path, overwrite: bool = False, suppl: bool = False, log=print
+) -> dict[str, list[Path]]:
+    """Fetch all series matrices of a GSE plus a probe map per platform.
+
+    With ``suppl`` also fetch the series' supplementary files (except ``*_RAW.tar``).
+    RNA-seq series keep their counts there; the series matrix has no table.
+    """
     out = Path(raw_dir) / gse
     names = [n for n in list_dir(series_dir(gse, "matrix")) if n.endswith("_series_matrix.txt.gz")]
     if not names:
@@ -111,7 +117,40 @@ def fetch_geo_series(gse: str, raw_dir: str | Path, overwrite: bool = False, log
                 log(f"  {pm} (from {gpl}.annot.gz)")
             except Exception as e:  # sequencing platforms have no .annot; matrices may already be symbols
                 print(f"  no probe map for {gpl}: {e}", file=sys.stderr)
+    if suppl:
+        got["suppl"] = []
+        for n in list_dir(series_dir(gse, "suppl")):
+            if n.startswith(gse) and not n.endswith("_RAW.tar"):
+                got["suppl"].append(download(series_dir(gse, "suppl") + n, out / n, overwrite))
+                log(f"  {got['suppl'][-1]}")
     return got
+
+
+GENE_INFO_URL = "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz"
+
+
+def gene_info_to_id_map(gene_info_gz: Path, out_tsv: Path) -> Path:
+    """NCBI gene_info -> ``ensembl_id<TAB>symbol`` (unversioned ENSG ids).
+
+    An Ensembl id cross-referenced by several NCBI genes keeps the first
+    protein-coding one, else the first listed.
+    """
+    gi = pd.read_csv(gene_info_gz, sep="\t", usecols=["Symbol", "dbXrefs", "type_of_gene"], dtype=str)
+    gi["ens"] = gi["dbXrefs"].str.findall(r"Ensembl:(ENSG\d+)")
+    gi = gi.explode("ens").dropna(subset=["ens"])
+    gi["_pc"] = gi["type_of_gene"] != "protein-coding"
+    gi = gi.sort_values("_pc", kind="stable").drop_duplicates("ens")
+    gi[["ens", "Symbol"]].sort_values("ens").to_csv(out_tsv, sep="\t", header=False, index=False)
+    return out_tsv
+
+
+def fetch_gene_info(raw_dir: str | Path, overwrite: bool = False, log=print) -> Path:
+    """Download NCBI Homo_sapiens.gene_info and write ``ensembl_to_symbol.tsv``."""
+    raw_dir = Path(raw_dir)
+    gz = download(GENE_INFO_URL, raw_dir / "Homo_sapiens.gene_info.gz", overwrite)
+    out = gene_info_to_id_map(gz, raw_dir / "ensembl_to_symbol.tsv")
+    log(f"  {out}")
+    return out
 
 
 LINCS_PATTERNS = {

@@ -66,6 +66,8 @@ def build_from_entry(entry: CatalogEntry, raw_dir: str | Path) -> Signature:
     Supported inputs (paths relative to ``raw_dir``):
       series_matrix + probe_map (TSV: probe<TAB>symbol) + pairing
       expression (genes x samples TSV) + samples (TSV, first column = sample id) + pairing
+      counts (raw RNA-seq counts, CSV/TSV) + id_map (TSV: gene id<TAB>symbol)
+        + samples + pairing; converted to log2(CPM+1) with a low-expression filter
     """
     rec, raw_dir = entry.record, Path(raw_dir)
     inp = rec.get("inputs") or {}
@@ -78,12 +80,19 @@ def build_from_entry(entry: CatalogEntry, raw_dir: str | Path) -> Signature:
             pm = pd.read_csv(raw_dir / inp["probe_map"], sep="\t", header=None, index_col=0, dtype=str)[1]
             expr = geo.collapse_probes(expr, pm)
         prov = PROV_GEO
+    elif "counts" in inp:
+        idm = None
+        if inp.get("id_map"):
+            idm = pd.read_csv(raw_dir / inp["id_map"], sep="\t", header=None, index_col=0, dtype=str)[1]
+        expr = geo.counts_to_log_cpm(geo.read_counts(raw_dir / inp["counts"]), idm)
+        samples = pd.read_csv(raw_dir / inp["samples"], sep="\t", index_col=0, dtype=str)
+        prov = PROV_GEO
     elif "expression" in inp:
         expr = pd.read_csv(raw_dir / inp["expression"], sep="\t", index_col=0)
         samples = pd.read_csv(raw_dir / inp["samples"], sep="\t", index_col=0, dtype=str)
         prov = inp.get("provenance", PROV_LOCAL)
     else:
-        raise ValueError(f"{entry.npi_id}: no inputs.series_matrix or inputs.expression")
+        raise ValueError(f"{entry.npi_id}: no inputs.series_matrix, inputs.counts or inputs.expression")
     expr = geo.maybe_log2(expr)
     pre, post, paired = geo.split_pre_post(expr, samples, pairing)
     md = _metadata(rec, prov, entry.quality_flag)

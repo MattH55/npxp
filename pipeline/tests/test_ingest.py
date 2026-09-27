@@ -100,3 +100,42 @@ def test_series_matrix_pairing(tmp_path):
     pre, post, paired = split_pre_post(genes, samples, {"subject_field": "subject", "time_field": "time",
                                                         "pre": "baseline", "post": "week 8"})
     assert paired and list(pre.columns) == ["p1", "p2"] and post.loc["MTOR", "p2"] == 6.5
+
+
+def test_counts_to_log_cpm_maps_sums_and_filters(tmp_path):
+    from npi_pharma.ingest.geo import counts_to_log_cpm, read_counts
+
+    p = tmp_path / "counts.csv"
+    p.write_text("FEATURE_ID,s1,s2\nENSG1.3,100,300\nENSG2,100,100\nENSG3,0,1\nENSG9,800,600\n")
+    counts = read_counts(p)
+    idm = pd.Series({"ENSG1": "MTOR", "ENSG2": "MTOR", "ENSG3": "RPTOR"})
+    e = counts_to_log_cpm(counts, idm, min_cpm=1000, min_frac=0.6)
+    # ENSG9 unmapped -> dropped before library size; ENSG1+ENSG2 summed; RPTOR passes in 1/2 < 0.6
+    assert list(e.index) == ["MTOR"]
+    np.testing.assert_allclose(e.loc["MTOR"], np.log2([200 / 200 * 1e6 + 1, 400 / 401 * 1e6 + 1]))
+
+
+def test_split_pre_post_named_index_and_counts_catalog(tmp_path):
+    from npi_pharma.ingest.catalog import CatalogEntry, build_from_entry
+
+    rng = np.random.default_rng(0)
+    genes = [f"ENSG{i}" for i in range(300)]
+    subj = [f"S{i}" for i in range(8)]
+    cols = [f"{s}_{t}" for s in subj for t in ("a", "b")]
+    base = rng.integers(200, 2000, size=(300, 1))
+    counts = pd.DataFrame(base * np.ones((1, 16)) + rng.integers(0, 50, size=(300, 16)), index=genes, columns=cols)
+    counts.iloc[0, 1::2] *= 4  # gene 0 up at post in every subject
+    counts.index.name = "FEATURE_ID"
+    counts.to_csv(tmp_path / "counts.tsv", sep="\t")
+    pd.DataFrame({"g": genes, "s": [f"G{i}" for i in range(300)]}).to_csv(
+        tmp_path / "map.tsv", sep="\t", header=False, index=False)
+    sheet = pd.DataFrame({"sample": cols, "subject": [c.split("_")[0] for c in cols],
+                          "timepoint": ["pre", "post"] * 8}).set_index("sample")
+    sheet.to_csv(tmp_path / "samples.tsv", sep="\t")
+    rec = {"npi_id": "T", "modality": "diet", "tissue": "adipose", "species": "human", "contrast": "post-pre",
+           "source_accessions": ["x"], "duration": "8 weeks", "intensity": "LCD", "sample_size": 8, "_min_n": 6,
+           "inputs": {"counts": "counts.tsv", "id_map": "map.tsv", "samples": "samples.tsv",
+                      "pairing": {"subject_field": "subject", "time_field": "timepoint", "pre": "pre", "post": "post"}}}
+    sig = build_from_entry(CatalogEntry(rec), tmp_path)
+    s = sig.as_series()
+    assert sig.quality_flag == "ok" and sig.sample_size == 8 and s.idxmax() == "G0"

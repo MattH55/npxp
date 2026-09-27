@@ -161,7 +161,12 @@ def cmd_fetch_geo(a) -> int:
 
     for gse in a.gse:
         print(f"{gse}:")
-        fetch_geo_series(gse, a.raw_dir, overwrite=a.overwrite)
+        fetch_geo_series(gse, a.raw_dir, overwrite=a.overwrite, suppl=a.suppl)
+    if a.gene_info:
+        from .ingest.fetch import fetch_gene_info
+
+        print("NCBI gene_info:")
+        fetch_gene_info(a.raw_dir, overwrite=a.overwrite)
     return 0
 
 
@@ -281,6 +286,9 @@ def build_parser() -> argparse.ArgumentParser:
     s = sub.add_parser("fetch-geo", help="download GEO series matrices + platform probe maps")
     s.add_argument("gse", nargs="+")
     s.add_argument("--raw-dir", default="data/raw")
+    s.add_argument("--suppl", action="store_true", help="also fetch supplementary files (RNA-seq counts)")
+    s.add_argument("--gene-info", action="store_true",
+                   help="also fetch NCBI gene_info -> ensembl_to_symbol.tsv (for RNA-seq counts)")
     s.add_argument("--overwrite", action="store_true")
     s.set_defaults(func=cmd_fetch_geo)
     s = sub.add_parser("fetch-lincs", help="download LINCS Level 5 GCTX + metadata from GEO")

@@ -15,7 +15,7 @@ paired human NPI+drug labels.
 ```bash
 cd pipeline
 pip install -e ".[test]"      # numpy, pandas, pyarrow, pyyaml (+ h5py, pytest)
-pytest                        # 29 tests, ~3 s, no network
+python -m pytest              # 32 tests, ~2 s, no network
 npi-pharma demo --out out/demo  # offline milestone path on SYNTHETIC fixtures
 ```
 
@@ -80,24 +80,26 @@ are listed under `pathways`.
 
 ## First milestone on real data
 
-This session's network policy blocked NCBI GEO and clue.io, so no real data
-could be fetched. The code paths are tested against a synthetic GCTX and
-series-matrix built in the same layout as the real files. To run the milestone
-where GEO is reachable:
+The milestone has been run on GSE95640 (LCD, adipose RNA-seq, n = 191 pairs) against
+the LINCS Phase II L1000 signatures. See [docs/milestone_GSE95640.md](docs/milestone_GSE95640.md)
+for the inputs, the curation checks, the result, and what the result does not show.
+To reproduce:
 
 ```bash
-# 1. Drugs: LINCS Phase II Level 5 from GEO GSE70138 (~2 GB download; unpacked GCTX ~5 GB)
+# 1. Drugs: LINCS Phase II Level 5 from GEO GSE70138 (5.4 GB download; unpacked GCTX 5.8 GB)
 npi-pharma fetch-lincs --gse GSE70138 --raw-dir data/raw      # prints the exact ingest-lincs command
 npi-pharma ingest-lincs --gctx data/raw/GSE70138/<...>.gctx --sig-info ... --gene-info ... \
-  --drug-set milestone --random 20 --seed 0 --out data/processed/signatures/drugs.parquet
+  --drug-set metabolic --random 20 --seed 0 --out data/processed/signatures/drugs.parquet
 
-# 2. NPI: series matrices + a probe->symbol map built from GEO's GPL .annot file
-npi-pharma fetch-geo GSE95640 GSE77962 --raw-dir data/raw
-npi-pharma inspect-geo data/raw/GSE95640/GSE95640_series_matrix.txt.gz   # shows subject/time fields
-#    -> fill inputs.pairing (+ duration/sample_size) for LCD_adipose_GSE95640 in configs/npi_catalog.yaml
+# 2. NPI. GSE95640 is RNA-seq: its counts are in the supplementary files, and
+#    --gene-info writes the Ensembl -> symbol map from NCBI gene_info.
+npi-pharma fetch-geo GSE95640 --suppl --gene-info --raw-dir data/raw
+python scripts/curate_gse95640.py        # subject pairing + timepoint checks -> samples_curated.tsv
 npi-pharma ingest-npi --ids LCD_adipose_GSE95640
+#    Microarray series (e.g. GSE77962) instead use the series matrix + GPL probe map:
+#    npi-pharma inspect-geo data/raw/GSE77962/GSE77962_series_matrix.txt.gz, then fill inputs.pairing
 
-# 3. Patient: one frozen GEO adipose baseline, against healthy adipose references of the same platform
+# 3. Patient: one adipose baseline, against healthy adipose references of the same platform
 npi-pharma encode-patient --input patient.tsv --sample GSMxxxx --tissue adipose --reference healthy.tsv --out patient.npz
 
 # 4. Score + ranked table + JSON explanation of which pathways drove the top pair
@@ -106,6 +108,11 @@ npi-pharma rank  --patient patient.npz --npi-class diet --drug-set metabolic --t
 ```
 
 `fetch-*` need HTTPS access to `ftp.ncbi.nlm.nih.gov`.
+
+Catalog `inputs` accept three forms:
+- `series_matrix` + `probe_map` (microarray)
+- `counts` + `id_map` + `samples` (RNA-seq raw counts, converted to log2(CPM+1) with a low-expression filter)
+- `expression` + `samples` (a genes × samples matrix that is already normalised)
 
 For real Hallmark/KEGG analyses, pass `--gene-sets h.all.v2024.1.Hs.symbols.gmt`.
 The bundled `curated_core.gmt` holds 12 compact, hand-curated core sets

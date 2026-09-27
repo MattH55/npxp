@@ -55,7 +55,9 @@ def test_catalog_keeps_cr_and_exercise_separate():
     assert len(ids) == len(set(ids))
     nutr = [e for e in entries if "mdpi.com/2072-6643/15/4/1047" in e.record["source_accessions"][0]]
     assert {e.record["modality"] for e in nutr} == {"caloric_restriction", "exercise"} and len(nutr) == 2
-    lcd = next(e for e in entries if e.npi_id == "LCD_adipose_GSE95640")
+    by = {e.npi_id: e for e in entries}
+    assert by["LCD_adipose_GSE95640"].quality_flag == "ok" and not by["LCD_adipose_GSE95640"].issues
+    lcd = by["LCD_adipose_GSE77962"]
     assert lcd.quality_flag == "unverified_metadata" and any("not yet curated" in i for i in lcd.issues)
 
 

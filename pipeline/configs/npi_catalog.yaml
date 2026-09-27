@@ -16,19 +16,27 @@
 npis:
   - npi_id: LCD_adipose_GSE95640
     modality: diet
-    intensity: low_calorie_diet
-    duration: null
+    intensity: low_calorie_diet_800-1000kcal_per_day
+    duration: 8 weeks
     tissue: adipose
     species: human
-    sample_size: null
+    sample_size: 191
     contrast: post-intervention vs baseline, paired
     source_accessions: [GSE95640]
     paper: https://link.springer.com/article/10.1186/s12967-025-07424-z
-    notes: Human paired diet signature, previously queried against L1000 (see paper). Milestone NPI.
+    notes: >-
+      DiOGenes cohort, subcutaneous adipose, obese non-diabetic adults, RNA-seq.
+      Duration, intensity and n are from GEO !Series_overall_design (191 patients,
+      8-week LCD at 800-1000 kcal/d). GEO has no subject id: pairs come from
+      scripts/curate_gse95640.py, which checks sex/age agreement, within-pair
+      expression correlation and the timepoint direction (the supplementary
+      sheet's header comment mislabels CID1/CID2; see the script). Milestone NPI.
     inputs:
-      series_matrix: GSE95640/GSE95640_series_matrix.txt.gz
-      probe_map: GSE95640/probe_map.tsv    # probe<TAB>symbol from the GPL annotation
-      pairing: {subject_field: null, time_field: null, pre: null, post: null}
+      # npi-pharma fetch-geo GSE95640 --suppl --gene-info && python scripts/curate_gse95640.py
+      counts: GSE95640/GSE95640_cid12_cng_rawcnts_qced.tsv.gz
+      id_map: ensembl_to_symbol.tsv
+      samples: GSE95640/samples_curated.tsv
+      pairing: {subject_field: subject, time_field: timepoint, pre: CID1, post: CID2}
 
   - npi_id: LCD_adipose_GSE77962
     modality: diet

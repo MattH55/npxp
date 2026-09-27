@@ -81,6 +81,35 @@ def maybe_log2(expr: pd.DataFrame) -> pd.DataFrame:
     return expr
 
 
+def read_counts(path: str | Path) -> pd.DataFrame:
+    """Read a genes x samples count table (CSV or TSV, gz or plain; first column = gene id)."""
+    with _open(path) as fh:
+        head = fh.readline()
+    sep = "," if head.count(",") > head.count("\t") else "\t"
+    return pd.read_csv(path, sep=sep, index_col=0)
+
+
+def counts_to_log_cpm(
+    counts: pd.DataFrame, id_map: pd.Series | None = None, min_cpm: float = 1.0, min_frac: float = 0.5
+) -> pd.DataFrame:
+    """Raw RNA-seq counts -> log2(CPM + 1) on gene symbols.
+
+    ``id_map`` maps gene ids (Ensembl version suffixes are stripped) to symbols;
+    counts of ids that share a symbol are summed. Library sizes are taken over
+    all mapped genes; genes with CPM >= ``min_cpm`` in fewer than ``min_frac`` of
+    samples are dropped, since low-count log ratios are mostly noise.
+    """
+    c = counts.apply(pd.to_numeric, errors="coerce").fillna(0)
+    if id_map is not None:
+        ids = c.index.astype(str).str.replace(r"\.\d+$", "", regex=True)
+        sym = pd.Series(ids, index=c.index).map(id_map)
+        c = c[sym.notna().to_numpy()]
+        c = c.groupby(sym.dropna().to_numpy()).sum()
+    cpm = c / c.sum(axis=0) * 1e6
+    keep = (cpm >= min_cpm).mean(axis=1) >= min_frac
+    return np.log2(cpm[keep] + 1)
+
+
 def split_pre_post(
     expr: pd.DataFrame, samples: pd.DataFrame, pairing: dict
 ) -> tuple[pd.DataFrame, pd.DataFrame, bool]:
@@ -98,8 +127,10 @@ def split_pre_post(
     post_s = s[s[tf].astype(str) == str(pairing["post"])]
     subj = pairing.get("subject_field")
     if subj:
-        pre_by = pre_s.reset_index().drop_duplicates(subj).set_index(subj)["index"]
-        post_by = post_s.reset_index().drop_duplicates(subj).set_index(subj)["index"]
+        pre_by = pd.Series(pre_s.index, index=pre_s[subj].to_numpy())
+        post_by = pd.Series(post_s.index, index=post_s[subj].to_numpy())
+        pre_by = pre_by[~pre_by.index.duplicated()]
+        post_by = post_by[~post_by.index.duplicated()]
         both = sorted(set(pre_by.index) & set(post_by.index))
         pre = expr[pre_by.loc[both].tolist()]
         post = expr[post_by.loc[both].tolist()]
