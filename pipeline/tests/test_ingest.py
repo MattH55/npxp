@@ -139,3 +139,14 @@ def test_split_pre_post_named_index_and_counts_catalog(tmp_path):
     sig = build_from_entry(CatalogEntry(rec), tmp_path)
     s = sig.as_series()
     assert sig.quality_flag == "ok" and sig.sample_size == 8 and s.idxmax() == "G0"
+
+
+def test_split_pre_post_holds_out_whole_subject():
+    expr = pd.DataFrame(np.arange(12.0).reshape(2, 6), index=["G1", "G2"], columns=list("abcdef"))
+    samples = pd.DataFrame({"subject": ["s1", "s1", "s2", "s2", "s3", "s3"], "t": ["pre", "post"] * 3},
+                           index=list("abcdef"))
+    spec = {"subject_field": "subject", "time_field": "t", "pre": "pre", "post": "post"}
+    pre, post, paired = split_pre_post(expr, samples, spec, {"a"})
+    assert paired and list(pre.columns) == ["s2", "s3"] and list(post.columns) == ["s2", "s3"]
+    pre, post, _ = split_pre_post(expr, samples, {"time_field": "t", "pre": "pre", "post": "post"}, {"a"})
+    assert list(pre.columns) == ["c", "e"] and list(post.columns) == ["b", "d", "f"]

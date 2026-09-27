@@ -45,6 +45,29 @@ def read_expression(path: str | Path, obs_filter: dict | None = None, sample_key
     return pd.read_csv(path, sep=sep, index_col=0), flags
 
 
+def reference_offset(case: pd.DataFrame, control: pd.DataFrame, min_n: int = 5) -> pd.Series:
+    """Per-gene standardized offset of a case group from healthy controls.
+
+    Returns Cohen's d, ``(mean_case - mean_control) / pooled SD``, from one
+    study in which both groups share a batch. Added to a patient's z against a
+    cohort of cases, it gives the patient's z against health without comparing
+    expression levels across batches:
+    ``(x - mu_ctrl)/sd = (x - mu_case)/sd + (mu_case - mu_ctrl)/sd``.
+    That identity assumes the between-subject SD is similar in both studies.
+    """
+    if case.shape[1] < min_n or control.shape[1] < min_n:
+        raise ValueError(f"reference_offset needs >= {min_n} samples per group "
+                         f"(got {case.shape[1]} case, {control.shape[1]} control)")
+    genes = case.index.intersection(control.index)
+    a, b = case.loc[genes], control.loc[genes]
+    na, nb = a.shape[1], b.shape[1]
+    pooled = np.sqrt(((na - 1) * a.var(axis=1, ddof=1) + (nb - 1) * b.var(axis=1, ddof=1)) / (na + nb - 2))
+    floor = float(np.nanmedian(pooled[pooled > 0])) if (pooled > 0).any() else 1.0
+    d = (a.mean(axis=1) - b.mean(axis=1)) / np.maximum(pooled, 0.1 * floor)
+    d.index = normalize_symbols(d.index)
+    return d[~d.index.duplicated()].replace([np.inf, -np.inf], np.nan).dropna()
+
+
 def encode_patient(
     expr: pd.DataFrame,
     sample_id: str | None,
@@ -52,6 +75,8 @@ def encode_patient(
     reference: pd.DataFrame | None = None,
     allow_no_reference: bool = False,
     flags: list[str] | None = None,
+    offset: pd.Series | None = None,
+    offset_desc: str | None = None,
 ) -> PatientState:
     """Build s_P for one sample.
 
@@ -62,6 +87,10 @@ def encode_patient(
          not from health; flagged ``cohort_relative``).
       3. single sample, ``allow_no_reference``: within-sample robust z. Mostly
          reflects baseline expression level; flagged and low-confidence.
+
+    ``offset`` (see :func:`reference_offset`) turns the cohort z of case 2 into
+    a z against health, restricted to genes present in both. It is allowed only
+    with a cohort, where the cohort is the offset's case group.
     """
     flags = list(flags or [])
     e = maybe_log2(_clean(expr))
@@ -100,6 +129,14 @@ def encode_patient(
     floor = float(np.nanmedian(sd[sd > 0])) if (sd > 0).any() else 1.0
     z = (x.loc[genes] - mu.loc[genes]) / np.maximum(sd, 0.1 * floor)
     z = z.replace([np.inf, -np.inf], np.nan).dropna()
+    if offset is not None:
+        if "cohort_relative" not in flags:
+            raise ValueError("offset needs a cohort (the offset's case group) as the reference, not a healthy set")
+        shared = z.index.intersection(offset.index)
+        z = z.loc[shared] + offset.loc[shared]
+        flags = [f for f in flags if f != "cohort_relative"] + ["health_via_external_offset"]
+        desc = (f"health, via cohort z + external case-vs-control offset ({offset_desc or 'offset'}); "
+                f"{len(shared)} shared genes; assumes comparable between-subject SD")
     return PatientState(
         sample_id=str(sample_id),
         tissue=tissue,

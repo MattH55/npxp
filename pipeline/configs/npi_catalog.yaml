@@ -170,4 +170,4 @@ retrieval_references:
   - ref_id: LCD_adipose_L1000CDS2_mimics
     npi_id: LCD_adipose_GSE95640
     source: https://link.springer.com/article/10.1186/s12967-025-07424-z
-    expected_top_hits: null   # curate from the paper's reported L1000CDS2 hits
+    expected_top_hits: configs/retrieval/GSE95640_L1000CDS2_top50.tsv   # paper Table S5; check: scripts/retrieval_check.py

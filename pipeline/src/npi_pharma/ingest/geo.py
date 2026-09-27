@@ -111,17 +111,23 @@ def counts_to_log_cpm(
 
 
 def split_pre_post(
-    expr: pd.DataFrame, samples: pd.DataFrame, pairing: dict
+    expr: pd.DataFrame, samples: pd.DataFrame, pairing: dict, exclude: set[str] | frozenset = frozenset()
 ) -> tuple[pd.DataFrame, pd.DataFrame, bool]:
     """Split into pre/post matrices using a catalog ``pairing`` spec:
 
     ``{time_field, pre, post, subject_field?, filter?: {field: value}}``.
     With ``subject_field`` the columns are matched per subject (paired);
-    otherwise returns an unpaired split.
+    otherwise returns an unpaired split. ``exclude`` holds sample ids to leave
+    out; in the paired case the whole subject is dropped, so a patient scored
+    later is not part of the signature.
     """
     s = samples.copy()
     for field, value in (pairing.get("filter") or {}).items():
         s = s[s[field].astype(str) == str(value)]
+    if exclude:
+        subj = pairing.get("subject_field")
+        hit = s.index.astype(str).isin(list(exclude))
+        s = s[~s[subj].isin(s.loc[hit, subj])] if subj else s[~hit]
     tf = pairing["time_field"]
     pre_s = s[s[tf].astype(str) == str(pairing["pre"])]
     post_s = s[s[tf].astype(str) == str(pairing["post"])]

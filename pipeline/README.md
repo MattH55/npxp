@@ -15,7 +15,7 @@ paired human NPI+drug labels.
 ```bash
 cd pipeline
 pip install -e ".[test]"      # numpy, pandas, pyarrow, pyyaml (+ h5py, pytest)
-python -m pytest              # 32 tests, ~2 s, no network
+python -m pytest              # 35 tests, ~2 s, no network
 npi-pharma demo --out out/demo  # offline milestone path on SYNTHETIC fixtures
 ```
 
@@ -33,7 +33,7 @@ patient expression ─────── encode-patient ► patient.npz ─┘
 | `ingest/lincs.py` | Reads only the requested columns of a Level 5 GCTX. Collapses each compound to a per-gene median, across all cell lines or a matched lineage. Resolves `rapamycin` ↔ `sirolimus`. `--random N --seed` draws a deterministic background set. |
 | `ingest/geo.py`, `ingest/catalog.py` | Parses GEO series matrices, maps probes to genes, and splits pre/post from `!Sample_characteristics`. Validates catalog records: uncurated metadata is listed, never guessed. |
 | `signatures/build.py` | `build_signature(pre, post, metadata)`: paired (or unpaired) moderated DE, then a robust z-score. Keeps the full vector plus the top 150 up/down genes. Consensus is refused across tissues or modalities. |
-| `patient/encode.py` | Computes s_P as the patient's z-score against a healthy reference of the same tissue. Falls back to a cohort (flagged `cohort_relative`) or, only if forced, a within-sample z-score (flagged `no_reference`). Reads `.h5ad` with pseudobulk and an obs filter as the scTherapy-style hook. |
+| `patient/encode.py` | Computes s_P as the patient's z-score against a healthy reference of the same tissue. Alternatively it takes the z against a same-batch patient cohort plus a within-study case-vs-healthy offset (`build-offset`, Cohen's d), flagged `health_via_external_offset`. Falls back to a cohort (flagged `cohort_relative`) or, only if forced, a within-sample z-score (flagged `no_reference`). Reads `.h5ad` with pseudobulk and an obs filter as the scTherapy-style hook. |
 | `gene_sets.py` | Pathway z-activity `Σz/√k` (the same function for interventions and patients), plus ssGSEA. |
 | `interact/score.py` | The v1 scores below. |
 | `interact/rank.py` | Scores every NPI × drug pair and filters by tissue compatibility. Pairs that cannot be scored stay in the table with an `error:` flag. |
@@ -62,6 +62,7 @@ All weights, shrink factors and thresholds are in
 | condition | multiplier |
 |---|---|
 | tissue mismatch | ×0.5 |
+| drug signature not from the patient's tissue (every LINCS cell line) | ×0.8 |
 | NPI signature with n < 6 | ×0.6 |
 | exploratory NPI | ×0.7 |
 | uncurated NPI metadata | ×0.85 |
@@ -83,6 +84,12 @@ are listed under `pathways`.
 The milestone has been run on GSE95640 (LCD, adipose RNA-seq, n = 191 pairs) against
 the LINCS Phase II L1000 signatures. See [docs/milestone_GSE95640.md](docs/milestone_GSE95640.md)
 for the inputs, the curation checks, the result, and what the result does not show.
+
+The follow-up in the same doc adds four things:
+- a health-referenced s_P (GSE244118 obese-vs-lean offset)
+- held-out signatures (`ingest-npi --exclude-samples`)
+- a 191-subject sweep (`scripts/cohort_sweep.py`)
+- a regression check against the paper's L1000CDS2 hits (`scripts/retrieval_check.py`): AUC 0.75, p = 0.0005
 To reproduce:
 
 ```bash

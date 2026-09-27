@@ -56,12 +56,13 @@ def cmd_ingest_npi(a) -> int:
     cfg = load_config(a.config)
     entries = load_catalog(a.catalog, min_n=cfg["min_npi_n"])
     ids = set(a.ids.split(",")) if a.ids else None
+    exclude = set(a.exclude_samples.split(",")) if a.exclude_samples else None
     built, skipped = [], []
     for e in entries:
         if ids and e.npi_id not in ids:
             continue
         try:
-            built.append(build_from_entry(e, a.raw_dir))
+            built.append(build_from_entry(e, a.raw_dir, exclude))
         except (ValueError, FileNotFoundError, KeyError) as err:
             skipped.append(str(err) if str(err).startswith(e.npi_id) else f"{e.npi_id}: {err}")
     if built:
@@ -81,11 +82,40 @@ def cmd_encode_patient(a) -> int:
     obs_filter = dict(kv.split("=", 1) for kv in a.obs_filter) if a.obs_filter else None
     expr, flags = read_expression(a.input, obs_filter=obs_filter, sample_key=a.sample_key)
     ref = read_expression(a.reference)[0] if a.reference else None
-    p = encode_patient(expr, a.sample, a.tissue, reference=ref, allow_no_reference=a.allow_no_reference, flags=flags)
+    offset = desc = None
+    if getattr(a, "reference_offset", None):
+        off = pd.read_csv(a.reference_offset, sep="\t", index_col=0)
+        offset, desc = off.iloc[:, 0], off.columns[0]
+    p = encode_patient(expr, a.sample, a.tissue, reference=ref, allow_no_reference=a.allow_no_reference, flags=flags,
+                       offset=offset, offset_desc=desc)
     save_patient(p, a.out)
     print(f"encoded {p.sample_id} ({p.tissue}, {len(p.genes)} genes; s_P vs {p.reference}) -> {a.out}")
     for f in p.flags:
         print(f"  flag: {f}", file=sys.stderr)
+    return 0
+
+
+def cmd_build_offset(a) -> int:
+    """Case-vs-healthy offset (Cohen's d per gene) from one RNA-seq study."""
+    from .ingest.geo import counts_to_log_cpm, read_counts
+    from .patient.encode import reference_offset
+
+    sheet = pd.read_csv(a.samples, sep="\t", index_col=0, dtype=str)
+    for kv in a.filter or []:
+        k, v = kv.split("=", 1)
+        sheet = sheet[sheet[k] == v]
+    case = sheet.index[sheet[a.group_field].isin(a.case.split(","))].tolist()
+    ctrl = sheet.index[sheet[a.group_field].isin(a.control.split(","))].tolist()
+    idm = pd.read_csv(a.id_map, sep="\t", header=None, index_col=0, dtype=str)[1] if a.id_map else None
+    expr = counts_to_log_cpm(read_counts(a.counts)[case + ctrl], idm)
+    d = reference_offset(expr[case], expr[ctrl])
+    name = a.name or f"{a.case} vs {a.control}"
+    Path(a.out).parent.mkdir(parents=True, exist_ok=True)
+    d.rename(name).to_frame().to_csv(a.out, sep="\t", index_label="gene")
+    print(f"offset '{name}': {len(d)} genes, {len(case)} case vs {len(ctrl)} control -> {a.out}")
+    top = d.sort_values()
+    print("  most below control: " + ", ".join(f"{g} {v:+.1f}" for g, v in top.head(8).items()))
+    print("  most above control: " + ", ".join(f"{g} {v:+.1f}" for g, v in top.tail(8)[::-1].items()))
     return 0
 
 
@@ -246,9 +276,23 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--catalog", default="configs/npi_catalog.yaml")
     s.add_argument("--raw-dir", default="data/raw")
     s.add_argument("--ids")
+    s.add_argument("--exclude-samples",
+                   help="comma-separated sample ids to hold out (paired: the whole subject), e.g. the patient to score")
     s.add_argument("--config")
     s.add_argument("--out", default="data/processed/signatures/npis.parquet")
     s.set_defaults(func=cmd_ingest_npi)
+
+    s = sub.add_parser("build-offset", help="case-vs-healthy per-gene offset (Cohen's d) from RNA-seq counts")
+    s.add_argument("--counts", required=True)
+    s.add_argument("--id-map", help="gene id<TAB>symbol TSV (e.g. data/raw/ensembl_to_symbol.tsv)")
+    s.add_argument("--samples", required=True, help="TSV, first column = counts column name")
+    s.add_argument("--group-field", default="group")
+    s.add_argument("--case", required=True, help="comma-separated case group values")
+    s.add_argument("--control", required=True, help="comma-separated healthy control group values")
+    s.add_argument("--filter", nargs="*", help="sample-sheet filters key=value, e.g. batch=PSQ")
+    s.add_argument("--name")
+    s.add_argument("--out", required=True)
+    s.set_defaults(func=cmd_build_offset)
 
     s = sub.add_parser("encode-patient", help="expression -> PatientState (.npz)")
     s.add_argument("--input", required=True, help="genes x samples TSV/CSV, or .h5ad")
@@ -256,6 +300,8 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--tissue", required=True)
     s.add_argument("--reference", help="healthy reference, genes x samples (same tissue/platform)")
     s.add_argument("--allow-no-reference", action="store_true")
+    s.add_argument("--reference-offset",
+                   help="TSV from build-offset; with a same-batch patient cohort, gives s_P against health")
     s.add_argument("--sample-key", help=".h5ad obs column to pseudobulk by")
     s.add_argument("--obs-filter", nargs="*", help=".h5ad obs filters key=value")
     s.add_argument("--out", required=True)

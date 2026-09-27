@@ -60,7 +60,7 @@ def _metadata(rec: dict[str, Any], provenance: str, flag: str) -> dict[str, Any]
     return md
 
 
-def build_from_entry(entry: CatalogEntry, raw_dir: str | Path) -> Signature:
+def build_from_entry(entry: CatalogEntry, raw_dir: str | Path, exclude_samples: set[str] | None = None) -> Signature:
     """Build a signature from the entry's ``inputs`` block.
 
     Supported inputs (paths relative to ``raw_dir``):
@@ -94,9 +94,15 @@ def build_from_entry(entry: CatalogEntry, raw_dir: str | Path) -> Signature:
     else:
         raise ValueError(f"{entry.npi_id}: no inputs.series_matrix, inputs.counts or inputs.expression")
     expr = geo.maybe_log2(expr)
-    pre, post, paired = geo.split_pre_post(expr, samples, pairing)
+    exclude = set(exclude_samples or ())
+    pre, post, paired = geo.split_pre_post(expr, samples, pairing, exclude)
     md = _metadata(rec, prov, entry.quality_flag)
     md["pairing"] = pairing
+    held_out = sorted(exclude & set(samples.index.astype(str)))
+    if held_out:
+        md["held_out_samples"] = held_out
+        if md.get("sample_size") is not None:
+            md["sample_size"] = int(min(pre.shape[1], post.shape[1]))
     if md.get("sample_size") is None:
         md["sample_size"] = int(min(pre.shape[1], post.shape[1]))
         if md["sample_size"] < rec["_min_n"] and md["quality_flag"] != "exploratory":

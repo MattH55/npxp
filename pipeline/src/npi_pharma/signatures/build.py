@@ -104,7 +104,7 @@ def build_signature(
         contrast=contrast,
         quality_flag=flag,
         source_accessions=list(metadata.get("source_accessions", [])),
-        meta={k: v for k, v in metadata.items() if k in ("paper", "notes", "arm", "pairing")},
+        meta={k: v for k, v in metadata.items() if k in ("paper", "notes", "arm", "pairing", "held_out_samples")},
     )
 
 

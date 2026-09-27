@@ -58,7 +58,9 @@ def test_pbmc_patient_with_muscle_npi_warns_and_shrinks(fx, by_id, gene_sets, cf
 def test_small_n_npi_is_down_weighted(patient, by_id, gene_sets, cfg):
     rep = score_pair(patient, by_id["FIXTURE_psychosocial_blood"], by_id["FIXTURE_metformin"], gene_sets, cfg)
     assert "small_n" in rep["flags"] and "tissue_mismatch" in rep["flags"]
-    assert rep["confidence"] == pytest.approx(cfg["shrink"]["small_n"] * cfg["shrink"]["tissue_mismatch"])
+    sh = cfg["shrink"]
+    assert "drug_tissue_mismatch" in rep["flags"]  # fixture drugs are cell-line consensus
+    assert rep["confidence"] == pytest.approx(sh["small_n"] * sh["tissue_mismatch"] * sh["drug_tissue_mismatch"])
 
 
 def test_xenobiotic_flag_needs_both_signatures(patient, by_id, gene_sets, cfg):

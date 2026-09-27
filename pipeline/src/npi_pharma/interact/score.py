@@ -133,6 +133,9 @@ def score_pair(
     if pt != nt:
         penalize("tissue_mismatch", f"patient tissue '{patient.tissue}' vs NPI signature tissue '{npi.tissue}'; "
                  "NPI programs are tissue-specific, score down-weighted")
+    if canonical_tissue(drug.tissue, cfg) != pt:
+        penalize("drug_tissue_mismatch", f"drug signature from '{drug.tissue}', patient tissue '{patient.tissue}'; "
+                 "cell-line drug responses need not transfer to the patient's tissue")
     if npi.quality_flag in ("small_n", "exploratory", "unverified_metadata"):
         penalize(npi.quality_flag, f"NPI signature quality_flag={npi.quality_flag} (n={npi.sample_size})")
     if npi.species != "human" or drug.species != "human":

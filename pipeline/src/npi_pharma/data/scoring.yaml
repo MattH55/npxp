@@ -20,6 +20,8 @@ n_attribution_genes: 20
 # Confidence multipliers applied to composite_raw -> composite.
 shrink:
   tissue_mismatch: 0.5
+  drug_tissue_mismatch: 0.8    # drug signature not from the patient's tissue (all LINCS cell lines);
+                               # uniform across LINCS drugs, so it lowers confidence without reordering them
   small_n: 0.6                 # NPI signature from < min_npi_n paired samples
   exploratory: 0.7
   unverified_metadata: 0.85
