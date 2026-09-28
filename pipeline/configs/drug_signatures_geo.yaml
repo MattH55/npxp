@@ -1,0 +1,121 @@
+# Drug transcriptomic signatures from GEO, for drugs LINCS does not cover.
+#
+# Why this file exists
+# -------------------
+# LINCS Phase II (GSE70138) contains only 5 of this project's 13 curated drugs:
+# mitomycin C, doxorubicin, paclitaxel, temozolomide and metformin. It has no
+# cisplatin, carboplatin, oxaliplatin, 5-fluorouracil, erastin, triapine,
+# lomustine or cyclophosphamide — including every platinum agent, which carry most
+# of the tier-1 interaction evidence. Those signatures come from ordinary GEO
+# series, found with scripts/find_drug_datasets.py.
+#
+# Rules
+# - Every series is an ACUTE drug-treatment experiment: drug-treated cells against
+#   a vehicle or untreated control in the same experiment. A resistant-line vs
+#   parental-line comparison is NOT a drug signature (it is adaptation) and is
+#   excluded even where it was the better-scoring search hit.
+# - `control` and `treated` name exact columns of the expression file. Each was
+#   read off GEO's own sample annotation, never inferred from a column name alone.
+#   GSE319411's mapping, for instance, is given by its per-sample
+#   "Library name: NC2_1" / "Library name: Bo2_1" description fields.
+# - Non-human, non-cancer-cell-line, and in-vivo series are excluded.
+
+drug_signatures:
+  - drug_id: cisplatin
+    accession: GSE319411
+    cell_line: MDA-MB-231
+    cell_line_id: MDAMB231_BREAST
+    curated_cell_line: true
+    condition: 1 uM cisplatin, 48 h
+    file: GSE319411/GSE319411_gene.count.matrix.annotation.xls.gz
+    format: {sep: "\t", gene_col: Gene name, id_col: Gene id}
+    control: [NC2_1, NC2_2, NC2_3, NC2_4]
+    treated: [Bo2_1, Bo2_2, Bo2_3, Bo2_4]
+    notes: >-
+      Factorial design with inorganic-phosphate arms (Pi2_*) and a combination arm
+      (PS2_*); only the control and cisplatin-alone arms are used. GEO's per-sample
+      description gives the column mapping ("Library name: NC2_1" = control medium,
+      "Library name: Bo2_1" = 1 uM cisplatin).
+
+  - drug_id: oxaliplatin
+    accession: GSE227315
+    cell_line: HCT116
+    cell_line_id: HCT116_LARGE_INTESTINE
+    curated_cell_line: true
+    condition: 0.5 uM oxaliplatin, 24 h
+    file: GSE227315/GSE227315_HCT116_Oxa24h_Raw_Norm_counts.txt.gz
+    format: {sep: "\t", id_col: test_id, gene_from_id: "_"}   # rows are ENSG..._SYMBOL
+    control: [NT1, NT2, NT3]
+    treated: [OXA1, OXA2, OXA3]
+    notes: Raw count columns used; the NORM_* columns are the authors' normalisation of the same samples.
+
+  - drug_id: 5-fluorouracil
+    accession: GSE343958
+    cell_line: HCT116
+    cell_line_id: HCT116_LARGE_INTESTINE
+    curated_cell_line: true
+    condition: 10 uM 5-FU, 48 h, 3D spheroids
+    file: GSE343958/GSE343958_QMMFHL-colo52-expression-matrix.csv.gz
+    format: {sep: ",", gene_col: gene_name, id_col: gene_id}
+    control: [QMMFHL_13_colo52_Control_rep1_count, QMMFHL_14_colo52_Control_rep2_count,
+              QMMFHL_15_colo52_Control_rep3_count, QMMFHL_16_colo52_Control_rep4_count]
+    treated: [QMMFHL_17_colo52_5-FU_rep1_count, QMMFHL_18_colo52_5-FU_rep2_count,
+              QMMFHL_19_colo52_5-FU_rep3_count, QMMFHL_20_colo52_5-FU_rep4_count]
+    notes: >-
+      3D spheroids rather than monolayer, which is closer to a tumour but not
+      directly comparable with the monolayer LINCS signatures. The olaparib arm
+      (Ola_*) is present in the file and unused.
+
+  - drug_id: carboplatin
+    accession: GSE185735
+    cell_line: SKOV3
+    cell_line_id: null            # ovarian; not in this project's curated cell-line table
+    curated_cell_line: false
+    condition: carboplatin, ovarian SKOV3
+    file: GSE185735/GSE185735_Gene.count.fpkm.txt.gz
+    format: {sep: "\t", gene_col: gene_name, id_col: ensembl_id}
+    control: [SKOV3-control-1.count, SKOV3-control-2.count, SKOV3-control-3.count]
+    treated: [SKOV3-Carbo-treated-1.count, SKOV3-Carbo-treated-2.count, SKOV3-Carbo-treated-3.count]
+    notes: The Carbo+COM33 combination arm in the same file is unused.
+
+  - drug_id: erastin
+    accession: GSE232034
+    cell_line: LNCaP
+    cell_line_id: null            # prostate; not in the curated table
+    curated_cell_line: false
+    condition: 5 uM erastin
+    file: GSE232034/GSE232034_LNCaP_group_gene_fpkm.txt.gz
+    format: {sep: "\t", encoding: utf-16, gene_col: gene_name, id_col: gene_id}
+    control: [LNCaP_1, LNCaP_2, LNCaP_3]
+    treated: [LNCaP_5_0_Era_1, LNCaP_5_0_Era_2, LNCaP_5_0_Era_3]
+
+  - drug_id: erastin
+    accession: GSE232034
+    cell_line: PC3
+    cell_line_id: null
+    curated_cell_line: false
+    condition: 5 uM erastin
+    file: GSE232034/GSE232034_PC3_group_gene_fpkm.txt.gz
+    format: {sep: "\t", encoding: utf-16, gene_col: gene_name, id_col: gene_id}
+    control: [PC3_1, PC3_2, PC3_3]
+    treated: [PC3_5_0_Era_1, PC3_5_0_Era_2, PC3_5_0_Era_3]
+
+# Searched and deliberately not used
+# ---------------------------------
+# triapine      GSE166419 (A-673, ES7 Ewing sarcoma, DMSO vs triapine 72 h) is a
+#               clean acute design but has ONE treated replicate per cell line, and
+#               its expression file is Affymetrix transcript-cluster intensities
+#               needing a probe map this project does not have for GPL23126.
+# erastin       GSE236253 (U-87, 10 uM erastin 72 h) would add a curated cell line,
+#               but its featureCounts file's columns are bam paths (U87-3.bam, ...)
+#               that GEO does not map to the WT and erastin samples, and most of the
+#               series is ChIP-seq. Not guessed.
+# lomustine     No acute cell-line treatment series found in 22 human expression GSEs.
+# cyclophosphamide
+#               No usable cell-line series, for a mechanistic reason: it is a prodrug
+#               requiring hepatic CYP activation, so treating cultured cells with it
+#               produces little response. Its curated interaction is an in vivo
+#               4T1 mouse result.
+# Excluded by design: resistant-vs-parental comparisons (GSE314768, GSE279527,
+# GSE306865, GSE198042, GSE317900 and others), patient and xenograft series, and
+# non-cancer models (GSE302756 kidney tubuloids).

@@ -121,3 +121,47 @@ def test_rank_combinations_drops_cell_lines_without_npi_measurement():
     assert set(out["drug"]) == {"a", "b"}               # NaN drug values are dropped, not imputed
     assert out.iloc[0]["drug"] == "a"
     assert out.iloc[0]["expected_combined_inhibition"] == pytest.approx(0.9)
+
+
+def test_drug_geo_gene_index_from_compound_id():
+    from npi_pharma.ingest.drug_geo import _gene_index
+
+    df = pd.DataFrame({"test_id": ["ENSG00000000003_TSPAN6", "ENSG00000000005_TNMD"], "NT1": [1, 2]})
+    g = _gene_index(df, {"id_col": "test_id", "gene_from_id": "_"})
+    assert list(g) == ["TSPAN6", "TNMD"]
+    g2 = _gene_index(pd.DataFrame({"gene_name": ["A", "B"]}), {"gene_col": "gene_name"})
+    assert list(g2) == ["A", "B"]
+    with pytest.raises(ValueError, match="cannot find gene symbols"):
+        _gene_index(pd.DataFrame({"x": [1]}), {})
+
+
+def test_drug_geo_build_filters_and_labels(tmp_path):
+    from npi_pharma.ingest.drug_geo import PROV_GEO_DRUG, build_from_record
+    from npi_pharma.model import DRUG
+
+    rng = np.random.default_rng(0)
+    n = 3000
+    genes = [f"G{i}" for i in range(n)]
+    base = rng.integers(200, 2000, size=(n, 1)) * np.ones((1, 6))
+    base = base + rng.integers(0, 40, size=(n, 6))
+    base[:20, 3:] *= 5          # planted up in treated
+    base[20:40, 3:] = base[20:40, 3:] // 5   # planted down
+    df = pd.DataFrame(base, columns=["c1", "c2", "c3", "t1", "t2", "t3"])
+    df.insert(0, "gene_name", genes)
+    df.loc[n - 1, "gene_name"] = ""          # blank symbol must be dropped
+    path = tmp_path / "expr.tsv"
+    df.to_csv(path, sep="\t", index=False)
+    rec = {"drug_id": "testdrug", "accession": "GSE1", "cell_line": "XYZ", "cell_line_id": None,
+           "curated_cell_line": False, "condition": "1 uM, 24 h", "file": "expr.tsv",
+           "format": {"sep": "\t", "gene_col": "gene_name"},
+           "control": ["c1", "c2", "c3"], "treated": ["t1", "t2", "t3"]}
+    sig = build_from_record(rec, tmp_path, min_genes=100)
+    s = sig.as_series()
+    assert sig.kind == DRUG and sig.provenance == PROV_GEO_DRUG and sig.sig_id == "testdrug|XYZ"
+    assert sig.meta["n_control"] == 3 and sig.meta["drug_id"] == "testdrug"
+    assert "" not in s.index
+    assert set(s.nlargest(10).index) <= {f"G{i}" for i in range(20)}
+    assert set(s.nsmallest(10).index) <= {f"G{i}" for i in range(20, 40)}
+    rec_bad = dict(rec, control=["nope"])
+    with pytest.raises(ValueError, match="columns not in file"):
+        build_from_record(rec_bad, tmp_path, min_genes=100)

@@ -144,6 +144,17 @@ to NPI x drug from `configs/npi_monotherapy.yaml`. See
 why total kill is not the same question as synergy, and why the NPI side needs
 curation before the ranking is usable.
 
+## Drug signatures beyond LINCS, and NPI retrieval
+
+LINCS Phase II carries only 5 of the 13 curated drugs and no platinum agent.
+`configs/drug_signatures_geo.yaml` plus `npi_pharma.ingest.drug_geo` add acute
+GEO drug-treatment signatures for cisplatin, oxaliplatin, 5-FU, carboplatin and
+erastin in human cancer lines; `scripts/find_drug_datasets.py` finds the series.
+`scripts/npi_drug_retrieval.py` then asks which drugs each NPI resembles. See
+[docs/npi_drug_retrieval.md](docs/npi_drug_retrieval.md) -- including the QC
+finding that a drug signature depends more on its cell line (0.71 for two
+different drugs in one line) than on the drug (0.18 for one drug in two lines).
+
 ## Fixtures
 
 `npi_pharma/fixtures.py` generates a deterministic **synthetic** world: 50
