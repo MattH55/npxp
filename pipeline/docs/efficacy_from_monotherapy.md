@@ -102,6 +102,16 @@ With the drug side from PRISM and GDSC this ranks 3,374 NPI × drug rows over
    measured TERs are also higher in RKO (cisplatin 3.5 vs 2.8), which is
    directionally consistent — but with n = 2 that is an observation, not evidence.
 
+## Curation attempted, and why it is the gate
+
+Five systematic literature passes (PMC open-access full text plus PubMed
+abstracts) added **nothing** to the 3 entries below, and a DepMap CRISPR
+dependency proxy was tested and rejected. See
+[npi_monotherapy_search_log.md](npi_monotherapy_search_log.md) for what was
+searched, why keyword search cannot reach this data, and the calibration finding
+that a per-cell-line functional measurement tops out near +0.2 to +0.47 Spearman
+for single-agent sensitivity even in the most favourable case.
+
 ## What to curate next
 
 `configs/npi_monotherapy.yaml` lists the wanted measurements in priority order.
