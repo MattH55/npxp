@@ -1,0 +1,83 @@
+# NPI monotherapy response per cancer cell line: the NPI's OWN effect, with no drug.
+#
+# Why this file exists
+# -------------------
+# The literature's strongest single predictor of a combination's outcome is each
+# agent's own response in that cell line (AstraZeneca-Sanger DREAM challenge,
+# Menden et al., Nat Commun 2019, doi:10.1038/s41467-019-09799-2). Validated on
+# DrugComb's 740k measured drug pairs, single-agent responses rank combination
+# EFFICACY at within-cell-line Spearman 0.75 with no fitting at all
+# (docs/efficacy_from_monotherapy.md). For drugs these numbers exist at scale
+# (PRISM, GDSC). For NPIs they are almost entirely uncurated -- that gap, not the
+# choice of model, is what blocks NPI x drug ranking.
+#
+# Rules (same as configs/npi_catalog.yaml)
+# - `inhibition` is the fraction of cells killed or growth lost vs untreated
+#   control, 0 = no effect, 1 = complete kill. Never estimated, never converted
+#   from a different quantity without saying so in `metric`.
+# - Every entry carries `source` and a `quote` of the sentence the number is from.
+# - A cell line / condition with no published number is simply absent. Absence is
+#   reported by the ranking script as missing coverage, never filled with a guess.
+# - `assay` matters: a short viability assay and a 10-day clonogenic assay give
+#   very different numbers for the same treatment. They are separate entries.
+
+npi_monotherapy:
+  # ---- Hyperthermia, 60 min, colorectal cancer lines ----------------------
+  - npi_id: HT_43C_60M
+    modality: thermal
+    condition: {temperature_C: 43, duration_min: 60, CEM43_min: 60}
+    cell_line_id: RKO_LARGE_INTESTINE
+    assay: viability_prestoblue_short_term
+    metric: fraction_viability_lost_vs_untreated
+    inhibition: 0.30
+    source: {pmid: "32722384", pmcid: PMC7464333, doi: 10.3390/cells9081775, authors: Helderman et al. 2020}
+    quote: >-
+      The cell viability of RKO cells decreases significantly after hyperthermia
+      treatment with a 30% reduction after a 43 °C treatment compared to control,
+      whereas HCT116 does not show any differences in cell viability after
+      hyperthermia treatment (Figure 1A).
+
+  - npi_id: HT_43C_60M
+    modality: thermal
+    condition: {temperature_C: 43, duration_min: 60, CEM43_min: 60}
+    cell_line_id: RKO_LARGE_INTESTINE
+    assay: clonogenic_survival_10d
+    metric: one_minus_surviving_fraction
+    inhibition: 0.81
+    source: {pmid: "32722384", pmcid: PMC7464333, doi: 10.3390/cells9081775, authors: Helderman et al. 2020}
+    quote: >-
+      RKO cells were the most sensitive, with only 19% of the cells surviving
+      after treatment at 43 °C.
+
+  - npi_id: HT_43C_60M
+    modality: thermal
+    condition: {temperature_C: 43, duration_min: 60, CEM43_min: 60}
+    cell_line_id: HCT116_LARGE_INTESTINE
+    assay: viability_prestoblue_short_term
+    metric: fraction_viability_lost_vs_untreated
+    inhibition: 0.0
+    source: {pmid: "32722384", pmcid: PMC7464333, doi: 10.3390/cells9081775, authors: Helderman et al. 2020}
+    quote: >-
+      ... whereas HCT116 does not show any differences in cell viability after
+      hyperthermia treatment (Figure 1A).
+    notes: >-
+      Reported as no difference, recorded as 0.0. The paper's clonogenic assay
+      shows HCT116 is nonetheless sensitive to some degree ("all five human CRC
+      cell lines are sensitive to hyperthermia alone, although to a different
+      extent"), but gives no HCT116 number, so no clonogenic entry exists here.
+
+# Wanted next, in priority order. Each needs a published surviving fraction or
+# viability loss for the NPI ALONE in a named cell line; the interaction numbers
+# already curated (thermal enhancement ratios) are a different quantity and
+# cannot substitute.
+#
+#   1. Hyperthermia 41/42/43 C / 60 min in the remaining curated lines:
+#      HELA_CERVIX, MCF7_BREAST, T47D_BREAST, MDAMB231_BREAST, MDAMB468_BREAST,
+#      A549_LUNG, U87MG_CENTRAL_NERVOUS_SYSTEM, T98G_CENTRAL_NERVOUS_SYSTEM,
+#      DU145_PROSTATE, CASKI_CERVIX, U937_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE.
+#      Classic thermal-dose literature reports these as survival curves vs CEM43.
+#   2. Glucose restriction (5% of standard medium glucose, 96 h) in T47D, MCF7,
+#      DU145 -- the lines behind the curated metformin interaction rows.
+#   3. Cystine / methionine withdrawal in MDA-MB-231 and HCT116.
+#   4. Serum starvation in LOVO, acidosis and hypoxia in U-87 MG (GSE300765 and
+#      GSE70976 already supply matching transcriptomes).

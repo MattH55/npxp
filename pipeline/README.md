@@ -131,6 +131,19 @@ The bundled `curated_core.gmt` holds 12 compact, hand-curated core sets
 (mTORC1, insulin, inflammation, OXPHOS, xenobiotic, FAO, lipogenesis,
 cholesterol, hypoxia, UPR/ISR, AMPK, E2F). They are not MSigDB.
 
+## Predicting efficacy instead of synergy
+
+Measured synergy turned out not to be predictable from signatures
+([docs/validation_drugcomb.md](docs/validation_drugcomb.md)). Combination
+*efficacy* is: on 739k DrugComb experiments, Bliss independence of the two
+measured single-agent responses ranks it at within-cell-line Spearman 0.75 with
+no fitting, and a trained model reaches 0.81 leave-cell-lines-out.
+`npi_pharma.cancer.efficacy` plus `scripts/rank_npi_drug_efficacy.py` apply that
+to NPI x drug from `configs/npi_monotherapy.yaml`. See
+[docs/efficacy_from_monotherapy.md](docs/efficacy_from_monotherapy.md), including
+why total kill is not the same question as synergy, and why the NPI side needs
+curation before the ranking is usable.
+
 ## Fixtures
 
 `npi_pharma/fixtures.py` generates a deterministic **synthetic** world: 50

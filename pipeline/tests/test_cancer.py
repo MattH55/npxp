@@ -91,3 +91,33 @@ def test_residual_spearman_removes_main_effects():
     # a feature that knows only the main effects scores high raw but nothing on the residual
     raw2, res2, _ = vm.residual_spearman(t, "additive", "auc", "drug", "cell")
     assert raw2 > 0.5 and abs(res2) < 0.1
+
+
+def test_bliss_expected_properties():
+    from npi_pharma.cancer.efficacy import auc_to_inhibition, bliss_expected, excess_over_bliss
+
+    assert bliss_expected(0.3, 0.5) == pytest.approx(0.65)
+    assert bliss_expected(0.0, 0.5) == pytest.approx(0.5)          # an inert agent adds nothing
+    assert bliss_expected(-0.2, 0.5) == pytest.approx(0.5)         # growth-promoting is clipped, not credited
+    assert bliss_expected(1.0, 0.4) == pytest.approx(1.0)          # saturates
+    assert bliss_expected(0.5, 0.3) == pytest.approx(bliss_expected(0.3, 0.5))  # symmetric
+    # monotone in each argument
+    assert bliss_expected(0.4, 0.5) > bliss_expected(0.3, 0.5)
+    np.testing.assert_allclose(bliss_expected(np.array([0.0, 0.5]), np.array([0.5, 0.5])), [0.5, 0.75])
+    # excess is measured minus expected; zero when the measurement is exactly additive
+    assert excess_over_bliss(0.65, 0.3, 0.5) == pytest.approx(0.0)
+    assert excess_over_bliss(0.8, 0.3, 0.5) == pytest.approx(0.15)
+    assert auc_to_inhibition(0.7) == pytest.approx(0.3)
+    assert auc_to_inhibition(1.2) == pytest.approx(0.0)            # AUC above 1 clipped to no effect
+
+
+def test_rank_combinations_drops_cell_lines_without_npi_measurement():
+    from npi_pharma.cancer.efficacy import rank_combinations
+
+    npi = pd.Series({"RKO": 0.8, "HCT116": 0.0})
+    drugs = pd.DataFrame({"a": [0.5, 0.5], "b": [0.1, np.nan]}, index=["RKO", "OTHER"])
+    out = rank_combinations(npi, drugs)
+    assert set(out["cell_line_id"]) == {"RKO"}          # HCT116 has no drug data, OTHER has no NPI value
+    assert set(out["drug"]) == {"a", "b"}               # NaN drug values are dropped, not imputed
+    assert out.iloc[0]["drug"] == "a"
+    assert out.iloc[0]["expected_combined_inhibition"] == pytest.approx(0.9)
