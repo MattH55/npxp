@@ -1,0 +1,183 @@
+{
+  "n_predictions": 3861,
+  "drug_out_rmse": 0.10821259254578239,
+  "coverage_90_drug_out": 0.823358413132695,
+  "controls": {
+    "auc_real_modifier_above_control": 0.4067913409793752,
+    "control_ranks_of_33": {
+      "gse153830_t47d_bhb25mm": 12,
+      "gse28016_muscle_fast40h_vs_fed": 3,
+      "gse85620_cwi_post_vs_pre": 16
+    }
+  },
+  "approx_90_half_width": 0.17800971473781202,
+  "n_above_half_width": 8,
+  "variance_share": {
+    "modifier_signature_id": 0.27856214292023207,
+    "drug_id": 0.12544607099839694,
+    "cell_line_id": 0.17273104617907462,
+    "interaction_residual": 0.4232607399022963
+  },
+  "gse85620_arms": {
+    "gse85620_placebo_post_vs_pre": {
+      "mean": 0.05846715888842089,
+      "rank_of_33": 2
+    },
+    "gse85620_cwi_post_vs_pre": {
+      "mean": 0.014569930431730741,
+      "rank_of_33": 16
+    }
+  },
+  "anchor_check": [
+    {
+      "anchor": "MOD-HT-42.8C-30M-SIMUL",
+      "drug": "cisplatin",
+      "cell_line": "HELA_CERVIX",
+      "enhancement_ratio": 3.1,
+      "source": "Kusumoto 1993, PMID 8347479",
+      "group": "heat_in_vitro",
+      "mean_pred": -0.07575699647814531,
+      "n_positive": 0,
+      "n": 6,
+      "mean_rank_of_33": 28.666666666666668,
+      "all_modifiers_mean": -0.005131858515561898
+    },
+    {
+      "anchor": "MOD-HT-42.8C-30M-SIMUL",
+      "drug": "cisplatin",
+      "cell_line": "HELA_CERVIX",
+      "enhancement_ratio": 3.1,
+      "source": "Kusumoto 1993, PMID 8347479",
+      "group": "heat_in_vivo",
+      "mean_pred": 0.038915622140844576,
+      "n_positive": 3,
+      "n": 3,
+      "mean_rank_of_33": 8.333333333333334,
+      "all_modifiers_mean": -0.005131858515561898
+    },
+    {
+      "anchor": "MOD-HT-43C-60M-HIPEC",
+      "drug": "cisplatin",
+      "cell_line": "RKO_LARGE_INTESTINE",
+      "enhancement_ratio": 3.5,
+      "source": "Helderman 2020",
+      "group": "heat_in_vitro",
+      "mean_pred": -0.0014060032972486429,
+      "n_positive": 2,
+      "n": 6,
+      "mean_rank_of_33": 25.166666666666668,
+      "all_modifiers_mean": 0.05047426983823919
+    },
+    {
+      "anchor": "MOD-HT-43C-60M-HIPEC",
+      "drug": "cisplatin",
+      "cell_line": "RKO_LARGE_INTESTINE",
+      "enhancement_ratio": 3.5,
+      "source": "Helderman 2020",
+      "group": "heat_in_vivo",
+      "mean_pred": 0.09106057412016093,
+      "n_positive": 3,
+      "n": 3,
+      "mean_rank_of_33": 11.666666666666666,
+      "all_modifiers_mean": 0.05047426983823919
+    },
+    {
+      "anchor": "MOD-HT-43C-60M-HIPEC",
+      "drug": "cisplatin",
+      "cell_line": "HCT116_LARGE_INTESTINE",
+      "enhancement_ratio": 2.8,
+      "source": "Helderman 2020",
+      "group": "heat_in_vitro",
+      "mean_pred": 0.005223430204080128,
+      "n_positive": 2,
+      "n": 6,
+      "mean_rank_of_33": 26.666666666666668,
+      "all_modifiers_mean": 0.06364423913006506
+    },
+    {
+      "anchor": "MOD-HT-43C-60M-HIPEC",
+      "drug": "cisplatin",
+      "cell_line": "HCT116_LARGE_INTESTINE",
+      "enhancement_ratio": 2.8,
+      "source": "Helderman 2020",
+      "group": "heat_in_vivo",
+      "mean_pred": 0.10192730726708223,
+      "n_positive": 3,
+      "n": 3,
+      "mean_rank_of_33": 11.666666666666666,
+      "all_modifiers_mean": 0.06364423913006506
+    }
+  ],
+  "top_modifier_drug": [
+    {
+      "modifier_signature_id": "gse82323_muscle_heat",
+      "drug_id": "paclitaxel",
+      "mean": 0.104,
+      "min": 0.049,
+      "max": 0.183
+    },
+    {
+      "modifier_signature_id": "gse85620_placebo_post_vs_pre",
+      "drug_id": "paclitaxel",
+      "mean": 0.103,
+      "min": 0.021,
+      "max": 0.192
+    },
+    {
+      "modifier_signature_id": "gse156248_muscle_cold10d",
+      "drug_id": "erastin",
+      "mean": 0.1,
+      "min": 0.061,
+      "max": 0.147
+    },
+    {
+      "modifier_signature_id": "gse3606_wbc_exhaustive_1h",
+      "drug_id": "cisplatin",
+      "mean": 0.097,
+      "min": 0.072,
+      "max": 0.123
+    },
+    {
+      "modifier_signature_id": "gse156248_muscle_cold10d",
+      "drug_id": "5-fluorouracil",
+      "mean": 0.091,
+      "min": 0.063,
+      "max": 0.118
+    },
+    {
+      "modifier_signature_id": "gse85620_placebo_post_vs_pre",
+      "drug_id": "cisplatin",
+      "mean": 0.091,
+      "min": 0.041,
+      "max": 0.189
+    },
+    {
+      "modifier_signature_id": "gse156247_muscle_exercise12w",
+      "drug_id": "erastin",
+      "mean": 0.088,
+      "min": 0.048,
+      "max": 0.146
+    },
+    {
+      "modifier_signature_id": "gse129843_muscle_trf8h_vs_15h",
+      "drug_id": "doxorubicin",
+      "mean": 0.086,
+      "min": 0.071,
+      "max": 0.116
+    },
+    {
+      "modifier_signature_id": "gse129843_muscle_trf8h_vs_15h",
+      "drug_id": "cisplatin",
+      "mean": 0.083,
+      "min": 0.031,
+      "max": 0.18
+    },
+    {
+      "modifier_signature_id": "gse82323_soleus_contraction",
+      "drug_id": "erastin",
+      "mean": 0.082,
+      "min": 0.053,
+      "max": 0.136
+    }
+  ]
+}
