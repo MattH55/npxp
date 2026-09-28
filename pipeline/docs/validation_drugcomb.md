@@ -30,6 +30,7 @@ numbers are given too.
 | 2. cell-wise | npi_pharma complementarity with the cell line in the patient slot; consensus signatures | 50,069 (pair, cell line), 2,290 pairs, 165 lines |
 | 3. cell-matched | same, but both signatures measured **in that same cell line** | 4,127 observations, 1,955 pairs, 9 lines |
 | 4. monotherapy | reversal vs the drug's own AUC in that line | 189,924 (PRISM), 61,285 (GDSC1), 31,100 (GDSC2) |
+| 5. positive control | measured same-experiment monotherapy response vs synergy | 739,964 rows, 73,167 pairs, 288 lines |
 
 ## 1. Pair level
 
@@ -94,8 +95,65 @@ GDSC agrees with the prediction and PRISM contradicts it. At n = 190k, even
 ρ = 0.005 is "significant"; the effect size, not the p-value, is what matters
 here, and |ρ| ≤ 0.022 is not usable.
 
+## 5. Positive control: is the residual bar simply unreachable?
+
+No. The identical residual test, run on the feature the literature calls the
+strongest single predictor of synergy (each agent's own response, measured in
+the same DrugComb experiment):
+
+| metric | ri_min | ri_mean | ri_max | css_mean |
+|---|---|---|---|---|
+| Bliss | −0.257 | **−0.302** | −0.257 | +0.083 |
+| Loewe | −0.016 | −0.137 | −0.188 | +0.059 |
+| ZIP | −0.223 | −0.243 | −0.203 | +0.076 |
+| HSA | −0.153 | −0.224 | −0.221 | +0.056 |
+
+Residual Spearman on 739,964 rows, 73,167 pairs, 288 cell lines. So the test
+detects real structure at |ρ| ≈ 0.2–0.3 where it exists, an order of magnitude
+above the ≤ 0.02 the signature scores reach. The nulls above are about the
+features, not the bar.
+
+Two honest notes on this control. The sign says more single-agent inhibition
+gives *less* Bliss and ZIP excess, which is largely the metric's ceiling: if
+each drug alone already kills the cells, there is little headroom for excess.
+So it is a strong statistical relation rather than proof that monotherapy
+response predicts biological synergy. That is consistent with the DREAM
+challenge, where a monotherapy-only predictor matched the average submitted
+model (Menden et al., Nat Commun 2019, doi:10.1038/s41467-019-09799-2).
+
+## How this sits in the literature
+
+Drug-synergy prediction from cell-line features is a mature field, and these
+results are consistent with it rather than contradicting it.
+
+- The DREAM challenge (160 teams, 11,576 experiments, 85 cell lines) found
+  synergy predictable to replicate-level accuracy for >60% of combinations, that
+  winning methods needed prior drug-target knowledge, and that 20% of
+  combinations were poorly predicted by every method.
+- A 2024 review of newer methods (arXiv:2404.02484) reports that the best models
+  solve scenarios involving *known* drugs and cell lines (AUROC up to 0.98,
+  Pearson up to 0.89), while "scenarios involving new drugs or cell lines still
+  fall short of an accurate prediction level", with leave-drug-out significantly
+  harder than leave-pair-out.
+- Most relevant: a 2025 study (Front Pharmacol, PMC12310685) builds "Drug
+  Resistance Signature" features in nearly the way `npi_pharma.cancer` does, from
+  LINCS signatures plus GDSC-defined resistant and sensitive lines, and reports
+  large gains (Pearson 0.72 vs 0.68; MSE 92 vs 346). But it evaluates with
+  stratified random 5-fold cross-validation, with no leave-drug-out or
+  leave-cell-line-out split and no main-effect ablation. Under a random split the
+  same drugs, pairs and cell lines appear in training and test, so drug and
+  cell-line main effects, which this project's audits show dominate, are
+  learnable rather than held out.
+
+The contribution here is therefore not a new finding about drug pairs. It is the
+effect size after main effects are removed, on the specific scoring rule this
+project uses, in the regime this project needs: a novel agent in a given cell
+line. That regime is the one the field itself reports as unsolved.
+
 ## What this settles
 
+- **The bar is fair, and the features fail it.** Monotherapy response clears the
+  same test at |ρ| ≈ 0.3; the signature scores reach ≤ 0.02.
 - **Three model families have now failed on measured data.** Phase 7's trained
   pathway-feature GBT (see `analysis/phase7_audit/`), the unsupervised
   resistance-reversal predictor (`docs/cancer_npi_drug_predictor.md`), and the
@@ -137,4 +195,5 @@ python scripts/validate_reversal_drugcomb.py  --drugcomb "$DC" --lincs drugs.par
 python scripts/validate_cellwise_drugcomb.py  --drugcomb "$DC" --lincs drugs.parquet
 python scripts/validate_cellmatched_drugcomb.py --drugcomb "$DC"
 python scripts/validate_monotherapy.py --lincs drugs.parquet
+python scripts/validate_positive_control.py --drugcomb "$DC"
 ```
