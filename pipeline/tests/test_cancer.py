@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import pytest
 
 from npi_pharma.cancer.programs import center_within, drug_specific, resistance_programs
 from npi_pharma.cancer.sensitize import percentile, score_matrix
@@ -55,3 +56,38 @@ def test_score_sign_and_percentile():
     s = score_matrix(npi, r)
     assert s.loc["moves_to_sensitive", "resist_up"] > 0.9
     assert percentile(s).loc["moves_to_sensitive", "resist_up"] == 1.0
+
+
+def test_residual_spearman_removes_main_effects():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "vm", Path(__file__).parents[1] / "scripts" / "validate_monotherapy.py")
+    vm = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(vm)
+    rng = np.random.default_rng(0)
+    drugs, cells = [f"d{i}" for i in range(20)], [f"c{i}" for i in range(20)]
+    de = dict(zip(drugs, rng.normal(size=20)))
+    ce = dict(zip(cells, rng.normal(size=20)))
+
+    rows = []
+    for d in drugs:
+        for c in cells:
+            pair = rng.normal()              # genuinely pair-specific, not additive
+            rows.append({"drug": d, "cell": c, "additive": de[d] + ce[c],
+                         "pair_only": pair, "auc": de[d] + ce[c] + pair})
+    t = pd.DataFrame(rows)
+
+    # a purely additive outcome leaves a numerically zero residual: no signal to find
+    add = t.assign(auc=t["additive"])
+    v = add["auc"]
+    resid = v - add.groupby("drug")["auc"].transform("mean") - add.groupby("cell")["auc"].transform("mean") + v.mean()
+    assert resid.abs().max() < 1e-12
+
+    # a feature that knows only the pair-specific term scores ~0 raw but ~1 on the residual
+    raw, res, n = vm.residual_spearman(t, "pair_only", "auc", "drug", "cell")
+    assert abs(raw) < 0.75 and res > 0.95 and n == 400
+    # a feature that knows only the main effects scores high raw but nothing on the residual
+    raw2, res2, _ = vm.residual_spearman(t, "additive", "auc", "drug", "cell")
+    assert raw2 > 0.5 and abs(res2) < 0.1

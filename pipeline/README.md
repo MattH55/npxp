@@ -9,6 +9,11 @@ paired human NPI+drug labels.
 > **Evidence tier:** every output is `tier_3_mechanism_only`, a plausibility
 > ranking. It is not measured or calibrated synergy, not a PK prediction, and not
 > clinical advice. Every report carries this disclaimer.
+>
+> That disclaimer now has a measured bound. Tested against DrugComb's 740k
+> measured drug-pair outcomes, the composition scores do not predict interaction
+> (see [docs/validation_drugcomb.md](docs/validation_drugcomb.md)). Read the
+> scores as mechanism-only hypotheses, never as synergy estimates.
 
 ## Install
 
@@ -47,7 +52,7 @@ the patient's top 500 |s_P| "focus" genes.
 
 | field | definition |
 |---|---|
-| `complementarity` | `gain = rev(combo) − max(rev(N), rev(D))`, divided by the remaining headroom `1 − max`. The raw value is kept as `complementarity_gain`. |
+| `complementarity` | `gain = rev(combo) − max(rev(N), rev(D))`, divided by the remaining headroom `1 − max`. The raw value is kept as `complementarity_gain`. **Measured bound:** tested against 50,069 DrugComb drug-pair observations, this score has no detectable relation to measured synergy (residual Spearman ≤ 0.02 on four metrics) — see [docs/validation_drugcomb.md](docs/validation_drugcomb.md). |
 | `orthogonality` | `1 − |cos(s_N, s_D)|` on focus genes. It counts toward the composite only when both agents reverse s_P. The ungated value is `orthogonality_raw`. |
 | `monotherapy_correlation` | `cos(s_N, s_D)`. Used as a feature, following eLife 2020;9:e52707. |
 | `pathway_joint` | DIPx-like. For each pathway, `need·(u_N+u_D)/2 − λ·|need|·conflict`, normalised by `Σ|need|`. |

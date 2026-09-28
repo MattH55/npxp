@@ -84,6 +84,11 @@ screen. The full table is written to `out/cancer_npi_drug/npi_drug_scores.tsv`
   An mRNA signature, especially one on 978 genes, sees these poorly.
 - **Program reliability.** The platinum and 5-FU programs, the drugs that matter
   most for the gates, are the least reliable.
+- **Now tested at scale.** The same scoring rule was run against DrugComb's
+  740k measured drug-pair outcomes, where labels are abundant:
+  no interaction signal in any of four synergy metrics
+  ([docs/validation_drugcomb.md](validation_drugcomb.md)). The gate failures below
+  are not a small-sample artefact.
 - **Two families now fail the same known results.** Phase 7 (trained GBT) and
   this unsupervised predictor both fail. Signature-only approaches have not
   reproduced the measured NPI × drug results. The limiting input is measured
