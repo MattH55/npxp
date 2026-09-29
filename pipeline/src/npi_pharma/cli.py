@@ -16,6 +16,17 @@ from .interact.rank import rank_pairs, select_npis
 from .store import load_patient, load_signatures, save_patient, save_signatures, signature_index
 
 
+def _perts(spec: str | None) -> list[str] | None:
+    """Parse --perts. ``@file`` reads one name per line, so compound names containing
+    commas (e.g. "16,16-dimethylprostaglandin-e2") survive; otherwise comma-separated."""
+    if not spec:
+        return None
+    if spec.startswith("@"):
+        lines = Path(spec[1:]).read_text().splitlines()
+        return [x.strip() for x in lines if x.strip()]
+    return [x.strip() for x in spec.split(",") if x.strip()]
+
+
 def _drug_set(path: str | None, name: str | None) -> list[str] | None:
     if not name:
         return None
@@ -30,7 +41,7 @@ def cmd_ingest_lincs(a) -> int:
 
     if a.level != 5:
         raise SystemExit("only Level 5 (MODZ consensus) signatures are supported")
-    perts = [p.strip() for p in a.perts.split(",")] if a.perts else _drug_set(a.drug_sets, a.drug_set)
+    perts = _perts(a.perts) or _drug_set(a.drug_sets, a.drug_set)
     if not perts:
         raise SystemExit("pass --perts or --drug-set")
     targets = None
@@ -260,7 +271,9 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--sig-metrics")
     s.add_argument("--pert-info")
     s.add_argument("--targets", help="TSV with pert_iname, target (|-separated), e.g. from the Repurposing Hub")
-    s.add_argument("--perts", help="comma-separated pert_iname list")
+    s.add_argument("--perts", help="comma-separated pert_iname list; a value starting with @ is "
+                                   "read as a file of one name per line, which is the only safe way "
+                                   "to pass names that themselves contain commas")
     s.add_argument("--drug-set")
     s.add_argument("--drug-sets", default="configs/drug_sets.yaml")
     s.add_argument("--cell-lines")

@@ -33,3 +33,14 @@ def test_milestone_path_end_to_end(tmp_path):
     lines = (out / "rank.tsv").read_text().splitlines()
     assert len(lines) == 11 and all("FIXTURE_LCD_adipose" in ln for ln in lines[1:])  # liver/blood NPIs filtered
     assert json.loads((out / "rank.json").read_text())["top_pairs"]
+
+
+def test_perts_accepts_a_file_so_commas_in_names_survive(tmp_path):
+    from npi_pharma.cli import _perts
+
+    assert _perts(None) is None
+    assert _perts("metformin, sirolimus ,everolimus") == ["metformin", "sirolimus", "everolimus"]
+    # a comma-separated list cannot carry this name; a file can
+    f = tmp_path / "perts.txt"
+    f.write_text("16,16-dimethylprostaglandin-e2\nmetformin\n\n  sirolimus  \n")
+    assert _perts(f"@{f}") == ["16,16-dimethylprostaglandin-e2", "metformin", "sirolimus"]
