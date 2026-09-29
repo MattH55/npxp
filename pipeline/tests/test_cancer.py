@@ -278,3 +278,43 @@ def test_labels_for_strips_library_name_prefix():
     assert "Bo2_1" in labs                      # prefix stripped
     assert "Library name: Bo2_1" in labs        # and the raw field kept
     assert "GSM1_counts" in labs                # supplementary basename, extensions removed
+
+
+def test_independent_accessions_rejects_one_study_and_companion_series():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "rnda", Path(__file__).parents[1] / "scripts" / "rank_npi_drug_all.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    assert m.independent_accessions(["GSE121689", "GSE146354"]) is True   # far apart: two studies
+    assert m.independent_accessions(["GSE232034"]) is False               # one accession
+    assert m.independent_accessions(["GSE232034", "GSE232034"]) is False  # same, twice
+    assert m.independent_accessions(["GSE59296", "GSE59297"]) is False    # companion series
+    assert m.independent_accessions([]) is False
+    # three consecutive is still one submission; a distant third makes it independent
+    assert m.independent_accessions(["GSE100", "GSE101", "GSE102"]) is False
+    assert m.independent_accessions(["GSE100", "GSE101", "GSE90000"]) is True
+
+
+def test_reliability_bands_follow_cross_series_agreement():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "rnda2", Path(__file__).parents[1] / "scripts" / "rank_npi_drug_all.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    qc = {"good": {"median_cross_series_cosine": 0.45, "n_series": 4},
+          "mid": {"median_cross_series_cosine": 0.20, "n_series": 3},
+          "poor": {"median_cross_series_cosine": 0.02, "n_series": 2}}
+    ind = ["GSE1", "GSE9999"]
+    assert m.reliability_for("good", qc, ind)[0] == "medium"
+    assert m.reliability_for("mid", qc, ind)[0] == "low"
+    assert m.reliability_for("poor", qc, ind)[0] == "very low"
+    assert m.reliability_for("unknown", qc, ind)[0] == "very low"
+    # a strong number from a single study is still capped
+    assert m.reliability_for("good", qc, ["GSE1", "GSE1"])[0] == "very low"
