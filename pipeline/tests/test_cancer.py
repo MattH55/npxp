@@ -399,3 +399,38 @@ def test_consensus_driver_slug_makes_safe_part_names():
     # distinct drugs must not collide on one part directory
     names = [m.slug(d) for d in m.MISSING_FROM_LINCS]
     assert len(set(names)) == len(names)
+
+
+def _dsf():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "dsf", Path(__file__).parents[1] / "scripts" / "drug_signatures_from_factorial.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def test_agent_label_strips_dose_and_synonym_decorations():
+    m = _dsf()
+    assert m.agent_label("Dalpiciclib 2μM, 48h") == "Dalpiciclib"
+    assert m.agent_label("Enzalutamide 35μM，48h") == "Enzalutamide"
+    assert m.agent_label("ABT199 (venetoclax)") == "ABT199"
+    assert m.agent_label("Ceritinib treatment at 1uM") == "Ceritinib"
+    assert m.agent_label("A51 treatment at 62.5nM") == "A51"
+    assert m.agent_label("cisplatin") == "cisplatin"
+    # a label that is only a dose must not be stripped to nothing
+    assert m.agent_label("2uM") == "2uM"
+
+
+def test_resistant_line_flag_catches_derivatives_without_false_positives():
+    m = _dsf()
+    # suffixes that mark a line selected for resistance
+    for line in ["IGROV-1/CP", "A2780/CP70", "HCT116-R", "MCF7 doxorubicin resistant",
+                 "SKOV3 CisR", "KB-V1 MDR"]:
+        assert m.resistant_line_flag(line) == "resistant_cell_line", line
+    # real parental line names, including ones with digits and hyphens
+    for line in ["IGROV-1", "MCF7", "CAMA1", "SNB19", "OCI-AML3", "KYSE30", "CLB-GA",
+                 "SKOV3", "Prostate cancer", "Cell line", None, ""]:
+        assert m.resistant_line_flag(line) is None, line

@@ -67,3 +67,67 @@ def test_gene_info_to_id_map_prefers_protein_coding(tmp_path):
                  "9606\t4\tNOENS\t-\tprotein-coding\n")
     out = fetch.gene_info_to_id_map(gi, tmp_path / "m.tsv")
     assert out.read_text().splitlines() == ["ENSG1\tMTOR", "ENSG2\tRPTOR", "ENSG3\tRPTOR"]
+
+
+def test_is_suppl_table_keeps_tables_and_rejects_unparseable_bulk():
+    """The filter that stopped one series from filling the disk.
+
+    GSE236253 ships a 2.7 GB Hi-C contact map beside its 4.8 MB count table, and
+    GSE276609 ships 8.5 GB of 10x Loupe projects. Neither can be read by
+    supplementary_table(), so neither should ever be fetched.
+    """
+    from npi_pharma.ingest.fetch import is_suppl_table
+
+    for name in ["GSE1_counts.txt.gz", "GSE1_Read_counts.csv.gz", "GSE1_gene_fpkm.tsv",
+                 "GSE1_table.xlsx", "GSE1_expression.txt", "GSE1_tpm.csv",
+                 "GSE1_matrix.mtx.gz", "GSE1_counts.tab.bz2"]:
+        assert is_suppl_table(name), name
+
+    for name in ["GSE236253_U87.allValidPairs.hic", "GSE276609_Cancer.cloupe.gz",
+                 "GSE276609_reanalysis.tar.gz", "GSE1_RAW.tar", "GSE1.bam", "GSE1.bw",
+                 "GSE1_signal.bigWig", "GSE1.h5", "GSE1_img.png", "GSE1.pdf",
+                 "GSE1_fastq.gz", "GSE1.CEL.gz", "GSE1.idat",
+                 "GSE1_barcodes.tsv.tar.gz"]:   # a table inside a tar is not readable either
+        assert not is_suppl_table(name), name
+
+
+def test_download_abandons_a_file_over_its_cap(tmp_path, monkeypatch):
+    """A cap is enforced on the declared length AND on the stream itself."""
+    import io
+    import urllib.request
+
+    import pytest
+
+    from npi_pharma.ingest import fetch
+
+    class Resp(io.BytesIO):
+        def __init__(self, data, declared):
+            super().__init__(data)
+            self.headers = {"Content-Length": str(declared)} if declared is not None else {}
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+    payload = b"x" * (3 << 20)          # 3 MB
+
+    # declared too large -> refused before a byte is written
+    monkeypatch.setattr(urllib.request, "urlopen",
+                        lambda *a, **k: Resp(payload, 3 << 20))
+    dest = tmp_path / "big.txt.gz"
+    with pytest.raises(fetch.TooLarge):
+        fetch.download("http://x/big.txt.gz", dest, max_bytes=1 << 20)
+    assert not dest.exists() and not dest.with_suffix(".gz.part").exists()
+
+    # no declared length -> the stream itself is capped, and the partial file removed
+    monkeypatch.setattr(urllib.request, "urlopen", lambda *a, **k: Resp(payload, None))
+    with pytest.raises(fetch.TooLarge):
+        fetch.download("http://x/big.txt.gz", dest, max_bytes=1 << 20)
+    assert not dest.exists() and not dest.with_suffix(".gz.part").exists()
+
+    # within the cap -> written
+    monkeypatch.setattr(urllib.request, "urlopen", lambda *a, **k: Resp(payload, None))
+    fetch.download("http://x/ok.txt.gz", tmp_path / "ok.txt.gz", max_bytes=8 << 20)
+    assert (tmp_path / "ok.txt.gz").stat().st_size == len(payload)

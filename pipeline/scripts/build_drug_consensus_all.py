@@ -49,7 +49,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out", default="data/processed/signatures/drugs_consensus_v2.parquet")
     ap.add_argument("--report", default="out/drug_consensus_v2")
     ap.add_argument("--timeout", type=int, default=3600, help="seconds per drug")
-    ap.add_argument("--min-free-gb", type=float, default=3.0,
+    ap.add_argument("--min-free-gb", type=float, default=12.0,
                     help="stop before a drug that would run with less headroom than this; "
                          "the supplementary downloads are several GB per drug, and running "
                          "out mid-write loses the part rather than skipping it")

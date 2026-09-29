@@ -44,13 +44,38 @@ def list_dir(url: str) -> list[str]:
     return sorted({h for h in re.findall(r'href="([^"?/][^"]*)"', html) if not h.startswith("http")})
 
 
-def download(url: str, dest: Path, overwrite: bool = False) -> Path:
+class TooLarge(Exception):
+    """A download exceeded its size cap and was abandoned."""
+
+
+def download(url: str, dest: Path, overwrite: bool = False,
+             max_bytes: int | None = None) -> Path:
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists() and dest.stat().st_size > 0 and not overwrite:
         return dest
     tmp = dest.with_suffix(dest.suffix + ".part")
-    with urllib.request.urlopen(url, timeout=120) as r, open(tmp, "wb") as fh:
-        shutil.copyfileobj(r, fh, length=1 << 20)
+    with urllib.request.urlopen(url, timeout=120) as r:
+        if max_bytes is not None:
+            declared = r.headers.get("Content-Length")
+            if declared is not None and int(declared) > max_bytes:
+                raise TooLarge(f"{url}: {int(declared) / 2**20:.0f} MB "
+                               f"exceeds the {max_bytes / 2**20:.0f} MB cap")
+        with open(tmp, "wb") as fh:
+            if max_bytes is None:
+                shutil.copyfileobj(r, fh, length=1 << 20)
+            else:
+                # Some listings declare no length, so cap the stream as well and drop
+                # the partial file: a single unbounded supplementary file (a 2.7 GB
+                # Hi-C map shipped beside a count table) can fill the disk and take
+                # the whole run down with it.
+                written = 0
+                while chunk := r.read(1 << 20):
+                    written += len(chunk)
+                    if written > max_bytes:
+                        fh.close()
+                        tmp.unlink(missing_ok=True)
+                        raise TooLarge(f"{url}: exceeds the {max_bytes / 2**20:.0f} MB cap")
+                    fh.write(chunk)
     tmp.replace(dest)
     return dest
 
@@ -137,13 +162,32 @@ def probe_map_from_platform_table(gpl: str, out_tsv: Path, timeout: int = 180) -
     return out_tsv
 
 
+# Supplementary files this package can actually read as a table: a delimited text
+# file or a spreadsheet, optionally compressed. Everything else a series ships
+# beside its counts -- Hi-C contact maps (.hic), 10x Loupe projects (.cloupe),
+# alignments, coverage tracks, raw-read tarballs, images -- cannot be parsed by
+# supplementary_table() and runs to gigabytes, so it is never worth fetching.
+SUPPL_TABLE = re.compile(r"\.(txt|tsv|csv|tab|xlsx?|mtx)(\.(gz|bz2|xz|zip))?$", re.I)
+MAX_SUPPL_MB = 512
+
+
+def is_suppl_table(name: str) -> bool:
+    """Could this supplementary file name hold a readable expression table?"""
+    return bool(SUPPL_TABLE.search(name)) and ".tar" not in name.lower()
+
+
 def fetch_geo_series(
-    gse: str, raw_dir: str | Path, overwrite: bool = False, suppl: bool = False, log=print
+    gse: str, raw_dir: str | Path, overwrite: bool = False, suppl: bool = False, log=print,
+    max_suppl_mb: int = MAX_SUPPL_MB,
 ) -> dict[str, list[Path]]:
     """Fetch all series matrices of a GSE plus a probe map per platform.
 
-    With ``suppl`` also fetch the series' supplementary files (except ``*_RAW.tar``).
-    RNA-seq series keep their counts there; the series matrix has no table.
+    With ``suppl`` also fetch the series' supplementary files. RNA-seq series keep
+    their counts there; the series matrix has no table. Only files that could hold a
+    readable table are fetched (:func:`is_suppl_table`), and each is capped at
+    ``max_suppl_mb``; the rest are listed under ``"suppl_skipped"``. Without those
+    two limits one series can exhaust the disk -- GSE236253 ships a 2.7 GB Hi-C map
+    next to its 4.8 MB count table, and GSE276609 ships 8.5 GB of Loupe projects.
     """
     out = Path(raw_dir) / gse
     names = [n for n in list_dir(series_dir(gse, "matrix")) if n.endswith("_series_matrix.txt.gz")]
@@ -175,10 +219,20 @@ def fetch_geo_series(
                           file=sys.stderr)
     if suppl:
         got["suppl"] = []
+        got["suppl_skipped"] = []
         for n in list_dir(series_dir(gse, "suppl")):
-            if n.startswith(gse) and not n.endswith("_RAW.tar"):
-                got["suppl"].append(download(series_dir(gse, "suppl") + n, out / n, overwrite))
+            if not n.startswith(gse) or n.endswith("_RAW.tar"):
+                continue
+            if not is_suppl_table(n):
+                got["suppl_skipped"].append(n)
+                continue
+            try:
+                got["suppl"].append(download(series_dir(gse, "suppl") + n, out / n, overwrite,
+                                             max_bytes=max_suppl_mb * 2**20))
                 log(f"  {got['suppl'][-1]}")
+            except TooLarge as e:
+                got["suppl_skipped"].append(n)
+                print(f"  skipped {n}: {e}", file=sys.stderr)
     return got
 
 
