@@ -382,3 +382,20 @@ def test_match_columns_by_assignment_refuses_when_not_decisive():
     # fewer columns than samples
     s = samples(["DMSO Replicate 1", "VTP Replicate 1"])
     assert bdc.match_columns_by_assignment(s, list(s.index), ["DMSO_R1"]) is None
+
+
+def test_consensus_driver_slug_makes_safe_part_names():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "bdca", Path(__file__).parents[1] / "scripts" / "build_drug_consensus_all.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    assert m.slug("5-fluorouracil") == "5_fluorouracil"
+    assert m.slug("mitomycin C") == "mitomycin_c"
+    assert m.slug("actinomycin D") == "actinomycin_d"
+    # distinct drugs must not collide on one part directory
+    names = [m.slug(d) for d in m.MISSING_FROM_LINCS]
+    assert len(set(names)) == len(names)
