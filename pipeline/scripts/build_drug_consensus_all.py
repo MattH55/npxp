@@ -95,10 +95,11 @@ def main(argv: list[str] | None = None) -> int:
                        "part_built": done.exists()})
         print(f"   {outcome} in {time.time() - t0:.0f}s", file=sys.stderr)
 
-    # merge: consensuses, per-series signatures, series logs and QC
+    # Merge every part on disk, NOT just the drugs this invocation ran. Rebuilding one
+    # drug (--drugs oxaliplatin --force) would otherwise republish the panel with that
+    # drug alone, silently discarding the rest.
     cons, per_series, logs, qc = [], [], [], {}
-    for drug in a.drugs:
-        d = parts / slug(drug)
+    for d in sorted(p for p in parts.iterdir() if p.is_dir()):
         if (d / "consensus.parquet").exists():
             cons += list(load_signatures(d / "consensus.parquet"))
         ps = d / "drugs_geo_per_series.parquet"
