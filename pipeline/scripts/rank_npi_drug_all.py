@@ -42,8 +42,16 @@ from npi_pharma.store import load_signatures  # noqa: E402
 
 PANELS = [
     ("data/processed/signatures/lincs_all.parquet", "LINCS consensus", "high"),
+    # v2 supersedes v1 for the drugs it covers: same method, but with the RNA-seq
+    # ingest path enabled, which v1 discarded 164 of 194 candidate series for.
+    ("data/processed/signatures/drugs_consensus_v2.parquet", "GEO consensus v2", None),
     ("data/processed/signatures/drugs_consensus.parquet", "GEO consensus", None),
     ("data/processed/signatures/drugs_geo.parquet", "GEO single series", "very low"),
+    # Single-agent main effects from the factorial corpus. The interaction from these
+    # series does not reproduce, but the main effects do (docs/measured_interactions.md),
+    # so they belong here -- as single-cell-line signatures, at "very low".
+    ("data/processed/signatures/drugs_from_factorial.parquet", "GEO factorial main effect",
+     "very low"),
 ]
 
 
@@ -90,14 +98,22 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--cancer-resource", required=True)
     ap.add_argument("--raw-dir", default="data/raw")
-    ap.add_argument("--consensus-qc", default="out/drug_consensus/qc.json")
+    ap.add_argument("--consensus-qc", nargs="*",
+                    default=["out/drug_consensus/qc.json", "out/drug_consensus_v2/qc.json"],
+                    help="cross-series agreement per drug; later files win on a clash, so "
+                         "v2 overrides v1 for the drugs it rebuilt")
     ap.add_argument("--min-genes", type=int, default=300)
     ap.add_argument("--top", type=int, default=8)
     ap.add_argument("--out", default="out/npi_drug_all")
     a = ap.parse_args(argv)
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
-    qc = json.loads(Path(a.consensus_qc).read_text()) if Path(a.consensus_qc).exists() else {}
+    qc: dict = {}
+    for q in a.consensus_qc:
+        if Path(q).exists():
+            qc |= json.loads(Path(q).read_text())
+        else:
+            print(f"  (missing QC: {q})", file=sys.stderr)
 
     import importlib.util
 
@@ -123,7 +139,20 @@ def main(argv: list[str] | None = None) -> int:
                                 reliability_for(drug, qc, list(s.source_accessions or [])))
             info[key] = {"drug": drug, "source": source, "reliability": rel,
                          "cross_series_agreement": cross, "n_series": nser,
-                         "cell_line": (s.meta or {}).get("cell_line")}
+                         "cell_line": (s.meta or {}).get("cell_line"),
+                         # A line selected for resistance to the drug being profiled
+                         # answers a different question; carried through, not dropped.
+                         "cell_line_flag": (s.meta or {}).get("cell_line_flag"),
+                         "quality_flag": s.quality_flag}
+    # v2 rebuilt some drugs from more series than v1 saw. Keeping both would enter one
+    # drug twice with two different reliabilities, so v1 yields for those drugs.
+    superseded = {v["drug"] for v in info.values() if v["source"] == "GEO consensus v2"}
+    for k in [k for k, v in info.items()
+              if v["source"] == "GEO consensus" and v["drug"] in superseded]:
+        frames.pop(k, None)
+        info.pop(k, None)
+    if superseded:
+        print(f"v2 supersedes v1 for {len(superseded)} drugs", file=sys.stderr)
     D = pd.DataFrame(frames)
     print(f"{npis.shape[1]} NPI signatures x {D.shape[1]} drug signatures", file=sys.stderr)
     counts = pd.Series([v["reliability"] for v in info.values()]).value_counts()
