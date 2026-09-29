@@ -163,6 +163,102 @@ def _norm_label(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", str(s).lower())
 
 
+# "_" is a word character, so \b does not separate "DMSO_R1"; match on non-alphanumeric instead.
+_REPLICATE = re.compile(r"(?<![A-Za-z0-9])(?:r|rep|replicate)[ _-]?(\d+)(?![A-Za-z0-9])", re.I)
+
+
+def _tokens(s: str) -> list[str]:
+    """Label to comparable tokens, splitting run-together words and digit runs.
+
+    ``CAMA-1_DMSO_1`` and ``SNB19ACT`` both become word/number tokens, so a column
+    written without separators can still be compared with a spaced GEO title.
+    ``R1``/``Rep1`` are rewritten to ``replicate 1`` first, because a table writes
+    the replicate number as ``_R1`` where the title spells it out.
+    """
+    s = _REPLICATE.sub(r"replicate \1", str(s))
+    s = re.sub(r"(?<=[a-zA-Z])(?=[0-9])|(?<=[0-9])(?=[a-zA-Z])", " ", s)
+    s = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", s)
+    return [t for t in re.split(r"[^A-Za-z0-9]+", s.lower()) if t]
+
+
+def _token_score(column: str, label: str) -> float:
+    """Fraction of a column's tokens accounted for by a sample label's tokens.
+
+    A prefix counts partially: tables abbreviate (``Veh`` for ``Vehicle``,
+    ``Sta`` for ``Stattic``) but do not rename. Prefixes must be >= 3 characters
+    so that a stray letter cannot match a word.
+    """
+    ct, lt = _tokens(column), set(_tokens(label))
+    if not ct:
+        return 0.0
+    total = 0.0
+    for t in ct:
+        if t in lt:
+            total += 1.0
+        elif len(t) >= 3 and any(u.startswith(t) or (len(u) >= 3 and t.startswith(u)) for u in lt):
+            total += 0.6
+    return total / len(ct)
+
+
+def match_columns_by_assignment(samples: pd.DataFrame, gsms: list[str], columns: list[str],
+                                min_score: float = 0.8) -> dict[str, str] | None:
+    """Map GSMs to columns as a one-to-one assignment, or None if it is not decisive.
+
+    Many RNA-seq series publish a count table whose columns are *arm labels*
+    (``CAMA-1_DMSO_1``, ``Veh_R``) rather than GSM names, so no single label
+    matches a column outright. Solving all the samples at once is what makes that
+    tractable: a column has to beat every other sample as well as every other
+    column, and the control arm is often identified only by which column is left
+    over. Three conditions must all hold, or the table is refused:
+
+      * every sample scores at least ``min_score`` against its assigned column;
+      * the assignment is one-to-one;
+      * forbidding any assigned pair makes the total strictly worse, so no second
+        arrangement scores as well. This is the guard against guessing -- a table
+        whose labels are genuinely ambiguous has a tie, and a tie is a refusal.
+    """
+    from scipy.optimize import linear_sum_assignment
+
+    # Its whole justification is solving the samples jointly -- a column must beat
+    # every other sample as well as every other column. With one sample there is no
+    # such constraint, so a single-sample request is refused rather than guessed.
+    if len(gsms) < 2 or len(columns) < len(gsms):
+        return None
+    # A table often publishes each sample twice, as counts and as TPM/FPKM. Those are
+    # two value types of one sample, not two candidate labels, and they tie exactly on
+    # token score -- which would refuse the whole table. Keep the counts.
+    # The suffix is also not part of the sample's name, so scoring uses the stem.
+    stems: dict[str, list[str]] = {}
+    for c in columns:
+        stems.setdefault(re.sub(r"[ _.-]?(counts?|tpms?|fpkms?|cpms?|rpkms?)$", "", c,
+                                flags=re.I), []).append(c)
+    keys = list(stems)
+    pick = [cs[0] if len(cs) == 1 else
+            next((c for c in cs if re.search(r"counts?$", c, re.I)), cs[0])
+            for cs in stems.values()]
+    if len(keys) < len(gsms):
+        return None
+    labels = [" ".join(_labels_for(samples, g)) for g in gsms]
+    S = np.array([[_token_score(k, lab) for k in keys] for lab in labels])
+
+    def solve(mask: np.ndarray) -> tuple[float, np.ndarray, np.ndarray]:
+        cost = np.where(mask, -S, 1e6)
+        r, c = linear_sum_assignment(cost)
+        return float(S[r, c][mask[r, c]].sum() - 1e6 * (~mask[r, c]).sum()), r, c
+
+    mask = np.ones_like(S, dtype=bool)
+    best, rows, cols = solve(mask)
+    if S[rows, cols].min() < min_score:
+        return None
+    for r, c in zip(rows, cols):
+        m = mask.copy()
+        m[r, c] = False
+        alt, _, _ = solve(m)
+        if alt >= best - 1e-9:
+            return None  # a second arrangement does as well: ambiguous, so refuse
+    return {gsms[r]: pick[c] for r, c in zip(rows, cols)}
+
+
 def match_columns(samples: pd.DataFrame, gsms: list[str], columns: list[str]) -> dict[str, str] | None:
     """Map each GSM to exactly one column of a supplementary table, or None.
 
@@ -199,10 +295,10 @@ def match_columns(samples: pd.DataFrame, gsms: list[str], columns: list[str]) ->
             counts = [c for c in uniq if re.search(r"count", c, re.I)]
             uniq = counts if len(counts) == 1 else uniq
         if len(uniq) != 1:
-            return None
+            return match_columns_by_assignment(samples, gsms, columns)
         out[gsm] = uniq[0]
     if len(set(out.values())) != len(out):
-        return None
+        return match_columns_by_assignment(samples, gsms, columns)
     return out
 
 
@@ -261,6 +357,13 @@ def supplementary_table(series_dir: Path, samples: pd.DataFrame, need: list[str]
             idx = df[gene_col].astype(str)
             if "_" in idx.iloc[0] and idx.str.startswith(("ENSG", "ENST")).mean() > 0.5:
                 idx = idx.str.split("_").str[-1]     # rows like ENSG..._SYMBOL
+            elif idx.str.startswith("ENSG").mean() > 0.5:
+                # Bare Ensembl IDs, often carrying a version ("ENSG00000000003.15").
+                # Left untranslated the series shares no gene with any other, so it
+                # silently drops out of every comparison rather than failing loudly.
+                emap = load_ensembl_map(series_dir.parent)
+                if emap is not None:
+                    idx = idx.str.split(".").str[0].map(emap).fillna(idx)
             expr.index = idx.str.upper().str.strip()
             expr = expr[(expr.index != "") & ~expr.index.isin(["NAN", "NA", "NONE", "-"])]
             expr = expr.groupby(level=0).sum()
@@ -271,6 +374,15 @@ def supplementary_table(series_dir: Path, samples: pd.DataFrame, need: list[str]
     if why is not None:
         why.append("processed supplement present but its columns could not be matched to samples")
     return None
+
+
+def load_ensembl_map(raw_dir: Path) -> "pd.Series | None":
+    """Ensembl gene ID -> symbol, from the same NCBI map, keyed without a version."""
+    p = raw_dir / "ensembl_to_symbol.tsv"
+    if not p.exists():
+        return None
+    m = pd.read_csv(p, sep="\t", header=None, names=["ensembl", "symbol"], dtype=str)
+    return m.drop_duplicates("ensembl").set_index("ensembl")["symbol"]
 
 
 def load_symbol_reference(raw_dir: Path) -> set[str] | None:

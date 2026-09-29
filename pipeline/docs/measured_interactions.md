@@ -75,20 +75,99 @@ drug does alone.
   factorial series (heat or nutrient restriction with a drug, all four arms) would
   give the same quantity for the question this project actually asks.
 
+## Item 2 is done: 10 of 11 series now build
+
+The expression-mapping failures cost 6 of 11 series. Five of the six are recovered,
+and the corpus is now **10 measured interaction signatures**. The sixth, GSE330930,
+publishes only a 10x `feature_reference.csv` — there is no expression matrix to map,
+and it is correctly refused rather than forced.
+
+The failures were all the same thing: RNA-seq count tables whose columns are *arm
+labels* (`CAMA-1_DMSO_1`, `Veh_R`, `DMSO_R1`, `SNB19ACT`) rather than GSM names, so
+no single label matched a column outright. `match_columns_by_assignment` in
+`scripts/build_drug_consensus.py` solves all the samples at once instead of one at a
+time, which is what makes those tables tractable: a column has to beat every *other
+sample* as well as every other column, so a control arm can be identified purely by
+being the column left over (`SNB19` against `SNB19ACT`/`SNB19Sta`/`SNB19Com`).
+
+Three conditions must hold or the table is refused, and the third is the one that
+keeps this from being guesswork: forbidding any assigned pair must make the total
+strictly worse. A table whose labels are genuinely ambiguous produces a tie, and a
+tie is a refusal. A single-sample request is refused outright, because with one
+sample the joint constraint that justifies the method does not exist.
+
+One further bug surfaced: GSE311210 indexes genes by versioned Ensembl IDs, and left
+untranslated it shared *zero* genes with every other series — so it dropped silently
+out of every comparison instead of failing loudly. `load_ensembl_map` now translates
+them.
+
+## Item 3, run early: the interaction contrast does not reproduce
+
+Two series in the corpus profile the same combination independently — abemaciclib +
+fulvestrant, in MCF7 (GSE336734) and CAMA1 (GSE336729). That allows the question to
+be asked directly, and it comes with its own positive control, because the same four
+arms of the same two series also give each agent's main effect. Every step of the
+pipeline is shared, so a split between them is specific to the contrast:
+
+| contrast | cross-series cosine |
+|---|---|
+| combination main effect (`combo − control`) | **+0.632** |
+| abemaciclib main effect | **+0.512** |
+| fulvestrant main effect | **+0.194** |
+| **interaction** (`combo − a − b + control`) | **−0.057** |
+
+Over 11,403 shared genes. The main effects reproduce — the combination's at 0.63,
+well above the 0.18 that the same drug in two different cell lines manages in this
+project's own measurements (`npi_drug_retrieval.md`). The interaction does not: at
+−0.06 it is indistinguishable from noise, and *below* the median unrelated pair in
+this corpus (+0.037). Meanwhile two mechanistically unrelated combinations reach
++0.347, which is the same pathology seen throughout this project — the cell line
+speaks louder than the perturbation.
+
+This is what the arithmetic predicts. The interaction is a difference of four group
+means, so its variance is the sum of all four; at n=2 and n=3 per arm it is the
+noisiest quantity the design can produce, and the main effects are the least noisy.
+Being *measured* rather than inferred does not rescue it.
+
+**Flagging, not withholding.** The 10 signatures are built and stored, with their
+`quality_flag` and per-arm counts attached. What this result forbids is treating any
+one of them as an estimate of that combination's interaction. What it does not
+forbid is using them where the noise is averaged over — which needs many more
+series, not better contrasts.
+
+### What this changes
+
+It reorders the remaining work. Item 3 — asking whether a single-agent feature
+predicts the measured interaction — cannot be run against a target that does not
+reproduce, because the ceiling on any such model is the target's own reliability,
+and here that is zero. Scaling the scan (item 1) is now the prerequisite rather than
+an improvement: the route forward is a per-combination *consensus* over independent
+series, exactly as the drug panel needed (`drug_consensus.md`), and that needs
+several series per combination where the corpus currently has two for one pairing.
+
+The honest caveat: this is **one** independent pair, at n=2 and n=3, in two different
+cell lines. It establishes that the contrast can fail this badly while its own main
+effects reproduce; it cannot say how often. A second replicate pair would settle
+whether −0.06 is typical or unlucky, and `REPLICATE_PAIRS` in the validation script
+is where one gets added.
+
 ## Why this matters for the project
 
 Three model families have now failed to predict interaction from signatures. The
 diagnosis throughout was that the missing ingredient is measured interaction data,
-not a better model. This is a route to that data:
+not a better model. This is a route to that data, and the finding above sharpens
+what "enough of it" means:
 
 1. Scale the scan — 16% of screened series were factorial, and only 70 were screened.
-2. Fix the expression-mapping failures, which cost 6 of 11 series.
-3. With enough of them, ask directly whether any single-agent feature predicts the
-   measured interaction contrast — the experiment that was impossible before.
+2. ~~Fix the expression-mapping failures~~ — done, 10 of 11 series now build.
+3. Reach several independent series *per combination*, so a consensus interaction can
+   be taken. Only then can item 3 — does any single-agent feature predict the measured
+   interaction — be asked against a target reliable enough to be predicted.
 
 ## Reproduce
 
 ```bash
 python scripts/find_combination_series.py --max-candidates 60 --max-fetch 70
 python scripts/build_interaction_signatures.py
+python scripts/validate_interaction_reproducibility.py
 ```

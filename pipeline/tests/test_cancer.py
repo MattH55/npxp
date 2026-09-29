@@ -318,3 +318,67 @@ def test_reliability_bands_follow_cross_series_agreement():
     assert m.reliability_for("unknown", qc, ind)[0] == "very low"
     # a strong number from a single study is still capped
     assert m.reliability_for("good", qc, ["GSE1", "GSE1"])[0] == "very low"
+
+
+def test_match_columns_by_assignment_solves_arm_labelled_tables():
+    """Count tables whose columns are arm labels, not GSM names, still map.
+
+    Each case below is a real GEO layout: the assignment has to survive
+    abbreviation (Veh/Vehicle), run-together labels (SNB19ACT), a replicate
+    number written as _R1, and a control arm identified only by what is left over.
+    """
+    bdc = _bdc()
+
+    def samples(titles):
+        return pd.DataFrame({"title": titles, "description": [""] * len(titles),
+                             "supplementary_file_1": ["NONE"] * len(titles)},
+                            index=[f"GSM{i}" for i in range(len(titles))])
+
+    s = samples(["CAMA1 DMSO RNAseq replicate 1", "CAMA1 abemaciclib RNAseq replicate 1",
+                 "CAMA1 fulvestrant RNAseq replicate 1"])
+    assert bdc.match_columns_by_assignment(
+        s, list(s.index), ["CAMA-1_DMSO_1", "CAMA-1_Abema_1", "CAMA-1_Fulv_1"]) == {
+            "GSM0": "CAMA-1_DMSO_1", "GSM1": "CAMA-1_Abema_1", "GSM2": "CAMA-1_Fulv_1"}
+
+    # abbreviated labels, and "_R1" against a spelled-out "Replicate 1"
+    s = samples(["Vehicle R", "Palbociclib R", "DMSO Replicate 1", "VTP_WM119 Replicate 1"])
+    assert bdc.match_columns_by_assignment(
+        s, list(s.index), ["Veh_R", "Palbo_R", "DMSO_R1", "VTP_WM119_R1"]) == {
+            "GSM0": "Veh_R", "GSM1": "Palbo_R", "GSM2": "DMSO_R1", "GSM3": "VTP_WM119_R1"}
+
+    # the control column carries no word for "control": it is the one left over
+    s = samples(["SNB19 cells,  Control", "SNB19 cells,  ACT001", "SNB19 cells,  Stattic"])
+    assert bdc.match_columns_by_assignment(
+        s, list(s.index), ["SNB19", "SNB19ACT", "SNB19Sta"]) == {
+            "GSM0": "SNB19", "GSM1": "SNB19ACT", "GSM2": "SNB19Sta"}
+
+    # counts and TPM of the same samples are two value types, not two labels
+    s = samples(["DMSO_1", "DAL_1"])
+    assert bdc.match_columns_by_assignment(
+        s, list(s.index), ["DMSO_1_tpm", "DAL_1_tpm", "DMSO_1_count", "DAL_1_count"]) == {
+            "GSM0": "DMSO_1_count", "GSM1": "DAL_1_count"}
+
+
+def test_match_columns_by_assignment_refuses_when_not_decisive():
+    bdc = _bdc()
+
+    def samples(titles):
+        return pd.DataFrame({"title": titles, "description": [""] * len(titles),
+                             "supplementary_file_1": ["NONE"] * len(titles)},
+                            index=[f"GSM{i}" for i in range(len(titles))])
+
+    # two samples that cannot be told apart: swapping them scores the same
+    s = samples(["treated", "treated"])
+    assert bdc.match_columns_by_assignment(s, list(s.index), ["T_a", "T_b"]) is None
+
+    # labels that name nothing in the columns
+    s = samples(["alpha", "beta"])
+    assert bdc.match_columns_by_assignment(s, list(s.index), ["colX", "colY"]) is None
+
+    # one sample gives the joint constraint nothing to work with
+    s = samples(["DMSO Replicate 1", "other"])
+    assert bdc.match_columns_by_assignment(s, ["GSM0"], ["DMSO_R1", "other"]) is None
+
+    # fewer columns than samples
+    s = samples(["DMSO Replicate 1", "VTP Replicate 1"])
+    assert bdc.match_columns_by_assignment(s, list(s.index), ["DMSO_R1"]) is None

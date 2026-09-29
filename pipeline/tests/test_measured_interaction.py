@@ -81,3 +81,32 @@ def test_additivity_summary_reports_both_directions():
     assert s["n_genes"] == 500 and s["sd_of_interaction"] > 0
     assert all(v > 0 for v in s["genes_above_additive"].values())
     assert all(v < 0 for v in s["genes_below_additive"].values())
+
+
+def test_interaction_reproducibility_cosine_and_verdict_rule():
+    """The reproducibility check's own arithmetic, on constructed contrasts."""
+    import importlib.util
+    from pathlib import Path
+
+    import numpy as np
+    import pandas as pd
+
+    spec = importlib.util.spec_from_file_location(
+        "vir", Path(__file__).parents[1] / "scripts" / "validate_interaction_reproducibility.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    genes = [f"G{i}" for i in range(500)]
+    rng = np.random.default_rng(0)
+    x = pd.Series(rng.normal(size=500), index=genes)
+
+    # identical contrasts agree at 1; a sign flip at -1; independent noise near 0
+    assert m.cosine(x, x)[0] == pytest.approx(1.0)
+    assert m.cosine(x, -x)[0] == pytest.approx(-1.0)
+    c, n = m.cosine(x, pd.Series(rng.normal(size=500), index=genes))
+    assert abs(c) < 0.15 and n == 500
+
+    # only shared genes are compared, and too few shared genes is not a number
+    y = pd.Series(rng.normal(size=300), index=genes[:300])
+    assert m.cosine(x, y)[1] == 300
+    assert np.isnan(m.cosine(x, pd.Series([1.0, 2.0], index=["G0", "G1"]))[0])
