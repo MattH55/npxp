@@ -89,6 +89,54 @@ def annot_to_probe_map(annot_gz: Path, out_tsv: Path) -> Path:
     return out_tsv
 
 
+PLATFORM_TABLE_URL = ("https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi"
+                      "?acc={gpl}&targ=self&view=data&form=text")
+SYMBOL_COL = re.compile(r"^(gene[ _]?symbol|symbol|gene[ _]?name)$", re.I)
+
+
+def probe_map_from_platform_table(gpl: str, out_tsv: Path, timeout: int = 180) -> Path:
+    """probe<TAB>symbol from GEO's platform table, for platforms with no ``.annot.gz``.
+
+    Many newer or vendor-specific platforms (Affymetrix PrimeView, Agilent arrays)
+    have no curated ``.annot`` file, but their submitted platform table does carry a
+    gene-symbol column. Raises if the table has no such column (some platforms give
+    only GenBank accessions).
+    """
+    raw = _get(PLATFORM_TABLE_URL.format(gpl=gpl), timeout).decode("utf-8", "replace")
+    header, rows = None, []
+    for line in raw.splitlines():
+        if line.startswith(("^", "!", "#")) or not line.strip():
+            continue
+        parts = line.rstrip("\n").split("\t")
+        if header is None:
+            if parts[0].strip().upper() != "ID":
+                continue
+            header = [p.strip() for p in parts]
+            continue
+        rows.append(parts)
+    if header is None:
+        raise ValueError(f"{gpl}: no platform table returned")
+    sym = next((i for i, h in enumerate(header) if SYMBOL_COL.match(h)), None)
+    assign = next((i for i, h in enumerate(header) if h.strip().lower() == "gene_assignment"), None)
+    if sym is None and assign is None:
+        raise ValueError(f"{gpl}: platform table has no gene-symbol column (has {header[:8]})")
+    out = []
+    for r in rows:
+        if not r or not r[0].strip():
+            continue
+        if sym is not None and len(r) > sym and r[sym].strip():
+            out.append((r[0].strip(), r[sym].strip().split("///")[0].strip()))
+        elif assign is not None and len(r) > assign:
+            # Affymetrix gene_assignment: "NM_001005484 // SAMD11 // description // ..."
+            parts = [p.strip() for p in r[assign].split("///")[0].split("//")]
+            if len(parts) >= 2 and parts[1]:
+                out.append((r[0].strip(), parts[1]))
+    if not out:
+        raise ValueError(f"{gpl}: platform table gave no probe-to-symbol rows")
+    pd.DataFrame(out).to_csv(out_tsv, sep="\t", header=False, index=False)
+    return out_tsv
+
+
 def fetch_geo_series(
     gse: str, raw_dir: str | Path, overwrite: bool = False, suppl: bool = False, log=print
 ) -> dict[str, list[Path]]:
@@ -115,8 +163,16 @@ def fetch_geo_series(
                 annot = download(platform_annot_url(gpl), out / f"{gpl}.annot.gz", overwrite)
                 got["probe_map"].append(annot_to_probe_map(annot, pm))
                 log(f"  {pm} (from {gpl}.annot.gz)")
-            except Exception as e:  # sequencing platforms have no .annot; matrices may already be symbols
-                print(f"  no probe map for {gpl}: {e}", file=sys.stderr)
+            except Exception as annot_err:
+                # No curated .annot: fall back to the submitted platform table, which
+                # often carries a gene-symbol column. Sequencing platforms have neither,
+                # and their matrices are usually already keyed by symbol or Ensembl id.
+                try:
+                    got["probe_map"].append(probe_map_from_platform_table(gpl, pm))
+                    log(f"  {pm} (from the {gpl} platform table)")
+                except Exception as table_err:
+                    print(f"  no probe map for {gpl}: {annot_err}; platform table: {table_err}",
+                          file=sys.stderr)
     if suppl:
         got["suppl"] = []
         for n in list_dir(series_dir(gse, "suppl")):

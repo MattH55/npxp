@@ -165,3 +165,69 @@ def test_drug_geo_build_filters_and_labels(tmp_path):
     rec_bad = dict(rec, control=["nope"])
     with pytest.raises(ValueError, match="columns not in file"):
         build_from_record(rec_bad, tmp_path, min_genes=100)
+
+
+def test_probe_map_from_platform_table(monkeypatch, tmp_path):
+    """Both annotation shapes GEO serves: a symbol column, and Affymetrix gene_assignment."""
+    from npi_pharma.ingest import fetch
+
+    symbol_table = (
+        "^PLATFORM = GPL1\n!platform_table_begin\n"
+        "ID\tCONTROL_TYPE\tGENE_SYMBOL\tGENE_NAME\n"
+        "p1\t\tMTOR\tmechanistic target\n"
+        "p2\tpos\t\t\n"                       # no symbol -> dropped
+        "p3\t\tRPTOR /// RPTOR2\tx\n"          # first of /// kept
+    )
+    assign_table = (
+        "ID\tprobeset_id\tgene_assignment\n"
+        "q1\tq1\tNM_001005484 // SAMD11 // sterile alpha motif // 1p36\n"
+        "q2\tq2\t---\n"
+        "q3\tq3\tNM_000546 // TP53 // tumor protein p53 /// NM_0001 // TP53B // other\n"
+    )
+    pages = {"A": symbol_table, "B": assign_table}
+    monkeypatch.setattr(fetch, "_get", lambda url, timeout=180: pages[url[-1]].encode())
+    monkeypatch.setattr(fetch, "PLATFORM_TABLE_URL", "http://x/{gpl}A")
+    out = fetch.probe_map_from_platform_table("GPL1", tmp_path / "a.tsv")
+    assert out.read_text().splitlines() == ["p1\tMTOR", "p3\tRPTOR"]
+
+    monkeypatch.setattr(fetch, "PLATFORM_TABLE_URL", "http://x/{gpl}B")
+    out = fetch.probe_map_from_platform_table("GPL2", tmp_path / "b.tsv")
+    assert out.read_text().splitlines() == ["q1\tSAMD11", "q3\tTP53"]
+
+    monkeypatch.setattr(fetch, "PLATFORM_TABLE_URL", "http://x/{gpl}C")
+    pages["C"] = "ID\tRANGE_START\tGB_ACC\nr1\t1\tNR_046018\n"
+    with pytest.raises(ValueError, match="no gene-symbol column"):
+        fetch.probe_map_from_platform_table("GPL3", tmp_path / "c.tsv")
+
+
+def test_consensus_arm_detection_rejects_resistance_and_combos():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "bdc", Path(__file__).parents[1] / "scripts" / "build_drug_consensus.py")
+    bdc = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bdc)
+
+    idx = [f"GSM{i}" for i in range(6)]
+    # a clean acute design is detected
+    ok = pd.DataFrame({"treatment": ["DMSO", "DMSO", "DMSO", "cisplatin 10 uM",
+                                     "cisplatin 10 uM", "cisplatin 10 uM"]}, index=idx)
+    arms = bdc.detect_arms(ok, "cisplatin")
+    assert arms is not None and len(arms[0]) == 3 and len(arms[1]) == 3 and arms[2] == "treatment"
+
+    # a resistant-vs-parental comparison is not a drug response
+    res = pd.DataFrame({"resistance": ["parental", "parental", "parental",
+                                       "cisplatin-resistant", "cisplatin-resistant",
+                                       "cisplatin-resistant"]}, index=idx)
+    assert bdc.detect_arms(res, "cisplatin") is None
+
+    # a combination arm must not be taken for the drug alone
+    combo = pd.DataFrame({"treatment": ["control", "control", "control",
+                                        "cisplatin + olaparib", "cisplatin + olaparib",
+                                        "cisplatin + olaparib"]}, index=idx)
+    assert bdc.detect_arms(combo, "cisplatin") is None
+
+    # too few replicates
+    small = pd.DataFrame({"treatment": ["control", "cisplatin"]}, index=idx[:2])
+    assert bdc.detect_arms(small, "cisplatin") is None
