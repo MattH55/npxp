@@ -172,11 +172,25 @@ def main(argv: list[str] | None = None) -> int:
             rows.append({"npi": npi, "npi_cell_line": NPI_CELL_LINE.get(npi),
                          "drug_signature": k, "similarity": float(v), "n_genes": len(g), **info[k]})
     t = pd.DataFrame(rows)
-    # percentile within each NPI, against the high-reliability LINCS panel only
+    # Percentile within each NPI against the LINCS panel. Read this ONLY for LINCS rows.
+    # The panels are not on one scale: a LINCS consensus is a median over ~7 cell lines,
+    # which shrinks the cell-line-specific component, while a GEO single- or few-series
+    # signature keeps it -- and the NPI signatures are themselves single-cell-line, so
+    # they share that component. Measured here: mean |similarity| is 0.060 for LINCS
+    # against 0.10-0.12 for the GEO panels, and ~0.008 against 0.07-0.12 for the three
+    # amino-acid-deprivation NPIs, a tenfold gap that has nothing to do with the drugs.
+    # So a GEO row's percentile against LINCS is inflated by construction.
     ref = t[t["reliability"] == "high"]
     t["percentile_vs_lincs_panel"] = [
         float((ref.loc[ref["npi"] == r.npi, "similarity"] < r.similarity).mean())
         for r in t.itertuples()]
+    # The comparison that is valid: rank and standardise within the row's own panel.
+    grp = t.groupby(["npi", "source"])["similarity"]
+    t["rank_in_panel"] = grp.rank(ascending=False, method="min").astype(int)
+    t["n_in_panel"] = grp.transform("size")
+    t["percentile_in_panel"] = grp.rank(pct=True)
+    sd = grp.transform("std")
+    t["z_in_panel"] = (t["similarity"] - grp.transform("mean")) / sd.where(sd > 0)
     t = t.sort_values(["npi", "similarity"], ascending=[True, False])
     t.to_csv(out / "npi_drug_all.tsv", sep="\t", index=False)
 
@@ -185,10 +199,21 @@ def main(argv: list[str] | None = None) -> int:
         "by_reliability": {k: int(v) for k, v in counts.items()},
         "interpretation": "cos > 0: the NPI mimics the drug (mechanism duplication risk). "
                           "Similarity is not synergy.",
+        "panel_scale_warning":
+            "The panels are not on one scale. Mean |similarity| is 0.060 for the LINCS "
+            "panel against 0.10-0.12 for the GEO panels, and ~0.008 against 0.07-0.12 "
+            "for the amino-acid-deprivation NPIs. A LINCS consensus is a median over "
+            "~7 cell lines, which shrinks the cell-line component that a GEO single- or "
+            "few-series signature keeps, and the NPI signatures are single-cell-line. "
+            "So compare within a panel (rank_in_panel, z_in_panel), never across.",
+        "mean_abs_similarity_by_panel": {
+            k: round(float(v), 4) for k, v in
+            t.assign(a=t["similarity"].abs()).groupby("source")["a"].mean().items()},
     }
     (out / "summary.json").write_text(json.dumps(summary, indent=2, default=float))
 
-    show = ["drug_signature", "similarity", "percentile_vs_lincs_panel", "reliability"]
+    show = ["drug_signature", "similarity", "rank_in_panel", "n_in_panel", "z_in_panel",
+            "reliability"]
     print(f"\n{t['npi'].nunique()} NPIs scored against {t['drug_signature'].nunique()} "
           f"drug signatures\n")
     for npi, g in t.groupby("npi"):
