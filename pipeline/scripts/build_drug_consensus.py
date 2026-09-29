@@ -389,14 +389,23 @@ def supplementary_table(series_dir: Path, samples: pd.DataFrame, need: list[str]
             # both "Gene id" (Ensembl) and "Gene name" (symbol), and only symbols can be
             # compared across series.
             cands = [c for c in df.columns if GENE_COL.match(str(c))] or [df.columns[0]]
+            # The identifier may not be a column at all. A table whose first column has
+            # no header -- GSE304295's raw counts -- is read with the gene names as the
+            # INDEX, so scoring only columns picks a sample and the symbol gate then
+            # rejects the series at 0% matched. Score the index on the same footing.
+            index_ids = pd.Series(df.index.astype(str), index=df.index)
             if symbols is not None:
-                scored = [(df[c].astype(str).str.upper().str.strip().isin(symbols).mean(), c)
+                # On a tie an explicitly named column beats the index, hence the 1/0.
+                scored = [(df[c].astype(str).str.upper().str.strip().isin(symbols).mean(), 1, c)
                           for c in cands]
-                gene_col = max(scored)[1]
+                if not isinstance(df.index, pd.RangeIndex):
+                    scored.append((index_ids.str.upper().str.strip().isin(symbols).mean(),
+                                   0, None))
+                gene_col = max(scored)[2]
             else:
                 gene_col = cands[0]
             expr = to_numeric_frame(df[list(mapping.values())])
-            idx = df[gene_col].astype(str)
+            idx = index_ids.astype(str) if gene_col is None else df[gene_col].astype(str)
             if "_" in idx.iloc[0] and idx.str.startswith(("ENSG", "ENST")).mean() > 0.5:
                 idx = idx.str.split("_").str[-1]     # rows like ENSG..._SYMBOL
             elif idx.str.startswith("ENSG").mean() > 0.5:

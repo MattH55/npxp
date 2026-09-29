@@ -480,3 +480,33 @@ def test_is_degenerate_catches_the_silent_all_zero_table():
     a = np.zeros((1000, 4))
     a[:5] = rng.normal(size=(5, 4))
     assert bdc.is_degenerate(pd.DataFrame(a)) is True
+
+
+def test_supplementary_table_uses_the_index_when_the_gene_column_has_no_header(tmp_path):
+    """GSE304295's raw counts have no header over the gene column.
+
+    pandas then reads the gene names as the INDEX, so scoring only columns picks a
+    sample column and the gene-symbol gate rejects the series at 0% matched. The
+    identifier is chosen by content, and the index has to be a candidate too.
+    """
+    bdc = _bdc()
+    samples = pd.DataFrame(
+        {"title": ["ctrl a", "ctrl b", "drug a", "drug b"],
+         "description": ["Library name: S1", "Library name: S2",
+                         "Library name: S3", "Library name: S4"],
+         "supplementary_file_1": ["NONE"] * 4},
+        index=["GSM1", "GSM2", "GSM3", "GSM4"])
+    # header row has 4 fields, data rows have 5 -> pandas makes column 0 the index
+    d = tmp_path / "GSE1"
+    d.mkdir()
+    rows = ["S1\tS2\tS3\tS4"]
+    for i, g in enumerate(["TP53", "MYC", "EGFR", "BRCA1", "CDKN1A"]):
+        rows.append(f"{g}\t{10 + i}\t{11 + i}\t{20 + i}\t{21 + i}")
+    (d / "GSE1_raw_counts.txt").write_text("\n".join(rows) + "\n")
+
+    got = bdc.supplementary_table(d, samples, need=["GSM1", "GSM2", "GSM3", "GSM4"],
+                                 symbols={"TP53", "MYC", "EGFR", "BRCA1", "CDKN1A"})
+    assert got is not None
+    assert set(got.index) == {"TP53", "MYC", "EGFR", "BRCA1", "CDKN1A"}
+    assert list(got.columns) == ["GSM1", "GSM2", "GSM3", "GSM4"]
+    assert got.loc["TP53", "GSM1"] == 10 and got.loc["TP53", "GSM3"] == 20
