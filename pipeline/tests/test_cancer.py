@@ -231,3 +231,50 @@ def test_consensus_arm_detection_rejects_resistance_and_combos():
     # too few replicates
     small = pd.DataFrame({"treatment": ["control", "cisplatin"]}, index=idx[:2])
     assert bdc.detect_arms(small, "cisplatin") is None
+
+
+def _bdc():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "bdc2", Path(__file__).parents[1] / "scripts" / "build_drug_consensus.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def test_match_columns_uses_geo_labels_and_refuses_ambiguity():
+    bdc = _bdc()
+    samples = pd.DataFrame(
+        {"title": ["ctrl rep 1", "ctrl rep 2", "drug rep 1"],
+         "description": ["Library name: NC2_1", "Library name: NC2_2", "Library name: Bo2_1"],
+         "supplementary_file_1": ["NONE", "NONE", "NONE"]},
+        index=["GSM1", "GSM2", "GSM3"])
+    cols = ["gene", "NC2_1", "NC2_2", "Bo2_1"]
+    got = bdc.match_columns(samples, ["GSM1", "GSM3"], cols)
+    assert got == {"GSM1": "NC2_1", "GSM3": "Bo2_1"}
+
+    # a label embedded in a longer column name still resolves
+    cols2 = ["gene_name", "run_NC2_1_count", "run_NC2_2_count", "run_Bo2_1_count"]
+    assert bdc.match_columns(samples, ["GSM1"], cols2) == {"GSM1": "run_NC2_1_count"}
+
+    # nothing to match -> refuse rather than guess
+    assert bdc.match_columns(samples, ["GSM1"], ["gene", "sampleA", "sampleB"]) is None
+
+    # an ambiguous label (matches two columns) -> refuse
+    amb = pd.DataFrame({"title": ["rep1"], "description": ["Library name: A"],
+                        "supplementary_file_1": ["NONE"]}, index=["GSM9"])
+    assert bdc.match_columns(amb, ["GSM9"], ["A_1", "A_2"]) is None
+
+
+def test_labels_for_strips_library_name_prefix():
+    bdc = _bdc()
+    samples = pd.DataFrame(
+        {"title": ["MDA-MB-231 cisplatin rep 1"], "description": ["Library name: Bo2_1"],
+         "supplementary_file_1": ["ftp://ftp.ncbi.nlm.nih.gov/x/GSM1_counts.txt.gz"]},
+        index=["GSM1"])
+    labs = bdc._labels_for(samples, "GSM1")
+    assert "Bo2_1" in labs                      # prefix stripped
+    assert "Library name: Bo2_1" in labs        # and the raw field kept
+    assert "GSM1_counts" in labs                # supplementary basename, extensions removed

@@ -27,6 +27,7 @@ consensus it builds for the platinums LINCS lacks is trustworthy on the same ter
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 import sys
@@ -133,6 +134,145 @@ def detect_arms(samples: pd.DataFrame, drug: str) -> tuple[list[str], list[str],
     return best
 
 
+def _labels_for(samples: pd.DataFrame, gsm: str) -> list[str]:
+    """Every name GEO gives a sample that a supplementary table might use as a column.
+
+    Includes the title, the ``description`` field (which often carries an explicit
+    "Library name: NC2_1"), and the basename of its supplementary file.
+    """
+    out = [gsm]
+    row = samples.loc[gsm]
+    for field in ("title", "description", "source_name_ch1"):
+        v = row.get(field)
+        if isinstance(v, str) and v.strip():
+            out.append(v.strip())
+            m = re.match(r"(?:library name|sample name|library)\s*[:=]\s*(.+)$", v.strip(), re.I)
+            if m:
+                out.append(m.group(1).strip())
+    for field in [c for c in samples.columns if c.startswith("supplementary_file")]:
+        v = row.get(field)
+        if isinstance(v, str) and v.strip() and v.strip().upper() != "NONE":
+            base = v.strip().split("/")[-1]
+            while re.search(r"\.(gz|bz2|zip|txt|tsv|csv|xlsx?|cel|bam|fastq)$", base, re.I):
+                base = re.sub(r"\.[^.]+$", "", base)
+            out.append(base)
+    return out
+
+
+def _norm_label(s: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", str(s).lower())
+
+
+def match_columns(samples: pd.DataFrame, gsms: list[str], columns: list[str]) -> dict[str, str] | None:
+    """Map each GSM to exactly one column of a supplementary table, or None.
+
+    Requires a unique match for every requested sample. Anything ambiguous is
+    refused rather than guessed, so a mislabelled arm cannot enter a signature.
+    """
+    norm_cols: dict[str, list[str]] = {}
+    for c in columns:
+        norm_cols.setdefault(_norm_label(c), []).append(c)
+    out: dict[str, str] = {}
+    for gsm in gsms:
+        hits: list[str] = []
+        for lab in _labels_for(samples, gsm):
+            key = _norm_label(lab)
+            if not key:
+                continue
+            if key in norm_cols and len(norm_cols[key]) == 1:
+                hits.append(norm_cols[key][0])
+                continue
+            # Either may embed the other: a column "run_NC2_1_count" contains the
+            # label "NC2_1", while a title "Non Treated replicate 1 (NT1)" contains
+            # the column "NT1". Require >= 3 characters so short tokens cannot match
+            # everything, and a unique hit either way.
+            if len(key) >= 3:
+                part = [c for k, cs in norm_cols.items() for c in cs
+                        if key in k or (len(k) >= 3 and k in key)]
+                if len(set(part)) == 1:
+                    hits.append(part[0])
+        uniq = sorted(set(hits))
+        if len(uniq) > 1:
+            # A table often carries the same sample twice, as a count and an FPKM/TPM
+            # column. Those are not ambiguous labels, just two value types: prefer the
+            # counts. Anything still ambiguous is refused.
+            counts = [c for c in uniq if re.search(r"count", c, re.I)]
+            uniq = counts if len(counts) == 1 else uniq
+        if len(uniq) != 1:
+            return None
+        out[gsm] = uniq[0]
+    if len(set(out.values())) != len(out):
+        return None
+    return out
+
+
+# GEO expression tables often carry whole GO/KEGG annotation blobs in one field, well
+# past the csv module's default 128 KiB limit, which otherwise aborts the read.
+csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
+
+PROCESSED_SUPP = re.compile(r"(count|fpkm|tpm|cpm|rpkm|matrix|expression|normali[sz]ed|rma)", re.I)
+GENE_COL = re.compile(r"^(gene[_ ]?name|gene[_ ]?symbol|symbol|gene[_ ]?id|geneid|id|ensembl[_ ]?id|"
+                      r"gene|feature[_ ]?id|test_id)$", re.I)
+
+
+def supplementary_table(series_dir: Path, samples: pd.DataFrame, need: list[str] | None = None,
+                        why: list[str] | None = None, symbols: set[str] | None = None) -> pd.DataFrame | None:
+    """Genes x GSM expression from a processed supplementary table, or None.
+
+    Columns are mapped to samples via GEO's own labels; a table that cannot be
+    mapped unambiguously is skipped, not guessed at. Only ``need`` (the samples the
+    arms actually use) must map, because a series often publishes one file per cell
+    line and no single file covers every sample.
+    """
+    need = list(need) if need else list(samples.index)
+    files = [p for p in sorted(series_dir.iterdir())
+             if p.is_file() and "series_matrix" not in p.name and PROCESSED_SUPP.search(p.name)
+             and p.suffix in (".gz", ".txt", ".tsv", ".csv")]
+    if not files:
+        if why is not None:
+            why.append("no expression table in the series matrix and no processed supplement")
+        return None
+    for p in files:
+        for enc in ("utf-8", "utf-16"):
+            try:
+                head = pd.read_csv(p, sep=None, engine="python", encoding=enc, nrows=3)
+            except Exception:
+                continue
+            cols = [str(c).strip() for c in head.columns]
+            mapping = match_columns(samples, need, cols)
+            if mapping is None:
+                continue
+            try:
+                df = pd.read_csv(p, sep=None, engine="python", encoding=enc)
+            except Exception:
+                continue
+            df.columns = [str(c).strip() for c in df.columns]
+            # Choose the identifier column by CONTENT, not by name: a table often has
+            # both "Gene id" (Ensembl) and "Gene name" (symbol), and only symbols can be
+            # compared across series.
+            cands = [c for c in df.columns if GENE_COL.match(str(c))] or [df.columns[0]]
+            if symbols is not None:
+                scored = [(df[c].astype(str).str.upper().str.strip().isin(symbols).mean(), c)
+                          for c in cands]
+                gene_col = max(scored)[1]
+            else:
+                gene_col = cands[0]
+            expr = df[list(mapping.values())].apply(pd.to_numeric, errors="coerce")
+            idx = df[gene_col].astype(str)
+            if "_" in idx.iloc[0] and idx.str.startswith(("ENSG", "ENST")).mean() > 0.5:
+                idx = idx.str.split("_").str[-1]     # rows like ENSG..._SYMBOL
+            expr.index = idx.str.upper().str.strip()
+            expr = expr[(expr.index != "") & ~expr.index.isin(["NAN", "NA", "NONE", "-"])]
+            expr = expr.groupby(level=0).sum()
+            expr.columns = list(mapping.keys())      # back to GSM ids
+            if why is not None:
+                why.append(f"used supplementary table {p.name}")
+            return expr
+    if why is not None:
+        why.append("processed supplement present but its columns could not be matched to samples")
+    return None
+
+
 def load_symbol_reference(raw_dir: Path) -> set[str] | None:
     """Known human gene symbols, from the NCBI map `fetch-geo --gene-info` writes."""
     p = raw_dir / "ensembl_to_symbol.tsv"
@@ -145,21 +285,28 @@ def load_symbol_reference(raw_dir: Path) -> set[str] | None:
 def series_signature(gse: str, drug: str, raw_dir: Path, min_genes: int = 3000,
                      symbols: set[str] | None = None, min_symbol_frac: float = 0.3,
                      why: list[str] | None = None):
-    """One drug signature from a GEO series whose series matrix carries the table."""
-    fetch_geo_series(gse, raw_dir, log=lambda *a, **k: None)
+    """One drug signature from a GEO series.
+
+    Expression comes from the series matrix where it carries a table (microarray),
+    otherwise from a processed supplementary table whose columns are matched to
+    samples through GEO's own labels (:func:`match_columns`), which refuses anything
+    ambiguous rather than guessing.
+    """
+    fetch_geo_series(gse, raw_dir, suppl=True, log=lambda *a, **k: None)
     mats = sorted((raw_dir / gse).glob("*series_matrix.txt.gz"))
     for m in mats:
         expr, samples = read_series_matrix(m)
-        if expr.shape[0] < 500:
-            if why is not None:
-                why.append("no expression table in the series matrix (RNA-seq series)")
-            continue
         arms = detect_arms(samples, drug)
         if not arms:
             if why is not None:
-                why.append(f"table present ({expr.shape[0]} rows) but no control/treated arms detected")
+                why.append("no control/treated arms in the sample annotations")
             continue
         ctrl, treat, field = arms
+        if expr.shape[0] < 500:
+            expr = supplementary_table(raw_dir / gse, samples, need=ctrl + treat, why=why,
+                                       symbols=symbols)
+            if expr is None:
+                continue
         pm_path = (raw_dir / gse / "probe_map.tsv")
         if not pm_path.exists():
             cands = sorted((raw_dir / gse).glob("probe_map_*.tsv"))
