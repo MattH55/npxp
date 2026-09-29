@@ -151,6 +151,53 @@ effects reproduce; it cannot say how often. A second replicate pair would settle
 whether −0.06 is typical or unlucky, and `REPLICATE_PAIRS` in the validation script
 is where one gets added.
 
+## The main effects are worth keeping, and they are free
+
+The interaction from these series does not reproduce, but the main effects from the
+*same four arms* do (0.512, 0.632 above). `scripts/drug_signatures_from_factorial.py`
+takes them: each series gives `a - control` and `b - control`, built by the same
+constructor the drug panel uses, so they drop straight into the same comparisons.
+
+**20 single-agent signatures from 10 series**, no new downloads:
+
+| | |
+|---|---|
+| cisplatin, nelfinavir | GSE338229, IGROV-1/CP |
+| abemaciclib, fulvestrant | GSE336734 (MCF7) and GSE336729 (CAMA1) |
+| palbociclib, fulvestrant | GSE311210, ER+ breast PDX |
+| dalpiciclib, enzalutamide | GSE325471, prostate |
+| ABT199, ERKi | GSE270318, OCI-AML3 |
+| A51, ceritinib | GSE262443, CLB-GA |
+| ACT001, stattic | GSE315147, SNB19 |
+| VTP50469, WM119 | GSE294096 |
+| IMMU132, IACS010759 | GSE304294, KYSE30 |
+
+Fulvestrant now has three independent series and abemaciclib two, which is the start
+of the per-drug consensus the panel needs.
+
+These are single-series, single-cell-line signatures, which this project measured to
+be dominated by the cell line rather than the drug (0.71 between two *different*
+drugs in one line, against 0.18 for the same drug in two lines). So they carry the
+same **"very low"** band as every other single-series signature and are useful as
+consensus inputs, not on their own.
+
+### One of them is flagged, not dropped
+
+GSE338229's line is **IGROV-1/CP** — IGROV-1 selected for cisplatin resistance. The
+response of a resistant line to the drug it resists is not that drug's response, so
+this signature answers a different question from the one the panel asks. The
+consensus builder rejects resistant *arms* (`RESISTANCE_VALUE`) but says nothing
+about the cell line, which is annotated elsewhere in the series.
+`resistant_line_flag` catches the naming conventions for derivative lines
+(`/CP`, `/CP70`, `-R`, `CisR`, `MDR`, spelled-out "resistant") and marks the
+signature `ok,resistant_cell_line` rather than discarding it. Its false-positive risk
+is the reason it is a flag: `IGROV-1`, `OCI-AML3`, `CLB-GA`, `SNB19` and `CAMA1` must
+all come back clean, and the tests assert that.
+
+This matters beyond one signature: it is the only cisplatin signature the factorial
+corpus yields, and cisplatin is one of the platinums the whole consensus re-run
+exists to reach.
+
 ## Why this matters for the project
 
 Three model families have now failed to predict interaction from signatures. The
@@ -170,4 +217,5 @@ what "enough of it" means:
 python scripts/find_combination_series.py --max-candidates 60 --max-fetch 70
 python scripts/build_interaction_signatures.py
 python scripts/validate_interaction_reproducibility.py
+python scripts/drug_signatures_from_factorial.py
 ```
