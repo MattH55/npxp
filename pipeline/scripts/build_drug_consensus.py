@@ -306,6 +306,48 @@ def match_columns(samples: pd.DataFrame, gsms: list[str], columns: list[str]) ->
 # past the csv module's default 128 KiB limit, which otherwise aborts the read.
 csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
 
+def to_numeric_frame(df: pd.DataFrame) -> pd.DataFrame:
+    """Coerce to numbers, retrying a column that is written with comma decimals.
+
+    GEO carries tables exported under a European locale: GSE304295's TPM file is
+    semicolon-separated with values like ``2,74724752907299``. Plain coercion turns
+    every one of those into NaN, and because the caller then sums by gene -- and
+    ``groupby().sum()`` of all-NaN is 0.0, not NaN -- the failure arrives as a table
+    of zeros instead of an error.
+    """
+    out = {}
+    for c in df.columns:
+        raw = df[c]
+        num = pd.to_numeric(raw, errors="coerce")
+        nonblank = raw.astype(str).str.strip().replace({"": None}).notna()
+        lost = nonblank & num.isna()
+        if nonblank.sum() and lost.sum() / nonblank.sum() > 0.5:
+            retry = pd.to_numeric(
+                raw.astype(str).str.strip().str.replace(".", "", regex=False)
+                   .str.replace(",", ".", regex=False), errors="coerce")
+            if retry.notna().sum() > num.notna().sum():
+                num = retry
+        out[c] = num
+    return pd.DataFrame(out, index=df.index)
+
+
+def is_degenerate(expr: pd.DataFrame, min_varying_frac: float = 0.01) -> bool:
+    """Is this expression table constant, so it can carry no signal?
+
+    A table that failed to parse arrives as all zeros rather than as an error (see
+    :func:`to_numeric_frame`). Standardising it later yields 0/0, so one such series
+    turns its drug's whole cross-series median into NaN -- which then reads as a
+    measured-low agreement rather than as a broken input.
+    """
+    if expr.empty or expr.shape[1] < 2:
+        return True
+    a = expr.to_numpy(float)
+    if not np.isfinite(a).any():
+        return True
+    varying = np.nanstd(a, axis=1) > 0
+    return bool(varying.mean() < min_varying_frac)
+
+
 PROCESSED_SUPP = re.compile(r"(count|fpkm|tpm|cpm|rpkm|matrix|expression|normali[sz]ed|rma)", re.I)
 GENE_COL = re.compile(r"^(gene[_ ]?name|gene[_ ]?symbol|symbol|gene[_ ]?id|geneid|id|ensembl[_ ]?id|"
                       r"gene|feature[_ ]?id|test_id)$", re.I)
@@ -353,7 +395,7 @@ def supplementary_table(series_dir: Path, samples: pd.DataFrame, need: list[str]
                 gene_col = max(scored)[1]
             else:
                 gene_col = cands[0]
-            expr = df[list(mapping.values())].apply(pd.to_numeric, errors="coerce")
+            expr = to_numeric_frame(df[list(mapping.values())])
             idx = df[gene_col].astype(str)
             if "_" in idx.iloc[0] and idx.str.startswith(("ENSG", "ENST")).mean() > 0.5:
                 idx = idx.str.split("_").str[-1]     # rows like ENSG..._SYMBOL
@@ -368,6 +410,14 @@ def supplementary_table(series_dir: Path, samples: pd.DataFrame, need: list[str]
             expr = expr[(expr.index != "") & ~expr.index.isin(["NAN", "NA", "NONE", "-"])]
             expr = expr.groupby(level=0).sum()
             expr.columns = list(mapping.keys())      # back to GSM ids
+            # groupby().sum() turns an all-NaN group into 0.0, so a table that failed to
+            # parse comes back as a silent field of zeros rather than as an error. That
+            # produced a completely flat oxaliplatin signature (GSE304295) which passed
+            # every downstream gate and turned its drug's cross-series median into NaN.
+            if is_degenerate(expr):
+                if why is not None:
+                    why.append(f"{p.name} parsed to a constant table (no usable numbers)")
+                continue
             if why is not None:
                 why.append(f"used supplementary table {p.name}")
             return expr
@@ -555,11 +605,20 @@ def main(argv: list[str] | None = None) -> int:
         if len(sigs) < 2:
             continue
         f = pd.concat([s.as_series() for s in sigs], axis=1, join="inner")
+        # A flat series standardises to 0/0, so every pair involving it is NaN and a
+        # plain median of the pairs is NaN too -- indistinguishable downstream from a
+        # genuinely low agreement. Drop those pairs and say how many were computable.
         z = f.apply(lambda c: (c - c.mean()) / c.std(ddof=0))
         C = (z.T @ z) / len(z)
         iu = np.triu_indices_from(C, 1)
+        pairs = C.to_numpy()[iu]
+        ok = pairs[np.isfinite(pairs)]
         qc[drug] = {"n_series": len(sigs), "shared_genes": int(len(z)),
-                    "median_cross_series_cosine": float(np.median(C.to_numpy()[iu]))}
+                    "median_cross_series_cosine": float(np.median(ok)) if len(ok) else None,
+                    "n_pairs": int(len(pairs)), "n_pairs_computable": int(len(ok))}
+        if len(ok) < len(pairs):
+            qc[drug]["flat_series"] = [s.sig_id for s in sigs
+                                       if not np.isfinite(np.nanstd(s.z)) or np.nanstd(s.z) == 0]
     lincs_path = Path(a.validate_against)
     if lincs_path.exists() and consensuses:
         lincs = {s.sig_id.lower(): s.as_series() for s in load_signatures(lincs_path)}

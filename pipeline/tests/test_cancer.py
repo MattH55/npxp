@@ -434,3 +434,49 @@ def test_resistant_line_flag_catches_derivatives_without_false_positives():
     for line in ["IGROV-1", "MCF7", "CAMA1", "SNB19", "OCI-AML3", "KYSE30", "CLB-GA",
                  "SKOV3", "Prostate cancer", "Cell line", None, ""]:
         assert m.resistant_line_flag(line) is None, line
+
+
+def test_to_numeric_frame_reads_comma_decimals_without_breaking_plain_numbers():
+    """GSE304295's TPM file is semicolon-separated with values like "2,74724752907299".
+
+    Plain coercion makes every one of those NaN, and the caller then sums by gene --
+    groupby().sum() of all-NaN is 0.0, not NaN -- so the parse failure arrived as a
+    table of zeros rather than as an error.
+    """
+    bdc = _bdc()
+
+    got = bdc.to_numeric_frame(pd.DataFrame({"a": ["2,747", "6,508", "0"],
+                                             "b": ["1,2", "3,4", "5"]}))
+    assert got["a"].tolist() == [2.747, 6.508, 0.0]
+    assert got["b"].tolist() == [1.2, 3.4, 5.0]
+
+    # ordinary decimal points must survive untouched
+    plain = bdc.to_numeric_frame(pd.DataFrame({"a": ["1.5", "2.5", "3.0"],
+                                               "b": [1, 2, 3]}))
+    assert plain["a"].tolist() == [1.5, 2.5, 3.0]
+    assert plain["b"].tolist() == [1.0, 2.0, 3.0]
+
+    # European thousands separator plus comma decimal
+    assert bdc.to_numeric_frame(pd.DataFrame({"a": ["1.234,5"]})).iloc[0, 0] == 1234.5
+
+    # genuinely unparseable text stays NaN rather than being invented
+    assert bdc.to_numeric_frame(pd.DataFrame({"a": ["n/a", "", "NA"]}))["a"].isna().all()
+
+
+def test_is_degenerate_catches_the_silent_all_zero_table():
+    import numpy as np
+
+    bdc = _bdc()
+    assert bdc.is_degenerate(pd.DataFrame(np.zeros((100, 4)))) is True
+    assert bdc.is_degenerate(pd.DataFrame(np.full((100, 4), 7.0))) is True
+    assert bdc.is_degenerate(pd.DataFrame(np.full((100, 4), np.nan))) is True
+    assert bdc.is_degenerate(pd.DataFrame()) is True
+    # one column cannot show variation across samples
+    assert bdc.is_degenerate(pd.DataFrame(np.arange(100.0).reshape(100, 1))) is True
+
+    rng = np.random.default_rng(0)
+    assert bdc.is_degenerate(pd.DataFrame(rng.normal(size=(100, 4)))) is False
+    # a table where only a handful of genes vary is still effectively constant
+    a = np.zeros((1000, 4))
+    a[:5] = rng.normal(size=(5, 4))
+    assert bdc.is_degenerate(pd.DataFrame(a)) is True
