@@ -49,7 +49,8 @@ from sklearn.decomposition import PCA
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.model_selection import GroupKFold, KFold
 
-FEATURE_SETS = ["drugs_only", "identity", "expression", "expression_shuffled"]
+FEATURE_SETS = ["drugs_only", "identity", "identity_pair", "expression",
+                "expression_shuffled", "identity_pair_plus_expression"]
 SPLITS = ["random", "leave_cell_out", "leave_drug_out"]
 
 
@@ -123,6 +124,14 @@ def main(argv: list[str] | None = None) -> int:
     # from the training rows only, so no test information reaches the encoding.
     ident_cols = ["drug_row", "drug_col", "cell_line_name"]
     keys = d[ident_cols].astype(str)
+    # Pair and triple keys. A per-level mean captures only MAIN effects, and the
+    # accuracy published synergy models report comes largely from memorising the PAIR
+    # (and the pair in that cell line). Without these the identity channel is too weak
+    # to stand in for SynVerse's one-hot baseline.
+    keys["pair"] = np.where(keys["drug_row"] < keys["drug_col"],
+                            keys["drug_row"] + "|" + keys["drug_col"],
+                            keys["drug_col"] + "|" + keys["drug_row"])
+    keys["triple"] = keys["pair"] + "|" + keys["cell_line_name"]
     X_pcs = pcs.loc[d["_model"]].to_numpy()
     # Shuffle which cell line's expression each row receives, by permuting the MAP
     # from cell line to profile. Every profile stays a real profile; only the pairing
@@ -145,8 +154,10 @@ def main(argv: list[str] | None = None) -> int:
     designs = {
         "drugs_only": (["drug_row", "drug_col"], None),
         "identity": (ident_cols, None),
+        "identity_pair": (ident_cols + ["pair", "triple"], None),
         "expression": (["drug_row", "drug_col"], X_pcs),
         "expression_shuffled": (["drug_row", "drug_col"], X_pcs_shuf),
+        "identity_pair_plus_expression": (ident_cols + ["pair", "triple"], X_pcs),
     }
     groups = {"random": None, "leave_cell_out": d["_model"].to_numpy(),
               "leave_drug_out": d["drug_row"].astype(str).to_numpy()}
