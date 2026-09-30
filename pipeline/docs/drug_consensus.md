@@ -123,9 +123,14 @@ LINCS Phase II lacks; the other 8 drugs found fewer than 2 usable series at all.
 | melphalan | 3 | −0.027 | very low |
 | vincristine | 2 | **−0.161** | very low |
 
-**Not one drug reaches 0.30**, the threshold this document's own validation set for
-"medium". Three reach 0.10. Vincristine is the sharpest statement of the problem: two
-independent series of the same drug *anti-correlate*.
+**Not one drug reaches 0.30** on this statistic. Three reach 0.10. Vincristine is the
+sharpest statement of the problem: two independent series of the same drug
+*anti-correlate*.
+
+> **Amended.** "Cross-series agreement" is the wrong statistic, and the table above
+> understates these consensuses. See *The statistic was wrong* below: measured on
+> split-half reproducibility, 5-FU reaches **0.371** and clears the bar. The platinum
+> conclusion is unchanged and now rests on the better statistic.
 
 The re-run did what it was built for on **coverage** — 5-FU and erastin went from too
 few series to 7 each, clearing the 5–8 series bar. It did nothing for **agreement**,
@@ -180,14 +185,8 @@ access, and a gzip stream cannot be seeked, so no subset of the remote file can 
 read. Reading it also needs the decompressed HDF5, several times the archive, so
 19.9 GB is a floor on the space required rather than the total.
 
-Two routes that would work, neither of them a download from here:
-
-* Run the ingest on a machine with ~80 GB free and commit the resulting parquet, which
-  is small — the existing `npi-pharma ingest-lincs` already does the subsetting, and
-  only ~500 signatures over 978 landmark genes are actually wanted.
-* Use the CLUE API (`api.clue.io`), which serves Phase I signatures individually and
-  would need a few MB rather than 20 GB. It requires a free registered key, which is
-  the user's to obtain; nothing here can be done without it.
+**This has now been done via the CLUE API**, with a key the user supplied. See
+*Phase I through the CLUE API* below.
 
 ## Three defects found while reading these numbers
 
@@ -256,6 +255,107 @@ Before the within-panel correction above, this result looked like "32.5 SD above
 LINCS panel mean". That number was an artefact of the panel-scale confound. The
 finding survived the correction; the overstatement did not.
 
+## The statistic was wrong
+
+Every band in this document came from **pairwise** agreement between the units making
+up a consensus. That answers the wrong question. It measures whether two individual
+units agree, not whether their *average* reproduces — and averaging is the entire point
+of a consensus. Noise in a mean falls as 1/√n, so a consensus over many weakly
+agreeing units can be far more reproducible than any pair of them.
+
+The right test is split-half: divide the units in two, build a consensus from each
+half, correlate the two. `scripts/validate_consensus_splithalf.py`:
+
+| panel | drug | units | pairwise | **split-half** |
+|---|---|---|---|---|
+| Phase I | dactinomycin | 12 lines | 0.287 | **0.826** |
+| Phase I | idarubicin | 51 lines | 0.084 | **0.803** |
+| Phase I | topotecan | 13 lines | 0.113 | **0.675** |
+| Phase I | azacitidine | 8 lines | 0.180 | **0.656** |
+| Phase I | pemetrexed | 50 lines | 0.024 | **0.577** |
+| Phase I | vinblastine | 15 lines | 0.099 | **0.575** |
+| Phase I | erastin | 51 lines | 0.025 | **0.494** |
+| Phase I | cisplatin | 4 lines | 0.172 | **0.450** |
+| Phase I | fluorouracil | 5 lines | 0.169 | **0.364** |
+| GEO v2 | 5-fluorouracil | 7 series | 0.176 | **0.371** |
+| GEO v2 | erastin | 7 series | 0.140 | 0.244 |
+| GEO v2 | carboplatin | 4 series | 0.052 | 0.039 |
+
+**All 13 Phase I consensuses clear 0.30 on split-half. None clears it on pairwise.**
+Erastin's pairwise agreement understated its consensus twentyfold. Split-half also
+*understates* the truth, since each half uses only half the units.
+
+Two corrections follow:
+
+* **"Not one drug reaches 0.30" was an artefact of the statistic.** On split-half,
+  GEO 5-FU reaches 0.371 and clears it.
+* **Cisplatin is now available at usable reliability** — Phase I, 4 cell lines,
+  split-half 0.450. The earlier claim that no platinum clears 0.10 was true of the GEO
+  panel on pairwise agreement; it is not true of cisplatin from Phase I.
+
+What does *not* change: **carboplatin and oxaliplatin remain unsupported.** Both are
+absent from Phase I, and carboplatin's GEO consensus is 0.039 on split-half — the
+better statistic confirms it rather than rescuing it.
+
+## Phase I through the CLUE API
+
+`scripts/ingest_clue_phase1.py` fetches Phase I signatures a few kB at a time instead
+of the 19.9 GB matrix. The API does **not** serve gene-level z-vectors — probed and
+confirmed, there is no `dataspace` or `l1000` endpoint on this key. `/api/sigs` serves
+each signature's top 100 up and top 100 down genes, which is what CMap's own
+connectivity scoring consumes.
+
+So a signature is a *set*, and the consensus is built to match: within a cell line a
+gene scores (up fraction − down fraction) over that line's signatures, averaging dose
+and timepoint first so one heavily profiled line cannot outvote the rest; then the
+per-line scores are averaged across lines. **13 consensus signatures**, erastin over 51
+cell lines.
+
+These are sparse and **not on the scale of the dense Phase II panel** — the same
+cross-panel trap corrected earlier in this document. Compare within the panel only.
+
+The API key is read from `CLUE_API_KEY` and is never written to disk or committed.
+
+## Retraction: the erastin result does not hold
+
+Earlier in this document, and twice in reporting, the cystine-deprivation → erastin
+match was called this project's single best result. **It does not survive scrutiny.**
+`scripts/validate_retrieval_specificity.py` applies two checks it fails.
+
+**It is not symmetric.** A retrieval result was only ever read down the drug axis: of
+1,803 drug signatures, which best matches this NPI? A mechanism-specific pairing must
+also hold down the NPI axis. It does not:
+
+| erastin signature | rank down drug axis | rank down NPI axis |
+|---|---|---|
+| GEO consensus v2 | **1** of 12 | 3 of 14 |
+| LINCS Phase I (51 lines) | 2 of 13 | **6** of 14 |
+| GEO single series | 3 of 6 | 10 of 28 |
+
+Erastin prefers serum-free LoVo and glucose deprivation over cystine deprivation. The
+Phase I consensus — the *more* trustworthy signature, split-half 0.494 — ranks cystine
+deprivation sixth and scores it 0.052.
+
+**One axis explains the panel.** The drugs' NPI-profiles correlate at median Spearman
++0.747 in the Phase I panel, with the first axis carrying **79.8%** of the variance.
+Azacitidine's profile is nearly indistinguishable from erastin's, and azacitidine
+outranks erastin for cystine deprivation. Every drug orders the NPIs roughly the same
+way, so that ordering is a property of the NPIs.
+
+What the axis is: response magnitude. An NPI's spread of similarity across the
+1,763-drug LINCS panel runs from 0.145 (serum-free, 96 h) to **0.010** for the three
+amino-acid deprivations — fourteenfold. Those three NPI signatures are nearly
+orthogonal to every dense drug signature, so whichever drug signature happens to share
+their sparse, single-cell-line character wins the drug axis on scale alone.
+
+The SLC7A11 mechanism story was real biology fitted to a statistically fragile
+observation. It was not planted, and it was not evidence.
+
+**The rule this establishes:** a pairing counts only if it ranks high down the drug
+axis *and* down the NPI axis, and its similarity is not explained by the panel's
+dominant axis. All three, or it is not a result. That test is now a script, and it
+should be run on any future hit before it is reported.
+
 ## Reproduce
 
 ```bash
@@ -266,6 +366,10 @@ python scripts/build_drug_consensus.py --drugs doxorubicin paclitaxel temozolomi
   --report out/drug_consensus_validation                    # validation against LINCS
 python scripts/build_drug_consensus_all.py                  # the v2 re-run, one process per drug
 python scripts/scope_lincs_phase1.py                        # what Phase I would add, from 12 MB of metadata
+export CLUE_API_KEY=...                                     # never committed
+python scripts/ingest_clue_phase1.py                        # Phase I consensuses via the CLUE API
+python scripts/validate_consensus_splithalf.py              # the reliability statistic that matters
+python scripts/validate_retrieval_specificity.py            # both axes + the dominant-axis check
 npi-pharma ingest-lincs --gctx ... --gene-space landmark --perts @perts.txt \
   --out data/processed/signatures/lincs_all.parquet         # all 1,763 LINCS compounds
 ```

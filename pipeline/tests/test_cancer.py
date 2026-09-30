@@ -530,3 +530,56 @@ def test_lincs_phase1_band_thresholds():
     assert m.band_for(2).startswith("weak")
     assert m.band_for(1).startswith("useless")   # melphalan
     assert m.band_for(0) == "absent"             # carboplatin, oxaliplatin
+
+
+def test_split_half_beats_pairwise_on_a_constructed_consensus():
+    """Split-half is the statistic that matters, and pairwise understates it.
+
+    Units built as (shared signal + heavy independent noise) agree weakly pairwise,
+    while their averages agree strongly -- the 1/sqrt(n) argument that justifies a
+    consensus at all. This is the pattern measured on real data: LINCS Phase I
+    erastin has pairwise 0.025 across 51 cell lines and split-half 0.494.
+    """
+    import importlib.util
+    from pathlib import Path
+
+    import numpy as np
+
+    spec = importlib.util.spec_from_file_location(
+        "vcs", Path(__file__).parents[1] / "scripts" / "validate_consensus_splithalf.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    rng = np.random.default_rng(0)
+    genes = [f"G{i}" for i in range(2000)]
+    shared = rng.normal(size=2000)
+    units = [pd.Series(shared + rng.normal(scale=6.0, size=2000), index=genes)
+             for _ in range(24)]
+
+    pairwise = np.median([m.cosine(units[i], units[j])
+                          for i in range(8) for j in range(i + 1, 8)])
+    got = m.split_half(units, n_splits=10)
+    assert pairwise < 0.15, pairwise                  # units barely agree
+    assert got["split_half"] > pairwise * 2           # their averages agree far better
+    assert got["n_units"] == 24
+
+    # too few units to split is reported, not faked
+    assert m.split_half(units[:3])["split_half"] is None
+
+
+def test_band_from_split_half():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "rnd2", Path(__file__).parents[1] / "scripts" / "rank_npi_drug_all.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    assert m.band_from_split_half(0.83) == "high"      # dactinomycin
+    assert m.band_from_split_half(0.60) == "high"
+    assert m.band_from_split_half(0.49) == "medium"    # erastin Phase I
+    assert m.band_from_split_half(0.30) == "medium"
+    assert m.band_from_split_half(0.20) == "low"
+    assert m.band_from_split_half(0.05) == "very low"
+    assert m.band_from_split_half(None) == "very low"

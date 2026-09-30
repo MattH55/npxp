@@ -52,7 +52,26 @@ PANELS = [
     # so they belong here -- as single-cell-line signatures, at "very low".
     ("data/processed/signatures/drugs_from_factorial.parquet", "GEO factorial main effect",
      "very low"),
+    # LINCS Phase I via the CLUE API, for the drugs Phase II lacks. Banded from each
+    # drug's SPLIT-HALF reproducibility, not from pairwise agreement between cell lines
+    # -- see docs/drug_consensus.md. Sparse (set-derived), so its own panel.
+    ("data/processed/signatures/lincs_phase1_clue.parquet", "LINCS Phase I (CLUE)", None),
 ]
+
+# Split-half is the reliability that matters for a consensus: pairwise agreement asks
+# whether two units agree, split-half asks whether their average reproduces, which is
+# what a consensus is for. Measured: every Phase I consensus clears 0.30 on split-half
+# and none clears it on pairwise (out/consensus_splithalf/).
+SPLIT_HALF_BANDS = [(0.60, "high"), (0.30, "medium"), (0.15, "low")]
+
+
+def band_from_split_half(v: float | None) -> str:
+    if v is None:
+        return "very low"
+    for threshold, label in SPLIT_HALF_BANDS:
+        if v >= threshold:
+            return label
+    return "very low"
 
 
 def independent_accessions(accessions: list[str], adjacent_within: int = 5) -> bool:
@@ -98,6 +117,9 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--cancer-resource", required=True)
     ap.add_argument("--raw-dir", default="data/raw")
+    ap.add_argument("--split-half", nargs="*",
+                    default=["out/lincs_phase1_clue/splithalf.json"],
+                    help="per-drug split-half reproducibility, which bands the Phase I panel")
     ap.add_argument("--consensus-qc", nargs="*",
                     default=["out/drug_consensus/qc.json", "out/drug_consensus_v2/qc.json"],
                     help="cross-series agreement per drug; later files win on a clash, so "
@@ -108,6 +130,10 @@ def main(argv: list[str] | None = None) -> int:
     a = ap.parse_args(argv)
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
+    sh: dict = {}
+    for q in a.split_half:
+        if Path(q).exists():
+            sh |= {k: (v or {}).get("split_half") for k, v in json.loads(Path(q).read_text()).items()}
     qc: dict = {}
     for q in a.consensus_qc:
         if Path(q).exists():
@@ -135,8 +161,13 @@ def main(argv: list[str] | None = None) -> int:
             drug = (s.meta or {}).get("drug_id", s.sig_id)
             key = f"{s.sig_id}|{source}"
             frames[key] = s.as_series()
-            rel, cross, nser = ((fixed, None, None) if fixed else
-                                reliability_for(drug, qc, list(s.source_accessions or [])))
+            if source.startswith("LINCS Phase I"):
+                rel = band_from_split_half(sh.get(drug))
+                cross, nser = sh.get(drug), (s.meta or {}).get("n_cell_lines")
+            elif fixed:
+                rel, cross, nser = fixed, None, None
+            else:
+                rel, cross, nser = reliability_for(drug, qc, list(s.source_accessions or []))
             info[key] = {"drug": drug, "source": source, "reliability": rel,
                          "cross_series_agreement": cross, "n_series": nser,
                          "cell_line": (s.meta or {}).get("cell_line"),
