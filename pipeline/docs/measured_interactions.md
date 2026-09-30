@@ -211,6 +211,67 @@ what "enough of it" means:
    be taken. Only then can item 3 — does any single-agent feature predict the measured
    interaction — be asked against a target reliable enough to be predicted.
 
+## Can the published synergy models be applied to NPI x drug? No — there is no training set
+
+The field has mature models that predict drug-pair synergy from gene expression
+(DeepSynergy, MatchMaker, DRSPRING, PerturbSynX; see `references.md`). Two things stop
+any of them being applied to NPI x drug, and neither is about the architecture.
+
+**There are no labels.** Every one is supervised on measured drug-pair synergy —
+DrugComb, O'Neil/Merck, ~740k observations. The factorial corpus here is 10 series and
+**all of them are drug+drug**; the combination scan turned up zero NPI-containing arms.
+`scripts/find_npi_drug_factorial.py` then searched specifically for the missing design
+— control, NPI, drug, both — across hyperthermia+chemotherapy, fasting/caloric
+restriction+chemotherapy, ketogenic/BHB+drug and hypoxia+drug:
+
+**78 series screened → 2 with any factorial design → 0 NPI x drug.**
+
+The one apparent hit was a false positive of the screen's own NPI regex, which matched
+`fast` inside "RNA-seq FASTQ were mapped" in a processing field; GSE290343's real arms
+are IL1B + 2-deoxyglucose, a cytokine plus a drug. That negative is moderate rather
+than conclusive — `detect_factorial` needs GEO's annotations to separate the arms
+cleanly, which many series do not do — but it is enough: a supervised NPI x drug
+interaction model has nothing to be fitted on today.
+
+**Transfer from drug-drug does not rescue it, and the reason is measured.** SynVerse
+(Brief Bioinform 2025) evaluated 16 synergy models with feature-shuffling ablations:
+none beat a one-hot-encoding baseline, and models with *shuffled* drug and cell-line
+features performed comparably to those with real ones. So their performance rests on
+agent identity seen in training, not on agent biology. An NPI has no identity in
+DrugComb, so a model generalising by identity offers it nothing. That is the same
+conclusion this project reached from its own data: signature composition carries
+<= 0.02 residual information about synergy (`validation_drugcomb.md`).
+
+There is also a representational block: the drug encoders consume SMILES or
+fingerprints, and hyperthermia has no chemical structure. Using a signature-based
+encoder instead (MARSY, PAIRWISE, JointSyn) puts the problem back on the signature
+route already measured as uninformative.
+
+### What is applicable
+
+1. **Monotherapy / Bliss.** DREAM found a monotherapy-only predictor matched the
+   average submitted model, and this project reproduced the effect at within-cell-line
+   Spearman 0.75 with no fitting (`efficacy_from_monotherapy.md`). `efficacy.py`
+   already implements it. It needs the NPI's own inhibition per cell line, and
+   `configs/npi_monotherapy.yaml` holds **3 entries**. That curation gap, not the model
+   choice, is the binding constraint.
+2. **Target and pathway knowledge**, which is what DREAM found actually mattered.
+   NPIs map onto pathways (heat -> HSF1/HSP90, fasting -> AMPK/mTOR, cystine
+   deprivation -> SLC7A11/GPX4), so a rule about whether the NPI hits a node upstream,
+   downstream or parallel to the drug's target predicts direction and mechanism. That
+   is the honest ceiling without labels.
+3. **Generating labels.** The only route to a real model. Given that the interaction
+   contrast does not reproduce at n=2-3 (this document, -0.057 against main effects at
+   +0.63), n >= 5 per arm is the floor.
+
+If labels did arrive, the right model would not be MatchMaker. With tens of
+observations rather than 740k, a deep network would memorise; and SynVerse showed
+one-hot beating 16 published models on the large dataset, so the prior for complexity
+on a small one is poor. The defensible design: measured interaction contrast as target,
+both agents' monotherapy responses as primary features, pathway overlap as secondary,
+leave-NPI-out and leave-drug-out splits only, and a monotherapy-only baseline that the
+model must beat or report nothing.
+
 ## Reproduce
 
 ```bash
@@ -218,4 +279,5 @@ python scripts/find_combination_series.py --max-candidates 60 --max-fetch 70
 python scripts/build_interaction_signatures.py
 python scripts/validate_interaction_reproducibility.py
 python scripts/drug_signatures_from_factorial.py
+python scripts/find_npi_drug_factorial.py     # are there NPI x drug factorial designs? (no)
 ```
