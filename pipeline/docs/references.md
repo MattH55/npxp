@@ -33,6 +33,41 @@ by signature records live in `configs/npi_catalog.yaml`.
 - Baseline expression predicts response to a meditation-class NPI. https://www.sciencedirect.com/science/article/abs/pii/S0889159124005269
 - PGx + nutrigenomics framing. https://www.mdpi.com/2075-4426/14/12/1121
 
+## Synergy prediction from gene expression (what the field has, and how it evaluates)
+
+Models that predict drug-pair synergy from **baseline (untreated) cell-line
+expression** plus drug chemical features. None of them takes a post-treatment
+signature as the input, and none takes an NPI as an agent.
+
+- DeepSynergy (Bioinformatics 2018): the original DNN on chemical descriptors +
+  cell-line expression. https://academic.oup.com/bioinformatics/article/34/9/1538/4747884
+- MatchMaker: two per-drug subnetworks on DrugComb; reports Pearson 0.79,
+  Spearman 0.74. https://www.biorxiv.org/content/10.1101/2020.05.24.113241v1.full
+- DRSPRING (GCN-based). https://www.sciencedirect.com/science/article/pii/S0010482524005201
+- PerturbSynX: the nearest relative to what this project wants, in that it uses
+  perturbation rather than only baseline data.
+  https://www.sciencedirect.com/science/article/abs/pii/S1476927125003974
+- 2024 mini-review: best models do well on *known* drugs and cell lines (AUROC to
+  0.98) while "scenarios involving new drugs or cell lines still fall short";
+  leave-drug-out is much harder than leave-pair-out. https://arxiv.org/html/2404.02484
+- Systematic evaluation (PLOS Comput Biol 2022).
+  https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010200
+
+**The decisive one for this project.** SynVerse (Brief Bioinform 2025) evaluated 16
+synergy models over 8 drug/cell-line feature types, 5 preprocessing schemes and 2
+encoders, under four splitting strategies, with module, feature-shuffling and
+network-based ablations. **None outperformed a naive one-hot-encoding baseline**, and
+models with *shuffled* drug and cell-line features performed comparably to those with
+the real ones -- so performance was not driven by biologically informative features.
+https://academic.oup.com/bib/article/26/6/bbaf676/8407512 ·
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12753315
+
+That is this project's own measurement arrived at independently: signature
+composition carries no detectable synergy information once drug and cell-line main
+effects are removed (docs/validation_drugcomb.md, <= 0.02 residual Spearman on
+739,964 observations against a -0.30 positive control). The negative result here is
+the field's result under proper ablation, not a failure of this implementation.
+
 ## Later (v2 trainable head)
 - PAIRWISE (transcriptome + drug graphs + targets). https://github.com/Mew233/pairwise
 - JointSyn (dual-view, sample-specific synergy; Bioinformatics 2024).
