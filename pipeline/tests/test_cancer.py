@@ -510,3 +510,23 @@ def test_supplementary_table_uses_the_index_when_the_gene_column_has_no_header(t
     assert set(got.index) == {"TP53", "MYC", "EGFR", "BRCA1", "CDKN1A"}
     assert list(got.columns) == ["GSM1", "GSM2", "GSM3", "GSM4"]
     assert got.loc["TP53", "GSM1"] == 10 and got.loc["TP53", "GSM3"] == 20
+
+
+def test_lincs_phase1_band_thresholds():
+    """Cell-line count decides the band, because a LINCS consensus is a median over lines."""
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "slp", Path(__file__).parents[1] / "scripts" / "scope_lincs_phase1.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+
+    assert m.band_for(51).startswith("high")     # erastin
+    assert m.band_for(7).startswith("high")      # exactly the Phase II median
+    assert m.band_for(6).startswith("usable")
+    assert m.band_for(4).startswith("usable")    # cisplatin
+    assert m.band_for(3).startswith("weak")
+    assert m.band_for(2).startswith("weak")
+    assert m.band_for(1).startswith("useless")   # melphalan
+    assert m.band_for(0) == "absent"             # carboplatin, oxaliplatin

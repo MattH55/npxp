@@ -140,9 +140,54 @@ computed, stored and banded — but the band is the result.
 
 ### What would actually work
 
-Not more GEO series. The options that remain are LINCS Phase I (GSE92742, 21 GB,
-which does carry the platinums), a dedicated platinum experiment, or accepting that
-the platinum arm of this project cannot be supported from public transcriptomics.
+Not more GEO series. Phase I was the obvious candidate and has now been scoped from
+its metadata (`scripts/scope_lincs_phase1.py`), which changes the picture in both
+directions.
+
+**Correction: Phase I does not carry the platinums either.** An earlier note in this
+project said it did. It carries **cisplatin only, in 4 cell lines** — fewer than the 7
+that make a Phase II consensus trustworthy. **Carboplatin and oxaliplatin are absent
+from Phase I entirely**, as are bleomycin, carmustine, lomustine and triapine. So the
+platinum arm cannot be rescued from LINCS at all, and the conclusion above stands and
+hardens: it needs a dedicated experiment or it does not get done.
+
+**But Phase I is worth having for other reasons.** Ten drugs the project needs today
+would reach "high" reliability, with cell-line counts far beyond anything GEO gave:
+
+| drug | Phase I cell lines | today |
+|---|---|---|
+| erastin | **51** | GEO consensus, 7 series, agreement 0.140 ("low") |
+| idarubicin | **51** | nothing |
+| pemetrexed | **50** | nothing |
+| vinblastine | 15 | GEO consensus, 2 series, 0.094 |
+| vincristine | 14 | GEO consensus, 2 series, **−0.161** |
+| vinorelbine | 14 | nothing |
+| topotecan | 13 | GEO consensus, 2 series, 0.016 |
+| dactinomycin | 12 | GEO consensus (actinomycin D) |
+| methotrexate | 8 | GEO consensus, 2 series, −0.017 |
+| cyclophosphamide | 8 | nothing |
+
+The erastin row is the one that matters most. Cystine deprivation retrieving erastin
+first of 1,803 signatures is this project's single best result, and it currently rests
+on a consensus banded "low". Phase I would replace that with a median over 51 cell
+lines — turning the best result into one whose input is trustworthy on the same terms
+as the rest of the LINCS panel. Vincristine is the other notable row: its GEO
+consensus is *negatively* self-consistent, and Phase I has 14 lines.
+
+**It does not fit in this container.** The Level 5 matrix is 19.9 GB gzipped against
+13.4 GB free, and there is no partial fetch: a `.gctx` is HDF5, which needs random
+access, and a gzip stream cannot be seeked, so no subset of the remote file can be
+read. Reading it also needs the decompressed HDF5, several times the archive, so
+19.9 GB is a floor on the space required rather than the total.
+
+Two routes that would work, neither of them a download from here:
+
+* Run the ingest on a machine with ~80 GB free and commit the resulting parquet, which
+  is small — the existing `npi-pharma ingest-lincs` already does the subsetting, and
+  only ~500 signatures over 978 landmark genes are actually wanted.
+* Use the CLUE API (`api.clue.io`), which serves Phase I signatures individually and
+  would need a few MB rather than 20 GB. It requires a free registered key, which is
+  the user's to obtain; nothing here can be done without it.
 
 ## Three defects found while reading these numbers
 
@@ -220,6 +265,7 @@ python scripts/build_drug_consensus.py --drugs doxorubicin paclitaxel temozolomi
   --out data/processed/signatures/drugs_consensus_validation.parquet \
   --report out/drug_consensus_validation                    # validation against LINCS
 python scripts/build_drug_consensus_all.py                  # the v2 re-run, one process per drug
+python scripts/scope_lincs_phase1.py                        # what Phase I would add, from 12 MB of metadata
 npi-pharma ingest-lincs --gctx ... --gene-space landmark --perts @perts.txt \
   --out data/processed/signatures/lincs_all.parquet         # all 1,763 LINCS compounds
 ```
