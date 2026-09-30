@@ -583,3 +583,61 @@ def test_band_from_split_half():
     assert m.band_from_split_half(0.20) == "low"
     assert m.band_from_split_half(0.05) == "very low"
     assert m.band_from_split_half(None) == "very low"
+
+
+def _spec():
+    import importlib.util
+    from pathlib import Path
+
+    spec = importlib.util.spec_from_file_location(
+        "vrs", Path(__file__).parents[1] / "scripts" / "validate_retrieval_specificity.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def test_two_way_residual_removes_a_pure_magnitude_effect():
+    """The confound that fooled the first version of this gate.
+
+    NPIs differ enormously in response magnitude (sd 0.145 down to 0.010 across the
+    LINCS panel). That is a difference in row VARIANCE, so subtracting row means
+    leaves it intact -- the first gate passed 229 pairings, nearly all on the two
+    highest-magnitude NPIs. Double standardisation removes it.
+    """
+    import numpy as np
+
+    m = _spec()
+    rng = np.random.default_rng(0)
+    drugs = [f"d{i}" for i in range(60)]
+    npis = [f"n{i}" for i in range(8)]
+    base = rng.normal(size=(8, 60))
+    # each NPI scaled by a wildly different magnitude, and no real pairing anywhere
+    scale = np.array([0.15, 0.13, 0.09, 0.08, 0.05, 0.01, 0.01, 0.01])[:, None]
+    M = pd.DataFrame(base * scale, index=npis, columns=drugs)
+
+    R = m.two_way_residual(M)
+    # after double standardisation every NPI contributes on the same scale
+    sds = R.std(axis=1)
+    assert sds.max() / sds.min() < 1.5, sds.to_dict()
+    # and nothing looks like a discovery, since none was planted
+    assert abs(R.to_numpy()).max() < 4.5
+
+    # a genuinely planted pairing becomes the largest residual
+    M2 = M.copy()
+    M2.loc["n5", "d7"] += 0.01 * 12          # large for that low-magnitude NPI
+    R2 = m.two_way_residual(M2)
+    assert R2.loc["n5", "d7"] == R2.to_numpy().max()
+    assert R2.loc["n5", "d7"] > R.to_numpy().max()
+
+    # ...but the statistic SATURATES, which is why a fixed z threshold is unusable and
+    # the gate uses a permutation null instead. With 8 rows, planting 6, 12, 20 or 40 sd
+    # all land near the same value: the outlier inflates the sd of its own column.
+    vals = []
+    for mult in (6, 12, 20, 40):
+        M3 = M.copy()
+        M3.loc["n5", "d7"] += 0.01 * mult
+        vals.append(m.two_way_residual(M3).loc["n5", "d7"])
+    assert vals[-1] < 2.5                        # a 40 sd effect still scores < 2.5
+    assert vals[-1] - vals[1] < 0.2              # 12 sd and 40 sd are indistinguishable
+    # the ceiling grows with the number of rows, not with the effect
+    assert max(vals) < np.sqrt(M.shape[0] - 1)

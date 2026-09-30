@@ -61,6 +61,83 @@ def shared_axis(M: pd.DataFrame) -> dict:
             "first_axis_variance_fraction": float(s[0] ** 2 / (s ** 2).sum())}
 
 
+def two_way_residual(M: pd.DataFrame) -> pd.DataFrame:
+    """Similarity double-standardised, by NPI and then by drug.
+
+    Subtracting row and column *means* is not enough here, and a first attempt at this
+    gate that did only that passed 229 pairings -- almost all of them on the two NPIs
+    with the largest response, and almost all with "this drug's best NPI" rank 1. The
+    dominant axis is NPI response *magnitude*, which is a difference in row variance,
+    not row mean: the spread of an NPI's similarity across the LINCS panel runs from
+    0.145 down to 0.010. Removing a mean leaves that untouched.
+
+    So each NPI's similarities are z-scored across drugs (which removes its mean AND
+    its scale), and those z-scores are then z-scored within each drug across NPIs
+    (removing a drug's overall tendency to score high). What survives is specific to
+    the pairing: large only if the drug is unusual for that NPI *and* the NPI is
+    unusual for that drug, on a scale both can be compared on.
+    """
+    A = M.copy()
+    rsd = A.std(axis=1).replace(0, np.nan)
+    Z = A.sub(A.mean(axis=1), axis=0).div(rsd, axis=0)
+    csd = Z.std(axis=0).replace(0, np.nan)
+    return Z.sub(Z.mean(axis=0), axis=1).div(csd, axis=1)
+
+
+CALIBRATION_NOTE = (
+    "CALIBRATION IS AN OPEN ITEM. residual_z is descriptive, not a significance test. "
+    "Two reasons. It saturates: the cell inflates the standard deviation of its own "
+    "column, so with n NPIs it cannot exceed about sqrt(n - 1) (3.6 here) however large "
+    "the real effect -- planting 6, 12, 20 and 40 sd into a test matrix scores 1.98, "
+    "2.22, 2.27 and 2.29. And the obvious null does not work: shuffling drugs within "
+    "each NPI preserves that NPI's values, so an extreme cell is still extreme in every "
+    "shuffle and inflates the null it is tested against -- a planted 200 sd effect "
+    "scores p = 0.37 against it. A usable test needs a statistic that cannot mask "
+    "itself (deleted or robust standardisation) with a null that does not carry the "
+    "effect. Until then, read the two axis ranks, which need no calibration."
+)
+
+
+def sweep(t: pd.DataFrame, min_drugs: int = 8, top: int = 12) -> pd.DataFrame:
+    """Every pairing scored on both axes and on the two-way residual."""
+    rows = []
+    for panel, g in t.groupby("source"):
+        M = g.pivot_table(index="npi", columns="drug", values="similarity")
+        if M.shape[1] < min_drugs:
+            continue
+        R = two_way_residual(M.fillna(M.stack().mean()))
+        # Rank down each axis on the row-standardised values, so "which NPI does this
+        # drug prefer" is not just "which NPI responds most".
+        rsd = M.std(axis=1).replace(0, np.nan)
+        Zr = M.sub(M.mean(axis=1), axis=0).div(rsd, axis=0)
+        drug_rank = M.rank(axis=1, ascending=False)     # within an NPI, across drugs
+        npi_rank = Zr.rank(axis=0, ascending=False)     # within a drug, across NPIs
+        for npi in M.index:
+            for drug in M.columns:
+                if pd.isna(M.loc[npi, drug]):
+                    continue
+                rows.append({
+                    "panel": panel, "npi": npi, "drug": drug,
+                    "similarity": float(M.loc[npi, drug]),
+                    "rank_drug_axis": int(drug_rank.loc[npi, drug]),
+                    "n_drugs": int(M.shape[1]),
+                    "rank_npi_axis": int(npi_rank.loc[npi, drug]),
+                    "n_npis": int(M.shape[0]),
+                    "residual_z": float(R.loc[npi, drug]),
+                })
+    r = pd.DataFrame(rows)
+    if not len(r):
+        return r
+    # A pairing is specific only if it is top-decile down BOTH axes and its residual
+    # survives the main-effect ablation.
+    r["top_decile_both_axes"] = (
+        (r["rank_drug_axis"] <= np.ceil(r["n_drugs"] * 0.1).clip(lower=1)) &
+        (r["rank_npi_axis"] <= np.ceil(r["n_npis"] * 0.1).clip(lower=1)))
+    # NOT a significance test -- see CALIBRATION_NOTE. A flag for inspection only.
+    r["flag_for_inspection"] = r["top_decile_both_axes"] & (r["residual_z"] >= 3.0)
+    return r.sort_values("residual_z", ascending=False)
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--ranking", default="out/npi_drug_all/npi_drug_all.tsv")
@@ -108,14 +185,54 @@ def main(argv: list[str] | None = None) -> int:
     print("\nNPI response magnitude (sd of similarity across the LINCS panel):")
     print(magnitude.to_string(float_format=lambda v: f"{v:.4f}"))
 
+    # the retrospective sweep over every pairing
+    sw = sweep(t)
+    if len(sw):
+        sw.to_csv(out / "sweep.tsv", sep="\t", index=False)
+        passed = sw[sw["flag_for_inspection"]]
+        print(f"\n=== retrospective gate over {len(sw)} pairings in "
+              f"{sw['panel'].nunique()} panels ===")
+        print("gate: top decile down BOTH axes AND residual z >= 3 after removing the "
+              "NPI and drug main effects")
+        # With this many comparisons a z threshold is met by chance many times over,
+        # so the count only means something against that expectation.
+        print(f"\n{len(passed)} pairing(s) flagged for inspection (NOT significant):")
+        cols = ["panel", "npi", "drug", "similarity", "rank_drug_axis", "n_drugs",
+                "rank_npi_axis", "n_npis", "residual_z"]
+        print(passed[cols].to_string(index=False) if len(passed) else "  (none)")
+        print("\nhighest residual_z regardless of the axis ranks:")
+        print(sw.head(10)[cols + ["top_decile_both_axes"]].to_string(index=False))
+
     verdict = {
         "pairs": rows, "shared_axis_by_panel": axes,
+        "sweep": {
+            "n_pairings": int(len(sw)),
+            "n_flagged_for_inspection": int(sw["flag_for_inspection"].sum()) if len(sw) else 0,
+            "flagged": (sw.loc[sw["flag_for_inspection"], ["panel", "npi", "drug", "similarity",
+                                                   "residual_z"]].to_dict("records")
+                        if len(sw) else []),
+            "flag": "top decile down both axes and residual z >= 3.0; an inspection "
+                    "flag, not a significance threshold",
+            "conclusion": None,
+        },
         "npi_response_magnitude": {k: round(float(v), 4) for k, v in magnitude.items()},
         "rule": "A pairing is only specific if it ranks high down the drug axis AND "
                 "down the NPI axis. A high rank on one axis alone is consistent with "
                 "the drug merely sharing the panel's dominant axis with a low-magnitude "
                 "NPI signature.",
     }
+    if len(sw):
+        verdict["sweep"]["calibration"] = CALIBRATION_NOTE
+        print("\n" + CALIBRATION_NOTE)
+        verdict["sweep"]["conclusion"] = (
+            "No NPI-drug pairing is supported. The evidence is the two checks that need "
+            "no null: the claimed pairing fails the reciprocal axis (erastin ranks "
+            "cystine deprivation 3rd of 14 on the GEO consensus and 6th on the 51-cell-"
+            "line Phase I consensus), and one axis carries 80% of the panel's variance, "
+            "that axis being NPI response magnitude. The residual column below is "
+            "descriptive only -- see the calibration note."
+        )
+        print("\n" + verdict["sweep"]["conclusion"])
     (out / "verdict.json").write_text(json.dumps(verdict, indent=2, default=float))
     return 0
 

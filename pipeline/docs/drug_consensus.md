@@ -356,6 +356,72 @@ axis *and* down the NPI axis, and its similarity is not explained by the panel's
 dominant axis. All three, or it is not a result. That test is now a script, and it
 should be run on any future hit before it is reported.
 
+## The gate run retrospectively: nothing survives
+
+`validate_retrieval_specificity.py` now sweeps **all 25,270 pairings** in the ranking,
+scoring each down both axes and on a residual with the NPI and drug main effects
+removed. Nothing is supported, and getting to that answer required fixing the gate
+twice.
+
+**First attempt passed 229 pairings** — nearly all of them on the two
+highest-response NPIs (serum-free LoVo, glucose deprivation in T47D), nearly all with
+"this drug's best NPI" rank 1. Subtracting row and column *means* does not remove the
+dominant axis, because NPI response magnitude is a difference in row **variance**: the
+spread runs 0.145 down to 0.010. Double standardisation — z within NPI across drugs,
+then z within drug across NPIs — removes it, and the count fell from 229 to **1**.
+
+That one is arn-509 with BHB 25 mM in T47D at residual 3.01, rank 38 of 1,763. It is
+not a finding, and the cleanest way to see that is this: **the LINCS panel's own
+chance level for the largest residual is 3.21**, above the threshold it cleared.
+
+### The residual is descriptive; calibration is unfinished
+
+Two properties, both measured, stop it being a significance test:
+
+* **It saturates.** A cell inflates the standard deviation of its own column, so with
+  *n* NPIs the value cannot exceed about √(n−1) — 3.6 here — however large the real
+  effect. Planting 6, 12, 20 and 40 sd into a test matrix scores 1.98, 2.22, 2.27,
+  2.29. The statistic stops responding.
+* **The obvious null is contaminated.** Shuffling drugs within each NPI preserves that
+  NPI's values, so an extreme cell stays extreme in every shuffle and inflates the
+  null it is being tested against. A planted 200 sd effect scores **p = 0.37**.
+
+A permutation null built on that scheme was written, measured to fail on the 200 sd
+plant, and **removed rather than shipped**. A usable test needs a statistic that cannot
+mask itself (deleted or robust standardisation) paired with a null that does not carry
+the effect. That is recorded as an open item.
+
+### What the conclusion actually rests on
+
+Not the residual. Two checks that need no calibration at all:
+
+1. **The reciprocal axis.** Erastin ranks cystine deprivation 3rd of 14 NPIs on the GEO
+   consensus and 6th on the 51-cell-line Phase I consensus. A mechanism-specific
+   pairing has to hold both ways round.
+2. **The dominant axis.** Drugs' NPI-profiles correlate at median Spearman +0.747 in
+   the Phase I panel, one axis carrying 79.8% of the variance, and that axis is
+   response magnitude.
+
+Those two are enough. No NPI × drug pairing in this project's data is supported as
+specific.
+
+## Bands now come from split-half, per panel
+
+`rank_npi_drug_all.py` bands a consensus on split-half wherever one exists, falling
+back to pairwise agreement for a GEO consensus of 2 or 3 series, which cannot be split.
+The current panel:
+
+| | high | medium | low | very low |
+|---|---|---|---|---|
+| **Phase I** | azacitidine, dactinomycin, idarubicin, topotecan | cisplatin, cyclophosphamide, erastin, fluorouracil, methotrexate, pemetrexed, vinblastine, vincristine, vinorelbine | — | — |
+| **GEO v2** | — | 5-fluorouracil | erastin, 5-azacytidine | bleomycin, carboplatin, cisplatin, melphalan, methotrexate, oxaliplatin, topotecan, vinblastine, vincristine |
+
+The split-half table **must be keyed by panel and drug, not drug alone.** A first
+version keyed it on drug, which silently gave GEO topotecan — a consensus of 2 series
+that cannot be split at all — Phase I topotecan's 0.675 and a "high" band. The same
+drug has a different reliability in each panel, and the merge order decided which one
+won. Fixed, with the panel named in each `--split-half` argument.
+
 ## Reproduce
 
 ```bash

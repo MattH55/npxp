@@ -118,8 +118,15 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--cancer-resource", required=True)
     ap.add_argument("--raw-dir", default="data/raw")
     ap.add_argument("--split-half", nargs="*",
-                    default=["out/lincs_phase1_clue/splithalf.json"],
-                    help="per-drug split-half reproducibility, which bands the Phase I panel")
+                    default=["LINCS Phase I (CLUE)=out/lincs_phase1_clue/splithalf.json",
+                             "GEO consensus v2=out/drug_consensus_v2/splithalf.json"],
+                    help="'<panel>=<path>' per file. Split-half reproducibility is the "
+                         "statistic that matters, and pairwise agreement understates a "
+                         "consensus badly (docs/drug_consensus.md). The panel must be "
+                         "named: the SAME drug has a different split-half in each panel "
+                         "-- Phase I topotecan over 13 cell lines is 0.675 while the GEO "
+                         "consensus of 2 series cannot be split at all -- so a dict keyed "
+                         "on drug alone silently gives one panel the other's reliability.")
     ap.add_argument("--consensus-qc", nargs="*",
                     default=["out/drug_consensus/qc.json", "out/drug_consensus_v2/qc.json"],
                     help="cross-series agreement per drug; later files win on a clash, so "
@@ -130,10 +137,17 @@ def main(argv: list[str] | None = None) -> int:
     a = ap.parse_args(argv)
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
-    sh: dict = {}
-    for q in a.split_half:
+    sh: dict[tuple[str, str], float | None] = {}
+    for spec in a.split_half:
+        panel, _, q = spec.rpartition("=")
+        if not panel:
+            print(f"  (ignored --split-half {spec!r}: needs '<panel>=<path>')", file=sys.stderr)
+            continue
         if Path(q).exists():
-            sh |= {k: (v or {}).get("split_half") for k, v in json.loads(Path(q).read_text()).items()}
+            for k, v in json.loads(Path(q).read_text()).items():
+                sh[(panel, k)] = (v or {}).get("split_half")
+        else:
+            print(f"  (missing split-half: {q})", file=sys.stderr)
     qc: dict = {}
     for q in a.consensus_qc:
         if Path(q).exists():
@@ -161,9 +175,19 @@ def main(argv: list[str] | None = None) -> int:
             drug = (s.meta or {}).get("drug_id", s.sig_id)
             key = f"{s.sig_id}|{source}"
             frames[key] = s.as_series()
-            if source.startswith("LINCS Phase I"):
-                rel = band_from_split_half(sh.get(drug))
-                cross, nser = sh.get(drug), (s.meta or {}).get("n_cell_lines")
+            # Split-half wins wherever it exists, for any consensus panel. A GEO
+            # consensus with >= 4 series has one; with 2 or 3 it cannot be split, so
+            # those fall back to pairwise agreement and stay conservatively banded.
+            sh_key = (source, drug)
+            if sh.get(sh_key) is not None and not fixed:
+                rel, cross = band_from_split_half(sh[sh_key]), sh[sh_key]
+                nser = ((s.meta or {}).get("n_cell_lines")
+                        or (s.meta or {}).get("n_series"))
+            elif source.startswith("LINCS Phase I"):
+                # Phase I with no split-half on file: it is a consensus, but an
+                # unvalidated one, so it stays at the bottom rather than borrowing.
+                rel, cross = "very low", None
+                nser = (s.meta or {}).get("n_cell_lines")
             elif fixed:
                 rel, cross, nser = fixed, None, None
             else:
