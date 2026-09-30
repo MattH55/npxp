@@ -48,7 +48,6 @@ import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.model_selection import GroupKFold, KFold
-from sklearn.preprocessing import OrdinalEncoder
 
 FEATURE_SETS = ["drugs_only", "identity", "expression", "expression_shuffled"]
 SPLITS = ["random", "leave_cell_out", "leave_drug_out"]
@@ -117,8 +116,13 @@ def main(argv: list[str] | None = None) -> int:
         d = d.sample(a.max_rows, random_state=a.seed)
     d = d.reset_index(drop=True)
 
-    cats = OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)
-    ident = cats.fit_transform(d[["drug_row", "drug_col", "cell_line_name"]].astype(str))
+    # Identity is encoded as a fold-safe target encoding rather than a category, because
+    # there are ~1,445 distinct drugs and sklearn's histogram GBT caps a categorical at
+    # 255 levels. A per-level mean of the target IS the identity channel -- it is what a
+    # one-hot tree would learn about that level -- and it is computed inside each fold
+    # from the training rows only, so no test information reaches the encoding.
+    ident_cols = ["drug_row", "drug_col", "cell_line_name"]
+    keys = d[ident_cols].astype(str)
     X_pcs = pcs.loc[d["_model"]].to_numpy()
     # Shuffle which cell line's expression each row receives, by permuting the MAP
     # from cell line to profile. Every profile stays a real profile; only the pairing
@@ -128,11 +132,21 @@ def main(argv: list[str] | None = None) -> int:
     X_pcs_shuf = pcs.loc[d["_model"].map(permuted)].to_numpy()
     y = d[a.target].to_numpy(float)
 
+    def encode(train_idx: np.ndarray, cols: list[str]) -> np.ndarray:
+        """Per-level mean of the target, learned on `train_idx` only."""
+        out = np.empty((len(d), len(cols)))
+        for j, c in enumerate(cols):
+            grand = float(y[train_idx].mean())
+            means = pd.Series(y[train_idx]).groupby(keys[c].to_numpy()[train_idx]).mean()
+            out[:, j] = keys[c].map(means).fillna(grand).to_numpy(float)
+        return out
+
+    # (identity columns used, whether to append expression, which expression matrix)
     designs = {
-        "drugs_only": (ident[:, :2], [0, 1]),
-        "identity": (ident, [0, 1, 2]),
-        "expression": (np.hstack([ident[:, :2], X_pcs]), [0, 1]),
-        "expression_shuffled": (np.hstack([ident[:, :2], X_pcs_shuf]), [0, 1]),
+        "drugs_only": (["drug_row", "drug_col"], None),
+        "identity": (ident_cols, None),
+        "expression": (["drug_row", "drug_col"], X_pcs),
+        "expression_shuffled": (["drug_row", "drug_col"], X_pcs_shuf),
     }
     groups = {"random": None, "leave_cell_out": d["_model"].to_numpy(),
               "leave_drug_out": d["drug_row"].astype(str).to_numpy()}
@@ -142,12 +156,13 @@ def main(argv: list[str] | None = None) -> int:
         splitter = (KFold(a.folds, shuffle=True, random_state=a.seed) if g is None
                     else GroupKFold(a.folds))
         folds = list(splitter.split(d, groups=g) if g is not None else splitter.split(d))
-        for name, (X, cat_idx) in designs.items():
+        for name, (cols, extra) in designs.items():
             preds = np.full(len(d), np.nan)
             for tr, te in folds:
+                E = encode(tr, cols)
+                X = E if extra is None else np.hstack([E, extra])
                 m = HistGradientBoostingRegressor(
-                    max_iter=200, learning_rate=0.1, random_state=a.seed,
-                    categorical_features=cat_idx)
+                    max_iter=200, learning_rate=0.1, random_state=a.seed)
                 m.fit(X[tr], y[tr])
                 preds[te] = m.predict(X[te])
             s = score(y, preds)
