@@ -121,6 +121,71 @@ response predicts biological synergy. That is consistent with the DREAM
 challenge, where a monotherapy-only predictor matched the average submitted
 model (Menden et al., Nat Commun 2019, doi:10.1038/s41467-019-09799-2).
 
+## Reproducing SynVerse's ablation here: expression is decoration, pairs are memorised
+
+SynVerse (Brief Bioinform 2025) found that none of 16 published synergy models beat a
+one-hot baseline and that *shuffled* drug and cell-line features performed about as
+well as real ones. `scripts/ablate_expression_features.py` runs that ablation on this
+project's own data: 150,000 DrugComb rows over 166 cell lines matched to DepMap
+expression, 4-fold, target `synergy_zip`.
+
+Spearman, which is the metric to read — `synergy_zip` is heavy-tailed and Pearson is
+outlier-dominated (all Pearson values here sit between 0.01 and 0.07):
+
+| split | drugs_only | identity | identity_pair | expression | expr_shuffled | pair+expr |
+|---|---|---|---|---|---|---|
+| random | 0.296 | 0.324 | **0.375** | 0.344 | 0.347 | 0.374 |
+| leave_cell_out | 0.269 | 0.243 | **0.289** | 0.245 | 0.222 | 0.192 |
+| leave_drug_out | 0.228 | 0.266 | 0.203 | 0.271 | **0.281** | 0.207 |
+
+**Expression contributes nothing over its own shuffle.** `expression` and
+`expression_shuffled` differ only in whether a row received its own cell line's
+profile or another cell line's; the drug channel is identical. Across two independent
+runs the gap under `leave_cell_out` was +0.0016 and −0.0037 Pearson, and +0.023
+Spearman — **the sign is not stable across runs or metrics**, so there is no detectable
+contribution. An earlier note here said shuffled was "slightly ahead"; that was
+reading noise as a direction and is withdrawn. Under `leave_cell_out`, where a test
+cell line's identity is worthless and expression is the only route to cell context,
+`drugs_only` is as good as anything using expression. Brute-forcing more expression
+datasets cannot help, because the deficit is not quantity.
+
+**Pair identity carries real signal, and it is memorisation.** `identity_pair` is best
+on the random split (0.375 against 0.296 for drugs alone) and on `leave_cell_out`
+(0.289 — a pair observed in *other* cell lines still informs a new one). It then falls
+to 0.203 on `leave_drug_out`, *below* drugs-only, because an unseen drug has no pair
+history. Performance tracks whether the pair was observed, not whether any biology is
+understood. That is the mechanism SynVerse's one-hot result points at, visible here
+directly.
+
+### What this cannot show
+
+The absolute values are far below published ones (Pearson 0.03–0.06 against
+MatchMaker's reported 0.79), for two reasons that are properties of this setup rather
+than findings. The features are two to four target-encoded scalars plus 50 expression
+PCs, not full one-hot plus chemical fingerprints. And the target is **pooled
+DrugComb**, which aggregates many studies with different assays and readouts, whereas
+DeepSynergy and MatchMaker are usually evaluated on the much more homogeneous
+O'Neil/Merck set. So this does not refute those numbers and does not adjudicate
+"nothing beats one-hot". It establishes the narrower claim it was built for: cell-line
+expression is interchangeable with randomly reassigned expression.
+
+### Two design errors worth recording
+
+Both produced plausible-looking numbers and were caught by the results looking wrong
+rather than by checking first.
+
+1. `HistGradientBoostingRegressor` rejects a categorical with more than 255 levels and
+   DrugComb has 1,445 drugs, so the first run crashed. Identity became a target
+   encoding instead.
+2. A `(pair, cell line)` triple encoding was added to test memorisation and made every
+   number worse (Spearman 0.113 random, −0.034 `leave_cell_out`). Cause: **93% of
+   triples occur once and 80% of rows sit in a once-only triple**, so the encoding
+   handed each training row its own label; the model leaned on it and collapsed at test
+   time on unseen triples. The triple is dropped and encoding is now leave-one-out
+   within the training fold. Pairs survive that, since only 7.4% of rows are in
+   once-only pairs.
+
+
 ## How this sits in the literature
 
 Drug-synergy prediction from cell-line features is a mature field, and these
