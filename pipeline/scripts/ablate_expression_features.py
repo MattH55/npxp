@@ -131,7 +131,12 @@ def main(argv: list[str] | None = None) -> int:
     keys["pair"] = np.where(keys["drug_row"] < keys["drug_col"],
                             keys["drug_row"] + "|" + keys["drug_col"],
                             keys["drug_col"] + "|" + keys["drug_row"])
-    keys["triple"] = keys["pair"] + "|" + keys["cell_line_name"]
+    # NOT the (pair, cell line) triple. 93% of triples occur exactly once and 80% of
+    # rows sit in a once-only triple, so target-encoding it hands each training row its
+    # own label; the model leans on that feature and then meets an unseen triple at
+    # test time, where the encoding falls back to a constant. A first run included it
+    # and generalisation collapsed (Spearman 0.113 random, -0.034 leave_cell_out) --
+    # that was this design error, not a result about synergy models.
     X_pcs = pcs.loc[d["_model"]].to_numpy()
     # Shuffle which cell line's expression each row receives, by permuting the MAP
     # from cell line to profile. Every profile stays a real profile; only the pairing
@@ -142,22 +147,39 @@ def main(argv: list[str] | None = None) -> int:
     y = d[a.target].to_numpy(float)
 
     def encode(train_idx: np.ndarray, cols: list[str]) -> np.ndarray:
-        """Per-level mean of the target, learned on `train_idx` only."""
+        """Per-level mean of the target from `train_idx`, LEAVE-ONE-OUT in training.
+
+        A plain per-level mean includes a training row's own target, so for a level
+        seen once the feature IS the label and the model learns to read it rather than
+        to generalise. Training rows therefore get the level mean with themselves
+        removed; test rows get the full training mean, and an unseen level gets the
+        grand mean (so identity correctly contributes nothing for it).
+        """
         out = np.empty((len(d), len(cols)))
+        in_train = np.zeros(len(d), bool)
+        in_train[train_idx] = True
         for j, c in enumerate(cols):
+            col = keys[c].to_numpy()
             grand = float(y[train_idx].mean())
-            means = pd.Series(y[train_idx]).groupby(keys[c].to_numpy()[train_idx]).mean()
-            out[:, j] = keys[c].map(means).fillna(grand).to_numpy(float)
+            g = pd.DataFrame({"k": col[train_idx], "y": y[train_idx]}).groupby("k")["y"]
+            s, n = g.sum(), g.size()
+            lvl_sum = pd.Series(col).map(s).to_numpy(float)
+            lvl_n = pd.Series(col).map(n).to_numpy(float)
+            full = np.where(lvl_n > 0, lvl_sum / np.maximum(lvl_n, 1), grand)
+            loo_n = lvl_n - 1
+            loo = np.where(loo_n > 0, (lvl_sum - y) / np.maximum(loo_n, 1), grand)
+            out[:, j] = np.where(in_train, loo, full)
+            out[np.isnan(out[:, j]), j] = grand
         return out
 
     # (identity columns used, whether to append expression, which expression matrix)
     designs = {
         "drugs_only": (["drug_row", "drug_col"], None),
         "identity": (ident_cols, None),
-        "identity_pair": (ident_cols + ["pair", "triple"], None),
+        "identity_pair": (ident_cols + ["pair"], None),
         "expression": (["drug_row", "drug_col"], X_pcs),
         "expression_shuffled": (["drug_row", "drug_col"], X_pcs_shuf),
-        "identity_pair_plus_expression": (ident_cols + ["pair", "triple"], X_pcs),
+        "identity_pair_plus_expression": (ident_cols + ["pair"], X_pcs),
     }
     groups = {"random": None, "leave_cell_out": d["_model"].to_numpy(),
               "leave_drug_out": d["drug_row"].astype(str).to_numpy()}
