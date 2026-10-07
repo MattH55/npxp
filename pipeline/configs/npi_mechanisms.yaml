@@ -1,0 +1,113 @@
+# Real, cited modifier -> induced-lesion knowledge base.
+#
+# This is deliberately NOT a statistical/expression-similarity model. This
+# project tested that family twice -- a pathway-feature GBT (Cancer Resource
+# repo, Phase 7) and a much larger, more rigorous reversal/complementarity
+# test on 739,964 real DrugComb pairs (docs/validation_drugcomb.md) -- and
+# found no real interaction signal either time. What follows instead is a
+# curated lookup: for each modality, the real published mechanism by which
+# it changes a cell's functional state, with a PMID, and (for the
+# "induced_hr_deficiency" category) the real gene(s) that state corresponds
+# to, which get cross-referenced against SynLethDB's real curated synthetic-
+# lethality pairs and DGIdb's real drug-target data. Every entry here is
+# traceable to one real paper; nothing is inferred from an expression vector.
+#
+# category:
+#   induced_hr_deficiency -- the modality degrades/suppresses a real DNA-
+#     repair gene, phenocopying a loss-of-function mutation in that gene.
+#     Looked up against SynLethDB for real synthetic-lethal partners.
+#   pathway_suppression -- the modality suppresses a real signalling
+#     pathway's activity (not a repair defect); the literature's own
+#     recommended drug class is used directly, not derived via SL lookup,
+#     and cross-referenced to DGIdb only to find real drugs in that class.
+#   immune_mobilization -- the mechanism is immune-cell trafficking, not a
+#     tumour-intrinsic genetic/pathway state; paired with immunotherapy via
+#     DGIdb's own immunotherapy flag, not SL or pathway lookup.
+
+modifiers:
+  hyperthermia_mild_41_42c:
+    label: "Mild hyperthermia (41-42.5 degC)"
+    category: induced_hr_deficiency
+    lesion_genes: [BRCA2]
+    mechanism: >
+      Mild hyperthermia (41-42.5 degC) induces BRCA2 protein degradation and
+      inhibits homologous recombination, phenocopying BRCA2 loss-of-function
+      without a mutation.
+    citation: {pmid: "21555554", first_author: "Krawczyk", journal: "PNAS", year: 2011}
+    supporting_citations:
+      - {pmid: "28427225", first_author: "Krawczyk", journal: "Oncotarget", year: 2017,
+         tested_target_genes: [PARP1],
+         note: "Real follow-up: PARP inhibitor + cisplatin + heat synthetic lethality, demonstrated in BRCA-proficient tumour cells. Tested PARP inhibition specifically -- does not cover other SL partners of BRCA2 listed below."}
+    real_library_signatures:
+      - gse48398_mcf10a_heat45c30min
+      - gse48398_mcf7_heat45c30min
+      - gse48398_mda231_heat45c30min
+      - gse48398_mda468_heat45c30min
+      - gse10043_u937_mildhyperthermia41c30min
+      - gse75127_hsc3_hyperthermia44c90min
+
+  hypoxia_chronic:
+    label: "Chronic hypoxia (<1% O2)"
+    category: induced_hr_deficiency
+    lesion_genes: [BRCA2, RAD51]
+    mechanism: >
+      Chronic hypoxia (tested at 0.2% O2, 48h) decreases translation of RAD51
+      and BRCA2, reducing homologous-recombination capacity -- a real,
+      measured, non-mutational phenocopy of HR deficiency in the hypoxic
+      tumour microenvironment.
+    citation: {pmid: "18199558", first_author: "Chan", journal: "Cancer Research", year: 2008}
+    real_library_signatures:
+      - gse300765_u87_hypoxia1pct48h
+
+  ttfields:
+    label: "Tumor Treating Fields"
+    category: induced_hr_deficiency
+    lesion_genes: [BRCA1]
+    mechanism: >
+      TTFields downregulate BRCA1 signalling and reduce DNA double-strand
+      break repair capacity, a real measured "BRCAness" state shown in
+      non-small-cell lung cancer cell lines.
+    citation: {pmid: "28358361", first_author: "Giladi/Schneiderman", journal: "Cell Death & Disease", year: 2017}
+    real_library_signatures: []  # no real TTFields transcriptomic signature in this project's library
+
+  fasting_caloric_restriction:
+    label: "Fasting / caloric restriction / fasting-mimicking diet"
+    category: pathway_suppression
+    lesion_genes: [IGF1R, PIK3CA, AKT1, MTOR]
+    recommended_target_genes: [MTOR, PIK3CA, AKT1, IGF1R]
+    mechanism: >
+      Fasting and caloric restriction reduce IGF-1/PI3K/AKT/mTOR signalling.
+      "Differential stress resistance" (Longo lab) protects normal cells but
+      not oncogene-addicted cancer cells against the same chemotherapy dose;
+      the literature's own recommendation is pairing with drugs targeting
+      this same axis (PI3K/AKT/mTOR inhibitors) or with chemotherapies whose
+      resistance is IGF-1-mediated.
+    citation: {pmid: "30327499", first_author: "Nencioni", journal: "Nature Reviews Cancer", year: 2018}
+    real_library_signatures:
+      - gse153830_t47d_glucose_deprivation
+      - gse153830_mcf7_glucose_deprivation
+      - gse153830_mcf7_bhb10mm
+      - gse153830_t47d_bhb25mm
+      - gse55924_muscle_fast24h_vs_1p5h
+      - gse28016_muscle_fast40h_vs_fed
+      - gse129843_muscle_trf8h_vs_15h
+      - gse168705_adipose_tre10h_8w
+
+  exercise:
+    label: "Exercise (acute and chronic)"
+    category: immune_mobilization
+    mechanism: >
+      Voluntary exercise mobilises NK cells into tumours via an epinephrine-
+      and IL-6-dependent mechanism, shown across five real tumour models in
+      mice; beta-adrenergic blockade or IL-6 blockade abolished the effect.
+      This is an immune-trafficking mechanism, not a tumour-intrinsic
+      genetic or pathway state, so it is paired with immunotherapy directly
+      rather than through a synthetic-lethality or pathway lookup.
+    citation: {pmid: "26895752", first_author: "Pedersen", journal: "Cell Metabolism", year: 2016}
+    real_library_signatures:
+      - gse3606_wbc_exhaustive_1h
+      - gse3606_wbc_moderate_1h
+      - gse252357_muscle_resistance_3h
+      - gse252357_muscle_resistance_24h
+      - gse111551_muscle_running18w
+      - gse111552_pbmc_running18w

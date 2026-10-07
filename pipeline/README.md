@@ -136,6 +136,20 @@ adipose patient and a healthy reference. Every id starts with `FIXTURE_`, every
 record has `provenance: synthetic_fixture`, and every score carries the
 `SYNTHETIC_FIXTURE` flag. Unit tests never download LINCS.
 
+## Mechanism-based hypotheses (real literature, not a model)
+
+`src/npi_pharma/mechanism/` + `scripts/build_mechanism_hypotheses.py`:
+after `interact/score.py`'s signature-composition approach and a much
+larger drug-drug validation (`docs/validation_drugcomb.md`, 739,964 real
+DrugComb pairs) both found no real synergy signal, this instead looks up
+real, independently-published mechanisms (e.g. hyperthermia/hypoxia/
+TTFields each independently shown to induce a real "BRCAness" state)
+against [SynLethDB 3.0](https://zenodo.org/records/22843223) (real curated
+synthetic-lethality pairs) and [DGIdb 5.0](https://dgidb.org) (real
+drug-target data), ranked by real evidence quality, not a learned score.
+See `docs/mechanism_hypotheses.md`. Deployed at
+[mechanism-hypotheses.html](../mechanism-hypotheses.html) on the static site.
+
 ## Not yet built (by design)
 
 The brief stops at the milestone. This package does not yet include:

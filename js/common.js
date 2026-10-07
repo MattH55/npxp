@@ -36,6 +36,7 @@ const STATIC_FILES = {
     "/prioritization/methodology": "api/prioritization_methodology.json",
     "/opportunity/cell-lines": "api/opportunity_cell_lines.json",
     "/opportunity/cancer-types": "api/opportunity_cancer_types.json",
+    "/mechanism-hypotheses": "api/mechanism_hypotheses.json",
 };
 
 async function staticApiGet(path, params = {}) {
@@ -128,6 +129,7 @@ const NAV_ITEMS = [
     { href: "coverage.html", label: "Coverage Gaps" },
     { href: "opportunity.html", label: "Opportunity" },
     { href: "scoring.html", label: "Scoring" },
+    { href: "mechanism-hypotheses.html", label: "Mechanism Hypotheses" },
 ];
 
 function renderNav(active) {

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanism-Based Hypotheses — NPxP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="text-slate-200 min-h-screen">
+  <div id="nav"></div>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-extrabold text-white mb-1">
+      <i class="fa-solid fa-diagram-project mr-2 text-indigo-400"></i>Mechanism-Based Hypotheses
+    </h1>
+    <p class="text-slate-400 text-sm mb-3">
+      Non-pharmacological intervention &times; drug combinations, ranked by real cited mechanism
+      and real curated synthetic-lethality/drug-target data — <b>not</b> a calibrated synergy score.
+    </p>
+
+    <div class="bg-rose-500/10 border border-rose-500/40 rounded-lg p-4 text-sm text-rose-100 mb-5">
+      <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+      <b>Why this page exists instead of a prediction model.</b> This project tested whether
+      expression-signature similarity/composition predicts real measured drug interaction —
+      twice: a pathway-feature model trained on 2,924 real ALMANAC/DrugComb pairs, and a much
+      larger, more rigorous test on <b>739,964</b> real DrugComb measurements across 288 cell
+      lines, including a shuffle-ablation control. Neither found a real signal (residual
+      correlation ≤ 0.02–0.04 against drugs, against a real positive control reaching
+      0.2–0.3). So nothing on this page is a learned score. Every row instead traces to two
+      independent real citations: (1) a real paper showing the modifier induces a specific
+      gene/pathway state, and (2) a real curated synthetic-lethality pair or drug-target
+      interaction linking that state to the drug.
+    </div>
+
+    <details class="bg-slate-800/40 border border-slate-700 rounded-lg mb-5">
+      <summary class="cursor-pointer px-4 py-2 text-sm text-slate-300 font-semibold">
+        <i class="fa-solid fa-scale-balanced mr-1"></i>Methodology
+      </summary>
+      <div class="px-4 pb-4 text-sm text-slate-400 space-y-2">
+        <p><b class="text-slate-200">induced_hr_deficiency</b>: the modality degrades or
+          suppresses a real DNA-repair gene (e.g. mild hyperthermia degrades BRCA2 and inhibits
+          homologous recombination — Krawczyk et al., <i>PNAS</i> 2011), phenocopying a
+          loss-of-function mutation without one. The induced gene is looked up in
+          <a class="underline" href="https://zenodo.org/records/22843223" target="_blank">SynLethDB 3.0</a>
+          (37,943 real curated human synthetic-lethality pairs) for real SL partners, then in
+          <a class="underline" href="https://dgidb.org" target="_blank">DGIdb 5.0</a> for real
+          approved anticancer drugs targeting each partner.</p>
+        <p><b class="text-slate-200">pathway_suppression</b>: the modality suppresses a real
+          signalling pathway's activity rather than causing a repair defect (fasting/caloric
+          restriction suppressing IGF-1/PI3K/AKT/mTOR — Nencioni et al., <i>Nat Rev Cancer</i>
+          2018). The literature's own recommended drug class is used directly, cross-referenced
+          to DGIdb only to find real approved drugs in that class.</p>
+        <p><b class="text-slate-200">immune_mobilization</b>: the mechanism is immune-cell
+          trafficking (exercise mobilising NK cells via epinephrine/IL-6 — Pedersen et al.,
+          <i>Cell Metabolism</i> 2016), not a tumour-intrinsic state, so it is paired with real
+          approved immune-checkpoint inhibitors (PD-1/PD-L1/CTLA-4-targeting, filtered to direct
+          inhibitor/antagonist/blocker claims, not DGIdb's broader "immunotherapy" flag, which
+          also catches immunosuppressants like sirolimus).</p>
+        <p><b class="text-slate-200">Evidence tier</b> (induced_hr_deficiency rows only): SynLethDB's
+          own evidence-type hierarchy — CRISPR/CRISPRi (a measured double-knockout result) &gt;
+          High/Low-throughput screen or curated database &gt; computational prediction &gt; text
+          mining (an NLP-extracted literature claim, the weakest evidence SynLethDB carries).</p>
+        <p><b class="text-slate-200">Direct experimental support</b> (gold badge): a handful of
+          rows have a <i>second</i>, independent real paper that tested this exact modifier +
+          this exact drug target together (e.g. heat + PARP inhibitor + cisplatin, Krawczyk et
+          al., <i>Oncotarget</i> 2017) — these are the strongest entries on the page, not
+          because of a higher score, but because they've actually been tested in combination.</p>
+      </div>
+    </details>
+
+    <div id="tabs" class="flex flex-wrap items-center gap-2 mb-3"></div>
+    <div id="status" class="text-slate-400 text-sm mb-3"></div>
+    <div id="content"></div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/mechanism.js"></script>
+</body>
+</html>
