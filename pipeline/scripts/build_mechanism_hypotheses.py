@@ -136,9 +136,28 @@ def build_immune_mobilization_rows(modifier_id: str, spec: dict, gene_index) -> 
     return rows
 
 
+def _attach_clinical_trials(all_rows: list[dict], trials_path: str) -> None:
+    """Join the real ClinicalTrials.gov cross-check (scripts/fetch_clinical_trials.py)
+    onto matching rows, keyed exactly as that script queried them
+    (f"{modifier_id}::{drug_name}") -- so a row with no entry in the file
+    (not run for this modifier, or genuinely zero real trials found) is
+    left with an empty list, never fabricated as a gap."""
+    if not os.path.exists(trials_path):
+        print(f"  (no clinical trials file at {trials_path} -- skipping join)")
+        return
+    with open(trials_path, encoding="utf-8") as fh:
+        ct = json.load(fh)
+    for r in all_rows:
+        key = f"{r['modifier_id']}::{r['drug_name']}"
+        entry = ct["results"].get(key)
+        r["clinical_trials"] = entry["trials"] if entry else []
+        r["has_clinical_trial"] = bool(r["clinical_trials"])
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", default=os.path.join(ROOT, "out", "mechanism_hypotheses.json"))
+    parser.add_argument("--clinical-trials", default=os.path.join(ROOT, "out", "clinical_trials.json"))
     args = parser.parse_args()
 
     with open(CONFIG_PATH, encoding="utf-8") as fh:
@@ -192,6 +211,11 @@ def main() -> int:
         reverse=True,
     )
 
+    print("Joining real ClinicalTrials.gov cross-check (scripts/fetch_clinical_trials.py)")
+    _attach_clinical_trials(all_rows, args.clinical_trials)
+    n_with_trial = sum(1 for r in all_rows if r.get("has_clinical_trial"))
+    print(f"  {n_with_trial}/{len(all_rows)} rows have a matching real registered trial")
+
     out = {
         "built": datetime.now(timezone.utc).isoformat(),
         "method": (
@@ -206,7 +230,13 @@ def main() -> int:
             "synergy (both a pathway-feature model here and a much larger "
             "740k-pair DrugComb test) and found no signal either time -- see "
             "pipeline/docs/validation_drugcomb.md. This table does not attempt "
-            "that; it is real literature + real curated databases, not a model."
+            "that; it is real literature + real curated databases, not a model. "
+            "Each row also carries `clinical_trials`: a real ClinicalTrials.gov "
+            "cross-check (scripts/fetch_clinical_trials.py) for whether this "
+            "exact modifier+drug combination has already been registered as a "
+            "trial -- an empty list means no matching trial was found (a "
+            "candidate white-space gap), not that none exists; the search is "
+            "not exhaustive (see that script's own limitations note)."
         ),
         "n_rows": len(all_rows),
         "rows": all_rows,

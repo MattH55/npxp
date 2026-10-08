@@ -5,6 +5,10 @@ renderNav("Mechanism Hypotheses");
 
 const TIER_LABEL = { 3: "CRISPR/CRISPRi (direct screen)", 2: "Curated / high-throughput", 1: "Computational prediction", 0: "Text mining" };
 const TIER_CLASS = { 3: "bg-emerald-600", 2: "bg-sky-600", 1: "bg-amber-600", 0: "bg-slate-600" };
+const TRIAL_STATUS_CLASS = {
+    RECRUITING: "bg-emerald-600", NOT_YET_RECRUITING: "bg-emerald-700", ACTIVE_NOT_RECRUITING: "bg-sky-600",
+    COMPLETED: "bg-slate-500", TERMINATED: "bg-rose-700", WITHDRAWN: "bg-rose-800", SUSPENDED: "bg-amber-700",
+};
 const CATEGORY_LABEL = {
     induced_hr_deficiency: "Induced HR deficiency → synthetic lethality",
     pathway_suppression: "Pathway suppression → same-axis drug class",
@@ -36,6 +40,7 @@ function groupByDrug(rows) {
             byDrug.set(r.drug_name, {
                 drug_name: r.drug_name, targets: new Set(), best_tier: -1,
                 n_sources: 0, sl_citations: [], has_direct: false, direct_citations: [],
+                clinical_trials: new Map(),
             });
         }
         const g = byDrug.get(r.drug_name);
@@ -48,6 +53,7 @@ function groupByDrug(rows) {
             g.has_direct = true;
             g.direct_citations.push(...r.direct_experimental_support);
         }
+        for (const t of (r.clinical_trials || [])) g.clinical_trials.set(t.nct_id, t);
     }
     return [...byDrug.values()].sort((a, b) => (b.has_direct - a.has_direct) || (b.best_tier - a.best_tier) || (b.n_sources - a.n_sources));
 }
@@ -64,6 +70,21 @@ function renderTabs() {
         renderTabs();
         renderContent();
     }));
+}
+
+function trialCell(trialsMap) {
+    if (!trialsMap || trialsMap.size === 0) {
+        return `<span class="text-emerald-400"><i class="fa-solid fa-flask mr-1"></i>No registered trial found (candidate gap)</span>`;
+    }
+    return [...trialsMap.values()].map((t) => {
+        const cls = TRIAL_STATUS_CLASS[t.status] || "bg-slate-600";
+        const href = `https://clinicaltrials.gov/study/${encodeURIComponent(t.nct_id)}`;
+        return `<div class="mb-1">
+          <span class="${cls} text-white text-xs font-semibold px-2 py-0.5 rounded-full">${escapeHtml(t.status.replaceAll("_", " "))}</span>
+          <a class="underline hover:text-white ml-1" target="_blank" rel="noopener" href="${href}">${escapeHtml(t.nct_id)}</a>
+          <div class="text-slate-400">${escapeHtml(t.title)}${t.why_stopped ? ` — stopped: ${escapeHtml(t.why_stopped)}` : ""}</div>
+        </div>`;
+    }).join("");
 }
 
 function renderContent() {
@@ -96,6 +117,7 @@ function renderContent() {
           ${g.direct_citations.map((c) => citationLine(c, c.note)).join("")}
           ${g.sl_citations.slice(0, 3).map((c) => c.pmid ? `<div>SL: ${escapeHtml(c.gene)} (PMID <a class="underline hover:text-white" target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/${c.pmid}/">${c.pmid}</a>, ${escapeHtml(c.evidence)})</div>` : "").join("")}
         </td>
+        <td class="text-xs">${trialCell(g.clinical_trials)}</td>
       </tr>`).join("");
 
     document.getElementById("content").innerHTML = header + `
@@ -106,6 +128,7 @@ function renderContent() {
           <th class="py-1">Best evidence</th>
           <th class="py-1">DGIdb corroboration</th>
           <th class="py-1">Citations</th>
+          <th class="py-1">ClinicalTrials.gov</th>
         </tr></thead>
         <tbody>${rowsHtml}</tbody>
       </table>`;

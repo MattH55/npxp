@@ -67,6 +67,15 @@
           this exact drug target together (e.g. heat + PARP inhibitor + cisplatin, Krawczyk et
           al., <i>Oncotarget</i> 2017) — these are the strongest entries on the page, not
           because of a higher score, but because they've actually been tested in combination.</p>
+        <p><b class="text-slate-200">ClinicalTrials.gov column</b>: a real, direct
+          <a class="underline" href="https://clinicaltrials.gov/api/v2/studies" target="_blank">ClinicalTrials.gov v2 API</a>
+          cross-check for this exact modifier + drug combination (scoped to the strongest-evidence
+          rows only). "No registered trial found" means the search found nothing — a candidate
+          white-space gap, not proof none exists. The search is a literal substring match on each
+          real trial's own intervention names and title (including brand/device names, e.g.
+          "Optune" for Tumor Treating Fields) after ClinicalTrials.gov's own fuzzy
+          <code>query.intr</code> ranking surfaces candidates — not exhaustive, and a trial using
+          unlisted terminology for the same modality can still be missed.</p>
       </div>
     </details>
 

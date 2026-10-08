@@ -2,11 +2,24 @@
 never the real downloaded SynLethDB/DGIdb files, same convention as the
 rest of this project's tests (see test_ingest.py)."""
 import csv
+import importlib.util
+import json
+import os
+import sys
 
 import pytest
 
 from npi_pharma.mechanism.dgidb import DIRECT_ACTION_TYPES, load_gene_to_drugs, real_anticancer_drugs, real_immunotherapy_drugs
 from npi_pharma.mechanism.synlethdb import load_sl_pairs, sl_partners
+
+_SCRIPT_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "scripts", "build_mechanism_hypotheses.py"
+)
+_spec = importlib.util.spec_from_file_location("build_mechanism_hypotheses", _SCRIPT_PATH)
+build_mechanism_hypotheses = importlib.util.module_from_spec(_spec)
+sys.modules["build_mechanism_hypotheses"] = build_mechanism_hypotheses
+_spec.loader.exec_module(build_mechanism_hypotheses)
+_attach_clinical_trials = build_mechanism_hypotheses._attach_clinical_trials
 
 
 def _write_sl_tsv(path, rows):
@@ -129,3 +142,30 @@ class TestDGIdb:
     def test_missing_file_raises(self, tmp_path):
         with pytest.raises(FileNotFoundError):
             load_gene_to_drugs(str(tmp_path / "nope.tsv"))
+
+
+class TestAttachClinicalTrials:
+    def _ct_file(self, tmp_path, results):
+        path = tmp_path / "clinical_trials.json"
+        path.write_text(json.dumps({"results": results}), encoding="utf-8")
+        return str(path)
+
+    def test_matching_row_gets_real_trials(self, tmp_path):
+        trial = {"nct_id": "NCT00000001", "title": "Real Trial", "status": "RECRUITING"}
+        ct = self._ct_file(tmp_path, {"hyperthermia_mild_41_42c::OLAPARIB": {"trials": [trial]}})
+        rows = [{"modifier_id": "hyperthermia_mild_41_42c", "drug_name": "OLAPARIB"}]
+        _attach_clinical_trials(rows, ct)
+        assert rows[0]["has_clinical_trial"] is True
+        assert rows[0]["clinical_trials"] == [trial]
+
+    def test_unmatched_row_gets_empty_list_not_fabricated(self, tmp_path):
+        ct = self._ct_file(tmp_path, {})
+        rows = [{"modifier_id": "exercise", "drug_name": "NIVOLUMAB"}]
+        _attach_clinical_trials(rows, ct)
+        assert rows[0]["has_clinical_trial"] is False
+        assert rows[0]["clinical_trials"] == []
+
+    def test_missing_file_leaves_rows_untouched(self, tmp_path):
+        rows = [{"modifier_id": "exercise", "drug_name": "NIVOLUMAB"}]
+        _attach_clinical_trials(rows, str(tmp_path / "does_not_exist.json"))
+        assert "clinical_trials" not in rows[0]
