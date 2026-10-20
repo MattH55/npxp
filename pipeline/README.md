@@ -150,6 +150,33 @@ drug-target data), ranked by real evidence quality, not a learned score.
 See `docs/mechanism_hypotheses.md`. Deployed at
 [mechanism-hypotheses.html](../mechanism-hypotheses.html) on the static site.
 
+## CCDI pediatric data
+
+The brief is `docs/ccdi_integration_brief.md`; results are in
+`docs/ccdi_integration.md`. The source is OpenPedCan v15 (TARGET, PBTA, GMKF,
+PPTC, Maris lines; CC-BY-4.0). The other CCDI hosts were blocked in the
+session that ran this.
+
+```bash
+python scripts/ccdi_preflight.py            # which CCDI hosts are reachable
+npi-pharma fetch-openpedcan --with-maf      # ~2.9 GB, md5-verified, MANIFEST.json
+npi-pharma build-ccdi                       # cohorts, model concordance, mechanism annotations
+npi-pharma encode-patient --input data/processed/ccdi/cohorts/neuroblastoma__poly_a.parquet \
+  --sample TARGET-30-PAIFXV-01A-01R --tissue neuroblastoma --out out/ccdi/nbl.npz
+```
+
+Outputs:
+- **Pediatric tumour cohorts:** split by cancer group × RNA library, for
+  cohort-relative patient encoding.
+- **Model concordance:** cell lines and PDXs against tumours
+  (`docs/ccdi/model_concordance_openpedcan_v15.tsv`).
+- **Mechanism-hypothesis annotations:** `pediatric_context` in
+  `api/mechanism_hypotheses.json`, covering baseline lesion frequency, target
+  expression and FDA PMTL.
+
+These are annotations and fidelity checks, not interaction evidence. Backend
+table changes are proposed in `docs/ccdi_backend_handoff.md`.
+
 ## Not yet built (by design)
 
 The brief stops at the milestone. This package does not yet include:

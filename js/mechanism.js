@@ -40,7 +40,7 @@ function groupByDrug(rows) {
             byDrug.set(r.drug_name, {
                 drug_name: r.drug_name, targets: new Set(), best_tier: -1,
                 n_sources: 0, sl_citations: [], has_direct: false, direct_citations: [],
-                clinical_trials: new Map(),
+                clinical_trials: new Map(), pediatric: null,
             });
         }
         const g = byDrug.get(r.drug_name);
@@ -54,6 +54,7 @@ function groupByDrug(rows) {
             g.direct_citations.push(...r.direct_experimental_support);
         }
         for (const t of (r.clinical_trials || [])) g.clinical_trials.set(t.nct_id, t);
+        if (!g.pediatric && r.pediatric_context) g.pediatric = r.pediatric_context;
     }
     return [...byDrug.values()].sort((a, b) => (b.has_direct - a.has_direct) || (b.best_tier - a.best_tier) || (b.n_sources - a.n_sources));
 }
@@ -87,6 +88,35 @@ function trialCell(trialsMap) {
     }).join("");
 }
 
+const PEDIATRIC_LABEL = "Pediatric context (annotation, not evidence of interaction)";
+
+function pct(x) {
+    return x == null ? "n/a" : `${(x * 100).toFixed(1)}%`;
+}
+
+function pediatricLesionBox(rows) {
+    const byGene = new Map();
+    for (const r of rows) {
+        const m = r.pediatric_context?.lesion_max_altered;
+        if (m && !byGene.has(m.gene)) byGene.set(m.gene, { max: m, already: r.pediatric_context.lesion_already_altered || [] });
+    }
+    if (!byGene.size) return "";
+    const items = [...byGene.values()].map(({ max, already }) => already.length
+        ? `<li><b>${escapeHtml(max.gene)}</b>: already altered (LoF or deep deletion) in &ge;5% of ${already.map((a) => escapeHtml(a.cancer_group)).join(", ")}</li>`
+        : `<li><b>${escapeHtml(max.gene)}</b>: below 5% baseline LoF/deep deletion in every pediatric group; highest ${pct(max.altered_fraction)} in ${escapeHtml(max.cancer_group)} (n=${max.n_dna})</li>`).join("");
+    return `<details class="mt-3 text-xs text-slate-400"><summary class="cursor-pointer text-slate-300">${PEDIATRIC_LABEL}</summary>
+      <ul class="list-disc ml-5 mt-1">${items}</ul>
+      <div class="mt-1">Source: OpenPedCan v15 (WGS/WXS primary tumours, one per patient; CC-BY-4.0).</div></details>`;
+}
+
+function pediatricCell(p) {
+    if (!p) return "";
+    const top = (p.target_expression_top || []).map((t) => `${escapeHtml(t.cancer_group)} (${t.median_log2tpm})`).join(", ");
+    return `<details class="mt-1"><summary class="cursor-pointer text-slate-300">${PEDIATRIC_LABEL}</summary>
+      <div>Highest target expression, median log2(TPM+1): ${top || "n/a"}</div>
+      <div>FDA PMTL: ${escapeHtml(p.target_pmtl || "not listed")}</div></details>`;
+}
+
 function renderContent() {
     const rows = ALL_ROWS.filter((r) => r.modifier_id === ACTIVE_MODIFIER);
     if (!rows.length) {
@@ -102,6 +132,7 @@ function renderContent() {
         <p class="text-sm text-slate-300 mb-2">${escapeHtml(first.mechanism)}</p>
         ${citationLine(first.modifier_citation)}
         ${(first.supporting_citations || []).map((c) => citationLine(c, c.note)).join("")}
+        ${pediatricLesionBox(rows)}
       </div>`;
 
     const rowsHtml = grouped.map((g) => `
@@ -110,7 +141,7 @@ function renderContent() {
           <div class="text-white font-semibold">${escapeHtml(g.drug_name)}</div>
           ${g.has_direct ? `<span class="bg-amber-500 text-slate-900 text-xs font-bold px-2 py-0.5 rounded-full"><i class="fa-solid fa-star mr-1"></i>Direct experimental support</span>` : ""}
         </td>
-        <td class="text-slate-300 text-sm">${[...g.targets].map(escapeHtml).join(", ")}</td>
+        <td class="text-slate-300 text-sm">${[...g.targets].map(escapeHtml).join(", ")}<div class="text-xs text-slate-400">${pediatricCell(g.pediatric)}</div></td>
         <td><span class="${TIER_CLASS[g.best_tier] ?? "bg-slate-600"} text-white text-xs font-semibold px-2 py-0.5 rounded-full">${escapeHtml(TIER_LABEL[g.best_tier] ?? "Literature-direct")}</span></td>
         <td class="text-slate-300 text-sm">${g.n_sources} source${g.n_sources === 1 ? "" : "s"}</td>
         <td class="text-xs text-slate-400">

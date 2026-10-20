@@ -21,7 +21,7 @@ def _clean(expr: pd.DataFrame) -> pd.DataFrame:
 
 
 def read_expression(path: str | Path, obs_filter: dict | None = None, sample_key: str | None = None) -> tuple[pd.DataFrame, list[str]]:
-    """Read bulk TSV/CSV (genes x samples) or AnnData .h5ad (cells/samples x genes).
+    """Read bulk TSV/CSV/Parquet (genes x samples) or AnnData .h5ad (cells/samples x genes).
 
     For .h5ad with ``sample_key`` the cells are pseudobulked (mean) per sample;
     ``obs_filter`` (e.g. {"compartment": "malignant"}) selects cells first, the
@@ -41,6 +41,8 @@ def read_expression(path: str | Path, obs_filter: dict | None = None, sample_key
             df = df.groupby(ad.obs[sample_key].astype(str).values).mean()
             flags.append("pseudobulk_from_single_cell")
         return df.T, flags
+    if path.suffix == ".parquet":
+        return pd.read_parquet(path), flags
     sep = "," if path.suffix == ".csv" else "\t"
     return pd.read_csv(path, sep=sep, index_col=0), flags
 
