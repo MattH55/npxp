@@ -1,0 +1,27 @@
+# OpenPedCan cancer_group -> OncoTree code. Curated by hand; only codes the
+# curator is confident of are filled. Blank = intentionally unmapped (broad
+# groups such as "Low-grade glioma" span several OncoTree codes). Codes are from
+# the curator's knowledge of OncoTree, not checked live (oncotree.info was
+# unreachable): verify before relying on them. Unmapped
+# groups are reported by build-ccdi, never dropped.
+# Retrieved 2026-10-20 against OpenPedCan v15 histologies.tsv.
+cancer_group	oncotree_code	canonical_tissue
+Neuroblastoma	NBL	peripheral_nervous_system
+Ganglioneuroblastoma	GNBL	peripheral_nervous_system
+Wilms tumor	WT	kidney
+Clear cell sarcoma of the kidney	CCSK	kidney
+Rhabdoid tumor of the kidney	MRTK	kidney
+Osteosarcoma	OS	bone
+Ewing sarcoma	ES	bone
+Chordoma	CHDM	bone
+Acute Myeloid Leukemia	AML	bone_marrow
+Acute Lymphoblastic Leukemia		bone_marrow
+Medulloblastoma	MBL	cns
+Ependymoma	EPM	cns
+Atypical Teratoid Rhabdoid Tumor	ATRT	cns
+Diffuse intrinsic pontine glioma	DIPG	cns
+Diffuse midline glioma		cns
+High-grade glioma		cns
+Low-grade glioma		cns
+Adamantinomatous Craniopharyngioma	ACPG	cns
+Meningioma	MNG	cns

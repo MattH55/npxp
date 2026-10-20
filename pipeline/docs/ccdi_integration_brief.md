@@ -5,6 +5,11 @@ Source list: the NCI CCDI slide "Combined Data Drives Scientific Discovery"
 those sources to integrate, in what order, and into which part of NPxP. It
 also says what must not be built.
 
+> **Status (2026-10-20):** milestones 1–3 have been run on OpenPedCan v15.
+> Results and deviations from this brief are in `ccdi_integration.md`.
+> Notably, §4.2's joint-PC1 concordance recipe failed its positive control
+> and was replaced.
+
 Work in `pipeline/` (`npi_pharma`). Read these first:
 
 - `pipeline/README.md`

@@ -225,6 +225,28 @@ def cmd_inspect_geo(a) -> int:
     return 0
 
 
+def cmd_fetch_openpedcan(a) -> int:
+    from .ccdi import openpedcan
+
+    files = list(openpedcan.CORE_FILES) + ([openpedcan.MAF] if a.with_maf else [])
+    openpedcan.fetch(a.raw_dir, files=files, release=a.release, overwrite=a.overwrite)
+    return 0
+
+
+def cmd_build_ccdi(a) -> int:
+    from .ccdi import build
+
+    inp = build.Inputs(a.raw_dir, a.processed, a.release)
+    steps = ["cohorts", "concordance", "annotate"] if a.step == "all" else [a.step]
+    if "cohorts" in steps:
+        build.step_cohorts(inp, a.diagnosis_map, min_tumours=a.min_n)
+    if "concordance" in steps:
+        build.step_concordance(inp, min_tumours=a.min_n)
+    if "annotate" in steps:
+        build.step_annotate(inp, a.hypotheses, a.out_json, min_n=a.min_n)
+    return 0
+
+
 def cmd_make_fixture(a) -> int:
     from .fixtures import write_fixture
 
@@ -345,6 +367,23 @@ def build_parser() -> argparse.ArgumentParser:
     s = sub.add_parser("inspect-geo", help="show sample annotations to curate pre/post pairing")
     s.add_argument("series_matrix")
     s.set_defaults(func=cmd_inspect_geo)
+
+    s = sub.add_parser("fetch-openpedcan", help="download OpenPedCan release files (md5-verified) + MANIFEST")
+    s.add_argument("--release", default="v15")
+    s.add_argument("--raw-dir", default="data/raw")
+    s.add_argument("--with-maf", action="store_true", help="also the 2 GB consensus SNV MAF (needed by annotate)")
+    s.add_argument("--overwrite", action="store_true")
+    s.set_defaults(func=cmd_fetch_openpedcan)
+    s = sub.add_parser("build-ccdi", help="pediatric cohorts, model concordance, mechanism annotations")
+    s.add_argument("--step", choices=["cohorts", "concordance", "annotate", "all"], default="all")
+    s.add_argument("--release", default="v15")
+    s.add_argument("--raw-dir", default="data/raw")
+    s.add_argument("--processed", default="data/processed/ccdi")
+    s.add_argument("--diagnosis-map", default="configs/ccdi/diagnosis_map.tsv")
+    s.add_argument("--hypotheses", default="out/mechanism_hypotheses.json")
+    s.add_argument("--out-json", default="out/ccdi/mechanism_hypotheses_pediatric.json")
+    s.add_argument("--min-n", type=int, default=20)
+    s.set_defaults(func=cmd_build_ccdi)
 
     s = sub.add_parser("make-fixture", help="write the synthetic 50-drug fixture")
     s.add_argument("--out", default="data/fixture")

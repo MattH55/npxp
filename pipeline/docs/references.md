@@ -146,3 +146,27 @@ measurement.
 - PAIRWISE (transcriptome + drug graphs + targets). https://github.com/Mew233/pairwise
 - JointSyn (dual-view, sample-specific synergy; Bioinformatics 2024).
 - MARSY is already named as the Stage 3 base model in `../../PREDICTION_METHODOLOGY.md`.
+
+## CCDI pediatric data (see `ccdi_integration_brief.md`, `ccdi_integration.md`)
+
+**Used:** OpenPedCan v15. It harmonises TARGET, PBTA/CBTN, GMKF, PPTC and the
+Maris lines, and includes the FDA PMTL mapping. CC-BY-4.0.
+https://github.com/d3b-center/OpenPedCan-analysis
+
+### CCDI controlled-access sources (documentation only, no code)
+- **Kids First DRC:** pediatric WGS/RNA-seq with germline data. dbGaP study
+  approval via the Kids First portal / CAVATICA. Later use: germline
+  predisposition, which is missing from the somatic-only annotations.
+- **St. Jude Cloud:** pediatric WGS/WES/RNA-seq. Data Access Agreement via St.
+  Jude Cloud. Later use: larger leukaemia and solid-tumour cohorts.
+- **COG / Pediatric MATCH / MyPART (NCTN/NCORP Data Archive):** trial outcomes
+  and molecular data. Data-archive application. Later use: outcome context
+  for targets.
+- **Project:EveryChild (COG):** registry and biobank. COG application.
+- **CCSS (Childhood Cancer Survivor Study):** survivors' lifestyle (exercise,
+  diet) × treatment × late effects. CCSS application. It is the one CCDI
+  source with real NPI × drug data in people. It would need a new
+  population-level evidence tier, outside the cell-line schema.
+- **Foundation Medicine:** commercial panel genomics. Research agreement.
+- **PPCR (Pediatric Proton/Photon Consortium Registry):** radiotherapy
+  registry. Application.
