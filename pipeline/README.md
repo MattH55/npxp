@@ -150,6 +150,13 @@ drug-target data), ranked by real evidence quality, not a learned score.
 See `docs/mechanism_hypotheses.md`. Deployed at
 [mechanism-hypotheses.html](../mechanism-hypotheses.html) on the static site.
 
+## CCDI pediatric data (planned)
+
+`docs/ccdi_integration_brief.md` is the coding-agent brief for integrating
+the open NCI CCDI pediatric sources (GDC TARGET/HCMI, refine.bio, Treehouse,
+OpenPedCan, ScPCA, FDA PMTL, SEER) as patient context, model-fidelity checks
+and mechanism-hypothesis annotations, not as a synergy predictor.
+
 ## Not yet built (by design)
 
 The brief stops at the milestone. This package does not yet include:
